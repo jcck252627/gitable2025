@@ -1,0 +1,89 @@
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/jcck252627/gitable2025.git
+git push -u origin main
+
+
+
+This is a very common issue when setting up Git and GitHub with SSH. Even if you've added your SSH key to your PC and to your GitHub account, Git might still be trying to use HTTPS for your repository, which will always prompt for a username and password (or a Personal Access Token, since password authentication for Git over HTTPS was deprecated by GitHub).
+
+Here's the most likely reason and how to fix it:
+
+The Problem: Your Git Remote URL is Set to HTTPS, Not SSH.
+
+When you git clone a repository, by default, GitHub often provides the HTTPS URL. If you used an HTTPS URL to clone your repository initially, then Git will try to use HTTPS for subsequent operations like git push. Even if you have an SSH key configured, Git won't use it if the remote URL is set to HTTPS.
+
+How to Fix It: Change Your Remote URL to Use SSH
+
+Check your current remote URL:
+Navigate to your repository's directory in your terminal and run:
+
+Bash
+
+git remote -v
+You'll likely see something like this (indicating HTTPS):
+
+origin  https://github.com/your-username/your-repo.git (fetch)
+origin  https://github.com/your-username/your-repo.git (push)
+If you see git@github.com:your-username/your-repo.git, then your remote is already set to SSH, and there might be another issue (see "Other Potential Issues" below).
+
+Get the SSH URL from GitHub:
+Go to your repository on GitHub.
+Click on the green "Code" button.
+Select the "SSH" tab.
+Copy the URL provided (it will look something like git@github.com:your-username/your-repo.git).
+
+Change the remote URL in your local repository:
+In your terminal, within your repository's directory, run:
+
+Bash
+
+git remote set-url origin git@github.com:your-username/your-repo.git
+Make sure to replace your-username/your-repo.git with the actual path you copied from GitHub!
+
+Verify the change:
+Run git remote -v again to confirm that the URL has been updated to the SSH version.
+
+Try pushing again:
+
+Bash
+
+git push -u origin main
+This time, it should use your SSH key for authentication and shouldn't ask for a username and password. If you have a passphrase on your SSH key, it might ask for that, but not your GitHub username and password.
+
+Other Potential Issues (Less Common if the above fix doesn't work):
+
+SSH Agent Not Running or Key Not Added:
+Even if you have the key, your SSH agent might not be running or the key might not be loaded into it.
+
+Start the SSH agent: eval "$(ssh-agent -s)"
+
+Add your key (replace id_rsa with your key's actual name if different, e.g., id_ed25519): ssh-add ~/.ssh/id_rsa
+
+If you have a passphrase on your key, it will prompt you for it here.
+
+You can check if your key is added by running ssh-add -l.
+
+Incorrect Permissions on SSH Key Files:
+Your private key file (id_rsa or id_ed25519) should have strict permissions (read-only for your user, no access for others).
+
+chmod 600 ~/.ssh/id_rsa (or your key's name)
+
+Your .ssh directory should have chmod 700 ~/.ssh.
+
+SSH Configuration File Issues (~/.ssh/config):
+If you have multiple SSH keys or complex setups, your ~/.ssh/config file might not be correctly configured to tell Git which key to use for github.com.
+A basic entry for GitHub usually looks like this:
+
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa  # Or wherever your private key is located
+  IdentitiesOnly yes
+After modifying this, try ssh -T git@github.com to test the connection. It should say: Hi <your-username>! You've successfully authenticated, but GitHub does not provide shell access.
+
+By following these steps, especially changing your remote URL, you should be able to push to GitHub using your SSH key without being prompted for your username and password.
+
+
