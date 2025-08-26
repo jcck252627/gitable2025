@@ -15,7 +15,7 @@ print(len(input("Now SERIOUSLY what is your name? " )))
 print(".............Another way .....................")
 username = input ("what is your name this time? ")
 length = str(len(username))
-print("your name this time now has " + length + " characters")
+print("Your name this time now has " + length + " characters ...")
 
 
 
