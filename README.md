@@ -1,5 +1,14 @@
 # gitable2025
 
+Primary Goal
+-Learn/Review Python
+-Learn Devops CI/CD
+-Learn cloud AWS/GCP/AZ and code in Terraform and their prospective script for automation
+-Learn to automate with Puppet and Ansible
+-Learn Containers and K8
+
+
+
 This will be where my code would be in, learn away ! 2025/2026/2027 !
 
 put in
