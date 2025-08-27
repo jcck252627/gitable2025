@@ -12,21 +12,23 @@ if size == "S" or size=="s":
     print(f"your pizza cost is: ${price}")
     if add_pepperoni == "Y" or add_pepperoni=="y":
         price += 2
+        print("You have selected to add pepperoni on your small pizza")
 
 elif size == "M" or size=="m":
     price += 20
     print(f"your pizza cost is: ${price}")
     if add_pepperoni == "Y" or add_pepperoni == "y":
         price += 3
+        print("You have selected to add pepperoni on your large or medium pizza")
 
 elif size == "L" or size=="l":
     price += 25
     print(f"your pizza cost is: ${price}")
     if add_pepperoni == "Y" or add_pepperoni == "y":
         price += 3
+        print("You have selected to add pepperoni on your large or medium pizza")
 
 if extra_cheese == "Y" or extra_cheese == "y":
     price += 1
-
 
 print(f"Your final bill is: ${price}.")
