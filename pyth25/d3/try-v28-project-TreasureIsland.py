@@ -20,7 +20,7 @@ if first_q == "left":
             print("You have found GOLD !! ... alots of GOLD !!!")
         elif third_q == "blue":
             print("Unluckily, you were eaten by a beast jump out of the blue door !!! ... GANE OVER")
-        elif third_q_q == "red":
+        elif third_q == "red":
             print("It's HOT in here, you were consumed by region of fire !!! ... GAME OVER")
         else:
             print("You have made a wrong choice ... GAME OVER prematurely")
