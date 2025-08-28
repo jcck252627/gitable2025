@@ -13,22 +13,22 @@ nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 # Flatten the list for random selections
-flat_list = [item for sublist in combined_pool for item in sublist]
-print(flat_list)
+#flat_list = [item for sublist in combined_pool for item in sublist]
+#print(flat_list)
 
 #easier version where the password generated according to the order of user input
 print("____________________________")
 print("This is the easier versin of the password requested where we have letters, followed by symbols then numbers ......")
 easy_password =""
-for letter_r in range (1, nr_letters+1):
+for letter_r in range (0, nr_letters):
     ran_letter= random.choice(letters)
     easy_password = easy_password +ran_letter
 
-for symbols_r in range (1, nr_symbols+1):
+for symbols_r in range (0, nr_symbols):
     ran_symbols = random.choice(symbols)
     easy_password = easy_password +ran_symbols
 
-for numbers_r in range (1, nr_numbers+1):
+for numbers_r in range (0, nr_numbers):
     ran_numbers = random.choice(numbers)
     easy_password = easy_password +ran_numbers
 
@@ -36,8 +36,39 @@ print("The easy version of the password generated this time is:  "+easy_password
 
 
 #Harder version where the password generated independent to the order of user input
-
-
+#first put the existing easy password into a list with each character as an individual element in the list
+ran_list = list(easy_password)
+print(ran_list)
+random.shuffle(ran_list)
+reordered_string=''.join(ran_list)
+print("The harder and scrambled version of the same password:  "+reordered_string)
 # Pick a random element
 # random_element = random.choice(flat_list)
 # print("Random element:", random_element)
+
+
+#harder version with conditional statements and rejoin to another list
+print("____________________________")
+print("Welcome to the HARDER and STRONGER Password Generator!")
+nra_letters = int(input("How many letters would you like in your password?  \n"))
+nra_symbols = int(input(f"How many symbols would you like?\n"))
+nra_numbers = int(input(f"How many numbers would you like?\n"))
+
+print("This is the harder version of the password generation where the order of characters are completely randomized from scratch ......")
+
+passwordList = []
+for n in range(0, nra_letters):
+    passwordList.append(random.choice(letters))
+for n in range(0, nra_symbols):
+    passwordList.append(random.choice(symbols))
+for n in range(0, nra_numbers):
+    passwordList.append(random.choice(numbers))
+
+random.shuffle(passwordList)
+
+hard_password = ""
+for character in passwordList:
+    hard_password += character
+
+print("The VERY HARD version of the password generated this time is:  "+hard_password)
+
