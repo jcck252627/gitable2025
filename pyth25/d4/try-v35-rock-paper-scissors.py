@@ -78,7 +78,7 @@ elif you_choice == "scissors" and computer_choice == "rock":
 print("__________________________________")
 print("__________________________________")
 print("__________________________________")
-print("__________________________________")
+print("____________________________-______")
 print(game_images[0]) # rock
 print(game_images[1]) # paper
 print(game_images[2]) # scissors
