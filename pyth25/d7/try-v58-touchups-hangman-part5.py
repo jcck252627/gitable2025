@@ -5,8 +5,8 @@ import nltk
 
 #import from a static word library of words ... another list of words stored in file ... as a secondary source of words
 from hangman_words_libs import hm_word_list_module
-from hangman_art import stages   # getting the ascii art for stage of the game
-from hangman_art import hangman_logo # getting the ascci art for tje beginning
+from hangman_art import HANGMAN_PICS   # getting the ascii art for stage of the game
+from hangman_art import HANGMAN_PICS # getting the ASSCI art for tje beginning
 
 # download once (quiet to avoid long output)
 nltk.download("words", quiet=True)
