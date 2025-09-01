@@ -1,4 +1,5 @@
-import random
+import art
+print(art.logo)
 
 wordlist =["aardvark" ,"baboon" ,"camel"]
 
