@@ -58,9 +58,6 @@ def decrypt (org_text, shift_amount):
     print(f"\nHere is the DECODED result: {ciphered_txt}")
 
 
-def caesar(org_text, shift_amount, encode_or_decode):
-
-
 
 # TODO-4: What happens if you try to shift z forwards by 9? Can you fix the code?
 
