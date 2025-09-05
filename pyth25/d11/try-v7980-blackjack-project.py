@@ -80,34 +80,8 @@ def pick_two_cards_p2():
 
 
 def print_cards(cards):
-    for card in cards:
-        if card == "A":
-            print(art.CARDS[12])
-        elif card =="2":
-            print(art.CARDS[11])
-        elif card =="3":
-            print(art.CARDS[10])
-        elif card =="4":
-            print(art.CARDS[9])
-        elif card == "5":
-            print(art.CARDS[8])
-        elif card == "6":
-            print(art.CARDS[7])
-        elif card == "7":
-            print(art.CARDS[6])
-        elif card == "8":
-            print(art.CARDS[5])
-        elif card == "9":
-            print(art.CARDS[4])
-        elif card == "10":
-            print(art.CARDS[3])
-        elif card == "J":
-            print(art.CARDS[2])
-        elif card == "Q":
-            print(art.CARDS[1])
-
-        else:
-            print(art.CARDS[0])
+        for card in cards:
+            print(CARD_ART_MAP[card])
 
 
 #def add_card_to_player():
