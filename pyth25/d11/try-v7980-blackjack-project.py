@@ -20,6 +20,27 @@ card_face_value ={
     "J": 10
 }
 
+def pick_two_cards():
+# Pick two random cards
+    cards = random.sample(list(card_face_value.keys()), 2)
+
+    total = 0
+    ace_count = 0
+
+    for card in cards:
+        if card == "A":
+            total += 11  # Assume Ace is 11
+            ace_count += 1
+        else:
+            total += card_face_value[card]
+
+    # Adjust Aces if total > 21
+    while total > 21 and ace_count > 0:
+        total -= 10  # Convert one Ace from 11 to 1
+        ace_count -= 1
+
+    return cards,total
+
 print("i am an Ace (A) for "+str(card_face_value["A"][1])+"  points if i can add it up to less than 21 " )
 
 
@@ -44,26 +65,9 @@ print(art.logo)
 #inital_hand_player
 
 
-# Pick two random cards
-random_cards = random.sample(list(card_face_value.keys()), 2)
 
-# Calculate total value with Ace logic
-total = 0
-ace_count = 0
-
-for card in random_cards:
-    if card == "A":
-        total += 11  # Assume Ace is 11 initially
-        ace_count += 1
-    else:
-        total += card_face_value[card]
-
-# Adjust Aces if total > 21
-while total > 21 and ace_count > 0:
-    total -= 10  # Convert one Ace from 11 to 1
-    ace_count -= 1
-
-print("Random cards:", random_cards)
+cards, total = pick_two_cards()
+print("Random cards:", cards)
 print("Total value:", total)
 
 
