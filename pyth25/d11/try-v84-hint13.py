@@ -62,9 +62,9 @@ while not game_over:
     print(*user_cards, sep=', ')
     user_score = calculate_score(user_cards)  # <-- Recalculate here!
     print("Total score for the player is: ", user_score)
-
-    print("**********Here are the dealer's cards:  ", computer_cards)
-    print(*computer_cards, sep=', ')
+    print(f"Computer's first card: {computer_cards[0]}")
+    print("**********Here are the dealer's first cards:  ", computer_cards[0])
+    # print(*computer_cards, sep=', ')
     dealer_score = calculate_score(computer_cards)  # <-- Optional: recalculate if dealer changes
     print("Total score for the dealer is:  ", dealer_score)
 
