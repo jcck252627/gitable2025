@@ -41,7 +41,7 @@ def compare (u_score, d_score):
 
 
 
-
+print(art.logo)
 
 user_cards=[]
 dealer_score = -1
@@ -93,3 +93,7 @@ while dealer_score != 100 and dealer_score < 17:
 
 print("______________________________________________________________")
 print(compare(user_score, dealer_score))
+
+
+while input("Do you want play another game of Blackjack ?  (y or n)").lower() == 'y':
+
