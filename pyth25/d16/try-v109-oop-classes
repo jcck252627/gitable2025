@@ -1,0 +1,11 @@
+"""
+OOP modeled after real world objects
+
+objects has attribute and methods
+
+attribute .... what characterstics the object has ... modeled with variables with data
+method .... what the object does  .... modeled with functions  with functionalities
+
+we can have object with the same blue print and develop it into a class
+
+"""
