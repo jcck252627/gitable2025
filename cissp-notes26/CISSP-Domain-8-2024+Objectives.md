@@ -234,16 +234,53 @@
               - Violate compliance
           - CISSP answer mindset:   Changes must still follow formal change control and risk assessment, even in Agile
         - **Deliver working software frequently, from a couple of weeks to a couple of months, with a preference for the shorter timescale**
-
+          - Why:  Short feedback loops and Early defect detection
+          - Security impact:  Automation becomes mandatory .......Manual security reviews won’t scale
+          - CISSP best practice:    Use automated security testing (SAST, DAST, dependency scans)
         - **Business people and developers must work together daily throughout the project**
+          - Why:  Reduce miscommunication
+          - CISSP concern:  Business may deprioritize security under deadline pressure
+          - CISSP principle:  Security requirements must be non‑negotiable functional requirements
         - **Build projects around motivated individuals; give them the environment, support, and tools and trust them to build**
+          - Why:  Empower teams and Increase productivity
+          - Security risk:  Over‑trusting individuals creates insider risk ....and Lack of segregation of duties
+          - CISSP must‑know:    Agile does NOT eliminate least privilege or separation of duties
         - **Emphasizing face-to-face conversation**
+          - Why: Faster understanding ... and Less bureaucracy
+          - CISSP risk:  Verbal agreements ≠ audit trail
+          - Exam tip:   Lack of documentation is a major Agile compliance weakness
         - **Working software is the primary measure of progress**
+          - Why:  Results over paperwork
+          - CISSP challenge:  “Working” does not mean “secure” .... and ..Security defects may be invisible
+          - CISSP lens: Progress must include security acceptance criteria
         - **Agile processes promote sustainable development; the them should be able to maintain a constant pace indefinitely**
+          - Why:  Avoid burnout ... and Maintain quality long‑term
+          - Security angle: Rushed development increases Coding errors...Vulnerabilities... and Misconfigurations
+          - CISSP alignment:  Stable pace improves secure coding discipline
         - **Continuous attention to technical excellence and good design enhances agility**
+          - Why:  Maintain long‑term agility
+          - Why CISSP cares: Secure architecture reduces attack surface .... also ...Technical debt = future vulnerabilities
+          - High‑value CISSP phrase:  ....“Security by design” and defense‑in‑depth
         - **Simplicity, or the art of maximizing the amount of work not done, is essential**
+          - Why:  Less complexity, fewer bugs
+          - Security benefit: Smaller attack surface .... and ....Fewer dependencies
+          - CISSP sweet spot: Simplicity improves availability, integrity, and maintainability
         - **The best architectures, requirements, and designs emerge from self-organizing teams**
+          - Why:  Teams adapt faster ..... AND Less micromanagement
+          - CISSP red flag: Lack of centralized security governance ...AND Inconsistent controls across teams
+          - CISSP principle:  Security policy remains centralized, even if execution is decentralized
         - **At regular intervals, the team reviews their effective and adjusts for improvement**
+          - Why: Continuous improvement
+          - Security relevance:  Post‑incident reviews ....Lessons learned ....Threat model updates
+          - CISSP alignment:  Supports continuous risk management and improvement
+
+      - High‑Probability CISSP Exam Themes ....Correct mindset answers
+        - “Security must be integrated into every sprint”
+        - “Frequent releases increase risk without automation”
+        - “Agile requires stronger—not weaker—governance”
+        
+      - CISSP One‑Paragraph Memory Summary
+        **The 12 Agile Manifesto principles emphasize flexibility, frequent delivery, and collaboration. From a CISSP perspective, Agile increases the need for continuous security testing, strong governance, automated controls, and integrated risk management to compensate for reduced documentation and frequent change.**
     - Exam focus: know these Agile types:
 
 
