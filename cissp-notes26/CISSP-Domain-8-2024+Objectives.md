@@ -29,7 +29,7 @@
     - With risk analysis and mitigation we identifying, assessing and mitigating the risks, understanding how they might affect our (software) project, and figure out what we can do to minimize the effects on our scope, schedule, cost, and quality.
     - Risks can be either opportunities or threats; they are scored on the likelihood of occurrence and impact on a project.
 
-**domain 8 - video 43 - Programming Concepts** 
+**domain 8 - video 43 - Programming Concepts part 1** 
 -   Machine Code:			Software executed directly by the CPU, 0's and 1's understood by the CPU
 -   Source Code:			Computer programming language, written in text and is human understandable, that is translated into machine code
 -   Assembler Languages:			Short mnemonics like ADD/SUB/JMP, which are matched with the full length binary machine code; assemblers convert assembly language into machine language. A disassembler does the reverse
@@ -59,7 +59,7 @@
     - 4th Generation: ABAP, Unix Shell, SQL, PL/SQ
     - 5th Generation: Prolog, OPS5, Mercury, …  AI research
 
--   CASE (Computer-Aided Software Engineering):
+-   CASE (Computer-Aided Software Engineering): - 4th GL also an 4th generation environment, similiar to CAD but for software design
     - Similar to and were partly inspired by computer-aided design (CAD) tools use for designing hardware products.
     - Used for developing high-quality, defect-free, and maintainable software.
     - Often associated with methods for the development of information systems together with automated tools that can be used in the software development process.
@@ -67,6 +67,28 @@
         - Tools support specific tasks in the software life-cycle.
         - Workbenches combine two or more tools focused on a specific part of the software life-cycle.
         - Environments combine two or more tools or workbenches and support the complete software life-cycle.
+
+**domain 8 - video 44 - Programming Concepts part 2** 
+-   **Top-Down Programming:**  ....start out with big picture/overview then break into pieces
+    - Starts with the big picture, then breaks it down into smaller segments.
+    - An overview of the system is formulated, specifying, but not detailing, any firstlevel subsystems.
+    - Each subsystem is then refined in yet greater detail, sometimes in many additional subsystem levels, until the entire specification is reduced to base elements.
+    - Procedural programming leans toward Top-Down, you start with one function and add to it.
+-   **Bottom-Up Programming:**  .... start with the specific item, build on and around it
+    - Piecing together of systems to build more complex systems, making the original systems a sub-system of the overarching system.
+    - The individual base elements of the system are first specified in great detail, they are then linked together to form larger subsystems, which then in turn are linked, sometimes in many levels  until a complete top-level system is formed.
+    - OOP leans tends toward Bottom-Up, you start by developing your objects and build up.
+
+-   **Type of software release: **
+    - Open source:
+      - We release the code publicly, where it can be tested, improved and corrected, but it also allows attackers to find the flaws in the code.
+    - Closed Source:
+      - We release the software, but keep the source code a secret, may be sound business practice, but can also be security through obscurity.
+    - Proprietary Software:
+      - Software protected byintellectual property and/or patents, often used interchangeably with Closed Source software, but it really is not. It can be both Open and Closed Source software.
+      - Any software not released into the public domain is protected by copyright
+
+
 
 
 
