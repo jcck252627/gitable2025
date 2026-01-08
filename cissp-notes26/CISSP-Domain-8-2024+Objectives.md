@@ -19,8 +19,8 @@
 -   It is common for programmers to make 15-50 mistakes per 1,000 lines of code. If using a programming maturity framework, we can lower that to 1 error per 1,000 lines of code.
 -   Most of the errors are not a vulnerability, or really a concern, but the more we use software in everything, the more critical the vulnerabilities beco
 -   Software-Defined Security (SDS):
-  - Security functions are removed from the hardware and become virtual network functions (VNFs).
-  - SDS is software-managed, policy-driven, and governed security where most of our security controls (IDS/IPS, network segmentation, access controls, …) are automated and monitored by the software
+    - Security functions are removed from the hardware and become virtual network functions (VNFs).
+    - SDS is software-managed, policy-driven, and governed security where most of our security controls (IDS/IPS, network segmentation, access controls, …) are automated and monitored by the software
 
 
 ##
