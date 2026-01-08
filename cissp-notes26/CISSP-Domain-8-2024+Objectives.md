@@ -15,7 +15,7 @@
   - Operations and Maintenance: deploying, and ensuring it's appropriately configured, patched, and monitored
 
 ##
-**domain 8 - video 42** 
+**domain 8 - video 42 - Designing Security into software** 
 -   It is common for programmers to make 15-50 mistakes per 1,000 lines of code. If using a programming maturity framework, we can lower that to 1 error per 1,000 lines of code.
 -   Most of the errors are not a vulnerability, or really a concern, but the more we use software in everything, the more critical the vulnerabilities beco
 -   Software-Defined Security (SDS):
@@ -29,6 +29,12 @@
     - With risk analysis and mitigation we identifying, assessing and mitigating the risks, understanding how they might affect our (software) project, and figure out what we can do to minimize the effects on our scope, schedule, cost, and quality.
     - Risks can be either opportunities or threats; they are scored on the likelihood of occurrence and impact on a project.
 
+**domain 8 - video 43 - Programming Concepts** 
+-   Machine Code:			Software executed directly by the CPU, 0's and 1's understood by the CPU
+-   Source Code:			Computer programming language, written in text and is human understandable, that is translated into machine code
+-   Assembler Languages:			Short mnemonics like ADD/SUB/JMP, which are matched with the full length binary machine code; assemblers convert assembly language into machine language. A disassembler does the reverse
+-   Compiler Languages:			Translates the higher level language into machine code and saves, often as executables, compiled once and run multiple times. 
+-	Interpreted Languages:			Similar to compiler languages, but interprets the code each time it is run into machine code
 
 ##
 - **Acceptance**: formal, structured hand-off of the completed software system to the customer org; usually involves test, analysis and assessment activities
