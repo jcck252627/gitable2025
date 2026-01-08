@@ -38,9 +38,9 @@
 -	Bytecode:			An interpreted code, in intermediary form, converted from source code to interpreted, but still needs to be converted into machine code before it can run on the CPU.
 -	Procedural Languages (Procedure-oriented):			Uses subroutines, procedures and functions.
 - Object-oriented Programming (OOP):
-			- Based on the concept of objects, which may contain data, in the form of fields, often known as attributes, and code, in the form of procedures, often known as methods.
-			- An object's procedures can access and often modify the data fields of the objects with which they are associated.
-			- In OOP, computer programs are designed by making them out of objects that interact with one another.
+		- Based on the concept of objects, which may contain data, in the form of fields, often known as attributes, and code, in the form of procedures, often known as methods.
+		- An object's procedures can access and often modify the data fields of the objects with which they are associated.
+		- In OOP, computer programs are designed by making them out of objects that interact with one another.
 
 
 ##
