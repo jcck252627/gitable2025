@@ -100,7 +100,17 @@
     - EULAs (End-User License Agreements):
       - Electronic form where the user clicks “I agree” to the software terms and conditions while installing the software.
 
-
+** Type of Software Licenses:**
+    - **Open source software** can be protected by a variety of licensing agreement.
+      - **GNU (General Public License) also called GPL:**
+        - Guarantees end users the freedom to run, study, share and modify the software.
+        - A "copyleft" license, which means that derivative work can only be distributed under the same license terms.
+    - **BSD (Berkeley Software Distribution):**
+        - A family of permissive free software licenses, imposing minimal restrictions on the use and redistribution of covered software.
+        - This is different than copyleft licenses, which have reciprocity share-alike requirements.
+    - **Apache:**
+        - Software must be free, distribute, modify and distribute the modified software.
+        - Requires preservation of the copyright notice and disclaimer
 
 
 
