@@ -1,0 +1,51 @@
+can you give example of UML components diagram with some example Azure in a DevOps infrastructure ?
+
+Below is a clean, realistic UML Component Diagram example for an Azure-based DevOps Infrastructure, showing how CI/CD, repos, pipelines, monitoring, and cloud resources interact.
+I will also include a Mermaid version so you can render it immediately.
+
+✅ UML Component Diagram — Azure DevOps Infrastructure Example
+Scenario:
+
+A company uses Azure DevOps for CI/CD, Azure Repos for code, Azure Pipelines for build + release, and Azure resources such as AKS, App Service, Key Vault, and Log Analytics.
+
+📌 UML Component Diagram (Conceptual)
+
+Components:
+
+Azure DevOps
+
+Azure Repos
+
+Azure Pipelines (CI & CD)
+
+Azure Artifacts
+
+Azure Cloud
+
+Azure Container Registry (ACR)
+
+Azure Kubernetes Service (AKS)
+
+Azure App Service
+
+Azure SQL
+
+Azure Key Vault
+
+Azure Monitor / Log Analytics
+
+Developers
+
+Developer Workstation / IDE (VS Code)
+
+Interactions:
+
+Developers commit code to Azure Repos
+
+Azure Pipeline (CI) builds + tests, pushes images to ACR
+
+Azure Pipeline (CD) deploys to AKS / App Service
+
+Workloads pull secrets from Key Vault
+
+Logs forwarded to Log Analytics
