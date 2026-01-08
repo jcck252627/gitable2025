@@ -42,7 +42,10 @@
 		- An object's procedures can access and often modify the data fields of the objects with which they are associated.
 		- In OOP, computer programs are designed by making them out of objects that interact with one another.
 
-
+-   Object-oriented Programming (OOP)
+    - Based on the concept of objects, which may contain data, in the form of fields, often known as attributes, and code, in the form of procedures, often known as methods.
+		- An object's procedures can access and often modify the data fields of the objects with which they are associated.
+		- In OOP, computer programs are designed by making them out of objects that interact with one another.
 ##
 - **Acceptance**: formal, structured hand-off of the completed software system to the customer org; usually involves test, analysis and assessment activities
 - **Accreditation**: AKA Security Accreditation a formal declaration by a designated accrediting authority (DAA) that an information system is approved to operate at an acceptable level of risk, based on the implementation an approved set of technical, managerial, and procedural safeguards
