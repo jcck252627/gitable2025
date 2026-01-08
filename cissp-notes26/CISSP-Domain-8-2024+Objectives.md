@@ -100,7 +100,7 @@
     - EULAs (End-User License Agreements):
       - Electronic form where the user clicks “I agree” to the software terms and conditions while installing the software.
 
-** Type of Software Licenses:**
+-   ** Type of Software Licenses:**
     - **Open source software** can be protected by a variety of licensing agreement.
       - **GNU (General Public License) also called GPL:**
         - Guarantees end users the freedom to run, study, share and modify the software.
