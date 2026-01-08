@@ -21,6 +21,13 @@
 -   Software-Defined Security (SDS):
     - Security functions are removed from the hardware and become virtual network functions (VNFs).
     - SDS is software-managed, policy-driven, and governed security where most of our security controls (IDS/IPS, network segmentation, access controls, …) are automated and monitored by the software
+-   Auditing and Logging of Changes:
+    - We need to be clear on change and configuration management
+    - How changes are requested (Request, formal assessment, planning, design and testing, implementation, final assessment), the controls we have in place (request control, change control, and release control) and how they contribute to security. 
+    - How does our configuration management control the versions of software used in an organization.
+-   Risk Analysis and Mitigation: (Idenify  --> Analyze --> Mitigate)
+    - With risk analysis and mitigation we identifying, assessing and mitigating the risks, understanding how they might affect our (software) project, and figure out what we can do to minimize the effects on our scope, schedule, cost, and quality.
+    - Risks can be either opportunities or threats; they are scored on the likelihood of occurrence and impact on a project.
 
 
 ##
