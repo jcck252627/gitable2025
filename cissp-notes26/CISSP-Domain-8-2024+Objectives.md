@@ -208,8 +208,45 @@
     - Still used in some situation ... but very linear and not adopted to changes 
 -   **Sashimi Model (Waterfall with overlapping phases or modified waterfall...):**  
     - Similar to waterfall, but we always have 2 overlapping phases, if we close one phase, we add the next phase.
-    - The modified waterfall model allows us to go back to the previous phase but no further.
+    - The modified waterfall model allows us to go back to the previous phase but no further.  (one back or one forward no further)
 -   **Agile Software Development:**  
+    - Describes a set of values and principles for software development under which requirements
+    - Solutions evolve through the collaborative effort of self-organizing cross-functional teams.
+    - Uses adaptive planning, evolutionary development, early delivery, and continuous improvement, and it encourages rapid and flexible response to change.
+    - Adaptive planning ... plan is not fixed ... adapt when change occurs then evolve ... deliver early and often
+    - Adaptive also to customer changes ... dont design something they dont want from the beginning 
+    - Based on Agile Manifesto ... about picking better solution/path to design software ...
+      - Individuals and Interactions are more than processes and tools.
+      - Working Software is more than comprehensive documentation.
+      - Customer Collaboration is more than contract negotiation.
+      - Responding to Change is more than following a plan.
+      - CISSP‑exam–focused explanation of the **12 Agile Manifesto principles**, why they matter, and how ISC² expects you to think about them from a security, governance, and risk perspective.
+        - **the highest priority is to satisfy the customer through early and continuous delivery of valuable software**
+          - Why it exists:    Deliver value fast and often
+          - CISSP importance:   Frequent releases = frequent security risk introduction .......Requires continuous security review
+          - CISSP takeaway:   Early delivery is acceptable only when security testing is continuous
+
+        - **Welcome changing requirements, even late in development; Agile processes harness change for the customer’s competitive advantage**
+          - Why:    Business needs evolve rapidly
+          - Security risk (CISSP angle) Late changes can: 
+              - Bypass security review
+              - Break threat models
+              - Violate compliance
+          - CISSP answer mindset:   Changes must still follow formal change control and risk assessment, even in Agile
+        - **Deliver working software frequently, from a couple of weeks to a couple of months, with a preference for the shorter timescale**
+
+        - **Business people and developers must work together daily throughout the project**
+        - **Build projects around motivated individuals; give them the environment, support, and tools and trust them to build**
+        - **Emphasizing face-to-face conversation**
+        - **Working software is the primary measure of progress**
+        - **Agile processes promote sustainable development; the them should be able to maintain a constant pace indefinitely**
+        - **Continuous attention to technical excellence and good design enhances agility**
+        - **Simplicity, or the art of maximizing the amount of work not done, is essential**
+        - **The best architectures, requirements, and designs emerge from self-organizing teams**
+        - **At regular intervals, the team reviews their effective and adjusts for improvement**
+    - Exam focus: know these Agile types:
+
+
 
 
 - 8.1.1 Development methodologies (e.g., Agile, Waterfall, DevOps, DevSecOps, Scaled Agile Framework)
