@@ -14,9 +14,9 @@
   - Testing: verifying/validating software meets requirements
   - Operations and Maintenance: deploying, and ensuring it's appropriately configured, patched, and monitored
 
-domain 8 - video 42 
-  ** It is common for programmers to make 15-50 mistakes per 1,000 lines of code. If using a programming maturity framework, we can lower that to 1 error per 1,000 lines of code.
-  ** Most of the errors are not a vulnerability, or really a concern, but the more we use software in everything, the more critical the vulnerabilities beco
+**domain 8 - video 42** 
+-  : It is common for programmers to make 15-50 mistakes per 1,000 lines of code. If using a programming maturity framework, we can lower that to 1 error per 1,000 lines of code.
+-  : Most of the errors are not a vulnerability, or really a concern, but the more we use software in everything, the more critical the vulnerabilities beco
 
 
 
