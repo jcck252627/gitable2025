@@ -44,8 +44,32 @@
 
 -   Object-oriented Programming (OOP)
     - Based on the concept of objects, which may contain data, in the form of fields, often known as attributes, and code, in the form of procedures, often known as methods.
-		- An object's procedures can access and often modify the data fields of the objects with which they are associated.
+		- Anobject's procedures can access and often modify the data fields of the objects with which they are associated.
 		- In OOP, computer programs are designed by making them out of objects that interact with one another.
+
+-   4th Generation languages (4GL):
+    - Fourth-generation languages are designed to reduce programming effort and the time it takes to develop software, resulting in a reduction in the cost of software development.
+    - Increases the efficiency by automating the creation of machine code.
+    - Often uses a GUI, drag and drop, and then generating the code, often used for websites, databases and reports.
+
+-   Programming Languages and Generations:
+    - 1st generation: Machine Code
+    - 2nd Generation: Assembler languages
+    - 3rd Generation: C, C++, Java, Python, PHP, Perl, C#, BASIC, Pascal, Fortran,ALGOL, COBOL, …
+    - 4th Generation: ABAP, Unix Shell, SQL, PL/SQ
+    - 5th Generation: Prolog, OPS5, Mercury, …  AI research
+
+-   CASE (Computer-Aided Software Engineering):
+    - Similar to and were partly inspired by computer-aided design (CAD) tools use for designing hardware products.
+    - Used for developing high-quality, defect-free, and maintainable software.
+    - Often associated with methods for the development of information systems together with automated tools that can be used in the software development process.
+    - CASE software is classified into 3 categories:
+        - Tools support specific tasks in the software life-cycle.
+        - Workbenches combine two or more tools focused on a specific part of the software life-cycle.
+        - Environments combine two or more tools or workbenches and support the complete software life-cycle.
+
+
+
 ##
 - **Acceptance**: formal, structured hand-off of the completed software system to the customer org; usually involves test, analysis and assessment activities
 - **Accreditation**: AKA Security Accreditation a formal declaration by a designated accrediting authority (DAA) that an information system is approved to operate at an acceptable level of risk, based on the implementation an approved set of technical, managerial, and procedural safeguards
