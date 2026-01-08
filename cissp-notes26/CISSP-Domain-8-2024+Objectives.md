@@ -112,8 +112,6 @@
         - Software must be free, distribute, modify and distribute the modified software.
         - Requires preservation of the copyright notice and disclaimer
 
-
-
 ##
 - **Acceptance**: formal, structured hand-off of the completed software system to the customer org; usually involves test, analysis and assessment activities
 - **Accreditation**: AKA Security Accreditation a formal declaration by a designated accrediting authority (DAA) that an information system is approved to operate at an acceptable level of risk, based on the implementation an approved set of technical, managerial, and procedural safeguards
@@ -196,6 +194,23 @@
 - **UAT**: User Acceptance Testing typically the last phase of the testing process; verifies that the solution developed meets user requirements, and validates against use cases
 
 ## [8.1](#81-understand-and-integrate-security-in-the-software-development-life-cycle-sdlc-osg-10-chpt-20) Understand and integrate security in the Software Development Life Cycle (SDLC) (OSG-10 Chpt 20)
+
+**domain 8 - video 45- Software Development Methodologies part 1**
+
+- Past: Waterfall method
+    - very linear ... not expecting any changes, building a software is unlike when building a house
+- Current: Spiral, Sashimi, Agile and Scrum
+
+-   **Waterfall**  
+    - Linear apporches ... each phase leading into directly the next phase
+    - The unmodified waterfall model does not allow us to go back to the previous phase.
+    - Also referred as unmodified waterfall (cannot go back at all) vs modified waterfall (can go back but only one step)
+    - Still used in some situation ... but very linear and not adopted to changes 
+-   **Sashimi Model (Waterfall with overlapping phases or modified waterfall...):**  
+    - Similar to waterfall, but we always have 2 overlapping phases, if we close one phase, we add the next phase.
+    - The modified waterfall model allows us to go back to the previous phase but no further.
+-   **Agile Software Development:**  
+
 
 - 8.1.1 Development methodologies (e.g., Agile, Waterfall, DevOps, DevSecOps, Scaled Agile Framework)
   - **Agile methodology**: a project management approach to development that involves breaking the project into phases and emphasizes continuous collaboration and improvement; teams follow a cycle of planning, executing, and evaluating; focus is on iterative development and frequent feedback, collab between small self-organizing cross-functional teams; in a very simplified sense, you can say agile is waterfall done in sprints
