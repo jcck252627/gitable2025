@@ -79,7 +79,7 @@
     - The individual base elements of the system are first specified in great detail, they are then linked together to form larger subsystems, which then in turn are linked, sometimes in many levels  until a complete top-level system is formed.
     - OOP leans tends toward Bottom-Up, you start by developing your objects and build up.
 
--   **Type of software release: **
+-   **Type of software release:**
     - Open source:
       - We release the code publicly, where it can be tested, improved and corrected, but it also allows attackers to find the flaws in the code.
     - Closed Source:
@@ -87,6 +87,18 @@
     - Proprietary Software:
       - Software protected byintellectual property and/or patents, often used interchangeably with Closed Source software, but it really is not. It can be both Open and Closed Source software.
       - Any software not released into the public domain is protected by copyright
+      - "We OWN the software" ... thats what it means by "proprietary"
+
+    - Free Software:
+      - Freeware:  Actually free software, it is free of charge to use.
+    - Shareware: 
+      - Fully functional proprietary software that is initially free to use.
+      - Often for trials to test the software, after 30 days you have to pay to continue to use.
+    - Crippleware:
+      - Partially functioning proprietary software, often with key features disabled.
+      - The user is required to make a payment to unlock the full functionality.
+    - EULAs (End-User License Agreements):
+      - Electronic form where the user clicks “I agree” to the software terms and conditions while installing the software.
 
 
 
