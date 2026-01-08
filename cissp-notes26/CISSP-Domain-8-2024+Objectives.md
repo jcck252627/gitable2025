@@ -14,6 +14,14 @@
   - Testing: verifying/validating software meets requirements
   - Operations and Maintenance: deploying, and ensuring it's appropriately configured, patched, and monitored
 
+domain 8 - video 42
+ ** It is common for programmers to make 15-50 mistakes per 1,000 lines of code. If using a
+programming maturity framework, we can lower that to 1 error per 1,000 lines of code.
+ ** Most of the errors are not a vulnerability, or really a concern, but the more we use
+software in everything, the more critical the vulnerabilities beco
+
+
+
 - **Acceptance**: formal, structured hand-off of the completed software system to the customer org; usually involves test, analysis and assessment activities
 - **Accreditation**: AKA Security Accreditation a formal declaration by a designated accrediting authority (DAA) that an information system is approved to operate at an acceptable level of risk, based on the implementation an approved set of technical, managerial, and procedural safeguards
 - **ACID Test**: data integrity provided by means of enforcing atomicity, consistency, isolation, and durability policies
