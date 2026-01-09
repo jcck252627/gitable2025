@@ -209,6 +209,8 @@
 -   **Sashimi Model (Waterfall with overlapping phases or modified waterfall...):**  
     - Similar to waterfall, but we always have 2 overlapping phases, if we close one phase, we add the next phase.
     - The modified waterfall model allows us to go back to the previous phase but no further.  (one back or one forward no further)
+
+**domain 8 - video 46- Software Development Methodologies part 2**
 -   **Agile Software Development:**  
     - Describes a set of values and principles for software development under which requirements
     - Solutions evolve through the collaborative effort of self-organizing cross-functional teams.
@@ -278,11 +280,79 @@
         - “Security must be integrated into every sprint”
         - “Frequent releases increase risk without automation”
         - “Agile requires stronger—not weaker—governance”
-        
+
       - CISSP One‑Paragraph Memory Summary
         **The 12 Agile Manifesto principles emphasize flexibility, frequent delivery, and collaboration. From a CISSP perspective, Agile increases the need for continuous security testing, strong governance, automated controls, and integrated risk management to compensate for reduced documentation and frequent change.**
-    - Exam focus: know these Agile types:
 
+-   **Agile Software Development - Scrum**  
+  - Designed for small teams each about 10 people
+  - Rely on generally 2-week development cycles ... called "sprints"
+  - Daily short stand-up meeting get to the point ... no sitting for efficency and effectiveness 
+  - 3 core roles in Scrum
+    - Product Owner:  product stakeholders, voice of the customer ... explain what we are doing... accountable for end result/delierables
+    - Development Team: responisble for delivering the product at end of each sprint ... 3 to 9 people doing the actual work
+    - Scrum Master: team lead or project manager ensure the framework is followed ... remove any roadblocks
+
+-   **Agile Software Development - XP(Extreme Programming)**  
+  - Intended to improve software quality and responsiveness to changing customer requirements.
+  - Iterative ... responses to frequent changes and based on short development cycles
+  - uses programming pairs ... two programmers coding together ...excessive code review (unit test) on all code
+  - avoiding building of features until they are actually needed
+  - Uses advocates frequent releases in short development cycles, intended to improve productivity and introduce checkpoints at which new customer requirements can be adopted.
+
+-   **Spiral Model (NOT considered an Agile methodology)**  
+  - shares some Agile‑like characteristics
+  - heavy on documentation
+  - risk‑driven, iterative SDLC model, originally proposed by Barry Boehm.
+  - The spiral model has four phases: Planning, Risk Analysis, Engineering and Evaluation.
+  - A software project repeatedly passes through these phases in iterations (called Spirals in this model).
+  - The baseline spiral, starting in the planning phase, requirements are gathered and risk is assessed.
+  - Each subsequent spiral builds on the baseline spiral.
+  - CISSP Exam‑Safe Statements (Memorize These) ---Correct statements
+    - **“The Spiral Model is an iterative, risk‑driven development model.”**
+    - **“Spiral is suitable for high‑risk systems requiring strong governance.”**
+    - **“Agile emphasizes customer collaboration and rapid delivery, while Spiral emphasizes risk management.”**
+
+-   **RAD (Rapid Application Development):**  
+  - Puts an emphasis on adaptability and the necessity of adjusting requirements in response to knowledge gained as the project progresses.
+  - Prototypes are often used in addition to or sometimes even in place of design specifications.
+  - Very suited for developing software that is driven by user interface requirements.
+  - GUI builders are often called rapid application development tools.
+
+-   **Prototyping**  
+  - Breaks projects into smaller tasks, creating multiple prototypes of system design features.
+  - A working model of software with some limited functionality, rather than designing the full software up front.
+  - Has a high level of customer involvement, the customer inspects the prototypes to ensure that the project is on track and meeting its objective.
+
+**domain 8 - video 47- Software Development Methodologies part 3**
+
+-   **SDLC (Software Development Life Cycle):**  
+  - The SDLC is not really a methodology, but a description of the phases in the life cycle of software development.
+  - if an answer option in the SDLC doesnt include secure/security as a key component then its the WRONG option
+  - These phases are (in general), investigation, analysis, design, build, test, implement, maintenance and support (and disposal).
+  - Can have security built into each step of the process, for the exam it always does.
+  - If an answer about SDLC does not list secure or security, it would be wrong and can be eliminated.
+  - Has a number of clearly defined and distinct work phases which are used by systems engineers and systems developers to plan for, design, build, test, and deliver information systems.
+
+  - The aim is to produce high-quality systems that meet or exceed customer expectations, based on customer requirements, by delivering systems which move through each clearly defined phase, within scheduled time frames and cost estimates.
+
+  - SDLC is used during the development of a project, it describes the different stages involved in the project from the drawing board, through the completion of the project.
+  - All software development methodologies follow the SDLC phases but the method of doing that varies vastly between methodologies.
+  - Many different SDLC methodologies have been created, Waterfall, Spiral, Agile, Rapid Prototyping,...
+  - In Scrum project a single user story goes through all the phases of the SDLC within a single two-week sprint, where Waterfall projects can take many months or several years to get through the phases.
+  - While very different they both contain the SDLC phases in which a requirement is defined, then pass through the life cycle phases ending in the final phase of maintenance and support.
+
+-   **Projects, Programs and Protfolios :**  
+  - A **project** is a temporary and unique endeavor, with a finite start and end, that is focused on creating a unique product, service, or result.
+  - A **program** is a collection of related projects. Like a project, a program is temporary, when the collection of projects are complete, the program is complete.
+  - A **portfolio** is a collection of projects and programs that are managed as a group to achieve strategic objectives.
+
+-   **IPT (Integrated Product Team): .... used in a project**  
+  - A multidisciplinary group of people who are collectively responsible for delivering a defined product or process.
+  - IPTs are used in complex development programs/projects for review and decision making.
+  - The emphasis of the IPT is on involvement of all stakeholders (users, customers, management, developers, contractors) in a collaborative forum.
+  - IPTs can be addressed at the program level, there may also be Oversight IPTs (OIPTs), or Working-level IPTs (WIPTs).
+  - IPTs are created most often as part of structured systems engineering methodologies, focusing attention on understanding the needs and desires of each stakeholder.
 
 
 
