@@ -285,6 +285,8 @@
         **The 12 Agile Manifesto principles emphasize flexibility, frequent delivery, and collaboration. From a CISSP perspective, Agile increases the need for continuous security testing, strong governance, automated controls, and integrated risk management to compensate for reduced documentation and frequent change.**
 
 -   **Agile Software Development - Scrum**  
+    - Scrum is an Agile project management framework that delivers products in short, iterative cycles called sprints, emphasizing collaboration, adaptability, and continuous improvement
+    - Also enabling security requirements to be identified, prioritized, and addressed throughout the system development life cycle (SDLC).
     - Designed for small teams each about 10 people
     - Rely on generally 2-week development cycles ... called "sprints"
     - Daily short stand-up meeting get to the point ... no sitting for efficency and effectiveness 
@@ -355,7 +357,7 @@
     - IPTs can be addressed at the program level, there may also be Oversight IPTs (OIPTs), or Working-level IPTs (WIPTs).
     - IPTs are created most often as part of structured systems engineering methodologies, focusing attention on understanding the needs and desires of each stakeholder.
 
-**domain 8 - video 48- Software Development Methodologies part 4**
+-   **domain 8 - video 48- Software Development Methodologies part 4**
 -   **Source Code Escrow:**  
     - The deposit of the source code of software with a third party escrow agent.
     - If say the software vendor went out of business or abandent the software source escrowing might mitigate some risks
@@ -421,6 +423,46 @@
       - CM Plan - **Configuration Monitoring** – Process for assessing or testing the level of compliance with the established baseline configuration and mechanisms for reporting on the configuration status of items placed under CM
 
 
+-   **domain 8 - video 49- DevOps and DevSecOps**
+
+-   **DevOps**
+    - Cooperation between different silos (orgiazation barriers where depts work in isolatoins) such as development, operations, and Quality Assurance in an organization
+    - Aligned with Agile, code is deployed rapidly, multiple times a day. .... small frequent changes and deployment
+    - is a cultural and technical approach that combines software development (Dev) and IT operations (Ops) to deliver applications and infrastructure faster, more reliably, and with greater collaboration through automation, continuous integration, and continuous delivery.
+    - **CI/CD (Continuous Integration/Continuous Delivery)**:
+      - The D in CD can also be referred to as Deployment or Development.
+      - Code rollouts may happen many times per day, with that we need to rely on much more automation
+      - Via integrating code repositories, deployment, infrastructure changes, software configuration management
+      - Also via moving code between development, testing, production environments, …
+      - Continuous Integration - build , test, merge
+      - Continuous Delivery - automatic release to repository then triggered continuous Deployment  - automatic deploy to production
+
+-   **DevSecOps**
+    - Evolved from DevOps to add security into the process.
+    - We want security to beintegrated throughout the development process.
+    - Security is not just added on later as an afterthought, it is designed in. 
+
+-   **domain 8 - video 50- Scaled Agile Frameworks - (SAFe)**
+-   **Scaled Agile Frameworks - SAFe** 
+????
+    - Integrating Security Practices into SAFe: 
+      - Built-in Quality: Security designed and integrated into the system from the beginning.
+      - CI/CD Pipeline: Continuous security testing to identify and remediate issues early.
+      - Threat Modeling: Identifying and prioritizing potential security risks and designing appropriate mitigation strategies.
+      - Security Champions: Designated team members responsible for advocating security best practices.
+      - Security Working Group: Coordinating security efforts across the entire ART at the program level.
+      - Portfolio Level Security: Ensuring security considerations are factored into strategic decisions and risk management processes.
+    - DevSecOps in SAFe:
+      - Combining operations, development, and security.
+      - Security configurations and policies defined and managed as code.
+      - Continuous monitoring for security events and abnormalities.
+      - Developer training in secure coding practices.
+      - Security services (e.g., penetration testing, vulnerability scanning, threat intelligence) provided as shared services.
+    - Implementing SAFe and Integrating Security Practices:
+      - May require a technical and cultural shift.
+      - Start with a small pilot project or a single ART and continuously learn and adapt.
+      - Requires investment in training and coaching for senior leadership and teams.
+      - Teams need resources, tools, and infrastructure for development, automation, monitoring, and rapid feedback loops.
 
 
 - 8.1.1 Development methodologies (e.g., Agile, Waterfall, DevOps, DevSecOps, Scaled Agile Framework)
