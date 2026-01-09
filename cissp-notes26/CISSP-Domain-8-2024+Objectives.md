@@ -285,13 +285,13 @@
         **The 12 Agile Manifesto principles emphasize flexibility, frequent delivery, and collaboration. From a CISSP perspective, Agile increases the need for continuous security testing, strong governance, automated controls, and integrated risk management to compensate for reduced documentation and frequent change.**
 
 -   **Agile Software Development - Scrum**  
-  - Designed for small teams each about 10 people
-  - Rely on generally 2-week development cycles ... called "sprints"
-  - Daily short stand-up meeting get to the point ... no sitting for efficency and effectiveness 
-  - 3 core roles in Scrum
-    - Product Owner:  product stakeholders, voice of the customer ... explain what we are doing... accountable for end result/delierables
-    - Development Team: responisble for delivering the product at end of each sprint ... 3 to 9 people doing the actual work
-    - Scrum Master: team lead or project manager ensure the framework is followed ... remove any roadblocks
+    - Designed for small teams each about 10 people
+    - Rely on generally 2-week development cycles ... called "sprints"
+    - Daily short stand-up meeting get to the point ... no sitting for efficency and effectiveness 
+    - 3 core roles in Scrum
+      - Product Owner:  product stakeholders, voice of the customer ... explain what we are doing... accountable for end result/delierables
+      - Development Team: responisble for delivering the product at end of each sprint ... 3 to 9 people doing the actual work
+      - Scrum Master: team lead or project manager ensure the framework is followed ... remove any roadblocks
 
 -   **Agile Software Development - XP(Extreme Programming)**  
     - Intended to improve software quality and responsiveness to changing customer requirements.
@@ -415,10 +415,12 @@
     - NIST 80-128: Guide for Security-Focused Configuration Management of Information Systems uses these terms:
     - A Configuration Management Plan (CM Plan) is a comprehensive description of the roles, responsibilities, policies, and procedures that apply when managing the configuration of products and systems.
 
-    - CM Plan - **Configuration Control Board (CCB)** – Establishment of and charter for a group of qualified people with responsibility for the process of controlling and approving changes throughout the development and operational lifecycle of products and systems, may also be referred to as a change control board.
-    - CM Plan - **Configuration Item Identification** – for selecting and naming configuration items that need to be placed under CM.
-    - CM Plan - **Configuration Change Control** – Process for managing updates to the baseline configurations for the configuration items.
-    - CM Plan - **Configuration Monitoring** – Process for assessing or testing the level of compliance with the established baseline configuration and mechanisms for reporting on the configuration status of items placed under CM
+      - CM Plan - **Configuration Control Board (CCB)** – Establishment of and charter for a group of qualified people with responsibility for the process of controlling and approving changes throughout the development and operational lifecycle of products and systems, may also be referred to as a change control board.
+      - CM Plan - **Configuration Item Identification** – for selecting and naming configuration items that need to be placed under CM.
+      - CM Plan - **Configuration Change Control** – Process for managing updates to the baseline configurations for the configuration items.
+      - CM Plan - **Configuration Monitoring** – Process for assessing or testing the level of compliance with the established baseline configuration and mechanisms for reporting on the configuration status of items placed under CM
+
+
 
 
 - 8.1.1 Development methodologies (e.g., Agile, Waterfall, DevOps, DevSecOps, Scaled Agile Framework)
