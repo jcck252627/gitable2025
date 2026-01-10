@@ -607,6 +607,13 @@ and maintainability.
   - Measures the strength of relationship between pieces of functionality within a given module.
   - In highly cohesive systems functionality is strongly related.
 
+**The ACID model (Atomicity, Consistency, Isolation, and Durability) of database:**
+-   **The ACID model is based on 4 parts:**
+    -   **Atomicity:** All or nothing, if any part of the transaction fails, the entire transaction fails.
+    -   **Consistency:** The database must be consistent with the rules, before and after the transaction.
+    -   **Isolation:** One transaction must be completed before another transaction can modify the same data.
+    -   **Durability:** Once transactions are committed to the database they must be preserved.
+
 
 
 - 8.1.1 Development methodologies (e.g., Agile, Waterfall, DevOps, DevSecOps, Scaled Agile Framework)
