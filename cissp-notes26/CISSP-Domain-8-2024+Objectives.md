@@ -452,7 +452,7 @@
 -   **Databases basics**
     - Collection of company data
     - Collection of data: schedule, the tables (relation), queries, report, views
-    - (Define ... parent and child table .... and ...primary and foreign key) 1 parent table in a db but many child ones
+  
     - Integrity is critical to a database
 
 -   **DBMS (Database Management System)**
@@ -473,8 +473,13 @@
 -   **Relational Model**
     - Organize data into tables or relations
     - Tables are made up by columns and rows
-    - Each column is an **attribute**
-    - Each row of database table is **Tuple**
+    - Each column of the database table is an **attribute**
+    - Each row of the database table is a **Tuple** (aka records ...must be unique)
+    - Usually has a primary database (parent) table and many child database tables
+    - **Primary Key**:  is a field (or combination of fields) that uniquely identifies each record in a table and cannot be null or duplicated, ensuring integrity in a relational database.
+    ... usually contains in the primary table, which uniquely identifies each record and serves as the authoritative source that other tables reference.
+    - **Foreign Key**:  is a field (or combination of fields) in one table that references the primary key of another table, establishing relationships between tables and enforcing referential integrity .... usually contains in a child table that reference the primary key of the parent table
+
 
 -   **3 Types of database Integrity**
     -  Referential Integrity
