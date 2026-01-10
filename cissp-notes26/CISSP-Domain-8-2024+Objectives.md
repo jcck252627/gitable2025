@@ -597,15 +597,15 @@ database schema,...(not the database itself but logic and administrative compone
 
 **Coupling**
   - The degree of interdependence between software modules, a measure of how closely connected two routines or modules are.
-**Cohesion:**
-  - Refers to the degree to which the elements inside a module belong together.
-  - Measures the strength of relationship between pieces of functionality within a given module.
-  - In highly cohesive systems functionality is strongly related.
-
 - Coupling is usually contrasted with cohesion.
 - Low coupling often correlates with high cohesion, and vice versa.
 - Low coupling is often a sign of a well-structured computer system and a good design, and when combined with high cohesion, supports the general goals of high readability
 and maintainability.
+
+**Cohesion:**
+  - Refers to the degree to which the elements inside a module belong together.
+  - Measures the strength of relationship between pieces of functionality within a given module.
+  - In highly cohesive systems functionality is strongly related.
 
 
 
