@@ -450,14 +450,32 @@
 
 **domain 8 - video 51- Databases Part 1**
 -   **Databases basics**
-    - Collection of schedule, the tables (relation), queries, report, views
-    - Most common type of databases is "Relational" Database - think of as a giant related Excel sheet
-    - Each column is an **attribute**
-    - Each row of database table is **Tuple**
+    - Collection of company data
+    - Collection of data: schedule, the tables (relation), queries, report, views
     - (Define ... parent and child table .... and ...primary and foreign key) 1 parent table in a db but many child ones
     - Integrity is critical to a database
 
--   **DBMS**
+-   **DBMS (Database Management System)**
+    - Allow application communcation to access the data
+    - Most common type of databases is "Relational" model of batabase - think of as a giant related Excel sheet
+    - Relational model is represented by SQL (Structured Query Language) 
+    - A computer software application that interacts with the user, other applications, and the database itself to capture and analyze data.
+    - A general-purpose DBMS is designed to allow the definition, creation, querying, update, and administration of databases.
+    - Examples of DBMS are : MySQL, PostgreSQL, MongoDB, MariaDB, Microsoft SQL Server, Oracle, Sybase, SAP HANA, SQLite and IBM DB2.
+    - Other types of data model (logical structure of a database)
+      - Navigational databases: Hierarchical database model, Network model, Graph database.
+      - Entity–relationship model, Enhanced entity–relationship model.
+      - Object model.
+      - Document model.
+      - Entity–attribute–value model.
+      - Star schema.
+
+-   **Relational Model**
+    - Organize data into tables or relations
+    - Tables are made up by columns and rows
+    - Each column is an **attribute**
+    - Each row of database table is **Tuple**
+
 -   **3 Types of database Integrity**
     -  Referential Integrity
     -  Semantic Integrity
