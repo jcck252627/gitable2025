@@ -942,8 +942,6 @@ and maintainability.
     -   Have a proper incident response and recovery plan.
         -   https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/
 
-**domain 8 - video 55- OWASP (Open Web Application Security Project) Part 4**
-
 -   **A10:2021 - Server-Side Request Forgery:** What can we do?
     -   Network layer: Segment remote resource access functionality in separate networks. Enforce “deny by default” to block all non-essential intranet traffic.
     -   Application layer: Sanitize and validate all client-supplied input data.
@@ -951,6 +949,7 @@ and maintainability.
     -   Do not send raw responses to clients. Disable HTTP redirections.
         -   https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/
 
+**domain 8 - video 55- OWASP (Open Web Application Security Project) Part 4**
 ... next up on notes
 -   **Insufficient Detection and Response:** 
 -   **Unvalidated Redirects and Forwarding:** 
