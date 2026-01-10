@@ -596,7 +596,7 @@ database schema,...(not the database itself but logic and administrative compone
 **domain 8 - video 54- Databases Part 4**
 
 **Coupling**
-  - The degree of interdependence between software modules, a measure of how closely connected two routines or modules are.
+- The degree of interdependence between software modules, a measure of how closely connected two routines or modules are.
 - Coupling is usually contrasted with cohesion.
 - Low coupling often correlates with high cohesion, and vice versa.
 - Low coupling is often a sign of a well-structured computer system and a good design, and when combined with high cohesion, supports the general goals of high readability
@@ -607,13 +607,12 @@ and maintainability.
   - Measures the strength of relationship between pieces of functionality within a given module.
   - In highly cohesive systems functionality is strongly related.
 
-**The ACID model (Atomicity, Consistency, Isolation, and Durability) of database:**
+**The ACID model (Atomicity, Consistency, Isolation, and Durability) of database: ... all relational database MUST have ..**
 -   **The ACID model is based on 4 parts:**
     -   **Atomicity:** All or nothing, if any part of the transaction fails, the entire transaction fails.
     -   **Consistency:** The database must be consistent with the rules, before and after the transaction.
     -   **Isolation:** One transaction must be completed before another transaction can modify the same data.
     -   **Durability:** Once transactions are committed to the database they must be preserved.
-
 
 
 - 8.1.1 Development methodologies (e.g., Agile, Waterfall, DevOps, DevSecOps, Scaled Agile Framework)
@@ -879,6 +878,34 @@ and maintainability.
 
 ## [8.3](#83-assess-the-effectiveness-of-software-security-osg-10-chpts-2021) Assess the effectiveness of software security (OSG-10 Chpts 20,21)
 
+**domain 8 - video 55- OWASP (Open Web Application Security Project) Part 1**
+-   **Releases TOP 10 Vunlerabilities every FOUR (4) years**
+    - **A01:2021 - Broken Access Control:** What can we do? We can deny by default, limit user rights, use role-based access control, strong passwords, MFA, log/act on access control failures, proper user and session management,...
+        -   https://owasp.org/Top10/A01_2021-Broken_Access_Control/
+    - **A02:2021 - Cryptographic Failures:** What can we do? We ensure we do not use depreciated encryption, data is identified and protected properly, no clear-text, proper implementation of up-to-date encryption/protocols/keys, no caching for responses with sensitive data, only store sensitive data as long as required,…
+        -   https://owasp.org/Top10/A02_2021-Cryptographic_Failures/
+
+**domain 8 - video 55- OWASP (Open Web Application Security Project) Part 2**
+- **A03:2021 – Injection:**  What can we do?
+        -   The fix is to do just that, we only allow users to input appropriate data into the fields, only letters in names, numbers in phone number, have dropdowns for country and state (if applicable), we limit how many characters people can use per cell, use secure APIs,...
+        -   CGI (Common Gateway Interface): Standard protocol for web servers to execute programs running on a server that generates web pages dynamically. We use the interface to ensure only proper input makes it to the database. ...The CGI separates the untrusted (user) from the trusted (database) ... and is being replaced by secured API or others secured web apps
+        -   Separating the data from the web application logic.
+        -   Implement settings and/or restrictions to limit data exposure in case of successful injection attacks.
+        -   https://owasp.org/Top10/A03_2021-Injection/
+- **A04:2021 - Insecure Design:**  What can we do?
+        -   We have our software developers use secure design patterns and reference architectures to build applications.
+        -   Our organization should have libraries with references and patterns.
+        -   Before finalizing our application design, we use a red team to do threat modeling and penetration testing.
+        -   https://owasp.org/Top10/A04_2021-Insecure_Design/
+-   **A05:2021 - Security Misconfiguration:** What can we do?
+    -   It is pretty simple; server hardening, proper patching, do not disable security features unless we are completely clear on why and we have done proper risk analysis.
+    -   https://owasp.org/Top10/A05_2021-Security_Misconfiguration/
+
+-   **A06:2021 - Vulnerable and Outdated Components:**
+    -   Proper patch management, scan for vulnerabilities, make sure we don’t use deprecated code, keep a continuous inventory of both server-side and client-side components and their dependencies, delete unused programs and features.
+    -   https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/
+
+
 - 8.3.1 Auditing and logging of changes
   - Applications should be configured to log details of errors and other security events to a centralized log repository
   - The Open Web Application Security Project (OWASP) Secure Coding Practices suggest logging the following events:
@@ -891,6 +918,49 @@ and maintainability.
     - use of admin privileges
     - Transport Layer Security (TLS) failures
     - cryptographic errors
+
+
+**domain 8 - video 55- OWASP (Open Web Application Security Project) Part 3**
+-   **A07:2021 - Identification and Authentication Failures:** What can we do?
+    -   MFA, sessions expires, non-predictable sessions, no plain-text anywhere, no session ID in URL, proper secure encryption, no default/weak passwords, log login failures, alert admins when detecting brute force, credential stuffing, and any other attacks.
+        -   https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/
+
+-   **A08:2021 - Software and Data Integrity Failures:**
+    -   Use digital signatures/hashes to verify the code/data is from the right source and is unaltered.
+    -   Make sure libraries and dependencies are using trusted repositories.
+    -   Deploy software supply chain tools to make sure components do not contain known vulnerabilities.
+    -   Ensure our CI/CD pipeline has proper segregation, configuration, and access control.
+    -   This should ensure the integrity of the code throughout the build and deploy processes.
+        -   https://owasp.org/Top10/A08_2021-Software_and_Data_Integrity_Failures/
+
+
+-   **A09:2021 - Security Logging and Monitoring Failures:** What can we do?
+    -   Implement proper monitoring and logging, ensure we log/report all failed login attempts and server-side validations.
+    -   Logs are generated in a format that our log management system can easily use, logs are kept long enough.
+    -   Logs are kept secure and protected against injection or any other type of attack.
+    -   Audit trails on high-value transactions.
+    -   Have a proper incident response and recovery plan.
+        -   https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/
+
+**domain 8 - video 55- OWASP (Open Web Application Security Project) Part 4**
+
+-   **A10:2021 - Server-Side Request Forgery:** What can we do?
+    -   Network layer: Segment remote resource access functionality in separate networks. Enforce “deny by default” to block all non-essential intranet traffic.
+    -   Application layer: Sanitize and validate all client-supplied input data.
+    -   Enforce the URL schema, port, and destination with a positive allow list.
+    -   Do not send raw responses to clients. Disable HTTP redirections.
+        -   https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/
+
+... next up on notes
+-   **Insufficient Detection and Response:** 
+-   **Unvalidated Redirects and Forwarding:** 
+-   **Cross-Site Request Forgery (CSRF):** 
+-   **Cross-Site Scripting (XSS):** 
+-   **Buffer Overflow (Buffer Overrun):** 
+
+
+
+
 
 - 8.3.2 Risk analysis and mitigation
   - Risk management is at the center of secure software development, in particular regarding the mapping of identified risks and implemented controls
