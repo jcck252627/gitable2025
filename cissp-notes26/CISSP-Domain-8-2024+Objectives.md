@@ -444,7 +444,27 @@
 
 -   **domain 8 - video 50- Scaled Agile Frameworks - (SAFe)**
 -   **Scaled Agile Frameworks - SAFe** 
+
 ????
+
+
+**domain 8 - video 51- Databases Part 1**
+-   **Databases basics**
+    - Collection of schedule, the tables (relation), queries, report, views
+    - Most common type of databases is "Relational" Database - think of as a giant related Excel sheet
+    - Each column is an **attribute**
+    - Each row of database table is **Tuple**
+    - (Define ... parent and child table .... and ...primary and foreign key) 1 parent table in a db but many child ones
+    - Integrity is critical to a database
+
+-   **DBMS**
+-   **3 Types of database Integrity**
+    -  Referential Integrity
+    -  Semantic Integrity
+    -  Entity integrity
+
+
+
     - Integrating Security Practices into SAFe: 
       - Built-in Quality: Security designed and integrated into the system from the beginning.
       - CI/CD Pipeline: Continuous security testing to identify and remediate issues early.
