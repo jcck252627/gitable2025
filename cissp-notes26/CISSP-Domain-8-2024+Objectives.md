@@ -443,9 +443,24 @@
     - Security is not just added on later as an afterthought, it is designed in. 
 
 -   **domain 8 - video 50- Scaled Agile Frameworks - (SAFe)**
--   **Scaled Agile Frameworks - SAFe** 
-
-????
+- **Integrating Security Practices into SAFe:** 
+      - Built-in Quality: Security designed and integrated into the system from the beginning.
+      - CI/CD Pipeline: Continuous security testing to identify and remediate issues early.
+      - Threat Modeling: Identifying and prioritizing potential security risks and designing appropriate mitigation strategies.
+      - Security Champions: Designated team members responsible for advocating security best practices.
+      - Security Working Group: Coordinating security efforts across the entire ART at the program level.
+      - Portfolio Level Security: Ensuring security considerations are factored into strategic decisions and risk management processes.
+    - DevSecOps in SAFe:
+      - Combining operations, development, and security.
+      - Security configurations and policies defined and managed as code.
+      - Continuous monitoring for security events and abnormalities.
+      - Developer training in secure coding practices.
+      - Security services (e.g., penetration testing, vulnerability scanning, threat intelligence) provided as shared services.
+    - Implementing SAFe and Integrating Security Practices:
+      - May require a technical and cultural shift.
+      - Start with a small pilot project or a single ART and continuously learn and adapt.
+      - Requires investment in training and coaching for senior leadership and teams.
+      - Teams need resources, tools, and infrastructure for development, automation, monitoring, and rapid feedback loops.
 
 
 **domain 8 - video 51- Databases Part 1**
@@ -476,36 +491,122 @@
     - Each column of the database table is an **attribute**
     - Each row of the database table is a **Tuple** (aka records ...must be unique)
     - Usually has a primary database (parent) table and many child database tables
+    - Child table is a sub set of parent table focusing on specific information instead of everything in parent table
     - **Primary Key**:  is a field (or combination of fields) that uniquely identifies each record in a table and cannot be null or duplicated, ensuring integrity in a relational database.
     ... usually contains in the primary table, which uniquely identifies each record and serves as the authoritative source that other tables reference.
     - **Foreign Key**:  is a field (or combination of fields) in one table that references the primary key of another table, establishing relationships between tables and enforcing referential integrity .... usually contains in a child table that reference the primary key of the parent table
-
-
--   **3 Types of database Integrity**
+    
+-   **3 Types of database Integrity - super critical for databases ... cannot be broken**
     -  Referential Integrity
+        - Where every foreign key in a secondary table matches a primary key in the parent table.
+        - It is broken if not all foreign keys match the primary key
     -  Semantic Integrity
+        - Each attribute value must be consistent with the attribute data type
     -  Entity integrity
+        - Each tuple (row) has a unique primary value that is not null. 
+
+**domain 8 - video 52- Databases Part 2**
+
+**More about integrity**   
+**User-Defined or Business Integrity**
+  - Specifiy by the users ... , which do not belong to the entity,domain and referential integrity categories.
+  - If a database supports these features, it is the responsibility of the database to ensure data integrity as well as the consistency model for the data storage and retrieval.
+  - If a database does not support these features it is the responsibility of the applications to ensure data integrity while the database supports the consistency model for the data storage and retrieval
+  - Audit table the record event happened in the database
+  - Having a single, well controlled, and well defined data-integrity system increases:
+    - Stability: One centralized system performs all data integrity operations
+    - Performance: All dataintegrity operations are performed in the same tier as the consistency model.
+    - Re-usability: All applications benefit from a single centralized data integrity system.
+    - Maintainability: One centralized system for all data integrity administration.
+  - Modern databases support these features, and it has become the de facto responsibility of the database to ensure data integrity.
+  - If our databases are older we can use companies or database systems, who offer products and services to migrate legacy systems to modern databases.
+  - Databases normally run multiple threads simultaneously and they are all capable of altering data
+
+**Database Normalization:**
+  - Used to clean up the data in a database table to make it logically concise, organized, and consistent.
+  - Removes redundant data, and improves the integrity and availability of the database.
+  - Benefit: Greater overall database organization
+  - Benefit: Reduction of redundant data
+  - Benefit: Data consistency within the database
+  - Benefit: A much more flexible database design
+  - Benefit: A better handle on database security
+
+  - Normalization has three forms (rules):
+    - First Normal Form: Divides the base data into tables, primary key is assigned to most or all tables.
+    - Second Normal Form: Move data that is partially dependent on the primary key to another table.
+    - Third normal Form: Remove data that is not dependent on the primary key
+
+**Database Views: .... result when user query a database**
+  - Database tables may be queried, what we see when we query them is called a database view.
+  - They can give users a view of the parts of the database they are allowed to access.
+  - For a normal employee this could be their own employee data, where HR can access all employee's data. Remember the need to know principle, even if you have the access that doesn't mean you are allowed to access it ... Need to Know
+
+**Database Directory:**
+  - Contains a description of the database tables (metadata).
+  - It has the database view information, information about authorized database administrators, user accounts names and privileges, auditing information,
+database schema,...(not the database itself but logic and administrative components)
+  - Database Schema:
+    - Describes the attributes and values of the database tables.
+    - Names should only contain letters, in the US SSN’s should only contain 9 numbers,…
+
+**domain 8 - video 53- Databases Part 3**
+**Database Query Languages:**
+  - Allow the creation, modification and deletion of database tables, the read/write  access for those tables,...
+  - Database query languages have at least two subsets of commands:
+    - **Data Definition Language (DDL):**
+      - A standard for commands that define the different structures in a database.
+      - Creates, modifies, and removes database objects such as tables, indexes, and users.
+      - Common DDL statements are CREATE, ALTER, and DROP.
+    - **Data Manipulation Language (DML)** 
+      - Used for selecting, inserting, deleting and updating data in a database.
+      - Common DML statements are SELECT, DELETE, INSERT, UPDATE.
+    - SQL or a SQL derivatives are by far the most common query languages.  
+    
+**Hierarchical Databases**
+- Like Windows registry
+
+**Object-Oriented Databases (Object Database Management Systems): **
+  - OO Database is Many-to-Many relationship vs one-to-to or one-to-many in retional database
+  - Object databases store objects rather than data such asintegers, strings or real numbers.
+  - Objects are used in object oriented languages such as Smalltalk, C++, Java,...
+  -  Objects, in anobject-oriented database, reference the ability to develop a product, then define and name it.
+  - The object can then be referenced, or called later, as a unit without having to go into its complexities.
+  - Objects basically consist of the following 3 components:
+    - Attributes:
+      - Data which defines the characteristics of an object.
+      - This data may be simple such as integers, strings, and real numbers or it may be a reference to a complex object.
+    - Methods:
+      - Defines the behavior of an object and are what was formerly called procedures or functions.
+      - Objects contain both executable code and data. 
+    - Classes:
+      - Define the data and methods the object will contain, they are the template for the object.
+      - Does not itself contain data or methods but defines the data and methods contained in the object. 
+
+**Enhence availablity of Databases**
+  - **Database Shadowing:**
+    - Exact real time copy of the database or files to another location.
+    - It can be another disk in the same server, but best practices dictates another geographical location, often on a different media.
+  -  **Electronic Vaulting (E-vaulting):**
+    - Using a remote backup service, backups are sent off-site electronically at a certain interval or when files change.
+  - **Remote Journaling:**
+    - Sends transaction log files to a remote location, not the files themselves. The transactions can be rebuilt from the logs if we lose the original files.
 
 
 
-    - Integrating Security Practices into SAFe: 
-      - Built-in Quality: Security designed and integrated into the system from the beginning.
-      - CI/CD Pipeline: Continuous security testing to identify and remediate issues early.
-      - Threat Modeling: Identifying and prioritizing potential security risks and designing appropriate mitigation strategies.
-      - Security Champions: Designated team members responsible for advocating security best practices.
-      - Security Working Group: Coordinating security efforts across the entire ART at the program level.
-      - Portfolio Level Security: Ensuring security considerations are factored into strategic decisions and risk management processes.
-    - DevSecOps in SAFe:
-      - Combining operations, development, and security.
-      - Security configurations and policies defined and managed as code.
-      - Continuous monitoring for security events and abnormalities.
-      - Developer training in secure coding practices.
-      - Security services (e.g., penetration testing, vulnerability scanning, threat intelligence) provided as shared services.
-    - Implementing SAFe and Integrating Security Practices:
-      - May require a technical and cultural shift.
-      - Start with a small pilot project or a single ART and continuously learn and adapt.
-      - Requires investment in training and coaching for senior leadership and teams.
-      - Teams need resources, tools, and infrastructure for development, automation, monitoring, and rapid feedback loops.
+**domain 8 - video 54- Databases Part 4**
+
+**Coupling**
+  - The degree of interdependence between software modules, a measure of how closely connected two routines or modules are.
+**Cohesion:**
+  - Refers to the degree to which the elements inside a module belong together.
+  - Measures the strength of relationship between pieces of functionality within a given module.
+  - In highly cohesive systems functionality is strongly related.
+
+- Coupling is usually contrasted with cohesion.
+- Low coupling often correlates with high cohesion, and vice versa.
+- Low coupling is often a sign of a well-structured computer system and a good design, and when combined with high cohesion, supports the general goals of high readability
+and maintainability.
+
 
 
 - 8.1.1 Development methodologies (e.g., Agile, Waterfall, DevOps, DevSecOps, Scaled Agile Framework)
