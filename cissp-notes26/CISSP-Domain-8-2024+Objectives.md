@@ -885,7 +885,7 @@ and maintainability.
     - **A02:2021 - Cryptographic Failures:** What can we do? We ensure we do not use depreciated encryption, data is identified and protected properly, no clear-text, proper implementation of up-to-date encryption/protocols/keys, no caching for responses with sensitive data, only store sensitive data as long as required,…
         -   https://owasp.org/Top10/A02_2021-Cryptographic_Failures/
 
-**domain 8 - video 55- OWASP (Open Web Application Security Project) Part 2**
+**domain 8 - video 56- OWASP (Open Web Application Security Project) Part 2**
 - **A03:2021 – Injection:**  What can we do?
         -   The fix is to do just that, we only allow users to input appropriate data into the fields, only letters in names, numbers in phone number, have dropdowns for country and state (if applicable), we limit how many characters people can use per cell, use secure APIs,...
         -   CGI (Common Gateway Interface): Standard protocol for web servers to execute programs running on a server that generates web pages dynamically. We use the interface to ensure only proper input makes it to the database. ...The CGI separates the untrusted (user) from the trusted (database) ... and is being replaced by secured API or others secured web apps
@@ -920,7 +920,7 @@ and maintainability.
     - cryptographic errors
 
 
-**domain 8 - video 55- OWASP (Open Web Application Security Project) Part 3**
+**domain 8 - video 57- OWASP (Open Web Application Security Project) Part 3**
 -   **A07:2021 - Identification and Authentication Failures:** What can we do?
     -   MFA, sessions expires, non-predictable sessions, no plain-text anywhere, no session ID in URL, proper secure encryption, no default/weak passwords, log login failures, alert admins when detecting brute force, credential stuffing, and any other attacks.
         -   https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/
@@ -942,6 +942,10 @@ and maintainability.
     -   Have a proper incident response and recovery plan.
         -   https://owasp.org/Top10/A09_2021-Security_Logging_and_Monitoring_Failures/
 
+
+
+**domain 8 - video 58- OWASP (Open Web Application Security Project) Part 4**
+
 -   **A10:2021 - Server-Side Request Forgery:** What can we do?
     -   Network layer: Segment remote resource access functionality in separate networks. Enforce “deny by default” to block all non-essential intranet traffic.
     -   Application layer: Sanitize and validate all client-supplied input data.
@@ -949,16 +953,132 @@ and maintainability.
     -   Do not send raw responses to clients. Disable HTTP redirections.
         -   https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/
 
-**domain 8 - video 55- OWASP (Open Web Application Security Project) Part 4**
-... next up on notes
+
 -   **Insufficient Detection and Response:** 
+    - Closely tied to A09:2021 - Security Logging and Monitoring Failures
+    - Not detecting we have been compromised due to lack of controls and/or detection applications.
+    - Not performing our due diligence and due care on our applications, systems, and our response to compromise.
+    - Not responding in a proper way to compromise, not informing anyone, informing too late, or just ignoring the incident (at best plugging the leak).
+    - We need to not just protect against this attack, but future similar attacks, patch software, and applications, close ports.
+
 -   **Unvalidated Redirects and Forwarding:** 
+    - Not confirming URLs forward and redirecting us to the right page.
+    - Mitigated with user awareness and spider/crawl our site to see if it generates any redirects (HTTP response codes 300-307, typically 302).
+    - Need to rebuild everything right ... then to see if a spider crawl outside see if new web site generate any HTTP redirects of code 300/307/302
+
 -   **Cross-Site Request Forgery (CSRF):** 
+    - Often through phising 
+    - Stolen session IDs or tokens.
+    - passwords/Username saved in cookies.
+    - Saved site passwords, not logging off when done, using the same browser for sensitive and non-sensitive information.
+    - Current browsers do mitigate some of this, they should use unique session-specific tokens (random or pseudo-random), and validate session tokens are not replayed.
+    - do not confuse two difference exploits:  cross-site request forgery VS cross-site scripting
+    - Cross-site scripting exploits the trust that an user has in a particular web site (an user already authenicated for example)
+    - Cross-site request forgery exploits the trust that a site has in a specific user's broswer (password saved is cookie)
+
 -   **Cross-Site Scripting (XSS):** 
--   **Buffer Overflow (Buffer Overrun):** 
+    - Attackers inject client-side scripts into web pages viewed by other users.
+    - The vulnerability may be used by attackers to bypass access controls such as the same-origin policy.
+    - To prevent XSS, we can use proper input validation and data typing.
+    - Set our server to redirect invalid requests, detect a simultaneous login from two different IP addresses and invalidate the sessions, require users to enter their passwords again before changing their registration information, and set cookie with HttpOnly flag to prevent access from JavaScript.
+
+**domain 8 - video 59- Software Vunlerabilities and Attacks**
+  - **Buffer Overflow (Buffer Overrun):** 
+    - An anomaly where a program, while writing data to a buffer, overruns the buffer's boundary and overwrites adjacent memory locations, happen from improper coding when a programmer fails to perform bounds checking.
+    - Buffers are areas of memory set aside to hold data, often while moving it from one section of a program to another, or between programs.
+    - Buffer overflows can often be triggered by malformed inputs, if one assumes all inputs will be smaller than a certain size and the buffer is created to be that size, if an anomalous transaction produces more data it could cause it to write past the end of the buffer.
+    - If this overwrites adjacent data or executable code, this may result in erratic program behavior, including memory access errors, incorrect results, and crashes.
+    - By sending in data designed to cause a buffer overflow, it is possible to write into areas known to hold executable code, and replace it with malicious code.
+
+  - **Race Condition (Race Hazard):**
+    - Two or more programs may collide in their attempts to modify or access a file.
+    - This can be an attacker with access, altering files which can then result in data corruption or privilege escalation.
+    - TOCTOU (Time of Check to Time of Use):
+      - A software bug caused by changes in a system between the checking of a condition (such as a security credential) and the use of the results of that check.
+  - **Privilege Escalation:**
+    - Exploiting a bug, design flaw or configuration oversight in an OS or application to gain access to resources that are normally protected from an application or user.
+    - Attacker often use this to elevate the user account they have gained access to, in order to get administrator access.
+    - The result is that an application with more privileges than intended by the application developer or system administrator can perform unauthorized actions.
+
+  - **Backdoors:**
+    - Often installed by attackers during an attack to allow them access to the systems after the initial attack is over, to exfiltrating data over time or to come back and compromise other systems.
+    - Bypassing normal authentication or encryption in a computer system, a product, or an embedded device,...
+    - Backdoors are often used for securing remote access to a computer, or obtaining access to plaintext in cryptographic systems.
+
+  - **Ethical disclosure:**
+    - What do you do when you discover a vulnerability? We covered some of this in the white, gray, black hat hacker section.
+    - **Full Disclosure:** Tell everyone, make it public, assuming attackers already know and are using it.
+    - **Responsible/Partial Disclosure:** Telling the vendor, they have time to develop a patch and then disclose it.
+      - If they do nothing we can revert to the full disclosure forcing them to act.
+    - **No Disclosure:** Attackers finding a vulnerability would try to exploit it and keep it secret as long as possible.
+
+
+  - **Security Orchestration, Automation, and Response (SOAR):**
+    - A software solution that uses AI to allows us to respond to some security incidents automatically.
+    - SOAR vs. SIEM: Very similar, both detect and alert on security events, but using AI, SOAR will also react to some security events.
+    - SIEMs often generate more alerts than a SOC team can handle, SOAR can help reduce the number of alerts and make workflows more manageable.
+    - SOAR combines all the comprehensive data we gather, has case management, standardization, workflows, and analytics, and it can integrate with many of our other solutions (Vulnerabili Management (VM), IT Service Management (ITSM), Threat Intelligence, …).
+    - All this can help our organization implement a detailed defense-in-depth solution.
+
+
+  - **Operation and Maintenance:**
+    - Once our finished software/project is handed off to operations, there will still be some maintenance tasks our organization needs to perform.
+    - Our environment and the requirements for our applications is never static.
+    - We need a solid support team in place to make sure the software functions as required, that any required changes are implemented using proper change management, and that all this is don with security in mind.
+
+  - **Integrated Development Environment (IDE):**
+    - Applications that help in the development of other applications.
+    - They are designed to contain all programming tasks in a single application, having a single central interface with all the tools the developer needs, including:
+    - **The Code editor:** For writing and editing source code, these editors are different from text editors, they are designed to either simplify or enhance the process of writing and editing the code.
+    - **Compiler:** The compilers change our source code, which is written in a human-readable language, into a form that computers can execute.
+    - **Debugger:** Debuggers are used during the testing phase and can help our developers debug their code.
+    - **Build automation tools:** Tools to help automate common dev tasks to save time.
+    - On top of this some IDEs may also include:
+      - **Class browser:** Used to reference and study the properties of an object-oriented class hierarchy.
+      - **Object browser:** Used to inspect objects present in a running application program.
+      - **Class hierarchy diagram:** Helps devs to visualize the structures of object-oriented programming code.
+
+
+  - **Runtime:**
+    - Runtime is the amount of time when a program is running. Starting when a program is executed/started and stopping with the program terminated/closed.
+    - The term, runtime, is most often used in software development. Commonly used with **"runtime error,"** an error that occurs while a program is running. This error is used to differentiate from other types of errors, like syntax errors and compilation errors, which happen **before** a program is run.
+
+**domain 8 - video 60- Maturity Model part 1** .... focusing on software development but also can be used else where
+- **We used them to check how mature are we formality and optimization of our processes**
+
+- **CMM (Capability Maturity Model):** .... mostly for software deverlopment
+  - The maturity relates to the degree of formality and optimization of processes, from ad hoc practices, to formally defined repeatable steps, to managed result metrics, to active optimization of the processes.
+  - There are five levels defined in the model and, which describes where an organization is, it also has practical steps to how to mature the organization to get to the next level.
+  - CMM model uses 5 levels : ... level 5 is where the optimal level ...
+    - **Level 1: Initial**
+      - Processes at this level are normally undocumented and in a state of dynamic change, tending to be driven in an ad hoc, uncontrolled and reactive manner by users or events.
+      - This provides a **poorly controlled, chaotic or unstable environment** for the processes.
+    - **Level 2: Repeatable**
+      - This level of maturity that **some processes are repeatable, possibly with consistent results.**
+      - Process discipline is unlikely to be rigorous, but where it exists it may help to ensure that existing processes are maintained during times of stress.
+    - **Level 3: Defined**
+      - This level that **there are sets of defined and documented standard processes** established and subject to some degree of improvement over time.
+      - These standard processes are in place.
+      - The processes may not have been systematically or repeatedly utilized enough for the users to become competent or the process to be validated in a range of situations.
+    - **Level 4: Managed (Capable or Quantitatively managed)**
+      - Processes at this level uses **process metrics**, effective achievement of the process objectives can be evidenced across a range of operational conditions.
+      - The suitability of the process in multiple environments has been tested and the process refined and adapted.
+      - Process users have experienced the process in multiple and varied conditions, and are able to demonstrate competence.
+    - **Level 5: Optimizing**
+      - Processes at this level focus on continually improving process performance through both incremental and innovative technological changes/improvements.
+      - Addressing statistical common causes of process variation and changing the process to improve process performance
+- **Efficient vs Effective**
+  - Effecient is reaching a goal with least amount of wasted time, money or efforts
+  - Effective is successfully proceduring the desired result
+
+- **CMMI (Capability Maturity Model Integration):** .... can be used for entired org
+
+
+**domain 8 - video 60- Maturity Model part 2**
 
 
 
+CMM (Capability Maturity Model):
 
 
 - 8.3.2 Risk analysis and mitigation
@@ -967,6 +1087,8 @@ and maintainability.
   - Threat modeling is important to dev teams, and particularly in DevSecOps
   - Assessors are also interested in the linkages between the software dev and risk management programs
     - software projects should be tracked in the org’s risk matrix, to ensure the dev team is connected to the broader risk management efforts, and not working in isolation
+
+
 
 ## [8.4](#84-assess-security-impact-of-acquired-software-osg-10-chpts-1620) Assess security impact of acquired software (OSG-10 Chpts 16,20)
 
