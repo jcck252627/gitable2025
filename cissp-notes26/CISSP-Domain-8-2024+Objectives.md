@@ -1072,13 +1072,63 @@ and maintainability.
   - Effective is successfully proceduring the desired result
 
 - **CMMI (Capability Maturity Model Integration):** .... can be used for entired org
+  - CMMI measures how mature, repeatable, and controllable an organization’s processes are, while CMM is its older, software-focused predecessor. 
+  - enables predictable security implementation support for Change management, configuration control and Incident response processes
 
 
-**domain 8 - video 60- Maturity Model part 2**
+**domain 8 - video 61- Maturity Model part 2**
+
+- **Software Assurance Maturity Model (SAMM)** ... from OWASP
+  - The Software Assurance Maturity Model (SAMM) is an open framework that provides an effective and measurable way for all types of organizations to analyze and improve their softwarsecurity posture.
+  - https://owaspsamm.org/model/
+  - The resources provided by SAMM aid in:
+    - Evaluating an organization’s existing software security practices.
+    - Building a balanced software security assurance program in well-defined iterations.
+    - Demonstrating concrete improvements to a security assurance program.
+    - Defining and measuring security-related activities throughout an organization.
+  - SAMM principles
+    - An organization’s behavior changes slowly over time.
+    - Changes must be iterative while working toward long-term goals.
+    - There is no single recipe that works for all organizations.
+    - A solution must enable risk-based choices tailored to the organization.
+    - Guidance related to security activities must be prescriptive.
+    - **A solution must provide enough details for non-security-people.**
+    - Overall, it must be simple, well-defined, and measurable.
+
+- **Acceptance Testing:**
+  - There are many different testing types we use throughout the development lifecycle.
+  - At the end of development we also use acceptance testing, we need to test it to ensure it does what it is supposed to and it is robust and secure.
+  
+  - The User Acceptance Test:
+    - Is the software functional for the users who will be using it? It is tested by the users and application managers.
+  - Operational Acceptance Testing:
+    - Does the software and all of the components it interacts with ready requirements for operation.
+    - Tested by system administrators are the backups in place, do we have a DR plan, how do we handle patching, is it checked for vulnerabilities,...?
+  - Contract Acceptance Testing:
+    - Does the software fulfil the contract specifications? The what/where/how of the acceptance is defined in the contract.
+  - Compliance Acceptance Testing:
+    - Is the software compliant with the rules, regulations and laws of our industry?
+  - Compatibility/Production Testing:
+    - Does the software interface as expected with other applications or systems?
+    - Does the software perform as expected in our production environment vs. the development environment?
 
 
+**domain 8 - video 62- Buying Software from other companies**
 
-CMM (Capability Maturity Model):
+- **Buying Software from other Companies**
+  - When we buy software from vendors either COTS (Commercial Off The Shelf) or custom built software we need to ensure it is as secure as we need it to be.
+  - Vendors claims of security posture should until proven be seen as marketing claims.
+  - We need to do our due care and due diligence, as well as use outside council if needed.
+  - Many organizations deal with C-level executives going to conferences and buying software that the organization may not want or need.
+  - Software development and procurement as well as any other project should be carefully scoped, planned be based on a clear analysis of what the business needs and wants.
+
+- **COTS (Commercial Off-the-Shelf) Software:**
+  - When buying COTS software we can, depending on how widely the software is used, look at reviews, talk to current customers and users to get a clearer understanding of the software capabilities and security.
+  - Software roadmaps are nice, but only buy the software for what it can actually do now, not what it can maybe do in the future.
+  - We can use a clear RTM (requirements traceability matrix), requirements are divided into "Must have, nice to have and maybe should have".
+  - We would then score the software candidates on the "Have's" and from that we should be able to see feasible candidates, other factors such as cost, maintenance also play a big part in the decision.
+  - For large/expensive implementations it may also be possible for the vendor to provide references to talk to.
+  - We would also look at how financially sound the vendor looks to be, if we spend $2,000,000 on software and the vendor goes out bankrupt in 3 months, we may have to spend another $2,000,000 all over again.
 
 
 - 8.3.2 Risk analysis and mitigation
