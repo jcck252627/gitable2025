@@ -1124,11 +1124,139 @@ and maintainability.
 
 - **COTS (Commercial Off-the-Shelf) Software:**
   - When buying COTS software we can, depending on how widely the software is used, look at reviews, talk to current customers and users to get a clearer understanding of the software capabilities and security.
-  - Software roadmaps are nice, but only buy the software for what it can actually do now, not what it can maybe do in the future.
-  - We can use a clear RTM (requirements traceability matrix), requirements are divided into "Must have, nice to have and maybe should have".
+  - Software roadmaps are nice, but **only buy the software for what it can actually do now, not what it can maybe do** in the future.
+  - We can use a clear **RTM (requirements traceability matrix)**, requirements are divided into "Must have, nice to have and maybe should have".
   - We would then score the software candidates on the "Have's" and from that we should be able to see feasible candidates, other factors such as cost, maintenance also play a big part in the decision.
   - For large/expensive implementations it may also be possible for the vendor to provide references to talk to.
-  - We would also look at how financially sound the vendor looks to be, if we spend $2,000,000 on software and the vendor goes out bankrupt in 3 months, we may have to spend another $2,000,000 all over again.
+  - We would also look at how **financially sound** the vendor looks to be, if we spend $2,000,000 on software and the vendor goes out bankrupt in 3 months, we may have to spend another $2,000,000 all over again.
+
+
+**Custom-Developed Third-Party Products:**  ... exactly what we need ...
+  - Having someone else develop the software we need is also an option.
+  - This is higher cost than COTS software, but also far more customizable.
+  - The same questions and then some should be asked:
+  - How good are they? Have they done this before? How secure are they?,...
+  - Do we own the code or do we rent it when it is done?
+  - What happens if they go out of business?
+  - Who will support it?
+  - Do you have capable staff, that can support and tweak the software?
+  - Is it secure or is it security through obscurity?
+  - Many code shops are just that, only code shops, once the software is accepted it is your problem to do the day to day maintenance, they may contract for updates, but that is it.
+
+
+**Cloud Computing:**
+  - Cloud Computing can be divided into 4 main types:
+    - **Private Cloud Computing** - Organizations build and run their own cloud infrastructure (or they pay someone to do it for them).
+    - **Public Cloud Computing** - Shared tenancy – A company builds massive  infrastructures and rents it out to anyone who wants it. (Amazon AWS, Microsoft, Google, IBM).
+    - **Hybrid Cloud Computing** – A mix of Private and Public Cloud Computing. An organization can choose to use Private Cloud for sensitive information and Public Cloud for non-sensitive data.
+    - **Community Cloud Computing** – Only for use by a specific community of consumers from organizations that have shared concerns. (Mission, policy, security requirements, and/or compliance considerations.)
+
+As with any other outsourcing, make sure you have the right to audit, pen test (clearly agreed upon criteria), conduct vulnerability assessment, and check that the vendor is compliant with your industry and the standards you adhere to.
+
+- **Platforms are normally offered as:**
+  - IaaS (Infrastructure as a Service) The vendor provides infrastructure up to the OS, the customer adds the OS and up.
+  - PaaS (Platform as a Service) The vendor provides pre-configured OSs, then the customer adds all programs and applications.
+  - SaaS (Software as a Service) The vendor provides the OS and applications/programs. Either the customer interacts with the software manually by entering data on the SaaS page, or data is automatically pushed from your other applications to the SaaS application (Gmail, Office 365, Dropbox, Payroll, …).
+
+- **Responsiablity levels for cloud services**
+  - Private/no-cloud : organization/you are responsible for all levels of infrastructure and software components 
+  - IaaS : organization/you are responsible for data, application, security, databases, OS
+  - PaaS : organziation/you only responsible for data and application you run on PaaS
+  - SaaS: organziation/you only responsible for data running on SaaS
+
+**domain 8 - video 64- Software Composition Analysis (SCA)**
+**Software Composition:**
+  - Modern software development often involves assembling software from various components, including:
+  - Proprietary Code
+  - Commercial Off-The-Shelf software (COTS)
+  - Open-Source Libraries and Frameworks
+  - Leveraging pre-existing tested code allows for rapid development and deployment of new features and capabilities.
+  - Each component in the software stack has its own dependencies, licenses, and potential vulnerabilities, introducing security, legal, and operational risks if not properly managed and monitored.
+
+
+**Software Component Analysis (SCA):**
+  - Processes of automatically or using tools identifying open source and third-party components in a software application to checks components for known security vulnerabilities, license compliance issues, and outdated versions.
+
+  - SCA tools scan the application source code, bytecode, and binary files, comparing them against a database of known components and their associated metadata (version number, license type, known security vulnerabilities, dependencies, and relationships with other components).
+  - Developers and security teams receive a detailed report flagging any component that may pose a risk.
+
+**Benefits of SCA:**
+  - **Early risk detection:** Identifies potential issues in the development process, allowing teams to remediate risks before production.
+  - **Continuous monitoring:** Integration with CI/CD pipeline enables continual monitoring for new vulnerabilities or changes in the component landscape.
+  - **License compliance: Reduces legal risk** and intellectual property disputes by ensuring compliance with licenses.
+  - **Dependency management:** Provides visibility into the complex web of dependencies in the software stack, enabling more efficient updates and patch management.
+
+**TO Implementing SCA Effectively:**
+  - Inventory all open software and third-party components used in the application, including version and license information.
+  - Integrate SCA into the early stages of the development process (requirement and design phase).
+  - Educate developers on the importance of SCA and provide training, awareness, and guidelines on using SCA tools effectively.
+  - Establish clear policies and procedures for using open source and third-party components, including requirements for security testing, license reviews, and approval processes.
+  - Prioritize and triage SCA findings based on factors like vulnerability severity, component criticality, and remediation difficulty.
+  - Automate and integrate SCA into the development workflow (e.g., integrating with build systems, automatically opening tickets for identified issues, blocking builds that don't meet quality gates).
+  - Monitor and update components continuously throughout the development process.
+  - Foster a culture of collaboration (DevSecOps) where Development, Security, and Operations teams work together to understand and mitigate risks.
+
+**Challenges with SCA:**
+  - Managing **false positives** (components flagged as vulnerable when they are not) and **false negatives** (missed vulnerabilities).
+  - Tuning SCA tool settings and thresholds based on the organization's risk tolerance and application-specific criteria.
+  - Implementing processes for manually reviewing and validating SCA findings, especially for high-risk or business-critical applications.
+  - Staying up to date with the latest developments in the rapidly evolving field of SCA and continually improving the organization's SCA-based processes based on feedback and lessons learned.
+
+
+**domain 8 - video 65- Artificial Intelligence (AI)**
+**AI (Artificial Intelligence)**
+  - Intelligence exhibited by machines, rather than humans or other animals.
+  - What true AI is, is a topic of discussion, what was considered AI years ago we have achieved and when once goal is reached the AI definition is tweaked a little.
+  - From what we are seeing published we do in my mind not currently have true AI, but  very highly simulated intelligence, that being said IBM and Google do seem to be getting a lot closer.
+  - It is also used when a machine mimics cognitive functions that humans associate with other human minds, such as learning and problem solving.
+  - AI currently defined as advice that perceives its environment and takes actions that maximize its chance of success at some goal, not through experience/programming, but through reasoning.
+
+
+**Expert Systems:**
+  - A computer system that emulates the decision-making ability of a human expert.
+  - Designed to solve complex problems by reasoning about knowledge, represented mainly as if–then rules rather than through conventional procedural code.
+  - An expert system is divided into two subsystems:
+    - 1.  The knowledge base represents facts and rules.
+    - 2.  The inference engine applies the rules to the known facts to deduce new facts, and can also include explanation and debugging abilities.
+
+
+**ANN's (Artificial Neural Networks):**
+  - Computing systems inspired by the biological neural networks that constitute animal brains, we make decisions based on 1000’s of memories, stories, the situation and many other factors, the ANN tries to emulate that.
+  - The systems learn and progressively improve their performance, to do tasks, generally without task-specific programming.
+  - They can learn to identify images that contain geckos by analyzing example images that have been manually labeled as "gecko" or "no gecko" and using the analytic results to identify geckos in other images.
+  - They are mostly used in areas that are difficult to express in a traditional computer algorithm using rule-based programming.
+  - An ANN is based on a collection of connected units called artificial neurons.
+  - Each connection (synapse) between neurons can transmit a signal to another neuron.
+  - Typically, neurons are organized in layers, different layers may perform different transformations on their inputs.
+  - Signals travel from the first input, to the last output layer, at times after traversing the layers multiple times.
+
+**GP (Genetic Programming):**
+  - A technique where computer programs are encoded as a set of genes that are then modified (evolved) using an evolutionary algorithm often a GA (Genetic Algorithm).
+  - The results are computer programs able to perform well in a predefined task.
+  - The methods used to encode a computer program in an artificial chromosome and to evaluate its fitness with respect to the predefined task are central in the GP technique and still the subject of active research.
+  - GP evolves computer programs, traditionally represented in memory as tree structures.
+  - Trees can be easily evaluated in a recursive manner.
+  - Every tree node has an operator function and every terminal node has an operand, making mathematical expressions easy to evolve and evaluate.
+  - Traditionally GP favors the use of programming languages that naturally embody tree structures for example, Lisp or other functional programming languages.
+  - The process is in its simple form like this:
+    - Generate an initial population of random computer programs.
+    - Execute each program in the population and assign it a fitness value according to how well it solves the problem.
+    - Create a new population of computer programs.
+    - Copy the best existing programs
+    - Create new computer programs by mutation.
+    - Create new computer programs by crossover.
+  - Genetic Algorithms and Genetic Programming have been used to program a Pac-Man playing program, robotic soccer teams, networked intrusion detection systems, and many others.
+
+
+**Final Points to Remember**
+  - Security should be designed into software from the beginning, not added as an afterthought.
+  - Secure coding practices, regular security testing, and continuous monitoring are essential for developing secure software.
+  - The Software Development Life Cycle (SDLC) should incorporate security at every stage, from requirements gathering to deployment and maintenance.
+  - Different SDLC methodologies, such as Waterfall, Agile, and DevOps, have their own unique security considerations.
+  - Development environment security controls, such as access control, version control, and secure coding practices, are crucial for maintaining the integrity of the software development process.
+  - Proper configuration management and change control processes help ensure that only authorized changes are made to the software.
+  - Software security effectiveness can be assessed through various means, such as code reviews, static and dynamic analysis, penetration testing, and vulnerability scanning.
+  - The OWASP Top 10 provides a valuable resource for understanding and mitigating common web application security risks.
 
 
 - 8.3.2 Risk analysis and mitigation
@@ -1137,7 +1265,6 @@ and maintainability.
   - Threat modeling is important to dev teams, and particularly in DevSecOps
   - Assessors are also interested in the linkages between the software dev and risk management programs
     - software projects should be tracked in the org’s risk matrix, to ensure the dev team is connected to the broader risk management efforts, and not working in isolation
-
 
 
 ## [8.4](#84-assess-security-impact-of-acquired-software-osg-10-chpts-1620) Assess security impact of acquired software (OSG-10 Chpts 16,20)
