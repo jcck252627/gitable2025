@@ -78,6 +78,34 @@
   
 ## [1.3](#13-evaluate-apply-and-sustain-security-governance-principles-osg-10-chpt-1) Evaluate, apply, and sustain security governance principles (OSG-10 Chpt 1)
 
+**Destination CISSP Youtube Video 1**
+**https://www.youtube.com/watch?v=hf5NwUSEkwA&list=PLZKdGEfEyJhLd-pJhAD7dNbJyUgpqI4pu**
+**https://destcert.com/resources/domain-1-security-and-risk-management/**
+
+- **Corporate Governance** 
+  - Is the system of rules, pratices and processes by which **an organization** is directed and controlled to achieve its **goals and objectives**
+  - Typicall focusing on increasing the value of the organization 
+
+- **Security Governance** 
+  - Is the system of rules, pratices and processes by which **the security fucntion** is directed and controlled to achieve its **goals and objectives**
+  - It is crucial that the security governance is aligning with the oganization governance
+
+- **Accountability vs Responsibilities**
+  - **Accountability** means ownership of something where liability is presented to an individual and CANNOT be delegated ... only one entity can be accountable ... who set rules/policies
+  - **Responibilities** is a direction or order given by the accountable party who ... it was delegated ... multiple popele can be responsible ... who develops plan make things happen
+
+- **Due care versus due diligence**
+  - Due Diligence = Pre-action research and evaluation to make informed decisions.
+  - Due Care = Ongoing actions and safeguards to maintain security and compliance.
+-** Why Due Diligence Comes First**
+  - **Due Diligence** is about investigation and informed decision-making before taking action. It’s the research phase where you identify risks, evaluate options, and choose the best course.
+  - **Due Care** is about implementing safeguards and best practices after decisions are made. It’s the execution phase where you actively protect assets and maintain security.
+  - Think of it like this: You cannot apply proper care if you don’t know what risks exist or what standards apply. For example, you wouldn’t encrypt data (due care) until you’ve identified which data is sensitive and needs protection (due diligence).
+
+  
+
+
+
 - **Security governance**: the collection of policies, roles, processes/practices used to make security decisions in an org; related to supporting, evaluating, defining, and directing the security efforts of an org; it involves making sure that security strategies align with business goals, and that they are comprehensive and consistent across the organization
   - Security governance is the implementation of a security solution and a management method that are tightly interconnected
 - **The security function**: the aspect of operating a business that focuses on the task of evaluating and improving security over time
