@@ -41,6 +41,21 @@
       - think of it like this: If you follow the first three canons in the code of ethics, you automatically comply with this one
       - anyone who subscribes to a code of ethics as part of their licensure or certification is eligible to file a complaint under canon IV
 
+**ISC2 Code of Ethics Preamble**
+**The safety and welfare of society and the common good, the duty to our principals, and to each other, requires that we adhere, and be seen to adhere, to the highest ethical standards of behavior.**
+  - Therefore, strict adherence to this Code is a condition of certification. The ISC2 Code of Ethics consists of the Canons outlined here:
+
+**ISC2 Code of Ethics Canons**  ... in order !!
+
+**- 1.  Protect society, the common good, necessary public trust and confidence, and the infrastructure.**
+**- 2.  Act honorably, honestly, justly, responsibly, and legally.**
+**- 3.  Provide diligent and competent service to principals.**
+**- 4.  Advance and protect the profession.**
+
+**Remember, if a scenario is presented in which there's a conflict in the Canons, they need to be applied in order.**
+
+
+
 - 1.1.2 Organizational code of ethics
   - You must also support ethics at your organization; this can be interpreted to mean evangelizing ethics throughout the organization, providing documentation and training around ethics, or looking for ways to enhance the existing organizational ethics
     - some organizations might have slightly different ethics than others, so be sure to familiarize yourself with your org’s ethics and guidelines
@@ -97,10 +112,53 @@
 - **Due care versus due diligence**
   - Due Diligence = Pre-action research and evaluation to make informed decisions.
   - Due Care = Ongoing actions and safeguards to maintain security and compliance.
--** Why Due Diligence Comes First**
+- **Why Due Diligence Comes First**
   - **Due Diligence** is about investigation and informed decision-making before taking action. It’s the research phase where you identify risks, evaluate options, and choose the best course.
   - **Due Care** is about implementing safeguards and best practices after decisions are made. It’s the execution phase where you actively protect assets and maintain security.
   - Think of it like this: You cannot apply proper care if you don’t know what risks exist or what standards apply. For example, you wouldn’t encrypt data (due care) until you’ve identified which data is sensitive and needs protection (due diligence).
+
+**Import / Export Controls and Laws**  ... both restrict manufacturing, distribution and sales of specific tech
+  - Import and export controls are country-based rules and laws implemented to manage which products, technologies, and information can move in and out of those countries, usually meant to protect national security, individual privacy, economic well-being, and so on.
+  - **ITAR** - Internation Traffic in Arms ... foucus on exports of defense articles like missiles and other arms
+  - **EAR** - Export Administration Regularition ... focus on dual-use items that are not covered by ITAR
+  - **The Wassenaar Arrangement** ... 42 countries signed ...The Wassenaar Arrangement was put in place to manage the risk that cryptography poses while still facilitating trade. It allows certain countries to exchange and use cryptography systems of any strength while also preventing the acquisition of these items by terrorists.
+
+**Transborder data flow**
+  - Transborder data flow laws restrict the transfer of data across country borders. When sharing data across borders, applicable laws must be considered.
+  - These laws primarily relate to personal data. The idea is to protect a country/state/province/region's citizens' personal data. If an organization is collecting citizens' data, then they are accountable for the protection of that data.
+  - Given these laws, organizations must consider the potential implications of the flow of data across physical borders. This can be very challenging for organizations to keep track of with the proliferation of service providers and global cloud services.
+
+
+**Ethics**
+  - **Ethics** are a foundational element of a successful security program and should be adhered to throughout the organization. Proper ethical behavior is based upon one belief: abide by the rules and do nothing harmful to anyone else.
+
+  - Within an organization, the best way to prescribe, promote, and instill consistent ethical behavior is through corporate rules or laws, more appropriately referred to as policies, to ensure that all employees employ the same set of ethics.
+
+  - **As a CISSP candidate**, you are responsible for understanding and complying with the ISC2 Code of Professional Ethics, which applies to CISSP holders around the globe. In fact, the CISSP exam will most likely ask at least one question on this topic.
+
+**ISC2 Code of Ethics Preamble**
+**The safety and welfare of society and the common good, the duty to our principals, and to each other, requires that we adhere, and be seen to adhere, to the highest ethical standards of behavior.**
+  - Therefore, strict adherence to this Code is a condition of certification. The ISC2 Code of Ethics consists of the Canons outlined here:
+
+**ISC2 Code of Ethics Canons**  ... in order !!
+
+**- 1.  Protect society, the common good, necessary public trust and confidence, and the infrastructure.**
+**- 2.  Act honorably, honestly, justly, responsibly, and legally.**
+**- 3.  Provide diligent and competent service to principals.**
+**- 4.  Advance and protect the profession.**
+
+**Remember, if a scenario is presented in which there's a conflict in the Canons, they need to be applied in order.**
+
+
+
+
+
+
+
+
+**Privacy**  .... cannot archive without security ... 
+- Privacy is the state or condition of being free from being observed or disturbed by other people, and personal data is information on its own or in combination that uniquely identifies an individual.
+- It's essential that personal data is well protected to comply with current privacy laws and to protect the value of the information and of the organization itself. This can become complex for multinational organizations since there's a significant variation around the world in both the definition of personal data and the laws that determine how to protect it.
 
   
 
