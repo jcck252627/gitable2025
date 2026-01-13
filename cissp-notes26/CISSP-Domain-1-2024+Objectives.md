@@ -123,6 +123,11 @@
   - **EAR** - Export Administration Regularition ... focus on dual-use items that are not covered by ITAR
   - **The Wassenaar Arrangement** ... 42 countries signed ...The Wassenaar Arrangement was put in place to manage the risk that cryptography poses while still facilitating trade. It allows certain countries to exchange and use cryptography systems of any strength while also preventing the acquisition of these items by terrorists.
 
+  - **International Traffic in Arms Regulations (ITAR)**: This is a US regulation that was built to ensure control over any export of items such as missiles, rockets, bombs, or anything else existing in the United States Munitions List (USML).
+
+  - **Export Administration Regulations (EAR)**:  EAR predominantly focuses on commercial use-related items like computers, lasers, marine items, and more. However, it can also include items that may have been designed for commercial use but actually have military applications.
+
+
 **Transborder data flow**
   - Transborder data flow laws restrict the transfer of data across country borders. When sharing data across borders, applicable laws must be considered.
   - These laws primarily relate to personal data. The idea is to protect a country/state/province/region's citizens' personal data. If an organization is collecting citizens' data, then they are accountable for the protection of that data.
@@ -150,13 +155,43 @@
 **Remember, if a scenario is presented in which there's a conflict in the Canons, they need to be applied in order.**
 
 
+**Corporate Laws, security policies ... and Functional Policies, procedures, standards, baselines, and guidelines**
+  - **Policies** is **corpoate laws** and tell people must do
+  - **Overarching Security Policy**  is an overall approache to security, provided and supported by the board of directors and senor management to ensure the policy is in line with the business goals and objectives
+  - **Functional Security Policies** ... corporate laws address specific security requirements
+    - **Standards:**  ...Specific hardware and software solutions, mechanisms, and products  
+    - **Procedures:** ...Step-by-step descriptions on how to perform a task; mandatory actions
+    - **Baselines:** ... Defined minimal implementation methods/levels for security mechanisms and products
+    - **Guidelines:** ... Recommended or suggested actions ... without making it a hard requirement
+
+
+**Risk management** (Big Topic .... more later)
+**Risk management** is the identification, assessment, and prioritization of risks and the economical application of resources to minimize, monitor, and control the probability and/or impact of these risks.
+
+
+**Procurement SLR vs SLA**
+- Security must be considered for all acquisitions and be part of the procurement process. Even if the acquisition is of a well-known brand, product, or service, risks exist and must be evaluated as part of the acquisition, or procurement, process. 
+- This evaluation should occur as early as possible and include security considerations that minimize the risk.
+
+**Service level requirements (SLR)**
+  -  With the acquisition of a service, additional organizational requirements must be considered, which is done through an SLR document. Specifically, an SLR outlines:
+  - Detailed service descriptions
+  - Detailed service level targets
+  - Mutual responsibilities
+
+**Service Level Agreement (SLA)**
+  - After a service is acquired, an SLA must be put in place between the customer and the service provider.
+  - SLAs often include expectations and stipulations related to:
+  - Service levels
+  - Governance
+  - Security
+  - Compliance with law and regulations
 
 
 
 
 
-
-**Privacy**  .... cannot archive without security ... 
+**Privacy**  .... cannot archive without security ... (Big Topic .... more later)
 - Privacy is the state or condition of being free from being observed or disturbed by other people, and personal data is information on its own or in combination that uniquely identifies an individual.
 - It's essential that personal data is well protected to comply with current privacy laws and to protect the value of the information and of the organization itself. This can become complex for multinational organizations since there's a significant variation around the world in both the definition of personal data and the laws that determine how to protect it.
 
