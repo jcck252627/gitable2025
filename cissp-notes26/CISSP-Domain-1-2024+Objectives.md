@@ -165,10 +165,6 @@
     - **Guidelines:** ... Recommended or suggested actions ... without making it a hard requirement
 
 
-**Risk management** (Big Topic .... more later)
-**Risk management** is the identification, assessment, and prioritization of risks and the economical application of resources to minimize, monitor, and control the probability and/or impact of these risks.
-
-
 **Procurement SLR vs SLA**
 - Security must be considered for all acquisitions and be part of the procurement process. Even if the acquisition is of a well-known brand, product, or service, risks exist and must be evaluated as part of the acquisition, or procurement, process. 
 - This evaluation should occur as early as possible and include security considerations that minimize the risk.
@@ -196,7 +192,24 @@
 - It's essential that personal data is well protected to comply with current privacy laws and to protect the value of the information and of the organization itself. This can become complex for multinational organizations since there's a significant variation around the world in both the definition of personal data and the laws that determine how to protect it.
 
   
+**Personal data**
+  - Depending on the location in the world, personal data may be referred to in different ways, and what constitutes personal data can vary significantly.
+**Personal data** can be referred to as:
+**PI:** Personal Information
+**PII:** Personally Identifiable Information
+**SPI:** Sensitive Personal Information
+**PHI:** Personal Health Information
 
+
+Privacy requirements
+Privacy policy requirements
+https://destcert.com/resources/domain-1-security-and-risk-management/
+
+
+
+
+**Risk management** (Big Topic .... more later)
+**Risk management** is the identification, assessment, and prioritization of risks and the economical application of resources to minimize, monitor, and control the probability and/or impact of these risks.
 
 
 - **Security governance**: the collection of policies, roles, processes/practices used to make security decisions in an org; related to supporting, evaluating, defining, and directing the security efforts of an org; it involves making sure that security strategies align with business goals, and that they are comprehensive and consistent across the organization
