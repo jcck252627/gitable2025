@@ -184,32 +184,82 @@
   - Compliance with law and regulations
 
 
-
-
-
-**Privacy**  .... cannot archive without security ... (Big Topic .... more later)
+**Privacy**  .... cannot archive without security ... (Big Topic .... separate mind map)
 - Privacy is the state or condition of being free from being observed or disturbed by other people, and personal data is information on its own or in combination that uniquely identifies an individual.
 - It's essential that personal data is well protected to comply with current privacy laws and to protect the value of the information and of the organization itself. This can become complex for multinational organizations since there's a significant variation around the world in both the definition of personal data and the laws that determine how to protect it.
 
-  
+**Privacy Policy** .... again divide into these sub components
+    - **Standards:**  ...Specific hardware and software solutions, mechanisms, and products  
+    - **Procedures:** ...Step-by-step descriptions on how to perform a task; mandatory actions
+    - **Baselines:** ... Defined minimal implementation methods/levels for security mechanisms and products
+    - **Guidelines:** ... Recommended or suggested actions ... without making it a hard requirement
+
 **Personal data**
   - Depending on the location in the world, personal data may be referred to in different ways, and what constitutes personal data can vary significantly.
-**Personal data** can be referred to as:
-**PI:** Personal Information
-**PII:** Personally Identifiable Information
-**SPI:** Sensitive Personal Information
-**PHI:** Personal Health Information
+    - **Personal data** can be referred to as:
+    - **PI:** Personal Information
+    - **PII:** Personally Identifiable Information
+    - **SPI:** Sensitive Personal Information
+    - **PHI:** Personal Health Information
+  - Degree of data can identify an individual and to what degree
+    - Director Identifiers - directly id an person on their own ... ie . driver license, governmental id, SSN, passport, bank account number, biometric data
+    - Indirect Identifiers - Does not directly id an person on their own like age, gender, zip code, online email addresses
+**Data Lifecycle**
+  - To identify data from creation to the end
+- 1. Creation / Update : new data is generated or when the data is altered/modified/used ... most important thing is to classify the data
+- 2. Store : data at rest
+- 3. Use : data in use
+- 4. Share : data in transit
+- 5. Archive : data retention
+- 6. Destory  : destructuion of data
+
+**OECD privacy guidelines**  ... cannot have privacy without security
+- The **Organization for Economic Cooperation and Development (OECD)** is an international organization that is focused on international standards and policies and finding solutions to social, economic, and environmental challenges. One such challenge that they have been driving for decades is privacy. .. are not mandatory for organizations to comply with, although they are considered a prudent course of action. These guidelines are:
+  - Collection limitation principle - should limit the collect of PII, legally, with proper consent from the data subject
+  - Data quality principle - the PII collected should have integrity, be relevant, accurate, complete and update to date
+  - Purpose specification principle - the purpose of collection of pii data should be specified
+  - Use limitation principle  - the pii data should be used only per the purpose specification which was collected upon
+  - Security safeguards principle - the pii should be protected with reasonable security from unauthorized access and modifiation, lost and destruction
+  - Openness principle - general openness about development, polices and practices with respect to pii
+  - Individual participation principle - the data subject should have the rights to access and remove from the data controller , (in GDPR, this is **the right to be forgotten**) 
+  - Accountability principle  - the data controller should be accountable for complying with other principles to protect pii
+- **GDPR (General Data protection Regulation)
+  - **GDPR Superviory Authority (SA)** : Independent public authority that needed in each member EU state to be responsible/accountable to monitor/enforce/investigate compliance
+  - Data subject have the rights to submit compliants with the SA
+  - GDPR protects personal data of EU residents, regardless of where the organization processing the data is located, making it an extraterritorial regulation with global impact.
+  - Data protection principles under GDPR include lawfulness, fairness, transparency, purpose limitation, data minimization, accuracy, storage limitation, and integrity and confideniality.
+  - Data subjects have enforceable rights, including access, rectification, erasure (right to be forgotten), restriction of processing, data portability, and objection to processing.
+  - Organizations have defined roles and responsibilities, such as data controllers and data processors, with accountability for how personal data is collected, processed, and protected.
+  - Security and privacy by design and by default are required, meaning appropriate technical and organizational safeguards must be implemented throughout the data lifecycle.
+  - **Data breach notification requirements mandate reporting to supervisory authorities within 72 hours of discovering a breach**, and notifying affected individuals when there is high risk.
+
+**Licensing and intellectual property (IP)**
+- Intellectual property laws aim to encourage the creation of intellectual goods (inventions, literary and artistic works, designs, symbols, and names) and to protect the same.
+- The following table will show what trade secrets, patents, copyrights, and trademarks protect.
+  - Trade Secret - Proprietary Business information/secret... not required to be disclosed, protected potentially infinitive peroid
+  - Patent  - Functional innovations, novel idea, inventions ... required diclosure to be registered
+  - Copyright - Expression of an idea embodied in a fixed medium (books, movies, songs, etc.) .. required diclosure to be registered
+  - Trademark - Color, logo, sound, symbol, etc. used to distinguish one product/company from another .. required diclosure to be registered
 
 
-Privacy requirements
-Privacy policy requirements
-https://destcert.com/resources/domain-1-security-and-risk-management/
+**Risk management** (Big Topic .... Separate mind map)
+  - **Risk management** is cruial to any security related program... it contain the identification, assessment, and prioritization of risks and the economical application of resources to minimize, monitor, and control the probability and/or impact of these risks. Here's an overview of the risk management process:
+    - **Asset Valuation** : identifying the assets of the organization and ranking those assets from most to least valuable. This process is referred to as asset valuation, and the ranking of assets can be achieved via two methods or, most commonly, a combination of both **quantitative value analysis** and **qualitative value analysis**.
+      - **quantitative value analysis** : Assign objective monetary values
+
+      - **qualitative value analysis** : Does not attempt to assign monetary value, but relies on descriptive scales and expert judgment
+        - It is characterized by its subjective evaluation, typically categorizing risks using terms like "high," "medium," and "low." It's often scenario-based, involving the analysis of potential risk situations and their outcomes. Two widely recognized and easily applied methods in qualitative risk analysis are:
+        - **Keep It Super Simple (KISS):** This one-dimensional technique is ideal for small projects or narrow-framed assessments. It's particularly useful when unnecessary complexity should be avoided, or when the assessing team lacks experience in risk evaluation. The KISS method involves rating risks on a basic scale (e.g., very high/high/medium/low/very low)
+        - **Probability/Impact Matri**x: This two-dimensional approach evaluates both the probability of a risk occurring and its potential impact. The impact typically considers factors like schedule, cost, scope, and quality. Risks are rated on a numeric scale (e.g., 1 to 5 or 1 to 10), with the risk score calculated by multiplying probability and impact.
+
+    
+    - **Risk Analysis** :Determine the risks associated with each asset via the risk analysis process. The four key components are threat, vulnerability, impact, and probability/likelihood.
+    
+    
+    - **Treatment.** :There are four risk treatment methods: avoid, transfer, mitigate, and accept.
+      
 
 
-
-
-**Risk management** (Big Topic .... more later)
-**Risk management** is the identification, assessment, and prioritization of risks and the economical application of resources to minimize, monitor, and control the probability and/or impact of these risks.
 
 
 - **Security governance**: the collection of policies, roles, processes/practices used to make security decisions in an org; related to supporting, evaluating, defining, and directing the security efforts of an org; it involves making sure that security strategies align with business goals, and that they are comprehensive and consistent across the organization
