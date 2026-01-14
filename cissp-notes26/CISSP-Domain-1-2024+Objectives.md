@@ -243,24 +243,86 @@
 
 
 **Risk management** (Big Topic .... Separate mind map)
-  - **Risk management** is cruial to any security related program... it contain the identification, assessment, and prioritization of risks and the economical application of resources to minimize, monitor, and control the probability and/or impact of these risks. Here's an overview of the risk management process:
-    - **Asset Valuation** : identifying the assets of the organization and ranking those assets from most to least valuable. This process is referred to as asset valuation, and the ranking of assets can be achieved via two methods or, most commonly, a combination of both **quantitative value analysis** and **qualitative value analysis**.
-      - **quantitative value analysis** : Assign objective monetary values
+- **Risk management** is cruial to any security related program... it contain the identification, assessment, and prioritization of risks and the economical application of resources to minimize, monitor, and control the probability and/or impact of these risks. Here's an overview of the risk management process:
+- **Asset Valuation** : identifying the assets of the organization and ranking those assets from most to least valuable. This process is referred to as asset valuation, and the ranking of assets can be achieved via two methods or, most commonly, a combination of both **quantitative value analysis** and **qualitative value analysis**.
+  - **quantitative value analysis** : Assign objective monetary values to each asset
+    - The preferred method but many assets such evaluation is not possible 
+    - Simple risk cost per year if its quantifiable: **Annualized Lost Expectance (ALE) calculation** 
+        - Annualized Lost Expectance (ALE) = Single Lost Expectany (SLE) x Annualized Rate of Occuenance (ARO)
+        - Where Single Lost Expectany (SLE)  = Asset Value (AV) x Exposure Factor % (EF)
 
-      - **qualitative value analysis** : Does not attempt to assign monetary value, but relies on descriptive scales and expert judgment
-        - It is characterized by its subjective evaluation, typically categorizing risks using terms like "high," "medium," and "low." It's often scenario-based, involving the analysis of potential risk situations and their outcomes. Two widely recognized and easily applied methods in qualitative risk analysis are:
-        - **Keep It Super Simple (KISS):** This one-dimensional technique is ideal for small projects or narrow-framed assessments. It's particularly useful when unnecessary complexity should be avoided, or when the assessing team lacks experience in risk evaluation. The KISS method involves rating risks on a basic scale (e.g., very high/high/medium/low/very low)
-        - **Probability/Impact Matri**x: This two-dimensional approach evaluates both the probability of a risk occurring and its potential impact. The impact typically considers factors like schedule, cost, scope, and quality. Risks are rated on a numeric scale (e.g., 1 to 5 or 1 to 10), with the risk score calculated by multiplying probability and impact.
 
-    
-    - **Risk Analysis** :Determine the risks associated with each asset via the risk analysis process. The four key components are threat, vulnerability, impact, and probability/likelihood.
-    
-    
-    - **Treatment.** :There are four risk treatment methods: avoid, transfer, mitigate, and accept.
+ALE = SLE (AV x EF) x ARO
+The acronyms pertain to:
+**Asset Value (AV) - Montary value of the asset**
+**Exposure Factor (EF) - which percentage of asset you expected to lose during the risk occurance** 
+Single Loss Expectancy (SLE)
+**Annualized Rate of Occurrence (ARO) - how many time we are expecting the risk to occur**
+Annualized Loss Expectancy (ALE)
+
+
+  - **qualitative value analysis** : Does not attempt to assign monetary value, but relies on descriptive scales and expert judgment, like ranking systems
+    - It is characterized by its subjective evaluation, typically categorizing risks using terms like "high," "medium," and "low." It's often scenario-based, involving the analysis of potential risk situations and their outcomes. Two widely recognized and easily applied methods in qualitative risk analysis are:
+    - **Keep It Super Simple (KISS):** This one-dimensional technique is ideal for small projects or narrow-framed assessments. It's particularly useful when unnecessary complexity should be avoided, or when the assessing team lacks experience in risk evaluation. The KISS method involves rating risks on a basic scale (e.g., very high/high/medium/low/very low)
+    - **Probability/Impact Matrix**: This two-dimensional approach evaluates both the probability of a risk occurring and its potential impact. The impact typically considers factors like schedule, cost, scope, and quality. Risks are rated on a numeric scale (e.g., 1 to 5 or 1 to 10), with the risk score calculated by multiplying probability and impact.
+
+- **Risk Analysis** :Determine the risks associated with each asset via the risk analysis process. The four key components are **threat, vulnerability, impact, and probability/likelihood**.
+    - **Threats:**  Is any action of potential danger; anything that causes damage to an asset, like hackers, earthquakes, ransomware, social engineering, denial-of-service attacks, disgruntled employees, and many others.
+        - **Threat Modeling**  tools that we can use to idetnify threats related to assets, **3 types for CISSP exam: STRIDE, PASTA, DREAD**
+            - **STRIDE**  a threat-focused methodology, stands for **Spoofing/Tampering/Repudiation/Information disclosure/Denial-of-service/Elevation of privilege**
+            - **PASTA**  Process for Attack Simulation and Threat Analysis (PASTA), contrary to STRIDE, is an attacker-focused, risk-centric methodology.
+            - **DREAD**  a threat model primarily used to measure and rank the severity of threats, for Damage/Reproducibility/Exploitability/Affected users/Discoverability
+
+    - **Vulnerability:**   a weakness that exists; anything or gap that allows a threat to take advantage of it to inflict damage to the organization. Examples include open ports with vulnerable services, lack of network segregation, lack of patching, and OS updating, 2 techniques can be used to identify vulnerabilities
+      - **Vulnerability Assessment:**
+      - **Penetration Testing:**  
+
+    - **Probability/likelihood:**   Measurement chances that a particular risk event will occur
+    - **Impact:** A potential harm or damage that could result from particular risk
+
+- **Treatment.** :There are four risk treatment methods: **avoid, transfer, mitigate, and accept**
+    - **Avoid**. Choosing to stop doing whatever exposes the asset to risk. Not jumping can avoid the risk, but you can miss significant opportunities (the opportunity cost).
+    - **Transfer**. Transferring risk means sharing some financial risks with another party, usually an insurance company, but not the accountability of the risk
+    - **Mitigate.** Mitigate risk means implementing controls that reduce the risk to an acceptable level. 3 types control implementing : Adminstrative, tech/logical, Physical 
+      - **Administrative:** Policies and procedures and other practieces that put in the manage risks
+      - **Technical/Logical:** Compensating measures such as new technical implementation 
+      - **Physical:** such as fenses, cameras , two categories: **Safeguards and Countermeasures**, each haas 3 controls
+    - Two categories of **risk mitigate controls** 
+      - **Safeguards** - stop risk from happening
+          - Directive control : provide guidance and instruction to personnel on how to handle risk ie. policy
+          - Deterent control : discourage risky behavior of individual that may cause risks
+          - Preventative control : preventing risk from occuring, ie firewall
+        - **Countermeasures** - dectect and respond to risks has occured
+          - Detective control - identify risks ongoing , ie SIEM, IDS
+          - Corrective control - aims to reduce negative impact of the risk occurred, fire supression ssystem
+          - Recovery control - measures that helps companies recovery from risk events like DRP
+          - Compensating control - minmize negative impact of risks when other controls fails
+
+    - **Functional and assurance**  - A good security control should always include two aspects: the functional aspect and the assurance aspect.
+      - **Functional:** control performs the function it was designed to address/does what it is meant to do—for example, **a firewall filtering traffic between different subnets**.
+      - **Assurance:** Control can be proven to be functioning properly on an ongoing basis, usually proven through testing, assessments, **logging, monitoring, etc**.
+
+
+    - **Accept.** Accepting risk simply means taking no action or no further action where the risk to a particular asset is concerned.
+
+**Risk management frameworks**
+Risk management frameworks provide comprehensive guidance for structuring and conducting risk management. The four risk management frameworks are shown in the following table:
+
+  - **NIST SP 800-37 (RMF)** :This guide describes the risk management framework (RMF) and provides guidelines for applying the RMF to information systems and organizations.
+    - need to memorize 7 steps to manage risks
+      - 1. **Prepare** to execute the RMF
+      - 2. **Categorize** info system
+      - 3. **Select** security controls
+      - 4. **Implement** security controls
+      - 5. **Assess** security controls
+      - 6. **Authorize** info system
+      - 7. **Monitor** security controls
+
+  - **ISO 31000**:  ISO 31000 is a family of standards relating to risk management.
+  - **COSO** provides a definition of essential enterprise risk management components, reviews ERM principles and concepts, and provides direction and guidance for enterprise risk management.
+  - **ISACA's Risk IT Framework** contains guidelines and practices for risk optimization, security, and business value. The latest version places greater emphasis on cybersecurity and aligns with the latest version of COBIT
       
-
-
-
+- **Residual Risk:**  The risk that remains after countermeasures and safeguards (controls) are implemented
 
 - **Security governance**: the collection of policies, roles, processes/practices used to make security decisions in an org; related to supporting, evaluating, defining, and directing the security efforts of an org; it involves making sure that security strategies align with business goals, and that they are comprehensive and consistent across the organization
   - Security governance is the implementation of a security solution and a management method that are tightly interconnected
