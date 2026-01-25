@@ -29,7 +29,6 @@ Focuses on identifying, analyzing, and treating information security risks.
 NIST CFS
 NIST SP 800-39
 NIST 800-37
-NIST SP 800-53: 
 NIST SP 800-53 is a comprehensive catalog of security and privacy controls for all U.S. federal information systems (except those related to national security) and is directly focused on listing such controls, making it highly relevant for application development.
 
 NIST SP 800-53A: 
@@ -75,13 +74,35 @@ A Type 1 report focuses on the design of controls at a point in time.
 A Type 2 report examines not only the design of a control but, more importantly, the operating effectiveness over a period of time, typically a year.
 From the types of reports defined, it should be clear that SOC 2, Type 2 are the most desirable reports for security professionals, as they report on the operating effectiveness of the security controls at a service provider over a period of time.
 
-ISO 31000
+ISO 31000 - ISO 31000 is a family of standards relating to risk
+management. The scope of ISO 31000 is to provide best
+practice structure and guidance to all organizations
+concerned with risk management.
 ISMS
-COSO
-NIST RMF 800-37
+COSO - COSO provides a definition to essential enterprise risk
+management components, reviews ERM principles and
+concepts, and provides direction and guidance for
+enterprise risk management.
+
+**NIST RMF 800-37 Rev2** - This guide describes the risk management framework (RMF) and provides guidelines for applying the RMF to information systems and organizations.
+Prepare to execute the RMF - In this step, information systems are identified and categorized. 
+Select Security Controls
+Implement Security Controls
+Assess Security Controls
+Authorize Information System
+Monitor Security Controls
+
+
+
+
+
 ISO/IEC 27001
 Enterprise security governance
-ISACA Risk IT Framework
+ISACA Risk IT Framework - ISACA’s Risk IT Framework contains guidelines and
+practices for risk optimization, security, and business
+value. The latest version places greater emphasis on
+cybersecurity and aligns with the latest version of COBIT.
+
 
 Zachman
 
@@ -576,9 +597,81 @@ Act - Based upon findings during the “Check” step, take additional, actions 
 
 
  
- Availability: The CIA triad stands for Confidentiality, Integrity, and Availability. These are the three main objectives of a secure system. In the context of the triad, 'Availability' ensures that information is accessible and services are up and running when required. It emphasizes that systems should be reliable, perform efficiently, and resist denial-of-service (DoS) attacks. Redundancy, fail-safe mechanisms, and disaster recovery are strategies often used to ensure availability. The incorrect answers: Although Authority is a significant concept in information security, it's not represented in the CIA triad. Authority typically refers to the rights and permissions assigned to an individual or a process, which can indeed help to protect information by limiting what actions different users can perform. However, it falls under the broader umbrella of 'Access Control' rather than being a core principle on its own in the CIA triad. While Authenticity is a vital factor in security, ensuring that individuals, transactions, and communications are genuine, it is not what the 'A' stands for in the CIA triad. It is usually an inherent part of maintaining 'Integrity' in the triad, as ensuring authenticity prevents unauthorized or improper modifications of data. Access: Access is another crucial component of information security, referring to the ability of authorized users, systems, or processes to interact with resources. Nonetheless, it's not represented by the 'A' in the CIA triad. 'Access' is typically controlled and managed to maintain the 'Confidentiality' component of the CIA triad, limiting exposure of sensitive information to only those who are authorized to view it.
+ The CIA triad stands for Confidentiality, Integrity, and Availability. 
  
-  In the DREAD risk assessment model, "Damage" refers to the potential harm that could be caused if a vulnerability were to be exploited. This impact considers how bad the consequences would be, ranging from minimal disruptions to significant data breaches or system outages. The severity of the potential damage is often considered the most critical factor because it directly relates to the potential consequences an organization could face from a security incident. The incorrect answers: Reproducibility refers to how easily and consistently the vulnerability can be exploited. While an easily reproducible vulnerability is concerning, it is the damage caused by the exploitation, not the frequency or ease of reproduction, that holds the highest impact. Exploitability gauges how easy it is for an attacker to exploit the vulnerability. While this is a crucial factor in the overall risk assessment, it is the potential damage that often holds greater weight in the decision-making process regarding the risk. Awareness measures how well-known the vulnerability is, both to potential attackers and the public. A widely known vulnerability might be seen as a higher risk because many attackers are aware of it, but again, it's the potential damage that results from the exploitation that generally carries the most weight in the assessment.
+
+ 
+ 
+ Purpose of threat modeling
+In order to perform proper risk management, it is important to identify the threats and vulnerabilities associated with each asset. Threat modeling methodologies aid in systematically identifying
+threats and their severity, which in turn makes risk management more accurate and effective
+ They enable: the systematic identification, enumeration, and prioritization of threats related to an asset.
+ . Three of the major threat modeling methodologies you need to know about for the exam are STRIDE, PASTA and DREAD.
+
+***STRIDE*** 
+***STRIDE*** was developed by Microsoft. Though it was initially developed as a means of assessing threats to applications and operating systems, it can be used in other contexts too. STRIDE is a threat-focused methodology
+**Spoofing - threat against Authentication
+An attacker pretends to be something or someone to gain unauthorized access
+**Tampering - threat againstIntegrity
+An attacker modifies data at rest (e.g., in a database) or in transit (e.g.,over the network)
+**Repudiation - threat against Nonrepudiation
+An attacker performs an action on a system that is not attributable to them
+**Information Disclosure - threat against Confidentiality
+An attacker can read sensitive information
+**Denial of Service - threat against Availability 
+An attacker prevents legitimate users from accessing an application/service
+** Elevation of Privilege - threat against Authorization
+An attacker gains elevated access rights (e.g., administrative/root access)
+
+**DREAD**
+**DREAD** is a threat model primarily used to rank the severity of threats. DREAD is often used in combination with the STRIDE model, where STRIDE identifies the threats, and DREAD is then used **to rank the severity** of threats. Five key points are considered and a score for each is determined between 1 and 10 (1 being low-risk, and 10 being high-risk). The score from each of thefive key points is then tallied up and divided by five to produce a final score out of ten. This final score is then used to understand the severity of a threat.
+D Damage
+Total amount of damage the threat can cause?
+R Reproducibility How easily can the threat be replicated? 
+E Exploitability
+How difficult is it to exploit the threat?
+A Affected Users
+How many people, inside or outside the organization, will be affected by the threat?
+D Discoverability
+How easily can the threat be discovered?
+  
+  **Damage** refers to the potential harm that could be caused if a vulnerability were to be exploited. This impact considers how bad the consequences would be, ranging from minimal disruptions to significant data breaches or system outages. The severity of the potential damage is often considered the most critical factor because it directly relates to the potential consequences an organization could face from a security incident. 
+  
+  **Reproducibility** refers to how easily and consistently the vulnerability can be exploited. While an easily reproducible vulnerability is concerning, it is the damage caused by the exploitation, not the frequency or ease of reproduction, that holds the highest impact. 
+  
+  **Exploitability** gauges how easy it is for an attacker to exploit the vulnerability. While this is a crucial factor in the overall risk assessment, it is the potential damage that often holds greater weight in the decision-making process regarding the risk. 
+  **Awareness(( measures how well-known the vulnerability is, both to potential attackers and the public. A widely known vulnerability might be seen as a higher risk because many attackers are aware of it, but again, it's the potential damage that results from the exploitation that generally carries the most weight in the assessment.
+
+**Attack Simulation and Threat Analysis (PASTA)**
+Process for **Attack Simulation and Threat Analysis (PASTA)**, contrary to STRIDE, is an attacker-focused, risk-centric methodology. It is much more detailed than STRIDE and performs threat analysis from a strategic perspective that includes input from governance, operations, architecture, and development, in both tech and business views
+
+**Define Objectives—This considers the inherent application risk profile and addresses other business impact considerations early.
+**Define Technical Scope—The philosophy behind this stage is that you can’t protect what you don’t know. It’s intended to decompose the technology stack that supports the application components that realize the business objectives identified from Stage 1.
+**Application Decomposition—This stage focuses on understanding the data flows among application components and services in the application threat model.
+**Threat Analysis—Reviews threat assertions from data within the environment as well as industry threat intelligence that is relevant to service, data, and deployment model.
+**Vulnerability and Weakness Analysis—Identifies the vulnerabilities and weaknesses within the application design and code and correlates to see if it supports the threat assertions from the prior stage.
+**Attack Modeling—This stage focuses on emulating attacks that could exploit identified weaknesses/vulnerabilities from the prior stage. It helps to also determine the threat viability via attack patterns.
+**Risk and Impact Analysis—This stage centers around remediating vulnerabilities or weaknesses in code or design that can facilitate threats and underlying attack patterns. It may warrant some risk acceptance by broader application owners or development managers.
+
+**Social engineering** 
+Manipulation of people’s actions through intimidation and/or deception .. it is a prevalent means of attack against organizations Best way to combat social engineering is through awareness/education/training
+
+**intimidation (involves inducing fear in order to manipulate someone into a specific course of action) ... blackmail
+**deception (involves tricking someone in one manner or another) ...lying 
+**rapport (building a gradual relationship with a victim in order to take advantage of it down the line) ...pretending to be from the IT team
+**Phishing -  where an attacker sends many emails with the hope that the target will open an email and click on a link or open a file that leads to a malicious action ... email 
+**Spear phishing -  a targeted form of phishing that typically focuses on certain individuals or groups of individuals ... sending fake invoice to payable team
+**Whaling Like spear phishing, this is also an email attack and targets the big fish—the whales—in an organization. Typically, targeting people like the CEO, COO, and CFO
+**Smishing - Smishing is a form of phishing that targets mobile phone users. Typically, an attacker purporting legit company sends a fraudulent text/SMS message to a potential victim, 
+**Vishing- Vishing is another form of phishing, and the name refers to the way it is typically presented to a potential victim—via voice over IP (VoIP) phone systems to their phones
+**Pretexting involves the attacker creating a scenario, almost like a script, that very ingeniously and subtly spurs the victim into action. a“friend” texting you with news about an unfortunate incident that’s left them stranded someplace. Ultimately, a request is made for money, sensitive information, or both.
+**Baiting -  a form of social engineering that preys on people’s curiosity via the use of physical tools, like USB drives. Usually, the attacker will drop some USB drives in a building parking lot, 
+**Tailgating or piggybacking -  the action of following a person who is authorized to enter a restricted area through a door and thus gaining unauthorized access. The difference is that in tailgating the attacker possesses a
+badge that is fake but looks real. In piggybacking, the attacker doesn’t have any badge at all.
+
+
+
+
  
 
 D2
