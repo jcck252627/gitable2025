@@ -2,6 +2,7 @@
  COBIT 2019: 
  COBIT, which stands for Control Objectives for Information and Related Technologies, is primarily a framework focused on governance and management of enterprise IT. Although COBIT can help organizations align IT with business strategies and manage IT-related risks, 
  COBIT (Control Objectives for Information and Related Technologies)
+ 
 Business-focused IT governance framework.
 Aligns IT goals with business objectives and risk management.
  
@@ -18,7 +19,7 @@ Aligns IT goals with business objectives and risk management.
 ISO/IEC 27001
 Specifies requirements for an Information Security Management System (ISMS).
 Focuses on governance, policy, risk management, and continual improvement.
-ISO/IEC 27002
+ISO/IEC 27002 
 Provides best-practice security controls to support ISO 27001.
 Answers “How do we implement security controls?”
 ISO/IEC 27005
@@ -74,6 +75,13 @@ A Type 1 report focuses on the design of controls at a point in time.
 A Type 2 report examines not only the design of a control but, more importantly, the operating effectiveness over a period of time, typically a year.
 From the types of reports defined, it should be clear that SOC 2, Type 2 are the most desirable reports for security professionals, as they report on the operating effectiveness of the security controls at a service provider over a period of time.
 
+ISO 31000
+ISMS
+COSO
+NIST RMF 800-37
+ISO/IEC 27001
+Enterprise security governance
+ISACA Risk IT Framework
 
 Zachman
 
@@ -96,35 +104,17 @@ Integrity model enforcing No Read Down, No Write Up.
 
 Protects data accuracy and trustworthiness.
 
-Clark-Wilson
+Clark-Wilson ... Integrity model using well-formed transactions and separation of duties. Common in commercial and financial systems.
 
-Integrity model using well-formed transactions and separation of duties.
+Brewer-Nash (Chinese Wall) .. Prevents conflicts of interest dynamically. ...Access depends on prior access history.
+Graham-Denning ....Formal model defining secure creation and deletion of subjects/objects. ...Focuses on access rights management.
 
-Common in commercial and financial systems.
-
-Brewer-Nash (Chinese Wall)
-
-Prevents conflicts of interest dynamically.
-
-Access depends on prior access history.
-
-Graham-Denning
-
-Formal model defining secure creation and deletion of subjects/objects.
-
-Focuses on access rights management.
-
-🔐 Cryptographic & Trust Models
-Public Key Infrastructure (PKI)
-
+🔐 Cryptographic & Trust Models ...Public Key Infrastructure (PKI)
 Framework for managing digital certificates and trust.
-
 Enables authentication, encryption, and non-repudiation.
 
 Web of Trust
-
 Decentralized trust model used by PGP.
-
 Trust is established through peer endorsements.
 
 🧩 Software & Development Models
@@ -181,10 +171,7 @@ In this scenario, any significant disruption in access to patient records can le
  Work Recovery Time (WRT) is the duration of time it takes to catch up on work not done during an outage. 
  This is important but is less critical in this scenario compared to RTO, given the urgency to get the patient records systems operational again. The priority in this case is to restore the systems and not necessarily to catch up on work not done during the outage.
 
-Due care: Due care refers to the level of care that an individual would reasonably be expected to exercise in a particular situation. 
-As the chief information security officer (CISO) at ThorTeaches.com, Jane is responsible for determining the security goals for the organization, and she must do so with due care. This means she should take reasonable steps to protect the company's data and systems from threats, aligning with industry best practices and regulatory requirements. 
 
-Due diligence is the investigative process conducted to assess a business transaction. When setting security goals, due diligence is part of the broader process Jane would undertake to understand the risks and requirements of the organization, but it is not the term that best describes the minimum standard required of her. 
 
 While the prudent person rule is related to due care, it is a legal concept that typically applies to the management of another's affairs, especially in a fiduciary capacity. It is not specifically a term used to describe the process of setting security goals for an organization. 
 
@@ -434,54 +421,160 @@ Risk = Threat x Vulnerability x Impact (How bad is it?).
 Total Risk = Threat x Vulnerability x Asset Value. 
 Residual Risk = Total Risk – Countermeasures.
 
+Single Loss Expectancy (SLE) = Asset Value (AV) x Exposure Factor (EF)
+Annualized Loss Expectancy (ALE) = Single Loss Expectancy (SLE) x Annualized Rate of Occurrence (ARO)
+
+**Asset Value (AV)**: The cost of the asset in a monetary
+value, e.g., a CCTV system that costs $2,000
+
+**Exposure Factor (EF)**: Measured as a percentage and expresses how much of the asset’s value stands to be lost in case of a risk materializing
+The EF will always be a percentage between 0 to 100 percent.
+
+**Single Loss Expectancy (SLE)**: Denotes how much it will cost if the risk occurs once. To calculate the SLE, simply multiply the AV by the EF:
+
+**Annualized Rate of Occurrence (ARO)**: Denotes how many times each year the risk is expected to occur. For example, if the voltage spikes excessively three times a year, the ARO is 3.
+
+**Annualized Loss Expectancy (ALE):** Expresses the annual cost of the risk materializing.
+
+Applicable Risk Controls
+**A complete control at minimum is a combination of preventive, detective, and corrective controls
+
+1. Directive Controls
+Definition: Controls that guide or mandate desired behavior but do not directly stop incidents.
+Example: An information security policy requiring strong passwords.
+
+2. Preventive Controls
+Definition: Controls that stop or block security incidents before they occur.
+Example: Firewall rules blocking unauthorized network traffic.
+
+3. Detective Controls
+Definition: Controls that identify and alert on security events after or during occurrence.
+Example: Intrusion Detection Systems (IDS) generating alerts on suspicious activity.
+
+4. Corrective Controls
+Definition: Controls that fix or remediate issues after an incident has occurred.
+Example: Applying security patches after discovering a vulnerability.
+
+5. Deterrent Controls
+Definition: Controls that discourage potential attackers through fear of detection or consequences.
+Example: Warning banners stating systems are monitored and logged.
+
+6. Compensating Controls
+Definition: Alternative controls used when primary controls are not feasible.
+Example: Increased logging and monitoring when encryption cannot be implemented.
+
+7. Recovery Controls
+Definition: Controls that restore systems and operations after an incident.
+Example: Backups and disaster recovery plans used to restore systems after ransomware.
+
+Key CISSP rule:
+A control has two dimensions
+What it does → Directive / Preventive / Detective / etc. 
+Directive/Detective/Deterrent/Corrective/Compenseation/Preventive/Recovery ...D3C2PR
+How each is implemented → Administrative / Technical / Physical
+
+One-Minute CISSP Decision Tree 🧠
+
+1️⃣ Does it tell people what to do? → Directive
+2️⃣ Does it scare or discourage? → Deterrent
+3️⃣ Does it block the action? → Preventive
+4️⃣ Does it detect or alert? → Detective
+5️⃣ Does it fix after damage? → Corrective
+6️⃣ Is it a backup control? → Compensating
+7️⃣ Does it restore operations? → Recovery
+
+Then ask:
+Policy/process? → Administrative
+System/software? → Technical
+Building/people? → Physical
+**Functional and Assurance** - The control should perform some function (e.g., control the flow of network traffic, only allow authorized employees to enter a building, detect smoke from a fire), ....and there should be some means of verifying/obtaining assurance that the control is working effectively on an ongoing basis.
+
+
 Patents: Protects inventions for 20 years (normally) – Cryptography algorithms can be patented. Inventions must be:Novel (New idea no one has had before). Useful (It is actually possible to use and it is useful to someone). Nonobvious (Inventive work involved).
 Trademark
 Copyright/Copyleft
 Trade Secret
 
+Due care: Due care refers to the level of care that an individual would reasonably be expected to exercise in a particular situation. 
+As the chief information security officer (CISO) at ThorTeaches.com, Jane is responsible for determining the security goals for the organization, and she must do so with due care. This means she should take reasonable steps to protect the company's data and systems from threats, aligning with industry best practices and regulatory requirements. 
+
+Due diligence is the investigative process conducted to assess a business transaction. When setting security goals, due diligence is part of the broader process Jane would undertake to understand the risks and requirements of the organization, but it is not the term that best describes the minimum standard required of her. 
+
+
 What is the FIRST step in protecting a company's trademark?
-Conducting a trademark search: Before you can protect a company's trademark, it's important to first conduct a trademark search. This is a critical step to ensure that the trademark you're planning to use is not already registered or in use by another company. Using an existing trademark can result in legal consequences, such as lawsuits and fines. It can also undermine your brand identity and lead to confusion in the marketplace. The first step to protecting your trademark is to make sure it's unique and available for use. The incorrect answers: Registering the trademark with the United States Patent and Trademark Office (USPTO) is an important step in protecting a trademark. However, it is not the first step. Registration can only happen after you've conducted a trademark search to verify that your desired trademark isn't already in use by another company. If you try to register a trademark that's already in use, the USPTO will reject your application. Monitoring the use of your trademark is crucial in maintaining its protection. This process involves keeping an eye out for any unauthorized use or infringement of your trademark by other businesses. This is an ongoing process that comes after the initial stages of conducting a trademark search and registering the trademark with the USPTO. You can't monitor the use of a trademark that hasn't been established as yours in the first place. Implementing a trademark usage policy is an integral part of protecting a company's trademark. This policy guides how the trademark can be used within the company and by third parties, helping to maintain consistency and prevent dilution of the brand. Nonetheless, this step is downstream from conducting a trademark search and registering the trademark. The policy would be irrelevant if the trademark you plan to protect is already registered or in use by another entity.
+Conducting a trademark search: Before you can protect a company's trademark, it's important to first conduct a trademark search. This is a critical step to ensure that the trademark you're planning to use is not already registered or in use by another company. Using an existing trademark can result in legal consequences, such as lawsuits and fines. It can also undermine your brand identity and lead to confusion in the marketplace. The first step to protecting your trademark is to make sure it's unique and available for use. 
+
+Registering the trademark with the United States Patent and Trademark Office (USPTO) is an important step in protecting a trademark. However, it is not the first step. Registration can only happen after you've conducted a trademark search to verify that your desired trademark isn't already in use by another company. If you try to register a trademark that's already in use, the USPTO will reject your application. 
+
+Monitoring the use of your trademark is crucial in maintaining its protection. This process involves keeping an eye out for any unauthorized use or infringement of your trademark by other businesses. This is an ongoing process that comes after the initial stages of conducting a trademark search and registering the trademark with the USPTO. You can't monitor the use of a trademark that hasn't been established as yours in the first place. 
+
+Implementing a trademark usage policy is an integral part of protecting a company's trademark. This policy guides how the trademark can be used within the company and by third parties, helping to maintain consistency and prevent dilution of the brand. Nonetheless, this step is downstream from conducting a trademark search and registering the trademark. The policy would be irrelevant if the trademark you plan to protect is already registered or in use by another entity.
 
 vulnerabilities vs exploit vs threats vs risk 
 
 
- The process owners. Process owners, who have a deep understanding of their operations, are usually the best suited for performing risk analysis. They are most familiar with their processes and likely to accurately identify and assess associated risks. Managers, for example can assess overall risk and implement solutions with a top-down approach. The incorrect answers: External auditors: While they play a crucial role in independently verifying that risk management processes are being followed, they may not have the detailed knowledge of specific day-to-day operations required for in-depth risk analysis. A group of peers from our competitors: Besides potential conflicts of interest, peers from competitors likely lack the intimate knowledge of your organization's specific processes and operations necessary for effective risk analysis. An external management consultant specialized on our line of business: Although they can provide valuable insights, they may not have the same level of detailed knowledge about the specific processes and operations as the process owners do.
+ "Conduct a risk assessment of the company's current IT systems and practices." would be the option to pick here. It is far more beneficial to inventory all assets through a risk assessment, then decide from there how to handle security. Otherwise, a business is taking things into consideration that have no effect on them. The incorrect answers:
+  Determine the company's overall goals and objectives for IT security is the first step in identifying the business needs for improving the IT security practices. 
+  Understanding the overarching goals and objectives ensures that such feedback is collected and analyzed in the context of the company's strategic direction.
+ 
+The primary objective of any risk management program is to minimize residual risk to an acceptable level. Residual risk is the risk that remains after all risk management strategies have been applied. 
+To eliminate business risk: It's unrealistic and impractical to completely eliminate business risk. The goal is to manage risk within acceptable levels. 
+To implement effective controls: While this is a part of managing risk 
+To minimize inherent risk: Inherent risk is the risk that exists before any controls or mitigation strategies are implemented. 
+ 
+Prudent person rule: While the prudent person rule is related to due care, it is a legal concept that typically applies to the management of another's affairs, especially in a fiduciary capacity. It is not specifically a term used to describe the process of setting security goals for an organization. 
 
- "Conduct a risk assessment of the company's current IT systems and practices." would be the option to pick here. It is far more beneficial to inventory all assets through a risk assessment, then decide from there how to handle security. Otherwise, a business is taking things into consideration that have no effect on them. The incorrect answers:Determine the company's overall goals and objectives for IT security is the first step in identifying the business needs for improving the IT security practices. Understanding what the organization aims to achieve through its IT security practices ensures that all subsequent steps, align with the company's overall strategy and objectives. It sets the foundation for the entire review process. Identifying the regulatory requirements that the company must comply with is also crucial, especially in a regulated industry like finance. However, this step should be taken in conjunction with understanding the overall goals and objectives, as compliance is typically one aspect of a broader security strategy. Gathering input and feedback from employees across all departments and business units is valuable for gaining insights into the practical realities of the company's IT systems and practices. Still, it is not the first step. Understanding the overarching goals and objectives ensures that such feedback is collected and analyzed in the context of the company's strategic direction.
- 
- To minimize residual risk. The primary objective of any risk management program is to minimize residual risk to an acceptable level. Residual risk is the risk that remains after all risk management strategies have been applied. The incorrect answers: To eliminate business risk: It's unrealistic and impractical to completely eliminate business risk. The goal is to manage risk within acceptable levels. To implement effective controls: While this is a part of managing risk, the ultimate goal is not just to have controls in place, but to use those controls to reduce residual risk. To minimize inherent risk: Inherent risk is the risk that exists before any controls or mitigation strategies are implemented. The focus of risk management is on reducing the residual risk that remains after controls are applied.
- 
- Using a software inventory management tool, periodically compare the inventory software list. This proactively identifies any unauthorized or unlicensed software installations. By regularly monitoring and auditing your software inventory, you can detect and address the illegal use of software. The incorrect answers: Remind all users periodically not to use illegally obtained software: While reminders may be part of a comprehensive approach to managing software licenses, they would not be as effective at detecting illegal software use as a software inventory tool. Send a questionnaire by email to all users: This method relies heavily on user honesty and awareness, and may not yield accurate or complete information. Develop a software anti-piracy policy immediately and distribute to all users without fail: While having such a policy is important, it won't help identify current illegal use of software. It's more about prevention and establishing guidelines for future behavior.
- 
-  Buy insurance. In cases where it's not possible to minimize residual risk to an acceptable level, buying insurance is a common risk management strategy. This does not reduce the risk itself, but it can help to mitigate the financial impact if the risk materializes. The incorrect answers: Update to state-of-the-art firewalls: While updated firewalls can provide better protection, if the leadership has determined that the residual risk is still too high even with all countermeasures in place, it's likely that simply updating firewalls wouldn't sufficiently alleviate the concern. Get professional pen-testers to pen test the 2 applications: Penetration testing can help identify vulnerabilities, but if the residual risk is still considered too high despite all possible countermeasures, it's unlikely that additional pen-testing would solve the problem. Build a SOC (Security Operations Center) and implement live monitoring: Having a SOC can improve incident detection and response times, but it does not directly reduce residual risk. If all plausible countermeasures have been considered and residual risk is deemed too high, setting up a SOC might not be sufficient.
- 
- Due care: Due care refers to the level of care that an individual would reasonably be expected to exercise in a particular situation. As the chief information security officer (CISO) at ThorTeaches.com, Jane is responsible for determining the security goals for the organization, and she must do so with due care. This means she should take reasonable steps to protect the company's data and systems from threats, aligning with industry best practices and regulatory requirements. The incorrect answers: Prudent person rule: While the prudent person rule is related to due care, it is a legal concept that typically applies to the management of another's affairs, especially in a fiduciary capacity. It is not specifically a term used to describe the process of setting security goals for an organization. Due diligence: Due diligence is the investigative process conducted to assess a business transaction. When setting security goals, due diligence is part of the broader process Jane would undertake to understand the risks and requirements of the organization, but it is not the term that best describes the minimum standard required of her. Building consensus: Building consensus is about obtaining agreement from various stakeholders or team members. While gaining agreement on security goals is an important part of the CISO's role, it does not represent the minimum standard of care expected of Jane when she determines those goals. Due care is the term that best fits this requirement.
- 
- New risk detection. The ability to detect new risks is crucial for maintaining an effective risk management program. If an organization fails to recognize new risks, it leaves itself vulnerable to threats it isn't prepared for. While all the options listed contribute to a robust risk management program, detecting new risks directly impacts the organization's risk exposure and its ability to preemptively manage and mitigate those risks. The incorrect answers: A flexible Information Security budget: While having financial flexibility can support adaptive responses, not detecting new risks could result in serious security incidents that can't be readily fixed with budgetary adjustments. A solid risk baseline: Having a solid risk baseline is important for comparison and for monitoring changes over time. However, this doesn't replace the need to continuously identify and address new risks. Accurate risk reporting: Accurate risk reporting is a significant aspect of risk management. However, if the organization fails to detect new risks in the first place, the reporting, no matter how accurate, would be incomplete.
- 
-  Prudent person rule: The prudent person rule is the correct term for Thor’s personal responsibility as the CEO in addressing risks facing the organization. This rule requires individuals in positions of authority, like Thor, to exercise the same degree of care and diligence that a prudent person would under similar circumstances. It focuses on the accountability and expected behavior of someone entrusted with governance and oversight, ensuring that the decisions made are prudent and in the best interest of the organization and its stakeholders. The incorrect answers: Due care: While due care is a legal and ethical obligation to act responsibly and is often associated with the prudent person rule, it is more specific to taking the necessary care to protect the company and its assets. In contrast, the prudent person rule is a broader standard that emphasizes the decision-making process and the approach that someone in a position of trust should take, which is why it's the best descriptor for Thor's role. Due diligence: Due diligence is the investigation and evaluation process undertaken to understand the risks associated with a business decision or transaction. It's evidence of the prudent person rule in action, but as a term, it specifically refers to the careful examination and research done before concluding agreements or investments, rather than the ongoing risk oversight provided by an executive like Thor. Building consensus: Building consensus involves uniting a group behind a decision or strategy. It is a crucial part of leadership, especially for a CEO who needs the support of various stakeholders to move the company forward. However, it does not directly relate to the individual responsibility of addressing overall risks facing the organization. The prudent person rule is more relevant in this context as it relates to the fiduciary duties of the CEO.
- 
- Controls. When defining inherent risk, you're looking at the risk that exists assuming no controls or other mitigation actions are in place. Thus, controls are not a factor typically considered when calculating inherent risk, as they are measures implemented to reduce that inherent risk. The incorrect answers: Likelihood or Probability: This is an essential facet of determining risk. It measures the chance of a given threat exploiting a vulnerability. Asset Valuation (AV): The value of the asset is a key component of risk. The more valuable the asset, the higher the potential risk. Impact or Consequence: This is another crucial variable for assessing risk. It measures the potential damage or consequences to the organization if a threat exploits a vulnerability.
+Due diligence: Due diligence is the investigative process conducted to assess a business transaction. When setting security goals, due diligence is part of the broader process Jane would undertake to understand the risks and requirements of the organization, but it is not the term that best describes the minimum standard required of her. 
 
-: Controls that have not been implemented yet. Security controls provide no protection until they are actually implemented. Even if a control has been designed or chosen, it does not contribute to security until it is put into operation. The incorrect answers: New controls that have not been proven to work: While these might not be as reliable as proven controls, they still provide some level of security protection once they are implemented. Existing controls that due to their age of use have probably been cracked: While such controls may not be as effective as they once were, they still provide some level of security until the vulnerabilities are exploited. Existing controls that have been proven to work: These controls definitely provide security protection, assuming they are still relevant to the threats faced by the organization.
-
-Establish baseline standards for all locations, and then add additional standards for locations that require more security. This approach allows for creating a consistent minimum level of security across the organization while acknowledging and addressing the specific regulatory requirements of each location. The incorrect answers: Incorporate all of the regulations into one overarching policy that covers all the requirements of all the locations and ensure all locations follow it: This approach might be unnecessarily strict for some locations and may not fully address the specific needs of each location. Find the industry best practices and ensure all locations are in compliance with those: Best practices are useful guides, but complying with them doesn't necessarily ensure compliance with specific regulations in each location. Find the common requirements that all locations have and implement those: This approach may miss specific requirements that are unique to certain locations. While it creates uniformity, it might not fully comply with all regulations.
-
-The ARO tells us the average number of attacks or breaches we can expect in a given time period: ARO stands for "Annualized Rate of Occurrence." In the context of quantitative risk analysis, ARO is a statistical measure that represents the frequency with which a certain type of risk, such as a cybersecurity attack or data breach, is expected to occur within a single year. ARO is a critical part of the risk management process as it provides a way for organizations to anticipate and prepare for potential risks based on historical data or industry averages. It's important to understand that ARO is about frequency, not the severity or the impact of the risk event. 
-
-Avoiding the risk altogether: In the context of risk management, avoiding the risk altogether is the highest level of risk avoidance. This strategy involves making changes to a project or business plan to remove the risk entirely, or to prevent it from happening. The incorrect answers: Accepting the risk and implementing a mitigation plan: This approach is a form of risk management, but it's not the highest level of risk avoidance. It involves acknowledging the risk, assessing its potential impact, and then implementing a plan to reduce that impact. For example, a business might identify a risk associated with a new product launch, but decide that the potential rewards are worth the risk. They might then implement a mitigation plan to minimize the risk, such as carrying out extensive market research and testing. This strategy does not avoid the risk; it accepts and manages it. Transferring the risk to a third party: This method involves passing the risk onto another entity. This could be through insurance, outsourcing, or contractual agreements. For example, a company might transfer the risk of a factory fire to an insurance company by taking out a policy. Or, they might outsource a risky operation to a third party that is better equipped to manage that risk. However, while this approach can help manage a risk, it doesn't remove or avoid the risk completely. Implementing a contingency plan: A contingency plan is a proactive strategy that outlines the steps to be taken if a certain risk event occurs. It's a form of risk preparedness, not risk avoidance. The risk is still present, but there is a plan in place to handle it if it does materialize. This could involve backup systems, alternative suppliers, emergency funding, or other measures to maintain operations in the face of adversity. But again, this strategy does not avoid the risk, it only prepares for it.
-
- Annual loss expectancy (ALE) is a commonly used method for calculating the financial impact of a security breach on an organization. It takes into account the likelihood of the breach occurring and the potential cost of the breach, such as lost revenue, remediation costs, legal fees, and reputational damage. By multiplying the likelihood of the breach by the cost of the breach, organizations can determine their expected financial losses from a security breach in a given year. The incorrect answers: Annualized rate of return is a measure of the annual return on an investment, such as a stock or bond. It does not take into account the likelihood or cost of a security breach, so it is not a suitable method for calculating the financial impact of a security breach on an organization. Net present value is a method used in capital budgeting to analyze the profitability of an investment or project. It calculates the present value of cash inflows minus the present value of cash outflows over a period of time. While NPV might be useful in assessing the value of investing in certain security measures, it does not directly calculate the potential financial impact of a security breach. Return on investment is a measure of the profitability of an investment, calculated as the ratio of the net profit to the cost of the investment. In terms of security measures, ROI could be used to assess the financial effectiveness of security investments in preventing breaches. However, it's not a method for calculating the financial impact of a security breach itself.
+Building consensus: Building consensus is about obtaining agreement from various stakeholders or team members. While gaining agreement on security goals is an important part of the CISO's role
  
- The correct answer:
-
-Highest Priority: Privacy by Design (PbD) is a framework that promotes privacy and data protection compliance from the start, emphasizing proactive measures to ensure privacy. The principles of PbD encourage proactive rather than reactive measures, privacy as the default setting, privacy embedded into the design, full functionality – positive-sum, not zero-sum, end-to-end security, visibility and transparency, and respect for user privacy (user-centric). None of the official principles of PbD specifically mentions "highest priority" as a standalone concept. While prioritizing privacy is implicit in the ethos of PbD, it’s not listed as a discrete principle in this framework.
-
-The incorrect answers:
-Proactive rather than reactive: PbD emphasizes a proactive approach to privacy protection, anticipating and preventing privacy issues before they occur, rather than reacting to privacy breaches or violations after the fact.
-End-to-end security: PbD requires the implementation of strong security measures to protect personal data throughout its entire lifecycle, from collection to destruction. This principle ensures that privacy is protected at every stage of data processing.
-User-centric: PbD places the interests and needs of the individual at the forefront. It emphasizes designing systems and practices that respect user privacy, provide users with control over their personal data, and ensure transparency and accountability in data handling practices.
+ Due care: While due care is a legal and ethical obligation to act responsibly and is often associated with the prudent person rule, it is more specific to taking the necessary care to protect the company and its assets. In contrast, the prudent person rule is a broader standard that emphasizes the decision-making process and the approach that someone in a position of trust should take, which is why it's the best descriptor for Thor's role. 
+  
+  Due diligence: Due diligence is the investigation and evaluation process undertaken to understand the risks associated with a business decision or transaction. It's evidence of the prudent person rule in action, but as a term, it specifically refers to the careful examination and research done before concluding agreements or investments, rather than the ongoing risk oversight provided by an executive like Thor.
+  
+  Building consensus: Building consensus involves uniting a group behind a decision or strategy. It is a crucial part of leadership, especially for a CEO who needs the support of various stakeholders to move the company forward. 
  
+ Controls. When defining inherent risk, you're looking at the risk that exists assuming no controls or other mitigation actions are in place. Thus, controls are not a factor typically considered when calculating inherent risk, as they are measures implemented to reduce that inherent risk. The incorrect answers: Likelihood or Probability: This is an essential facet of determining risk. It measures the chance of a given threat exploiting a vulnerability. 
+ 
+ Asset Valuation (AV): The value of the asset is a key component of risk. The more valuable the asset, the higher the potential risk. 
+ Impact or Consequence: This is another crucial variable for assessing risk. It measures the potential damage or consequences to the organization if a threat exploits a vulnerability.
+
+Establish baseline standards for all locations, and then add additional standards for locations that require more security. This approach allows for creating a consistent minimum level of security across the organization while acknowledging and addressing the specific regulatory requirements of each location. 
+
+The incorrect answers: Incorporate all of the regulations into one overarching policy that covers all the requirements of all the locations and ensure all locations follow it: This approach might be unnecessarily strict for some locations and may not fully address the specific needs of each location. 
+
+Find the industry best practices and ensure all locations are in compliance with those: Best practices are useful guides, but complying with them doesn't necessarily ensure compliance with specific regulations in each location. 
+
+Find the common requirements that all locations have and implement those: This approach may miss specific requirements that are unique to certain locations. While it creates uniformity, it might not fully comply with all regulations.
+
+Privacy by Design (PbD) — CISSP Definition (Plain English) - Privacy is built into systems, processes, and technologies from the beginning, not added later.
+is about: Proactive, not reactive, Default privacy protections ..Minimizing data collection ... Embedding privacy into architecture, SDLC, and governance 📌 Think architecture principle, not a single control.
+2️⃣ The 7 PbD Principles (EXAM-WORTHY)
+CISSP doesn’t always ask all seven, but keywords from them appear constantly.
+1️⃣ Proactive, not Reactive – prevent privacy issues before they happen
+2️⃣ Privacy as the Default – no action required by the user to protect privacy
+3️⃣ Privacy Embedded into Design – part of architecture and SDLC
+4️⃣ Full Functionality (Positive-Sum) – privacy AND security/business goals
+5️⃣ End-to-End Security – data protected through entire lifecycle
+6️⃣ Visibility & Transparency – clear policies and processing
+7️⃣ User-Centric – respect user privacy choices
+Privacy by Default - Configuration state
+Privacy by Design - Architectural principle
+
+Where PbD Fits in CISSP Domains
+Domain	How PbD Appears
+Domain 1 – Security & Risk	Privacy governance, policy, legal compliance
+Domain 3 – Security Architecture	Data flow design, minimization, encryption
+Domain 7 – SDLC	Privacy requirements, secure design
+Domain 8 – Software Dev	Secure coding, data handling
+
+Continous Risk Management - Plan Do Check Act / Deming Cycle
+Plan - Determine which controls to implement based on the risks identified
+Do - Implement the controls
+Check -  Check Monitoring and assurance; are the controls operating effectively
+Act - Based upon findings during the “Check” step, take additional, actions as necessary (react), which leads back to planning
+
+
  
  Availability: The CIA triad stands for Confidentiality, Integrity, and Availability. These are the three main objectives of a secure system. In the context of the triad, 'Availability' ensures that information is accessible and services are up and running when required. It emphasizes that systems should be reliable, perform efficiently, and resist denial-of-service (DoS) attacks. Redundancy, fail-safe mechanisms, and disaster recovery are strategies often used to ensure availability. The incorrect answers: Although Authority is a significant concept in information security, it's not represented in the CIA triad. Authority typically refers to the rights and permissions assigned to an individual or a process, which can indeed help to protect information by limiting what actions different users can perform. However, it falls under the broader umbrella of 'Access Control' rather than being a core principle on its own in the CIA triad. While Authenticity is a vital factor in security, ensuring that individuals, transactions, and communications are genuine, it is not what the 'A' stands for in the CIA triad. It is usually an inherent part of maintaining 'Integrity' in the triad, as ensuring authenticity prevents unauthorized or improper modifications of data. Access: Access is another crucial component of information security, referring to the ability of authorized users, systems, or processes to interact with resources. Nonetheless, it's not represented by the 'A' in the CIA triad. 'Access' is typically controlled and managed to maintain the 'Confidentiality' component of the CIA triad, limiting exposure of sensitive information to only those who are authorized to view it.
  
