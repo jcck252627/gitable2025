@@ -79,6 +79,9 @@ Zachman
 
  The Graham-Denning model is a framework for identifying and selecting appropriate security controls for an organization. It takes into account the organization's goals, threats, and vulnerabilities to determine the most effective controls. 
 
+ GLBA (Gramm-Leach-Bliley Act)-  Establishing safeguards for financial institutions -  requires financial institutions to develop, implement, and maintain a comprehensive information security program to protect the privacy and security of customers' nonpublic personal information. 
+ This includes ensuring customer privacy, implementing cybersecurity measures, and adopting other administrative, technical, and physical safeguards.
+
 
  Security Models (Very Exam-Heavy)
 Bell-LaPadula
@@ -481,6 +484,9 @@ User-centric: PbD places the interests and needs of the individual at the forefr
  
  
  Availability: The CIA triad stands for Confidentiality, Integrity, and Availability. These are the three main objectives of a secure system. In the context of the triad, 'Availability' ensures that information is accessible and services are up and running when required. It emphasizes that systems should be reliable, perform efficiently, and resist denial-of-service (DoS) attacks. Redundancy, fail-safe mechanisms, and disaster recovery are strategies often used to ensure availability. The incorrect answers: Although Authority is a significant concept in information security, it's not represented in the CIA triad. Authority typically refers to the rights and permissions assigned to an individual or a process, which can indeed help to protect information by limiting what actions different users can perform. However, it falls under the broader umbrella of 'Access Control' rather than being a core principle on its own in the CIA triad. While Authenticity is a vital factor in security, ensuring that individuals, transactions, and communications are genuine, it is not what the 'A' stands for in the CIA triad. It is usually an inherent part of maintaining 'Integrity' in the triad, as ensuring authenticity prevents unauthorized or improper modifications of data. Access: Access is another crucial component of information security, referring to the ability of authorized users, systems, or processes to interact with resources. Nonetheless, it's not represented by the 'A' in the CIA triad. 'Access' is typically controlled and managed to maintain the 'Confidentiality' component of the CIA triad, limiting exposure of sensitive information to only those who are authorized to view it.
+ 
+  In the DREAD risk assessment model, "Damage" refers to the potential harm that could be caused if a vulnerability were to be exploited. This impact considers how bad the consequences would be, ranging from minimal disruptions to significant data breaches or system outages. The severity of the potential damage is often considered the most critical factor because it directly relates to the potential consequences an organization could face from a security incident. The incorrect answers: Reproducibility refers to how easily and consistently the vulnerability can be exploited. While an easily reproducible vulnerability is concerning, it is the damage caused by the exploitation, not the frequency or ease of reproduction, that holds the highest impact. Exploitability gauges how easy it is for an attacker to exploit the vulnerability. While this is a crucial factor in the overall risk assessment, it is the potential damage that often holds greater weight in the decision-making process regarding the risk. Awareness measures how well-known the vulnerability is, both to potential attackers and the public. A widely known vulnerability might be seen as a higher risk because many attackers are aware of it, but again, it's the potential damage that results from the exploitation that generally carries the most weight in the assessment.
+ 
 
 D2
 **********************************************************
@@ -511,6 +517,8 @@ D3
 **********************************************************
 The Graham-Denning model is a framework for identifying and selecting appropriate security controls for an organization. It takes into account the organization's goals, threats, and vulnerabilities to determine the most effective controls. 
 
+
+ A unique key pair is generated for every user and the private key must remain secret correctly describes how asymmetric encryption is practically applied. In asymmetric encryption, each user has a pair of keys - a private key that must be kept secret and a public key that is made public. This key pair is unique for every user. The public key is used to encrypt the data, and only the corresponding private key can decrypt it. It's essential to understand that the private key should never be shared as it could lead to the decryption of the information by unauthorized individuals, compromising the confidentiality of the data. The incorrect answers: In an asymmetric encryption setup, each participant has a key pair, not just one user. The private key is kept private, while the public key is distributed to anyone who needs to send an encrypted message to the key owner. The fundamental idea behind asymmetric encryption is that the public key is shared openly, allowing anyone to encrypt messages with it. The corresponding private key, which is required to decrypt these messages, is kept secret by its owner. Everyone in the organization uses the same key pair for communication is a misrepresentation of asymmetric encryption. In reality, every participant in the communication has their unique key pair. If the entire organization used the same key pair, it would be similar to using symmetric encryption, which increases the risk of compromise and makes secure individual communication impossible.
 
 
 AES (Advanced Encryption Standard): This is an example of symmetric cryptography where the same key is used for both encryption and decryption of data.  
@@ -568,6 +576,38 @@ FIRST principle that should be considered when assessing and implementing secure
 
 D4
 **********************************************************
+Physical Layer: This is the lowest (first) layer in the OSI model. The Physical layer deals with the physical aspects of the data transmission, including the hardware devices, cables, connectors, signals, binary transmission, and other aspects related to the physical transmission of data. It does not interpret any data and works simply to send and receive a raw bit stream over the physical medium. 
+Example: Cables, hubs, fiber, radio signals, NICs
+Threats: Wiretapping, jamming, cutting cables, EMI
+
+Data Link Layer: The Data Link layer is the second layer in the OSI model. It provides reliable transit of data across a physical network link and handles error correction from the physical layer, packet framing, network topology, and Media Access Control (MAC). It ensures that the data sent by the Network layer of one device can be read by the Network layer of another device. 
+Example: Ethernet, ARP, VLANs, switches, Wi‑Fi MAC layer, NAC
+Threats: MAC spoofing, ARP poisoning, VLAN hopping
+
+Network Layer : The Network layer is the third layer in the OSI model. Its primary function includes addressing, routing, and (on many networks) the control of congestion of data. This layer is responsible for deciding which physical pathway data should take based on network conditions, priority of service, and other factors.
+Example: IP, ICMP, routers, OSPF, BGP
+Threats: IP spoofing, route hijacking, ICMP tunneling 
+
+Transport Layer: The Transport layer is the fourth layer of the OSI model. It provides transparent transfer of data between end systems and is responsible for end-to-end error recovery and flow control. This layer ensures complete data transfer. Protocols like TCP and UDP operate at this layer.
+Example: TCP, UDP, ports (80, 443, 3389)
+Threats: SYN floods, port scanning, session reset attacks
+
+Session Layer — “Manages sessions, connections, and dialogs.”
+Example:  Session tokens, NetBIOS, RPC, SQL session management. Anything involving session IDs, authentication tokens, or dialog control is Session layer.
+Threats: Session hijacking, replay attacks, fixation attacks
+
+Presentation Layer — “Formats, encrypts, and translates data.”
+Example: SSL/TLS encryption, data compression, character encoding
+Threats: SSL stripping, weak encryption, downgrade attacks
+
+Application Layer — “Where users and software interact with the network.”
+Example: HTTPS, DNS, SMTP, FTP, SNMP
+Threats: Phishing, DNS poisoning, email malware, API abuse
+
+
+
+
+
 Packet switching - Cheap, but no capacity guarantee, very widely used today. Data is sent in packets, but take multiple different paths to the destination. The packets are reassembled at the destination.
 
 staeful vs stateless firewall ...
