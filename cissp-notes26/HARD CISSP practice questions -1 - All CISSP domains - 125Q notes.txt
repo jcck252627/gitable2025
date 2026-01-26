@@ -14,6 +14,7 @@ Aligns IT goals with business objectives and risk management.
  GDRP
  
  ISO / IEC (International Standards)
+ ISO 27001
  ISO 27002: 
  ISO 27002 is a well-established international standard that provides best practice recommendations on information security controls, making it a suitable reference for listing security controls in application development.
 ISO/IEC 27001
@@ -594,13 +595,8 @@ Plan - Determine which controls to implement based on the risks identified
 Do - Implement the controls
 Check -  Check Monitoring and assurance; are the controls operating effectively
 Act - Based upon findings during the “Check” step, take additional, actions as necessary (react), which leads back to planning
-
-
  
  The CIA triad stands for Confidentiality, Integrity, and Availability. 
- 
-
- 
  
  Purpose of threat modeling
 In order to perform proper risk management, it is important to identify the threats and vulnerabilities associated with each asset. Threat modeling methodologies aid in systematically identifying
@@ -669,10 +665,113 @@ Manipulation of people’s actions through intimidation and/or deception .. it i
 **Tailgating or piggybacking -  the action of following a person who is authorized to enter a restricted area through a door and thus gaining unauthorized access. The difference is that in tailgating the attacker possesses a
 badge that is fake but looks real. In piggybacking, the attacker doesn’t have any badge at all.
 
+Apply supply chain risk management (SCRM) concepts
+**Risk management methodologies should be applied to all vendors, suppliers, service providers
+**The process of identifying, assessing, mitigating, and monitoring risks introduced by third parties, vendors, suppliers, and service providers across the entire lifecycle.
+**CISSP frames SCRM in domain 1 as: Governance responsibility, Risk ownership by the organization, Policy-driven, contract-enforced ...  not purely technical risk
+**CISSP Considers “Supply Chain” examples : Software vendors (OS, apps, SaaS), Cloud providers, MSPs / MSSPs, Hardware manufacturers, Open-source components, Logistics and maintenance vendors
+**Supply chain risk management ensures third-party risks are governed through due diligence, contractual controls, and continuous monitoring.
+
+1. Identify
+Who are the vendors?
+What do they access?
+What data do they handle? 📌 Vendor inventory is critical.
+2. Assess
+Security posture
+Compliance (SOC 2, ISO 27001)
+Financial stability
+Geographic / geopolitical risk 📌 Use due diligence, not trust.
+3. Mitigate
+Contract clauses, SLAs / SRAs, Right-to-audit
+Security requirements ...Segmentation & least privilege 📌 Contracts are security controls.
+4. Monitor (Continuous)
+Ongoing assessments
+Audit reports
+Incident notifications
+Performance metrics 📌 One-time assessments = ❌ wrong answer.
+
+SCRM vs Third-Party Risk (Trick!)
+Third-party risk	Risks from any external party
+SCRM		Focused on supply chain dependencies
+
+**SCRM mitigation controls(Know These)**
+Administrative - Vendor policies, contracts, NDAs, SLA/SLR
+Technical	Network segmentation, access controls
+Legal	Right-to-audit, breach notification
+Operational	Monitoring, audits, performance reviews
+
+**Other various supply chain risk mitigations**
+**Software Bill of Materials - A comprehensive list of components, libraries and modules that are used to build a software product, often detailing versions, sources and dependencies. 
+With this list, we can check what changes have been made in new versions. This can help us detect things like backdoors and othervulnerabilities.
+**Third-party Assessment and Monitoring - Evaluating and continuously monitoring the security practices and performance of third-party vendors or suppliers.
+**Minimum Security Requirements - Predefined baseline security standards that vendors must meet.
+**Service-level Requirements - Specifications set in contracts that dictate the expected performance, availability, and responsiveness of a service provided by a vendor.
+**Silicon Root of Trust - A secure cryptographic identity embedded in hardware, ensuring that the hardware starts in a trusted state and that the firmware loaded onto it is genuine
+Physically Unclonable Function - A hardware feature that uses the unique physical characteristics of semiconductor devices to generate cryptographic keys, ensuring that each device has a unique and unclonable identity. 
+
+**SLR, SLA, and Service Level Reports**
+1**SLR — Service Level Requirements - Business-defined minimum service expectations (availability, RTO, response time).
+CISSP framing: Input to risk assessment,  Defined by business, not vendor, Occurs before SLA
+With the acquisition of a service, additional organizational requirements must be considered, and this is done through a document called an SLR.
+Detailed service descriptions, Detailed service level targets, Mutual responsibilities
+.....it defines the security services and service level targets that each potential supplier can be evaluated agains
+
+
+2**SLA — Service Level Agreement - A contractual agreement that commits a provider to meet defined service levels.
+CISSP framing: Legal / administrative control, Risk transfer & risk mitigation
+SLAs are addendums to the contract and are therefore enforceable. SLAs often include expectations and stipulations such as **Service Levels (performance levels)**, **Governance**—the customer and the service provider know
+who is responsible for what, **Security** —expected security controls put in place by the service provider that speak to the topic of accountability
+and responsibility. Accountability can never be outsourced,  Compliance with all laws and regulations, and Liability/Indemnification when any element of the SLA is not met or is below threshold standards
+
+
+3** Service Level Reports (SLRpt / SLM Reports)- Operational evidence showing whether SLAs are being met.
+CISSP framing: Monitoring and assurance, Supports audits and RMF “Monitor” step, Detective control
+-Service level reports are issued by a vendor or service provider to a client and provide insight and information about the service provider’s ability to deliver services as defined by the SLA.
+- The service level report compares anticipated and agreed upon service levels with actual service levels and documents the effectiveness of security controls, which allows the customer—the owner—to gain assurance that expectations are being met. such ... Achievement of metrics defined in the SLA, issues identified, Reporting channels, Third-party SOC2 type2 reports, which provide independent verification and assurance
+
+**Order matters — CISSP loves order questions
+SLR → SLA → Service Level Reports   (SLA is based on SLR, not the other way around.)
+(Step	RMF / PDCA Phase / RMF mapping )
+SLR	- PLAN  - Categorize /Select / Define SLRs
+SLA	- DO - Implement / Establish SLAs  - SLA ≠ Risk Transfer - SLA transfers financial accountability, not risk ownership.
+Reports -	CHECK assess / Review service reports  - Define SLRs and enforce SLAs with reporting
+Adjust SLA / Controls -	ACT / Monitor Continuous service reporting - SLA without reporting = false sense of security.
+
+Item	Control Type
+SLR	Administrative (governance)
+SLA	Administrative / Legal
+Reports	Detective / Administrative
+
+SLR = What we need
+SLA = What we agree
+Reports = What we prove
+
+SLRs define business service expectations, SLAs contractually enforce them, and service level reports provide ongoing assurance as part of continuous risk monitoring.
+
+Exam Keywords to Circle ✏️ If you see keywords like:
+Vendor, Supplier, Outsourcing, Cloud provider, Third-party access, Contracts
+➡️ Think SCRM
+
+**Risks associated with the acquisition of products and services from suppliers and providers**
+**Product Tampering - Unauthorized alteration or modification of a product after manufacturing, but before the product reaches the consumer. 
+As an example, an attacker could intercept a keyboard delivery, solder a keylogger inside it, and then repackage it. 
+**Counterfeits - Unauthorized replicas or imitations of products that are made to deceive consumers into thinking that they are purchasing the real thing. Counterfeits may result in reduced
+performance, hazards, regulatory violations, inappropriate security, or increased vulnerabilities.
+**Implants - Hardware or software components stealthily inserted into products to perform unauthorized activities, such as espionage or data theft. Implants can result in sensitiveinformation being sent to unauthorized entities and unauthorized access to systems. 
+
+**Methods and Techniques to Increase Awareness, Training, and Education**
+**Awareness is to change cultural sensitivity to a topic or issue
+Examples of awareness include internal phishing campaigns, lunch and learns, and awareness posters hung in visible places.
+**Training provides specific skills needed to perform tasks for security or tech spec in a role
+Examples of training might include a firewall administrator learning how to write firewall rules or a security guard learning how to respond to different situations related to protecting a
+building and the assets within.
+**Education helps people understand fundamental concepts and therefore develop decision-making skills and abilitie
+
+Methods and Techniques to Provide Awareness and Training (e.g., social engineering, phishing, security champions (promoters), gamification)
 
 
 
- 
+Enforceable via penalties
 
 D2
 **********************************************************
