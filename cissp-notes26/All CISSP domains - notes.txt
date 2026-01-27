@@ -1,4 +1,16 @@
 
+• Domain 1: Security and Risk Management
+• Domain 2: Asset Security
+• Domain 3: Security Architecture and Engineering
+• Domain 4: Communication and Network Security
+• Domain 5: Identity and Access Management (IAM)
+• Domain 6: Security Assessment and Testing
+• Domain 7: Security Operations
+• Domain 8: Software Development Security
+https://drive.google.com/file/d/1y8LiZUfuVykYvsjY3GqNESLdyCEK4icf/view?usp=sharing
+
+Framework and Compliance lists:
+
  COBIT 2019: 
  COBIT, which stands for Control Objectives for Information and Related Technologies, is primarily a framework focused on governance and management of enterprise IT. Although COBIT can help organizations align IT with business strategies and manage IT-related risks, 
  COBIT (Control Objectives for Information and Related Technologies)
@@ -111,7 +123,10 @@ value. The latest version places greater emphasis on
 cybersecurity and aligns with the latest version of COBIT.
 
 
-Zachman
+Three of the most popular enterprise security architectures are 
+Zachman, Sherwood Applied Business Security Architecture (SABSA), and The Open Group Architecture Framework (TOGAF).
+
+
 
  The Graham-Denning model is a framework for identifying and selecting appropriate security controls for an organization. It takes into account the organization's goals, threats, and vulnerabilities to determine the most effective controls. 
 
@@ -226,171 +241,6 @@ Server responds on port 49,123 and continues to listen for Ken's traffic on port
 
 The correct answer: The ratio of false positives to false negatives: The best metric to use when evaluating the effectiveness of Intrusion Detection Systems (IDSs) is the ratio of false positives to false negatives. This metric provides insight into the accuracy and precision of the IDS, considering both its sensitivity (which could result in false positives, where benign activity is incorrectly flagged as malicious) and its specificity (which could result in false negatives, where actual malicious activity is not detected). A balanced ratio indicates an effective IDS that neither overburdens staff with false alarms nor misses genuine threats. 
 
-***************************************
-Brewer Nash. The Brewer-Nash model, also known as the 'cinderella' or 'chinese wall' model, imposes dynamic access controls based on a user's prior actions. In this case, it would prevent a sales rep from sharing information until the sale has concluded, but would still allow them to answer incoming calls from any client. The term is now known as "cone of silence" or "ethical wall" instead of "chinese wall". 
-
-The incorrect answers: 
-Bell-LaPadula: This model primarily focuses on maintaining the confidentiality of information and would not adequately address the dynamic access needs in this scenario. 
-
-Clark-Wilson: This model focuses on enforcing integrity in commercial transaction systems. It's not particularly suited to the needs described in this scenario. 
-
-Biba: This model is concentrated on maintaining the integrity of information and would not adequately handle the described scenario.
-
-Big Picture: What Security Models Are About
-Who can read what
-Who can write what
-What property is being protected ..Confidentiality or Integrity or Availability (less common in classic models)
-
-**Bell–LaPadula (BLP)**
-Goal: ✅ Confidentiality
-Used in: Military / government classification systems
-Rules  
-Simple Security Property
-👉 No Read Up
-*‑Property (Star Property)
-👉 No Write Down
-
-✅ Prevents data leakage to lower classifications
-🚫 Does NOT protect integrity
-
-📌 Mnemonic:
-Bell = Confidentiality
-“Read Down, Write Up”
-----------------------------------------------------------------------------------
-**Biba Integrity Model**
-Goal: ✅ Integrity
-Used in: Financial systems, databases, transactional systems
-Rules
-
-Simple Integrity Property
-👉 No Read Down
-*‑Integrity Property
-👉 No Write Up
-
-✅ Prevents untrusted data from corrupting trusted data
-🚫 Does NOT protect confidentiality
-📌 Mnemonic:
-
-Biba = Integrity
-“Read Up, Write Down”
-
-✅ Notice it’s the opposite of Bell‑LaPadula
-----------------------------------------------------------------------------------
-Clark–Wilson Model
-Goal: ✅ Integrity (Commercial Focus)
-Used in: Banking, accounting, business applications
-Key Ideas
-
-No direct user access to data
-Uses:
-
-Constrained Data Items (CDI)
-Transformation Procedures (TP)
-
-
-Focus on:
-
-Separation of duties
-Well‑formed transactions
-Auditing
-
-
-
-✅ Strong real‑world integrity
-✅ Practical and process‑driven
-🚫 Less about labels and classifications
-📌 Mnemonic:
-
-Clark‑Wilson = Clerks & Workflows
-----------------------------------------------------------------------------------
-Brewer–Nash (Chinese Wall)
-Goal: ✅ Prevent Conflict of Interest
-Used in: Legal firms, consulting, finance
-Rule
-
-Access depends on prior access history
-Once you access Company A’s data, you’re blocked from Company B’s competing data
-
-✅ Dynamic access control
-✅ Prevents insider conflict
-🚫 Not about CIA triad directly
-📌 Mnemonic:
-
-Chinese Wall = Conflict Wall
-----------------------------------------------------------------------------------
-attice-Based Access Control
-Goal: ✅ Formal information flow control
-Used in: MLS (Multi‑Level Security) systems
-Concept
-
-Every subject and object has a label
-Lattice defines allowed dominance relationships
-
-✅ Formal basis for Bell‑LaPadula
-✅ Highly structured
-📌 Mnemonic:
-
-Lattice = Levels + Labels
-----------------------------------------------------------------------------------
-Graham–Denning Model
-Goal: ✅ Secure creation & deletion of subjects/objects
-Focus
-
-Access rights management
-Who can:
-
-Grant access
-Delete users
-Transfer rights
-
-
-
-✅ Administrative control model
-🚫 Not about data flow directly
-📌 Mnemonic:
-
-Graham‑Denning = Admin actions
-----------------------------------------------------------------------------------
-Harrison–Ruzzo–Ullman (HRU)
-Goal: ✅ Access rights safety
-Key Question
-
-Can a system ever reach an unsafe state where rights leak?
-
-✅ Theoretical model
-✅ Proves access control problems can be undecidable
-📌 Mnemonic:
-
-HRU = “Are Rights Unsafe?”
-----------------------------------------------------------------------------------
- Ultra‑Fast Memory Tricks (Exam Gold)
-🔔 Bell‑LaPadula
-✅ Bell rings when secrets leak
-👉 Protects Confidentiality
-🔧 Biba
-✅ Biba breaks bad data
-👉 Protects Integrity
-🏦 Clark‑Wilson
-✅ Accountants love workflows
-👉 Integrity + Separation of Duties
-🧱 Brewer‑Nash
-✅ Walls stop conflicts
-👉 Conflict of Interest
-🪜 Lattice
-✅ Security ladder
-👉 Levels & dominance
-
-🎯 CISSP Exam Strategy
-When you see a question:
-1️⃣ Ask: Confidentiality or Integrity?
-2️⃣ If confidentiality → Bell‑LaPadula
-3️⃣ If integrity (especially business) → Biba or Clark‑Wilson
-4️⃣ If conflict of interest → Brewer‑Nash
-
-HARD CISSP practice questions #1: All CISSP domains - 125Q   ... notes
-
-
-***************************************
 
 Started the authentication sequence by claiming an identity: By entering his username on the system, Thor has initiated the authentication process by claiming an identity. 
 A username is a claim of identity that will typically be followed by providing credentials (such as a password) to verify or authenticate that claim. 
@@ -440,7 +290,7 @@ Work Recovery Time (WRT) is the duration of time it takes to catch up on work no
 
 
 
-D1
+Domain 1: Security and Risk Management
 **********************************************************
 BIA/BCP/DRP /RMF
 
@@ -779,7 +629,7 @@ Methods and Techniques to Provide Awareness and Training (e.g., social engineeri
 
 Enforceable via penalties
 
-D2 - ASSET SECURITY
+Domain 2: Asset Security
 **********************************************************
 
 
@@ -977,13 +827,306 @@ Domain 3 Security Architecture and Engineering
 	-	due to the growth in reliance on third-party services, trust should be verified through additional assurance mechanisms like Audits, Ongoing monitoring, SOC reporting, Contracts/agreements, like SLAs and SLRs
    
    
-   Privacy by Design - Privacy by Design is premised on the belief that privacy should be incorporated into networked systems and technologies by default and designed into the architecture.  
-   Shared responsibility
-   Secure access service edge
+**Privacy by Design - Privacy by Design is premised on the belief that privacy should be incorporated into networked systems and technologies by default and designed into the architecture Shared responsibility    
+	-	Privacy as proactive and preventive, not reactive and remedial. Privacy by Design (PbD) should anticipate and prevent privacy shortcomings before they occur. PbD does not wait for risks to privacy to arise, nor does it 	attempt to resolve privacy breaches once they’ve taken place
+	-	 Privacy as the default setting. Like many firewalls that include implicit deny as the default treatment of all traffic, PbD seeks to ensure the automatic—default—protection of personal data in IT systems and business practices
+	-	Privacy embedded into design. PbD is considered from the inception of a system, application, or process and is included in the architecture, design, and development of the system, application, and process. 
+	-	**Full functionality within a given solution**. PbD seeks a “win-win” situation for all parties involved and attempts to accommodate all interests, goals, and objectives rather than demand trade-offs that reduce overall effectivenes
+	-	End-to-End Security. PbD, having been considered from the inception of a system, application, or process, should securely extend through the life cycle of the data involved.
+	-	Visibility and Transparency. PbD calls for visibility and transparency of all components and processes related to the technology or business practice being used.
+	-	 Respect for User Privacy. PbD ultimately requires the individual to be treated with the utmost respect and care.
+
+**Shared Responsibility 
+	-	defines which security responsibilities belong to the cloud provider and which belong to the customer.
+	-	consumers and providers must act on these responsibilities and define clear contracts and agreements, which can then be implemented through appropriate policies, procedures, and controls.
+	-	CISSP tests : Accountability, Risk ownership and Legal and governance implications
+	-	You can outsource operations — you CANNOT outsource responsibility,  Even if the cloud provider causes the issue, the organization remains accountable.
+	-	defined and understood, especially since accountability may never be delegated or otherwise transferred, regardless of the customer provider relationship.
+	-	High level:
+		-	Cloud Provider (Always Responsible For) -Physical security of data centers, Power, HVAC, Physical network infrastructure, Hypervisor (usually)
+		-	Customer (Always Responsible For) - Data classification, Access control, Identity management, Configuration, Compliance
+	-	By Service Model (Exam Favorite)
+		-	IaaS Customer responsible for: OS patching, Firewall rules, Applications Data, 
+		-	IaaS Provider responsible for: Physical servers, Hypervisor, Facilities
+		-	PaaS Customer responsible for: Applications, Data, User access
+		-	PaaS Provider responsible for: OS, Runtime, Platform services
+		-	SaaS Customer responsible for: Data, User access, Configuration settings, 
+		-	SaaS Provider responsible for: Application, OS, Infrastructure
+	-	SaaS is NOT zero customer security duties ✅ Identity, access, data remain customer's accountability
+
+**Break some links in the Cyber Kill Chain.
+	- 	framework describing the stages of a cyberattack, originally developed by Lockheed Martin, used to understand, detect, and disrupt attacks at multiple points.
+	-	CISSP need to Mapping controls to attack phases, to where to break the chain and to Choosing preventive vs detective vs corrective controls
+	-	7 stages of CKC
+		**	1. Reconnaissance - involves identifying a target, gather information that will be useful to the attacker
+				stage controls: Reduce attack surface, info disclosure
+		**	2. Weaponization - Malware/exploit prepared, building an exploit that aims to take advantage of any vulnerabilities identified in the previous step.
+				stage controls: Secure SDLC, patching
+		**	3. Delivery - Payload delivered (email, USB, web), involves the attacker launching their attack. Common delivery methods include sending malicious
+				stage controls: Email security, user training
+		**	4. Exploitation - 	Vulnerability exploited, the attacker executes their malicious code on the target’s systems.
+				stage controls : Hardening, patching
+		**	5. Installation - 	Malware installed, comes immediately after exploitation, and the attacker now has software installed on the target’s systems.
+				stage controls : Endpoint protection
+		**	6. Command & Control (C2) - Attacker establishes control, allows the attacker to remotely control their malware running within the target’s systems. The attacker can move laterally and install backdoors to advance
+				stage controls : Network monitoring
+		**	7. Actions on Objectives - Execute utimate goals such as Data exfiltration, lateral movement, or encrypting the target’s files in a ransomware attack.
+				stage controls : DLP, IR
+	- 	Stopping the attack at ANY stage of the CKC is a success
+	-	CISSP prefers : Earlier stages → cheaper, less damage, Defense in depth → multiple chances to stop attacker
+	-	CISSP must see CKC stage controls ..is NOT only prevention but expects detection + response
+	-	DO NOT memorizing steps without control mapping, Always ask: Which control stops this stage?
+
+
+
+**Secure access service edge - We discuss secure access service edge when we talk about edge computing in section 3.5.15.
+
+3.2 Understand the fundamental concepts of security models (e.g., Biba, Star Model, Bell–LaPadula)
+3.2.1 Security Models
+**A model is a representation of something real.
+**A security model is a representation of what security should look like in an architecture.
+**Some of these models include Bell– LaPadula, Biba, Clark–Wilson and Brewer–Nash (also referred to as the Chinese Wall model). 
+**These are simple models that provide the basis—the fundamental means—for building confidentiality or integrity into architectures that require these core principles. 
+**Like any model, security models represent what security needs to look like.
+
+
+3.2.2 Enterprise Security Architecture
+**An architecture is a group of components that work together.
+**Security architecture involves breaking down a system to its components and protecting each component based upon its value.
+**Frameworks existto serve as guidelines. THREE of the most popular enterprise security architectures 
+**Though each differs a bit in structure and terminology, they each basically do the same thing to protect any architecture are:
+	-	**Zachman**
+		**The Zachman Framework is a taxonomy (classification schema) that organizes enterprise architecture artifacts by perspective and interrogatives.
+		**Tells you how to organize and describe architecture
+		**Focuses on answering basic questions like how, where, who, when, and why 
+		**Directing those questions to the various company teams (e.g., designers, owners, architects, strategists, engineers, operators) and acquiring their feedback
+		**
+		**outdated ...as it merely focuses on science of sysmatic classification (taxonomy) and organization of enterprise security.
+		
+	-	**Sherwood Applied Business Security Architecture (SABSA)** 
+			**a business‑driven security architecture framework that starts with business requirements and risk, then derives security services and controls.
+			**Built specifically for security, ✅ Strong alignment with risk management,✅ Very popular in CISSP questions
+			**CISSP keywords in the question: Business drivers, Risk appetite, Security metrics, Business alignment
+			
+	-	**The Open Group Architecture Framework (TOGAF).** 
+		**focuses on efficient resource utilization and cost minimization while having a modular structure increasing its adoption, a content framework providing consistency, and a style that allows architectural flexibility.
+		** is a methodology and framework for developing, implementing, and governing enterprise architecture.
+		**✅ It includes process, ✅ governance, ✅Architecture  Lifecycle management
+	
+
+
+✅ Mnemonic
+Zachman = WHAT exists, Classification & taxonomyOrganizing architecture artifacts
+TOGAF   = HOW to build it, Security‑driven architectureAligning security to business
+SABSA   = WHY security exists, Enterprise architecture processBuilding and governing architecture
+
+Zachman = Structure
+TOGAF   = Process
+SABSA   = Security + Business
+	
+	
+If the question says…
+
+“Classification, viewpoints, completeness” → Zachman
+“Business‑driven security, risk appetite” → SABSA
+“Architecture process, governance, lifecycle” → TOGAF
+
    
+**Security models:**
+-	**ABOUT Who can read/write what ..What property is being protected ..Confidentiality or Integrity or Availability (less common in classic models)
+-	**Two most common types: **lattice-based** or **rule-based**
+	-	A good way to envision a **lattice-based model** is to think of a ladder, where a framework and steps exist that look a bit like layers, going up and down. In other words, a lattice-based model is a layer-based model. It requires layers of security to address the requirements. 2 main lattice-based models exists: **Bell–LaPadula** and **Biba**.
+	-	Lattice-based models do include rules, but those rules are confined to layers within the model; hence, the term lattice-based is more applicable.
+		**Bell–LaPadula - The Bell–LaPadula model is a formal state machine model designed to **preserve confidentiality** in multilevel security systems (e.g., military or government environments).
+			-	BLP ...**No Read Up and No Write Down**, protects **Confidentiality ONLY"
+			-	**When Bell–LaPadula is the right answer**: ✅ Confidentiality‑focused questions, ✅ Government / military environments, ✅ Data classification and clearance levels, ✅ Mandatory Access Control (MAC)
+			-	Core rules: No Read Up (ss‑property) and No Write Down (*-property).
+			-	Goal: prevent disclosure of higher‑classified data to lower levels.
+		**Biba - formal access control model designed to preserve integrity, ensuring that data is not improperly modified in a system.
+			-	Biba ...**No Write Up and No Read Down**, protects **Integrity ONLY"
+			-	Biba is opposite of BLP
+			-	**When Biba is the right answer**: ✅ Focus on data integrity ✅ Preventing unauthorized modification ✅ Trusted vs untrusted data sources ✅ Financial, transactional, or safety‑critical systems
+			-	Core rules: No Read Down (simple integrity) and No Write Up (*-integrity).
+			-	Goal: prevent corruption of high‑integrity data by lower‑integrity subjects.			
+		**Lipner implementation is not a model; it is an implementation that combines the best features of Bell–LaPadula and Biba, protects both confidentiality and integrity
+		**Star-Rules (BLP): Normal Star  = write up allowed ... Strong Star = same level only
+		**Invocation property says (Biba): a subject cannot invoke a subject at a higher integrity level. = no write up
+-	**All other models are **rule-based**, meaning specific rules dictate how security operates. is a set of rules that mediate access between subject and objects. 
+		-	Information Flow - models track the flow of information and can help uncover vulnerabilities and insecurities like covert channels.
+		-	Covert channels are unintentional information communications/disclosure paths; two types exist: storage and timing. 
+				**timing -hugh/sudden pizza order delivery hinting something big... when they exist, confidentiality may be compromised
+				**storage - sensitive info intentionally remain in memory of a laptop
+		-	Clark–Wilson - focuses on enforcing integrity in commercial transaction systems. Well‑formed transactions
+				**Prevent authorized subjects from making bad changes
+				**Maintain consistency of the system
+				**Prevent unauthorized subjects from making any changes (this is the only of the three that Biba addresses)
+				**Rules of integrity: Well-form transaction(Good, consistent, validated data.), Separation of Duties (One person shouldn’t be allowed to perform all tasks related to a critical function.) and Access Triple (subject cannot directly access object but via program)
+		-	Brewer–Nash (Chinese Wall) - Brewer Nash. 
+				**AKA the 'cinderella' or 'chinese wall' model, it's core rule is dynamic separation and protect from Conflict of interest
+				** Development and Production departments in an organization, should not be able to influence each other or even allow access between each other.
+		-	Graham–Denning - rule-based model that specifies rules allowing a subject to access an object.
+		-	Harrison–Ruzzo–Ullman - rule-based model that focuses on the integrity of access rights via a finite set of rules available to edit the access rights of a subject. It adds the ability to add generic rights to groups of individuals.
+	
+	
+	3.2.5 Certification and Accreditation   ..... pg 276 to be continue .,................
+
+
+
+
+
+
+
+
+**Bell–LaPadula (BLP)**  .....“Read Down, Write Up”)
+Goal: ✅ Confidentiality only
+Used in: Military / government classification systems
+📌 Mnemonic: Bell = Confidentiality ... “Read Down, Write Up”
+Simple Security Property
+👉 No Read Up
+*‑Property (Star Property)
+👉 No Write Down
+✅ Prevents data leakage to lower classifications
+
+
+
+----------------------------------------------------------------------------------
+**Biba Integrity Model** (No Read Down/No Write Up .....“Read Up, Write Down”)
+Goal: ✅ Integrity only
+Used in: Financial systems, databases, transactional systems
+📌 Mnemonic:
+Biba = Integrity
+“Read Up, Write Down”
+Simple Integrity Property
+👉 No Read Down
+*‑Integrity Property
+👉 No Write Up
+
+✅ Prevents untrusted data from corrupting trusted data
+✅ Notice it’s the opposite of Bell‑LaPadula
+----------------------------------------------------------------------------------
+Clark–Wilson Model
+Goal: ✅ Integrity (Commercial Focus)
+Used in: Banking, accounting, business applications
+Key Ideas
+
+No direct user access to data
+Uses:
+
+Constrained Data Items (CDI)
+Transformation Procedures (TP)
+
+
+Focus on:
+
+Separation of duties
+Well‑formed transactions
+Auditing
+
+
+
+✅ Strong real‑world integrity
+✅ Practical and process‑driven
+🚫 Less about labels and classifications
+📌 Mnemonic:
+
+Clark‑Wilson = Clerks & Workflows
+----------------------------------------------------------------------------------
+Brewer–Nash (Chinese Wall)
+Goal: ✅ Prevent Conflict of Interest
+Used in: Legal firms, consulting, finance
+Rule
+
+Access depends on prior access history
+Once you access Company A’s data, you’re blocked from Company B’s competing data
+
+✅ Dynamic access control
+✅ Prevents insider conflict
+🚫 Not about CIA triad directly
+📌 Mnemonic:
+
+Chinese Wall = Conflict Wall
+----------------------------------------------------------------------------------
+attice-Based Access Control
+Goal: ✅ Formal information flow control
+Used in: MLS (Multi‑Level Security) systems
+Concept
+
+Every subject and object has a label
+Lattice defines allowed dominance relationships
+
+✅ Formal basis for Bell‑LaPadula
+✅ Highly structured
+📌 Mnemonic:
+
+Lattice = Levels + Labels
+----------------------------------------------------------------------------------
+Graham–Denning Model
+Goal: ✅ Secure creation & deletion of subjects/objects
+Focus
+
+Access rights management
+Who can:
+
+Grant access
+Delete users
+Transfer rights
+
+
+
+✅ Administrative control model
+🚫 Not about data flow directly
+📌 Mnemonic:
+
+Graham‑Denning = Admin actions
+----------------------------------------------------------------------------------
+Harrison–Ruzzo–Ullman (HRU)
+Goal: ✅ Access rights safety
+Key Question
+
+Can a system ever reach an unsafe state where rights leak?
+
+✅ Theoretical model
+✅ Proves access control problems can be undecidable
+📌 Mnemonic:
+
+HRU = “Are Rights Unsafe?”
+----------------------------------------------------------------------------------
+ Ultra‑Fast Memory Tricks (Exam Gold)
+🔔 Bell‑LaPadula
+✅ Bell rings when secrets leak
+👉 Protects Confidentiality
+🔧 Biba
+✅ Biba breaks bad data
+👉 Protects Integrity
+🏦 Clark‑Wilson
+✅ Accountants love workflows
+👉 Integrity + Separation of Duties
+🧱 Brewer‑Nash
+✅ Walls stop conflicts
+👉 Conflict of Interest
+🪜 Lattice
+✅ Security ladder
+👉 Levels & dominance
+
+🎯 CISSP Exam Strategy
+When you see a question:
+1️⃣ Ask: Confidentiality or Integrity?
+2️⃣ If confidentiality → Bell‑LaPadula
+3️⃣ If integrity (especially business) → Biba or Clark‑Wilson
+4️⃣ If conflict of interest → Brewer‑Nash
+
+HARD CISSP practice questions #1: All CISSP domains - 125Q   ... notes
+
+
+***************************************
+
+
+
+
 
 The Graham-Denning model is a framework for identifying and selecting appropriate security controls for an organization. It takes into account the organization's goals, threats, and vulnerabilities to determine the most effective controls. 
 
+**links or attachments to targets.
 
  A unique key pair is generated for every user and the private key must remain secret correctly describes how asymmetric encryption is practically applied. In asymmetric encryption, each user has a pair of keys - a private key that must be kept secret and a public key that is made public. This key pair is unique for every user. The public key is used to encrypt the data, and only the corresponding private key can decrypt it. It's essential to understand that the private key should never be shared as it could lead to the decryption of the information by unauthorized individuals, compromising the confidentiality of the data. 
  
