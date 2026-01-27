@@ -23,7 +23,9 @@ Aligns IT goals with business objectives and risk management.
  PCI DSS
  CSA START
  FedRAMP
+ FISMA
  GDRP
+ ITIL
  
  ISO / IEC (International Standards)
  ISO 27001
@@ -954,25 +956,106 @@ If the question says…
 -	**All other models are **rule-based**, meaning specific rules dictate how security operates. is a set of rules that mediate access between subject and objects. 
 		-	Information Flow - models track the flow of information and can help uncover vulnerabilities and insecurities like covert channels.
 		-	Covert channels are unintentional information communications/disclosure paths; two types exist: storage and timing. 
-				**timing -hugh/sudden pizza order delivery hinting something big... when they exist, confidentiality may be compromised
+				**timing -huge/sudden pizza order delivery hinting something big... when they exist, confidentiality may be compromised
 				**storage - sensitive info intentionally remain in memory of a laptop
 		-	Clark–Wilson - focuses on enforcing integrity in commercial transaction systems. Well‑formed transactions
 				**Prevent authorized subjects from making bad changes
 				**Maintain consistency of the system
 				**Prevent unauthorized subjects from making any changes (this is the only of the three that Biba addresses)
-				**Rules of integrity: Well-form transaction(Good, consistent, validated data.), Separation of Duties (One person shouldn’t be allowed to perform all tasks related to a critical function.) and Access Triple (subject cannot directly access object but via program)
-		-	Brewer–Nash (Chinese Wall) - Brewer Nash. 
+				**Rules of integrity: Well-form transaction(Good, consis**tent, validated data.), Separation of Duties (One person shouldn’t be allowed to perform all tasks related to a critical function.) and Access Triple (subject cannot directly access object but must go through a program that enforces access rules)
+		-	Brewer–Nash (Chinese Wall) -   one primary goal: Preventingconflicts of interest.
 				**AKA the 'cinderella' or 'chinese wall' model, it's core rule is dynamic separation and protect from Conflict of interest
-				** Development and Production departments in an organization, should not be able to influence each other or even allow access between each other.
-		-	Graham–Denning - rule-based model that specifies rules allowing a subject to access an object.
-		-	Harrison–Ruzzo–Ullman - rule-based model that focuses on the integrity of access rights via a finite set of rules available to edit the access rights of a subject. It adds the ability to add generic rights to groups of individuals.
+				**stipulates and ensures that information flows between subjects and objects are only allowed if the information does not provide a conflict of interest
+				**ie. Development and Production departments in an organization, should not be able to influence each other or even allow access between each other.
+		-	Graham–Denning - integrity-focused rule-based model that specifies rules allowing a subject to access an object.
+		-	Harrison–Ruzzo–Ullman - like GD focusing integrity via a finite set of rules to assign access rights of a subject to an object. It adds the ability to add generic rights to groups of individuals.
 	
 	
-	3.2.5 Certification and Accreditation   ..... pg 276 to be continue .,................
+**3.2.5 Certification and Accreditation   ..... pg 276 in Destin**
+	-	**Certification** is the **comprehensive technical analysis** of a solution to confirm it meets the desired needs.
+	-	**Accreditation is **management’s official sign-off** of certification for a predetermined period of time, then the certifcation/accreditation processes repeated
+	-	An architectures..especially security architectures—are built, products are often purchased from vendors. Security today often relies on solutions and mechanisms provided by vendors. 
+	-	would need an independent and objective measurement system that vendors can use for evaluation and purchasing purposes, which is called **evaluation criteria systems**, 3 system well known:
+		-	Trusted Computer System Evaluation Criteria (TCSEC)**	—also known as the **Orange Book**
+				**was written as part of a series of books known as the “rainbow series,” published by the US DOD in the ’80s. different books each with a different color
+				**There’s one book called the Light Blue Book that deals with password guidelines, while the Red Book deals with network security, and the Orange Book focuses on measuring security products.
+				**Focus on Confidentiality only, Military / government systems, Mandatory Access Control (MAC) and BLP model, Old, rigid, confidentiality-focused.
+				**it only measures single-box type of architectures; it does not map well to networked environments.
+				**Functional levels Ratings: D → C → B → A (A1 highest)
+		-	The European-equivalent of TCSEC called **Information Technology Security Evaluation Criteria (ITSEC)**
+				**Focus on all 3 CIA triad (broader than TCSEC and includes network environment), Separates functionality from assurance
+				**Improvement over TCSEC but still fragmented internationally, Flexible security targets
+				**"E" for Levels of assurance Ratings: E0 → E6 (E6 highest) and also "F" Functional level rating which same as the Orange Book
+		-	An ISO standard, called the **Common Criteria (ISO/IEC 15408)** 
+				**Common Criteria is an international evaluation standard that assesses security functions and assurance levels using **Protection Profiles, Security Target and Evaluation Assurance Levels**
+				**International standard replacing TCSEC and ITSEC
+				**Focus on CIA triad and Customizable security requirements
+				**4 Evaluation processes : 
+					**Protection Profile** (PP) – “What are needed” -  lists the security capabilities that a type or category of security products should possess
+					**Target of Evaluation** (TOE) - a vendor desires their target product to be rated according to the Common Criteria,  under eval of functional and assurance security capabilities
+					**Security Target** (ST) – “How this product meets it” - from the vendor's perspective—each of the firewall's security capabilities that match up with capabilities outlined in the Protection Profile.
+					**Evaluation Assurance** Levels (EAL 1–7, 7 most rigorously tested, EAL7/6/5 too high-maintenance/cost/risks, typically EAL3 for OS and EAL4 for Firewall), same in lifespan until major product changes
+				**It’s called the Common Criteria because several countries joined together with a common goal: to create a common measurement system that could be trusted globally. 
+				**For example, if a German-made product is rated, the rating can be trusted by US-based companies, because the rigorous rating process is independent and objective and globally applicable. 
+				**To make this possible, globally dispersed, independent, Common Criteria–licensed organizations evaluate and rate products. 
+			
+	Evaluation criteria systems 
+		**Timeline Trick**
+			Orange → Europe → World
+			TCSEC → ITSEC → Common Criteria
+		**Scope Trick**
+			TCSEC = Top Secret focus
+			ITSEC = Improved triad
+			Common Criteria = Custom Criteria
 
 
+3.3  Select controls based upon systems security requirements
+3.3.1 Security Control Frameworks
 
+**Security control frameworks aid with the control selection process.
+**Security control frameworks provide guidance, based upon best practices.
+**Features from multiple frameworks can be used to meet the needs of an organization.
+**When considered, especially mitigating controls, control frameworks can be utilized to aid with the control selection process. Control frameworks provide comprehensive guidance, based upon best practices
+**Understand the major frameworks at a high level, especially ISO 27001/02, which is an internationally recognized framework
+		**ISO 27001
+		**ISO 27002
+	
 
+COBIT
+ITIL
+NIST SP 800-53
+PCI DSS
+COSO
+HIPAA
+FISMA
+FedRAMP
+SOX
+	
+3.4 Understand security capabilities of information systems (IS) (e.g., memory protection, Trusted Platform Module (TPM),encryption/decryption)
+3.4.1 RMC, Security Kernel, and TCB
+
+**Security within information systems always pertains to **subjects and objects**.
+**The **Reference Monitor Concept (RMC)** is a concept.
+**Implementation of the RMC is known as a **security kernel**.
+**A security kernel should consist of three properties, or characteristics: **completeness, isolation, and verifiability**.
+**The term **Trusted Computing Base (TCB)** refers to all the protection mechanisms within an architecture; the TCB is the totality of protection mechanisms within an architecture.
+
+**subjects and objects**
+	-	Subject: Active entities A subject is a person, process, program, or anything similar that actively tries to access an object.
+	-	Object: Passive entities An object is anything that is being passively accessed by a subject, like a file, server, process, or hardware component.
+
+**Reference Monitor Concept (RMC)**
+	-	The RMC is simply the concept of a subject accessing an object through some form of mediation that is based on a set of rules, with this access being logged and monitored. 
+	-	Need features like: Must mediate all access, Be protected from modification, Be verifiable as correct and Always be invoked
+
+**Security Kernel**
+	- 	The implementation of the reference monitor concept (concept only) is known as a security kernel, that is must be an implementation of a system that actually controlling access 
+	-	When implemented, **a viable security kernel should contain three properties or characteristics**
+			-	completeness
+			-	isolation
+			- 	verifiability
+			
+DEST pg 301 .............................................................
 
 
 
