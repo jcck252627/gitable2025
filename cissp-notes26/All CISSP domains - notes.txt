@@ -8,6 +8,7 @@
 • Domain 7: Security Operations
 • Domain 8: Software Development Security
 https://drive.google.com/file/d/1y8LiZUfuVykYvsjY3GqNESLdyCEK4icf/view?usp=sharing
+https://drive.google.com/file/d/1y8LiZUfuVykYvsjY3GqNESLdyCEK4icf/view?usp=drive_link
 
 Framework and Compliance lists:
 
@@ -19,13 +20,147 @@ Business-focused IT governance framework.
 Aligns IT goals with business objectives and risk management.
  
  SOX
- HIPPA
+
+HIPAA
+**HIPAA = Health Insurance Portability and Accountability Act (1996)**
+**HIPAA establishes a framework for protecting health information, and its enforcement is carried out by the Office for Civil Rights (OCR) and the Health and Human Services (HHS). OCR is responsible for enforcing the HIPAA Privacy and Security Rules, conducting compliance reviews, and investigating complaints. HHS, on the other hand, is involved in developing and updating HIPAA regulations and ensuring equal access to health and human services. 
+
+**From a CISSP perspective, HIPAA is: ✔ A U.S. federal law protect­ing PHI, Protected Health Information (PHI) includes:
+	-Medical records
+	-Billing data
+	-Diagnoses
+	-Lab results
+	-Any data that can identify a patient
+**HIPAA aligns to the “C” in GRC — Compliance.
+
+A law with three major rules the exam focuses on:
+**Privacy Rule** – defines when PHI can/cannot be used or disclosed
+**Security Rule** – protects electronic PHI (ePHI) via administrative, physical, and technical controls
+**Breach Notification Rule** – requires timely disclosure to affected individuals + HHS (US Department of Health and Human Services)
+**Covered entities:** (hospitals, insurers, clinics, providers, plans, clearinghouses, doctors, pharmacies)
+**Business associates:** (cloud vendors, billing companies, MSPs, labs) - any person/org/services that works with entities that handles PII/PHI
+
+✔Privacy Rule...
+		- Governs: Use & disclosure of PHI, Minimum necessary requirement, Patient rights (access, correction, restrictions)
+		**CISSP mindset: Privacy Rule = policy & governance.
+
+✔ Security Rule 
+		**Requires administrative, physical, and technical safeguards for ePHI:
+		**Administrative Safeguards
+		-	Risk assessments
+		-	Workforce training
+		-	Policies/program oversight
+		**Physical Safeguards
+			Facility access
+			Device/media controls
+		**Technical Safeguards
+		-	Access control
+		-	Audit logs
+		-	Encryption (addressable, not mandatory)
+		-	Integrity controls
+		**CISSP mindset: Security Rule = technical + operational security controls.**	
+✔ Breach Notification Rule ...If PHI is breached:
+		-	Notify affected individuals without unreasonable delay
+		-	Notify HHS
+		-	Notify media if > 500 individuals affected
+		**	CISSP mindset: Breach = immediate reporting + incident response. CISSP will NEVER choose “wait for investigation to complete before notifying.”
+How CISSP Wants You to Think About HIPAA
+Use these principles:
+✔ Compliance requirements override convenience
+✔ Patient rights and privacy always come first
+✔ Administrative controls are equally important
+✔ Risk assessment is the foundation of HIPAA Security Rule
+✔ Breach notification must be prompt
+✔ PHI = highly regulated, no exceptions
+ 
  PCI DSS
+ 
+ 
+
  CSA START
  FedRAMP
  FISMA
  GDRP
  ITIL
+ 
+COSO Internal Control Framework
+Focuses on enterprise internal controls and risk management.
+Often referenced for financial systems and compliance.
+
+
+SOC 1 / SOC 2 (AICPA)/SOC3 / each with type 1/2
+**SOC = System and Organization Controls.. They are audits performed under AICPA SSAE 18 standards.
+** AICPA = American Institute of Certified Public Accountants (AICPA) Auditing Standards Board.
+**SOC reports are third‑party independent audits
+**They support **vendor due diligence, supplier risk, and compliance assurance**
+**SOC is NOT security certification (they are attestation, not certification)
+**SOC reports are a GRC artifact, not a technical control
+**Type 1 - A point in time report ... completedthe first time to get SOC certification ... “Are the controls designed properly now?”
+**Type 2 - conducted annually , show how controls operated over a period of time typically 6-12 months ... “Do the controls actually work during this period?” ... **CISSP perferred type 2 for RMF** 
+
+➡	SOC 1 = FINANCIAL
+	Sections: 1. Auditor’s Report / 2. Management Assertion / 3. System Description/ 4. Control Objectives (financial oriented)/ 5. Controls and Tests / 6. Results / Exceptions
+	CISSP GRC Tie‑Ins:  Vendor financial risk, Third‑party assurance, Governance requirements for financial systems, SOX compliance evidence
+
+➡➡SOC 2 = SECURITY .............**MOST important for CISSP**
+Purpose
+Evaluate controls relevant to the Trust Services Criteria (TSC):
+
+Security (mandatory)
+Availability
+Processing Integrity
+Confidentiality
+Privacy
+
+SOC 2 Sections
+Auditor’s Opinion
+Management Assertion
+System Description
+Trust Services Criteria
+Controls & Test Procedures
+Results / Exceptions
+
+CISSP GRC Tie‑Ins
+Cloud vendor risk assessments
+Privacy compliance audits
+Security governance assurance
+Contractual due diligence
+Supply chain risk management
+
+
+➡ SOC 3 = PUBLIC‑FACING SECURITY SUMMARY
+Purpose
+A public, high-level version of SOC 2 with no confidential details.
+Used For
+Marketing
+Publishing on website
+Easy proof of security posture
+CISSP GRC Tie‑In:  Used for governance transparency and stakeholder assurance, but not acceptable for vendor risk assessments.
+
+SOC 1 is Financial reporting controls (ICFR) for Auditors, CFO, regulators
+SOC 2 focuses on security, availability, confidentiality, integrity, privacy. need registered CPA firms/CPAs to conduct audits and issue reports for **security and customer teams** ....
+SOC 3 for Public summary of SOC 2 for giving to Public, marketing, customers
+
+ SOC 1 vs SOC 2
+Your organization is evaluating a payroll vendor that processes financial transactions. Which report provides the MOST relevant assurance?
+✔ Correct Answer: SOC 1 Type II
+➡ CISSP Logic:
+Financial reporting = SOC 1.
+Assurance = Type II.
+ 
+ CISSP Exam Traps to Avoid
+❌ Trap 1: “SOC 1 is about security”
+No — SOC 1 = financial.
+❌ Trap 2: “SOC 3 is enough for due diligence”
+Never. It is not acceptable for risk assessments.
+❌ Trap 3: “Type I is as strong as Type II”
+Type II is always stronger.
+❌ Trap 4: “SOC reports certify security”
+They do not certify. They attest.
+❌ Trap 5: “SOC 2 always includes all TSC”
+Only Security is mandatory.
+ 
+ 
  
  ISO / IEC (International Standards)
  ISO 27001
@@ -42,7 +177,7 @@ Risk management framework aligned with ISO 27001.
 Focuses on identifying, analyzing, and treating information security risks.
 
 NIST CFS
-NIST SP 800-39
+NIST SP 800-39	- framework any companies can use to assess risks ... "a holistic view rather than a checklist view ", 3 tiers, organization/mission-business/info-system, risks must be addresses in each tiers
 NIST 800-37
 NIST SP 800-53 is a comprehensive catalog of security and privacy controls for all U.S. federal information systems (except those related to national security) and is directly focused on listing such controls, making it highly relevant for application development.
 
@@ -74,12 +209,6 @@ Supports both qualitative and quantitative risk analysis.
 
 NIST SP 800-88 revision 1 provides guidelines for media sanitization 
 
-COSO Internal Control Framework
-Focuses on enterprise internal controls and risk management.
-Often referenced for financial systems and compliance.
-SOC 1 / SOC 2 (AICPA)
-Audit reports evaluating controls at service organizations.
-SOC 2 focuses on security, availability, confidentiality, integrity, privacy.
 
 Establishing appropriate controls for security and availability: The SOC 2 (System and Organization Controls) audit is a type of audit designed to assess a service organization's systems in terms of their security, availability, processing integrity, confidentiality, and privacy. The primary focus of a SOC 2 audit is on the organization's non-financial reporting controls as they relate to the security and availability of a system. The primary indicator that a company has met the requirements of a SOC 2 audit is its establishment of appropriate controls for security and availability. These controls must be designed effectively and operating as intended to pass the audit. The incorrect answers: Although implementing strong password policies is indeed a best practice in cybersecurity and could be part of the controls evaluated in a SOC 2 audit, it is not the primary indicator that a company has met the audit's requirements. SOC 2 audits are broader and include controls that relate to the entire system’s security and availability, not just the strength of password policies. While important, strong password policies alone do not guarantee a successful SOC 2 audit. Having a comprehensive data backup plan is certainly a vital part of any organization's disaster recovery strategy and can contribute to the availability aspect of SOC 2. Still, it is only one of many aspects of a system that are evaluated in a SOC 2 audit. A successful audit requires an organization to demonstrate effective controls across a range of areas, including security, availability, processing integrity, confidentiality, and privacy. Regular risk assessments are an integral part of maintaining a secure and reliable system. They help organizations identify potential threats and vulnerabilities, assess their impact and likelihood, and prioritize mitigation strategies. Regular risk assessments alone do not indicate that a company has met all the requirements of a SOC 2 audit. The audit examines how well an organization has established and is operating controls in numerous areas, not just its ability to identify and assess risk.
 
@@ -1043,49 +1172,80 @@ SOX
 **subjects and objects**
 	-	Subject: Active entities A subject is a person, process, program, or anything similar that actively tries to access an object.
 	-	Object: Passive entities An object is anything that is being passively accessed by a subject, like a file, server, process, or hardware component.
-
 **Reference Monitor Concept (RMC)**
 	-	The RMC is simply the concept of a subject accessing an object through some form of mediation that is based on a set of rules, with this access being logged and monitored. 
+	-	there—as a subject is accessing an object— based on a set of rules, and this activity is logged and monitored.
 	-	Need features like: Must mediate all access, Be protected from modification, Be verifiable as correct and Always be invoked
 
 **Security Kernel**
-	- 	The implementation of the reference monitor concept (concept only) is known as a security kernel, that is must be an implementation of a system that actually controlling access 
+	- 	The implementation of the reference monitor concept (concept only) is known as a **security kernel**, that is must be an implementation of a system that actually controlling access 
 	-	When implemented, **a viable security kernel should contain three properties or characteristics**
-			-	completeness
-			-	isolation
-			- 	verifiability
+			-	completeness - it is impossible to bypass the mediation/security kernel, subject must always go through the security kernel when accessing the object.
+			-	isolation - relates to the mediation rules and specifically ensures that the mediation rules are tamper-proof. Only authorized individuals should be able to change these rules.
+			- 	verifiability - relates to the aspect of assurance. It means being able to verify that the security kernel is functioning correctly by means of logging and monitoring, and other forms of testing.
+
+**Trusted Computing Base (TCB)**	
+	-	Refer to all the protection mechanisms within a system, within an architecture; the TCB is the totality of protection mechanisms within an architecture.
+	-	all the security controls that are implemented to protect an architecture 
+	-	Examples of components that would be within the TCB include all the system kernel, hardware, firmware, and software processes that make up the security system.
+	
+3.4.2 Processors (CPUs)
+**A central processing unit (CPU) is the brain of a computer; it processes all of the instructions and ultimately solves problems.
+**CPU processing involves an ongoing, four-step process: Fetch, Decode, Execute, and Store.
+	- Fetching instructions and data- 
+	- Decoding instructions-
+	- Executing instructions-
+	- Storing results-
+**A CPU operates in one of two states: the supervisor state or the problem state - operating modes for the processor that restrict the operations that can be performed by certain processes.
+	- Supervisor State (higher privillege)-  Typically, where the system kernel runs, allowing full access to all of the instructions and capabilities of a CPU
+	- Problem state (lower privilege) - Limited access to CPU instructions, this is the standard operation mode of the CPU, means does the "solve problems" job
+
+3.4.3 Process Isolation
+**Prevents interactions that could result in negative consequences
+**Two primary methods: memory segmentation and time-division multiplexing
+**From a security perspective, process isolation is a critical element of computing, as it prevents objects from interacting with each other
+**the actions of one object should not affect the state of other objects and their resources.... acomplished by **Memory segmentation and Time-division multiplexing**
+	-	Time-division multiplexing - more to the CPU. With time-division multiplexing, process isolation is determined by the CPU allocates very small slots of time to each process.
+	-	Memory segmentation - all about separating memory (RAM)segments from each other to protect the contents, including processes thatmay be running in those segments. - each segment accessible by one application only 
+
+3.4.4 Types of Storage
+**Two types of storage: primary and secondary storage
+**Primary storage is small, fast and Volatile—data is lost when device gets powered off (RAM, CPU register, cache)
+**Secondary storage is slow and non-volatile (Disks, optical, virtual memory or tapes storage)
+Faster -----------------------------------> Slower
+Register -> Cache ----> RAM -----> Disks 
+Small cap  -------------------------------> Large cap
+
+3.4.5 System Kernel
+**Core of the operating system that has complete control over everything in the system
+**The system kernel and the security kernel are NOT the same thing.
+**Relies on privilege levels for smooth and safe operation
+**As noted, the system kernel drives the operating system. The security kernel is the implementation of the reference monitor concept.
+**security perspective, it’s critical to protect the system kernel and ensure that it is operating correctly, and privilege levels aid in this regard.
+
+3.4.6 Privilege Levels
+Privilege levels establish operational trust boundaries for software
+running on a computer.
+User mode results in lower trust and only allows access to a small
+subset of system capabilities.
+Privileged mode, also known as kernel mode, results in higher trust
+and allows access to more system capabilities.
+The ring protection model describes a form of CPU layering that is
+designed to protect critical elements of a computing system.
+
+pg 312 ..............................................
+
+
+
 			
 DEST pg 301 .............................................................
+https://drive.google.com/file/d/1y8LiZUfuVykYvsjY3GqNESLdyCEK4icf/view?usp=drive_link
 
 
 
 
-**Bell–LaPadula (BLP)**  .....“Read Down, Write Up”)
-Goal: ✅ Confidentiality only
-Used in: Military / government classification systems
-📌 Mnemonic: Bell = Confidentiality ... “Read Down, Write Up”
-Simple Security Property
-👉 No Read Up
-*‑Property (Star Property)
-👉 No Write Down
-✅ Prevents data leakage to lower classifications
 
 
-
-----------------------------------------------------------------------------------
-**Biba Integrity Model** (No Read Down/No Write Up .....“Read Up, Write Down”)
-Goal: ✅ Integrity only
-Used in: Financial systems, databases, transactional systems
-📌 Mnemonic:
-Biba = Integrity
-“Read Up, Write Down”
-Simple Integrity Property
-👉 No Read Down
-*‑Integrity Property
-👉 No Write Up
-
-✅ Prevents untrusted data from corrupting trusted data
-✅ Notice it’s the opposite of Bell‑LaPadula
 ----------------------------------------------------------------------------------
 Clark–Wilson Model
 Goal: ✅ Integrity (Commercial Focus)
@@ -1548,121 +1708,10 @@ The interactions between different components of the software system: Interface 
 
 
 
-ENGL 125 C	The Film	3.0 Units
-ENGL 125HC	Honors Film	3.0 Units
-
-MAD 110 C	Animation History and Technology	3.0 Units
-MAD 122 C	History of Graphic Design	3.0 Units
-MAD 126 C	Crime Film Genre	3.0 Units
-MAD 127 C	Fantasy Film Genre	3.0 Units
-MAD 128 C	Comedy Film Genre	3.0 Units
-MAD 129 C	Musical Film Genre	3.0 Units
-MAD 131 C	Introduction to Media Aesthetics	3.0 Units
-MAD 191 C	Film Noir Genre	3.0 Units
-MAD 192 C	Great Directors of Cinema	3.0 Units
-MAD 195 C	Science Fiction Film Genre	3.0 Units
-MAD 196 C	Silent Film Genre	3.0 Units
-MAD 197 C	Western Film Genre	3.0 Units
-MAD 198 C	Horror Film Genre	3.0 Units
-TIX05504718 - VSPACTGAPP1 Windows running low on disk space.
-TIX05504688 - VSPACTGAPP1 running low on disk space. 
-
-ticket RITM0675324  created for scanning of the new XDS VM servers ... working on the two physical ones on another ticket,  thanks
-
-Cypress College GE: Area 1B Oral Communication or Critical Thinking 3.0 - 4.0 Units
- GENERAL
-3 Unit Minimum. Oral Communication or Critical Thinking must be completed with a grade of "C" or better.
-
-CIS 111 C	Computer Information Systems	3.0 Units
-COMM 050 C	Effective Communication	3.0 Units
-COMM 110 C	Mediated Public Speaking	3.0 Units
-COMM 135 C	Argument and Critical Thinking	3.0 Units
-COMM C1000	Introduction to Public Speaking	3.0 Units
-COMM C1000H	Introduction to Public Speaking - Honors	3.0 Units
-ENGL 104 C	Critical Analysis and Literature	4.0 Units
-ENGL 104HC	Honors Critical Analysis and Literature	4.0 Units
-ENGL 135 C	Grammar and Usage	3.0 Units
-ENGL C1001	Critical Thinking and Writing	4.0 Units
-ENGL C1001H	Critical Thinking and Writing - Honors	4.0 Units
-PHIL 170 C	Logic and Critical Thinking	3.0 Units
-PHIL 170HC	Honors Logic and Critical Thinking	3.0 Units
-PHIL 172 C	Critical Thinking and Writing	3.0 Units
-PHIL 175 C	Symbolic Logic	3.0 Units
 
 
 
 
-
-ok so i can understand the environment better and processes we do this DR ... I know you will be doing it just interested to find out how it works
-
-1. the NurseCall servers runnings in Irvine is being constantly replicated to San Diego (but the DR/SDSC copy of VMs are not online until activated ?)
-2. once we ready to do the exercise , we set the fail over process in Nutanix which it will fail over the SDSC to active status ... and irvine ones to inactive/offline status ?
-3. All these operation you doing are done in VMware or Nutanix console ?
-4. manual re ip is not necessary correct ?  just we have to change the DNS records to point to new/SDSC ip adddresses i am assuming ?
-
-VIPAVASURE1.ad.medctr.ucla.edu [10.16.102.56]
-VIPAVASURE2.ad.medctr.ucla.edu [10.16.102.57]
-VIPAVASURE3.ad.medctr.ucla.edu [10.16.102.58]
-VIPAVASURE4.ad.medctr.ucla.edu [10.16.102.62]
-VIPAVASURE5.ad.medctr.ucla.edu [10.16.102.63]
-VIPAVASUREINT1.ad.medctr.ucla.edu [10.16.102.214]
-
-VSTAVASURE1.ad.medctr.ucla.edu [10.12.173.141]
-VSTAVASURE2.ad.medctr.ucla.edu [10.12.173.142]
-VSTAVASURE3.ad.medctr.ucla.edu [10.12.173.143]
-VSTAVASUREINT1.ad.medctr.ucla.edu [10.12.172.244]
-VITAVASYS01.ad.medctr.ucla.edu [10.16.101.121]
-
-VIPCAPVP1 / TIX05499994
-
-
-PBS_CashPost_Read    ///  ad.medctr.ucla.edu/MC/Financial Systems/Groups/PBS_CashPost_Read
-
-PBS_PBS Financial Reporting_WkstusTolbr_TST
-
-\\pbsfs01\data\PBS Financial Reporting\WorkStatusToolbar\TEST
-
-
-
-Cypress College GE: Area 6 Ethnic Studies 3.0 Units
- GENERAL
-3 Unit Minimum
-
-ETHS 101 C	American Ethnic Studies	3.0 Units
-ETHS 101HC	Honors American Ethnic Studies	3.0 Units
-ETHS 129 C	Introduction to African-American Studies	3.0 Units
-ETHS 150 C	Introduction to Chicana-o-x Studies	3.0 Units
-ETHS 151 C	Chicana-o-x History I	3.0 Units
-ETHS 152 C	Chicana-o-x History II	3.0 Units
-ETHS 159 C	Introductin to Native American Studies	3.0 Units
-ETHS 161 C	Native American Hisotry II	3.0 Units
-ETHS 170 C	Introduction to Asian Pacific American Studies	3.0 Units
-ETHS 171 C	Asian Pacific American History	3.0 Units
-ETHS 202 C	Race, Ethnicity, and Popular Culture	3.0 Units
-ETHS 235 C	American Racial Liberation Movements	3.0 Units
-
-
-
-Going over renaming processes for a new server built  ... check on what are the manual steps we need to look up for during and after the new prod servers needed to rename to the original prod server name  
-
-Below are the items I can think of during the new server builds would involves hostname ..,
-
-Did I missed anything  ?
-
-Update AD hostname  ( manually renamed in the OS then reflected to AD)
-Update InfoBlox DNS/A hostname/rev (manually update ?)
-Update needed in LogicMonitor ?
-VM name in vCenter (if VM)
-KVM name if Raritan (if physical)
-***Puppet related cert update
-Prod app related cert (re issue from CM if any in prod)
-Re-check ISS Crypto ?
-Update needed in TSM (physical) / Rubrik (VM) ?
-Update needed in Delina ?
-Update needed in SCCM ?
-Update needed in Duo / Trelix / Tanium ?
-Procedure to update the SNoW CMDB if any
-Update the NetNewDecomm form (for physical servers) 
 
 
 
