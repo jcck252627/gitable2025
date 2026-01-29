@@ -1031,7 +1031,6 @@ Domain 3 Security Architecture and Engineering
 		**Tells you how to organize and describe architecture
 		**Focuses on answering basic questions like how, where, who, when, and why 
 		**Directing those questions to the various company teams (e.g., designers, owners, architects, strategists, engineers, operators) and acquiring their feedback
-		**
 		**outdated ...as it merely focuses on science of sysmatic classification (taxonomy) and organization of enterprise security.
 		
 	-	**Sherwood Applied Business Security Architecture (SABSA)** 
@@ -1055,13 +1054,10 @@ Zachman = Structure
 TOGAF   = Process
 SABSA   = Security + Business
 	
-	
 If the question says…
-
 “Classification, viewpoints, completeness” → Zachman
 “Business‑driven security, risk appetite” → SABSA
 “Architecture process, governance, lifecycle” → TOGAF
-
    
 **Security models:**
 -	**ABOUT Who can read/write what ..What property is being protected ..Confidentiality or Integrity or Availability (less common in classic models)
@@ -1350,12 +1346,8 @@ applications.
 
 **Grid systems are interconnected systems that are usually working together to solve a specific and usually very complex problem.
 
-A great example of the world’s largest
-distributed system is the internet. A company network is an
-example of a distributed system. Although there is significant value
-in connecting the systems within an organization and then
-connecting the organization to the internet, there are also
-significant risks,
+A great example of the world’s largest distributed system is **the internet**. A company network is an example of a distributed system. Although there is significant value
+in connecting the systems within an organization and then connecting the organization to the internet, there are also significant risks,
 
 What is an underlying risk related to distributed file systems (DFS)?
 **Distributed systems are a number of different systems that are networked together and can communicate with each other
@@ -1434,19 +1426,7 @@ Three major types of Industrial Control Systems (ICS)
 	-	Process control system that monitors, controls,and gathers data from components like controllers, sensors, and other devices typically found in large processing facilities.
 	-	DSC mostly can only be controlled locally ...Unlike SCADA which includes local and remote management capabilities
 **PLC (Programmable Logic Controller)
-Industrial
-computer,
-specifically used
-for the control of
-manufacturing
-processes
-Key features
-include high
-reliability, ease of
-programming and
-diagnosis of
-process problems.
-Often networked
+Industrial computer, specifically used for the control of manufacturing processes Key features include high reliability, ease of programming and diagnosis of process problems. Often networked
 with other PLC devices and SCADA systems
 
 3.5.8 Internet of Things (IoT)
@@ -1457,23 +1437,141 @@ with other PLC devices and SCADA systems
 	-	Reduce Risk of Internet of Things (IoT) by planning, Make sure the technology remains up to date, connect them to a segregated part of the network, and ensure adequate protection is built around it and ensure you scan that network for vulnerabilities and mitigate those accordingly., and segement off the network from regular production networks to be safe ...
 
 3.5.9 Cloud Service and Deployment Models
+**Characteristics of cloud computing: on-demand self-service, broad network access, resource pooling, rapid elasticity and scalability, measured service, multitenancy 
+**Cloud service models: IaaS, PaaS, SaaS, CaaS, FaaS
+**Cloud deployment models: Public, Private, Community, Hybrid Protection and privacy of data in the cloud should be carefully considered.
 
-Characteristics of cloud computing: on-demand self-service, broad
-network access, resource pooling, rapid elasticity and scalability,
-measured service, multitenancy
-Cloud service models: IaaS, PaaS, SaaS, CaaS, FaaS
+Cloud Computing Cloud computing allows individuals and organizations to access and use computing resources 
+**like servers,, storage, databases, networking, software, and more) over the internet, on a pay-as-yougo basis. 
+**This enables users to access data and applications from anywhere, without having to maintain physical hardware and software infrastructure themselves. 
 
-Cloud deployment models: Public, Private, Community, Hybrid
-Protection and privacy of data in the cloud should be carefully
-considered.
+Cloud computing
+A cloud can be a private, public, or hybrid model. It can also allow greater or smaller control to fall on the client or the cloud service provider. It all depends on what the goals are. So many options and variations exist. Some of the most common characteristics of a cloud provider are:
 
-Cloud Computing
-Cloud computing allows individuals and organizations to access
-and use computing resources (like servers,
+**On-demand self-service
+**Broad network access
+**Resource pooling
+**Rapid elasticity and scalability
+**Measured service
+**Multitenancy
+
+Cloud service models	-	There are three primary service models used in the cloud:
+**Software as a Service (SaaS) provides access to an application that is rented—usually via a monthly/annual, subscriber-based fee—and the application is typically web-based.
+**Infrastructure as a Service (IaaS) is an environment where customers can deploy virtualized infrastructure servers, appliances, storage, and networking components.
+**Platform as a Service (PaaS) is a platform that provides the services and functionality for customers to develop and deploy applications.
+**Containers as a Service (CaaS). It allows for multiple programming language stacks, like Ruby on Rails or node.js, to name a couple, to be deployed in one container. 
+**Function as a Service (FaaS). It describes serverless and the use of microservices to accomplish business goals inexpensively and quickly.
+
+Understand cloud service provider and cloud customer responsibilities, depending upon the cloud service model in use
+Regardless of the nature of shared responsibility, one thing is always constant when talking about the relationship between the cloud service provider and the cloud customer: the cloud customer is always accountable for their data and other assets existing in a cloud environment.
+
+Cloud Deployment Models - Several cloud deployment models exist
+
+The first model is public cloud, and the name implies who can
+access it—everybody, the public. A public cloud is in the cloud
+service provider’s data center and consumers are simply accessing
+it as a service (e.g., Gmail). It’s accessible by anyone.
+
+A private cloud is only accessible by a single customer, so it’s
+private to that customer. If it’s an on-premises private cloud, this
+means it’s in the customer’s own data center;
+
+A community cloud is a cloud that is used by a group of users that
+share common needs or interests, like a group of hospitals, for
+example. One of the largest community clouds is GovCloud.
+
+The last cloud deployment model is a hybrid cloud. A hybrid cloud
+is any combination of the three previously mentioned, and it is
+usually a combination of a public and private cloud.
+
+Protection and Privacy of Data in the Cloud - What should be a primary concern of an organization considering a move to the cloud?
+In addition to implementing strong access controls, strong encryption practices should be used when and where necessary to properly secure this data. This is especially true when an organization makes the initial decision to move from legacy, on-premises infrastructure to that of a cloud provider. In cases like this, best practices indicate that data should be encrypted and secured locally and then migrated to the cloud.
+
+Cloud computing roles
+Multiple computing roles relate to cloud computing: cloud consumer, cloud provider, cloud partner, and cloud broker.
+	-	Cloud Service - Customer/Consumer	-	Individual or organization who is accessing cloud services
+	-	Cloud Service Provider	-	The organization that is providing cloud services/resources to consumers
+	-	Cloud Service Partner	-	The organization which supports either the cloud provider or customer (e.g., cloud auditor or cloud service broker)
+	-	Broker	-	Carrier, Architect, Administrator, Developer, Operator, Services Manager, Reseller, Data Subject, Owner, Controller, Processor, Steward
+
+Accountability versus responsibility
+Accountability can never be delegated or outsourced. It can't be outsourced or passed down, and it always remains with the owner.
+
+Responsibility, 
+on the other hand, can be outsourced, and this often happens to a great extent when working with a cloud service provider.
+
+Compute in the cloud Hypervisors, virtual machines (VM), containers, serverless
+A hypervisor, also known as a virtual machine manager/monitor (VMM), is software that allows multiple operating systems to share the resources of a single physical machine. On the other hand, a virtual machine (VM) resembles a computer, but everything is emulated using software.
+
+One of the characteristics of cloud computing is resource pooling, which describes the relationship between the fundamental hardware that makes up the compute, storage, and network resources and the multiple customers that utilize those resources. Cloud customers can access compute resources through:
+
+Monolithic vs. Microservices vs Serverless Computing
+Monolithic
+**All functionality of a monolithic application is wrapped together as a single unit, whereas with microservices and serverless, functionality is more defined and self-contained in smaller or individual units.
+** typically comprise of a back-end database, an application and a user interface. Correspondingly, this implies a single large code base, and changes to an application may require updates to all three areas. 
+Microservices (Container)
+**a function that exists and operates as one unit, microservices exist and function as separate units that are loosely coupled via API calls.
+**The fact that an application is composed of multiple, loosely coupled components allows for better overall understanding of the application, and functional components can be reused across multiple applications.
+Serverless(FaaS)
+**The term serverless takes the basic premise of microservices—hyper focused, independent pieces of functionality coupledtogether through APIs—and extends it to the cloud
+
+3.5.11 Cloud Forensics
+**Focus is on the forensic process in cloud computing environments
+**Typically, more complex than on-premises forensic investigations
+**Virtual disks and VM images are often analyzed as part of cloud forensics
+
+The following table shows the type of forensic evidence that can be acquired based on the cloud model being used:
+
+SaaS
+Consumers must rely entirely on CSP
+PaaS
+For underlying infrastructure, consumers must rely entirely on CSP
+Consumer is responsible for any application layer code they deployed and application logging
+IaaS
+Consumers can perform forensic investigations on their VMs
+Investigation of network traffic, access to snapshots of memory, or the creation of hard disk images may require investigative support by the CSP
+
+NIST published a document in August 2020 entitled “NIST Cloud Computing Forensic Science Challenges” that summarized research in this area by members of the NIST Cloud Computing Forensic Science Working Group identified 9 main areas of challenge categories related to cloud forensics as outlined below:
+1.   Architecture
+2.   Data collection
+3.   Analysis
+4.   Anti-forensics
+5.   Incident first responders
+6.   Role management
+7.   Legal
+8.   Standards
+9.   Training
+
+3.5.12 Cloud Computing Roles
+**Multiple computing roles relate to cloud computing: cloud consumer, cloud provider, cloud partner, cloud broker
+**The cloud consumer is always accountable for their data stored in the cloud .. Responsibility can be delegated to other cloud computing roles.
+**Data controller = owner of data = cloud customer = accountable -  regardless of the terms of the SLA, accountability always remains with the asset owner.
+**Cloud Service Provider - Organization that is providing cloud services/resources to consumers
+**Data processor = processor of data = cloud provider or other agent of the customer = responsible
+Cloud Service Partner - Organization which supports either the cloud provider or customer (e.g., cloud auditor or cloud servicebroker)
+**Cloud service broker representatives provide service aggregation services to customers. Carrier, Architect, Administrator, Developer, Operator, Services Manager, Reseller, Data Subject, Owner, Controller, Processor, Steward
+
+3.5.13 Cloud Identities
+Third-party identity provider is a trusted organization that manages
+user identities and related attributes for purposes of authentication
+and authorization.
+Identity federation involves protocols, standards, practices, and
+policies that support identity portability and trust relationships
+among unaffiliated resources and organizations.
+SPML enables the automation of adding users to multiple cloud
+services.
+On-premise IAM solutions include Microsoft Active Directory and
+LDAP based.
+Cloud-based IAM solutions include those offered by Amazon, Google,
+and many other cloud vendors.
+Identify as a Service (IDaaS) refers to cloud-based IAM services.
+
+
+..................pg 383
 
 
 
-pg 356......................................................
+
 
 ----------------------------------------------------------------------------------
 Clark–Wilson Model
