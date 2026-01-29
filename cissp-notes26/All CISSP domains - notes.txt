@@ -1272,11 +1272,9 @@ stored on a TPM can be bound to it, ensuring that keys are only accessible by th
 **Sealing** – A cryptographic operation that involves encrypting data. However, unlike binding, sealing is not tied to the TPM’s state or configuration. Instead, sealing is used to only allow the data to be
 decrypted in certain conditions, such as in the presence of certain software or after user authentication.
 
-
 3.5 Assess and mitigate the vulnerabilities of security
 architectures, designs, and solution elements
 3.5.1 Vulnerabilities in Systems
-
 
 ** A single point of failure is something that exists in a system or security architecture, when a failure is realized, will result in negative operational impact of the whole system....
 ** Redundancy can help alleviate the risk associated with a single point of failure, and it should be implemented where it is cost-justifiable.
@@ -1315,7 +1313,6 @@ Policies: One of the best ways to reduce risk related to mobile devices is using
 
 Process related to lost or stolen devices: Typically, this involves notification of IT and security personnel as well as a means by which the device can be remotely wiped. Note that remotely wiping is dependent upon the device being connected to the internet and a savvy attacker can easily prevent this from happening.
 
-
 Remote access security: VPN and 2FA capabilities should be enabled by default, to prevent a mobile device from being used to connect to a remote network in an insecure manner 
 
 Endpoint security: Antivirus/malware, DLP, and similar MDM-provisioned software should be installed on mobile devices just like standard computing equipment. Additionally, the concept of hardening should be employed to minimize the potential attack surface of the devices.
@@ -1343,13 +1340,7 @@ OWASP Mobile Top 10 adheres loosely to OWASP Top 10 methodology, with the focus 
 
 What are the top vulnerabilities on mobile devices?
 
-In addition to the valuable information provided in the OWASP
-Mobile Top 10 list, the OWASP Foundation has developed a security
-standard for mobile applications that helps with security testing
-and reverse engineering. It’s called the Mobile Application Security
-Testing Guide (MASTG). Another interesting OWASP project is the
-Mobile Application Security Verification Standard (MASVS), which
-helps guide secure development and testing for mobile
+In addition to the valuable information provided in the OWASP Mobile Top 10 list, the OWASP Foundation has developed a security standard for mobile applications that helps with security testing and reverse engineering. It’s called the Mobile Application Security Testing Guide (MASTG). Another interesting OWASP project is the Mobile Application Security Verification Standard (MASVS), which helps guide secure development and testing for mobile
 applications.
 
 3.5.5 Distributed Systems
@@ -1366,30 +1357,123 @@ in connecting the systems within an organization and then
 connecting the organization to the internet, there are also
 significant risks,
 
-
 What is an underlying risk related to distributed file systems (DFS)?
 **Distributed systems are a number of different systems that are networked together and can communicate with each other
 
 **Distributed file systems (DFS) take the concept of distributed systems a step further by allowing files to be hosted by multiple hosts and shared and accessed across a network. DFS software helps manage the files being hosted and presents them to users as if they’re stored in one central location.
 
-
 Grid Computing
-Grid computing, depicted in Figure 3-22, is like distributed systems
-as it still relates to systems that are connected together, but the
-thinking behind grid systems is that they’re usually connected via a
-very high-speed connection to serve a greater purpose than simply
-passing the occasional email or file back and forth.
+**Grid computing is like distributed systems as it still relates to systems that are connected together, but the thinking behind grid systems is that they’re usually connected via a very high-speed connection to serve a greater purpose than simply passing the occasional email or file back and forth.
+**A grid systems are multiple systems working together to solve very complex problems that require more computing power that one system can provide; so, a number of systems are interconnected into a grid and programmed to work in unison to solve difficult problems.
+**Example , users downloaded "SETI at Home" screen saver on their home computer and processed these little chunks of data. And in doing so they essentially created the world’s largest distributed grid computer.
+** data integrity and data validation can be comprised 
 
-systems are multiple systems working together to solve very
-complex problems that require more computing power that one
-system can provide; so, a number of systems are interconnected
-into a grid and programmed to work in unison to solve difficult
-problems.
+3.5.6 Inference and Aggregation
+**Data warehouse
+	-	To perform data analytics from a number of different data sets in different systems, with the hope of identifying interesting bits of information. 
+	-	Each Data set are its own island , DW is bringing them to one location for easy analyze and search and trending  
+	-	Security risks to  availability. If the data warehouse goes down, access to valuable data insights could be lost.
+	-	Also to the fact that if someone gains unauthorized access to the data warehouses, they could have access to significant amounts of valuable information ... all at once
+	-	Need redundancy and fine-grained access control which are more complex in DW
+	
+**Big data
+	-	Similiar useage to DW but difference in variety, volume, and velocity.
+	-	**Variety** refer to that any kind of data from any source can be found within a big data repository, not just relational data can be stored only data in a clean table format, with rows and columns as in DW
+	-	**Volume** refers to the size of the data sets. With a data warehouse, storage is typically restricted to the storage capacity of a single system; with big data, storage spans multiple systems. ie. Hadoop
+	-	**Velocity** refers to the fact that data can be ingested and analyzed very rapidly in big data—even faster than is possible with data warehouses.
+	-	Big data tools: include Hadoop, MongoDB, and Tableau.
+	
+**Data Mining and Analytics
+	-	Through the analysis of seemingly disparate data, otherwise invisible relationships and little nuggets of valuable information can be gleaned.
+	-	Aggregation pulls data into one location. 
+	-	Inference tries to infer things; it tries to identify bits of information in the data.
+	-	inference, especially unauthorized inference, can create a significant risk to an organization.
+	-	Unauthorized inference can take information from the hands of key decision makers or secure systems and expose it to an entire organization, the competition, or even to the enemy.
+Aggregation -	Collecting, gathering, or combining data for the purpose of statistical analysis
+Inference - 	Deducing information from evidence and reasoning rather than from explicit statements
+
+Understand the difference between aggregation and inference and how inference can be mitigated
+
+Reduce Risk of Inference and Aggregation One method to reduce the risk of unauthorized inference is using “polyinstantiation,” which allows information to exist in different classification levels for the purpose of preventing unauthorized inference and aggregation
+
+3.5.7 Industrial Control Systems (ICS)
+
+**Industrial control system (ICS) is a general term used to describe control systems (HW and SW) related to industrial processes and critical infrastructure: factory, power/nuclear,manufacturing plants, 
+**Three primary types of ICSs: Supervisory Control and Data Acquisition(SCADA), Distributed Control System (DCS), Programmable Logic Controller (PLC)
+**Due to their inherent complexity and the things they help control/manage, ICS can be quite vulnerable to attack; the best way to reduce risk to ICS is to keep them offline—to “air gap” them from direct or indirect access to the internet.
+** Operational technology (OT) is a broader term than ICS. It refers to the hardware and software technology used to monitor and control physical processes, devices, and industrial systems. ICS is a subset of OT that focuses on the control and automation of industrial processes.
+
+Reduce Risk in Industrial Control Systems
+Understand the risk associated with ICS and how best to reduce this risk
+
+One of the best ways to protect ICS is keeping them offline, also
+known as “air gapping” or creating an “air gap.” What this simply
+means is that ICS devices can communicate with each other, but
+the ICS network is not connected to the internet or even the
+corporate network in any way. So, even if someone does try to
+connect to these ICS systems from the internet or corporate
+network, they’ll be unable to do so.
+
+Patching Industrial Control Systems
+	-	Understand the implications of patching ICS or alternative ways to mitigate risk if patching is not possible
+	-	Industrial control systems by their very nature are difficult to maintain, especially where security is concerned. Often patching of ICS has been avoided, as patching these critical systems may cause unintended consequences and downtime.
+	-	Strong configuration management processes, good patch management and backup/archive plans, and so on should be in place and used when and where possible.
+	-	When patching ICS systems is not possible (or not possible to the degree needed), additional mitigating steps can be taken to reduce the risk and impact of disruption of critical infrastructure:
+
+Understand each type of ICS at a high level
+	-	Implement nonstop logging and monitoring and anomaly detection systems to rapidly detect nefarious activities within ICS networks.
+	-	Conduct regular vulnerability assessments of ICS networks, with particular focus on connections to the internet or direct connections to internet-connected systems, rogue devices, and plaintext authentication.
+	-	Use VLANs and zoning techniques to mitigate or prevent an attacker from pivoting to other neighboring systems if the ICS is breached.
+	-	Additionally, privileged access management and privilege task automation tools can potentially be deployed to help manage risks associated with legacy systems often found within ICS.
+	
+Three major types of Industrial Control Systems (ICS)
+**SCADA (Supervisory Control and Data Acquisition)
+	-	System architecture that comprises computers, networking, and proprietary devices as well as graphical interfaces for management of the entire system
+	-	Used to manage	small and large-scale industrial, infrastructure, and facility processes
+**DCS (Distributed Control System)
+	-	Process control system that monitors, controls,and gathers data from components like controllers, sensors, and other devices typically found in large processing facilities.
+	-	DSC mostly can only be controlled locally ...Unlike SCADA which includes local and remote management capabilities
+**PLC (Programmable Logic Controller)
+Industrial
+computer,
+specifically used
+for the control of
+manufacturing
+processes
+Key features
+include high
+reliability, ease of
+programming and
+diagnosis of
+process problems.
+Often networked
+with other PLC devices and SCADA systems
+
+3.5.8 Internet of Things (IoT)
+	-	Internet of Things (IoT) refers to all the devices, like home appliances, that are connected to the internet.
+	-	IoT devices, by their nature, are risky. Reducing their risk involves making different purchase decisions, taking every precaution when installing and keeping the technology up to date.
+	-	Risks: built-in computer and networking, never updated, cheap, insecurely configured password, vunlerable to network open doors
+	-	Prone to malware and DDOS attacks if not secured 
+	-	Reduce Risk of Internet of Things (IoT) by planning, Make sure the technology remains up to date, connect them to a segregated part of the network, and ensure adequate protection is built around it and ensure you scan that network for vulnerabilities and mitigate those accordingly., and segement off the network from regular production networks to be safe ...
+
+3.5.9 Cloud Service and Deployment Models
+
+Characteristics of cloud computing: on-demand self-service, broad
+network access, resource pooling, rapid elasticity and scalability,
+measured service, multitenancy
+Cloud service models: IaaS, PaaS, SaaS, CaaS, FaaS
+
+Cloud deployment models: Public, Private, Community, Hybrid
+Protection and privacy of data in the cloud should be carefully
+considered.
+
+Cloud Computing
+Cloud computing allows individuals and organizations to access
+and use computing resources (like servers,
 
 
-PG 341 ....................................................
 
-
+pg 356......................................................
 
 ----------------------------------------------------------------------------------
 Clark–Wilson Model
