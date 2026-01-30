@@ -78,7 +78,7 @@ Use these principles:
  
 
  CSA START
- FedRAMP
+ FedRAMP (Federal Risk and Authorization Management Program)  .. 3PAO
  FISMA
  GDRP
  ITIL
@@ -176,7 +176,24 @@ ISO/IEC 27005
 Risk management framework aligned with ISO 27001.
 Focuses on identifying, analyzing, and treating information security risks.
 
-NIST CFS
+****NISTs*****
+NIST CFS 
+NIST CSF = Identify → Protect → Detect → Respond → Recover
+It is NOT a technical standard, a certification nor mandatory (unless referenced by law or contract).
+It IS:
+	-	A risk-based, voluntary framework
+	-	Designed for critical infrastructure, but usable by any org
+	-	Mapped to other frameworks (ISO 27001, COBIT, etc.)
+	-	High-level, management-friendly
+	-	outcome driven
+Use the acronym: I P D R R
+👉 “I Prepare DRR (Disaster Ready Response)”
+or
+👉 “I Protect Data, Respond & Recover.”
+You will see this flow repeatedly in questions.
+	
+	
+
 NIST SP 800-39	- framework any companies can use to assess risks ... "a holistic view rather than a checklist view ", 3 tiers, organization/mission-business/info-system, risks must be addresses in each tiers
 NIST 800-37
 NIST SP 800-53 is a comprehensive catalog of security and privacy controls for all U.S. federal information systems (except those related to national security) and is directly focused on listing such controls, making it highly relevant for application development.
@@ -1551,24 +1568,15 @@ NIST published a document in August 2020 entitled “NIST Cloud Computing Forens
 Cloud Service Partner - Organization which supports either the cloud provider or customer (e.g., cloud auditor or cloud servicebroker)
 **Cloud service broker representatives provide service aggregation services to customers. Carrier, Architect, Administrator, Developer, Operator, Services Manager, Reseller, Data Subject, Owner, Controller, Processor, Steward
 
-3.5.13 Cloud Identities
-Third-party identity provider is a trusted organization that manages
-user identities and related attributes for purposes of authentication
-and authorization.
-Identity federation involves protocols, standards, practices, and
-policies that support identity portability and trust relationships
-among unaffiliated resources and organizations.
-SPML enables the automation of adding users to multiple cloud
-services.
-On-premise IAM solutions include Microsoft Active Directory and
-LDAP based.
-Cloud-based IAM solutions include those offered by Amazon, Google,
-and many other cloud vendors.
-Identify as a Service (IDaaS) refers to cloud-based IAM services.
+3.5.13 Cloud Identities (pg383)
+**Third-party identity provider is a trusted organization that manages user identities and related attributes for purposes of authentication and authorization.
+**Identity federation involves protocols, standards, practices, and policies that support identity portability and trust relationships among unaffiliated resources and organizations.
+**SPML enables the automation of adding users to multiple cloud services.
+**On-premise IAM solutions include Microsoft Active Directory and LDAP based.
+**Cloud-based IAM solutions include those offered by Amazon, Google, and many other cloud vendors.
+**Identify as a Service (IDaaS) refers to cloud-based IAM services.
 
-
-..................pg 383
-
+Identity and Access Management (IAM) in any context can be challenging, and especially so in the cloud, with one of the most significant challenges being that of provisioning users to multiple disparate resources spread across multiple cloud services.
 
 
 
