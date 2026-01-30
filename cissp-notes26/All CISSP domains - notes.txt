@@ -1575,11 +1575,229 @@ Cloud Service Partner - Organization which supports either the cloud provider or
 **On-premise IAM solutions include Microsoft Active Directory and LDAP based.
 **Cloud-based IAM solutions include those offered by Amazon, Google, and many other cloud vendors.
 **Identify as a Service (IDaaS) refers to cloud-based IAM services.
+**Identity moves to the cloud; access control follows federated trust, not local accounts.
 
-Identity and Access Management (IAM) in any context can be challenging, and especially so in the cloud, with one of the most significant challenges being that of provisioning users to multiple disparate resources spread across multiple cloud services.
+**Identity and Access Management (IAM) in any context can be challenging, and especially so in the cloud, with one of the most significant challenges being that of provisioning users to multiple disparate resources spread across multiple cloud services.
+
+**Identity as a Service (IDaaS) - One of their primary advantages is supports scalability, availability, and centralized control, but introduces third-party and trust risks.
+IDaaS is a cloud-based IAM model where identity lifecycle, authentication, authorization, and federation are handled by a third-party provider (e.g., Azure AD, Okta, Ping).
+Centralized identity management
+Supports SSO, MFA, and federation
+Integrates on-prem and cloud apps
+Reduces password sprawl and admin overhead
+
+**Federated identity (FIM) -  operates in a similar context to IDaaS.Purpose: Automates identity provisioning and deprovisioning
+Create, modify, delete user accounts
+**FIM extends the functionality of IDaaS to include multiple resources and organizations. Standards, protocols, and technologies that support FIM include Services Provisioning Markup Language (SPML), Security Assertion Markup Language (SAML), OAuth and OpenID
 
 
+SPML (Service Provisioning Markup Language)
+Purpose: Automates identity provisioning and deprovisioning
+Create, modify, delete user accounts
+Synchronizes identities across systems
+XML-based (older, but exam-relevant)
+📌 Exam clue: “Automated user account provisioning across cloud services”
+SPML = account lifecycle management
 
+
+**Security Assertion Markup Language (SAML)  is an XML-based, OASIS standard that utilizes security tokens that contain assertions about a user. SAML facilitates service requests made by users to service providers in the form of requests to identity providers, which—if the user is authenticated/authorized—result in SAML assertions allowing the user access to the service.
+Purpose: Authentication & SSO across trust boundaries
+Uses XML assertions
+Common in enterprise SSO
+Identity Provider (IdP) ↔ Service Provider (SP)
+📌 Exam clue to be SAML:“User authenticates once and accesses multiple SaaS apps”
+📌SAML handles authentication, not authorization logic
+SAML - Authentication
+
+**OAuth (Authorization) - OAuth (authorization) is a Federated Identity Management (FIM) open-standard protocol that typically works in conjunction with OpenID (authentication). OAuth provides users and applications with “secure delegated access” via access tokens versus credentials
+Authorization for APIs — OAuth (and OpenID Connect) OAuth 2.0
+Purpose: Authorization delegation
+Grants access tokens
+Used by APIs and microservices
+No password sharing
+📌 Exam clue: “Allow a mobile app to access cloud resources on behalf of a user”
+📌OAuth = what you can access, not who you are  ...  
+
+Protocol	Primary Function	Used For	CISSP Keyword
+SPML	Provisioning	Account lifecycle	User management
+SAML	Authentication	SSO, federation	Trust assertions
+OAuth	Authorization	API access	Token delegation
+OIDC	Authentication	Cloud/mobile login	Identity claims
+
+A company wants automatic account creation and removal when employees join or leave. - SPML
+Users authenticate once and access multiple SaaS apps without re-entering credentials. ✅ SAML
+
+A mobile app accesses a cloud API without storing user passwords.
+✅ OAuth
+
+OAuth is used to authenticate users.
+❌ Wrong
+✔ OAuth authorizes access; OIDC authenticates users
+
+🧠 Memory Trick (CISSP-Friendly)
+SPML → Staff Provisioning
+SAML → Single Sign-On
+OAuth → API Access
+OIDC → OAuth + Identity
+🏁 CISSP Bottom Line
+Cloud IAM = federation + tokens + lifecycle automation
+Identity is centralized, not local
+Protocols solve different IAM problems
+Always map the protocol to what the question is really asking
+
+
+3.5.14 Cloud Migration (pg 386)
+**Cloud migration involves benefits and risks that should be carefully considered 
+**One significant risk of cloud migration is vendor lock-in
+**Security in the cloud should be understood thoroughly, and organizations should work closely with the cloud service provider to implement security that follows best practices.
+
+Cost shifting ...
+Benefits of such a move include shifting costs from a capitalization expense (CapEx) model, where networking and computer equipment is owned by the organization, to an operations expense (OpEx) model where
+compute, storage, and networking costs are borne by the cloud service provider and paid for by the organization on an “as needed” basis.
+
+Focus shifting ...
+This shift, though not necessarily a huge cost-saver, can result
+in considerable efficiencies gained. Additionally, it’s in a cloud
+service provider’s best short- and long-term interest to provide
+reliable technology and support to its customers. This further shifts
+the load away from the organization so it can focus on core
+business activities.
+
+efficiencies and scalability ...
+Moving to the cloud makes applications, services, and
+data accessible from anywhere, using virtually any type of device,
+as long as an internet connection is available
+
+security 
+igration to the cloud also facilitates the centralization of data,
+which can further facilitate safe storage and backup of data.
+
+Among Cloud migration risk, what is one of the most important things to consider? ..................
+
+most important considerations of cloud migration
+relates to vendor lock-in—the notion that once migrated, an
+organization is “stuck” with the cloud service provider and will be
+unable to move elsewhere
+
+Security related to cloud migration must be carefully
+considered and addressed. 
+
+3.5.15 Edge Computing
+Edge computing is a distributed computing approach that can
+reduce latency, speed up response times, and increase bandwidth
+availability. Instead of processing all of the data in a central data
+center, much of the processing is done closer to the source of the
+data, often on the devices themselves, or on a local server
+
+ some important concepts related to edge computing.
+Ingress
+Ingress traffic is traffic entering a network. In edge computing,
+ingress traffic is often generated by users who are accessing
+services that are hosted at the edge
+
+Egress
+Egress traffic is traffic exiting a network. In the context of edge
+computing, this is generally data sent from services at the
+edge, either back to users, or to another network.
+
+Peering
+Peering is the interconnection between separate networks for
+exchanging traffic, This approach allows them to exchange
+traffic without going through the Internet. ISPs often have
+agreements between themselves to make it easier to send
+data to one another.
+
+Secure Access Service Edge
+Secure access service edge (SASE), pronounced sassy, is a suite of
+technologies that is often looked upon as the future of wide area
+networks (WANs).
+
+It combines network security and wide area
+networking into a cloud-based service. It aims to get data and
+services as close to the end users as possible
+
+3.5.16 XSS and CSRF
+**The topic of assessing and mitigating vulnerabilities in web-based systems is important, because the prevalence of web-based
+applications only continues to grow.
+**Cross-site scripting (XSS) attacks
+**An XSS attack involves a malicious script that is injected into a trusted website that a visitor’s browser then downloads and executes
+	-	Two primary forms of cross-site scripting (XSS): stored/persistent XSS and reflected XSS
+
+**A cross-site request forgery (CSRF) relies on persistence facilitated by cookies in browsers
+**With XSS, the target of attack is the user’s browser; with CSRF, the target of attack is the web server
+
+One-line memory anchor
+XSS = attacker injects script that runs in the user’s browser
+CSRF = attacker tricks a user’s browser into sending a valid request
+
+Cross-Site Scripting (XSS)
+What it is (CISSP definition): Injection attack where malicious script executes in the victim’s browser under a trusted site’s context.
+Key CISSP focus
+Client-side attack
+Steals cookies, tokens, sessions
+Exploits trust in the website, not the user
+
+Two Testable Types of XSS
+🎯A. Stored (Persistent) XSS
+Malicious script is stored on the web server (DB, forum post, comment)
+Executes every time a user loads the page
+Example: User posts <script>stealCookies()</script> in a comment field.
+ Exam memory trick:  Stored = Saved = Server-side persistence
+
+🎯B. Reflected (Non-Persistent) XSS
+Script is reflected immediately in the response
+Delivered via URL, form input, search field
+Requires user interaction (click link)
+Example: https://site.com/search?q=<script>attack()</script>
+Exam memory trick:
+Reflected = Returned immediately
+
+🛡 XSS Mitigations (CISSP-favorite answers)
+Input validation
+Output encoding
+Content Security Policy (CSP)
+HTTPOnly cookies
+
+Cross-Site Request Forgery (CSRF / XSRF)
+What it is: Attack where a logged-in user is tricked into executing an unwanted action without knowing it.
+🎯 Key CISSP focus
+Uses valid session/cookies
+No script injection required
+Exploits trust in the user
+Example: User clicks hidden link that submits a fund transfer form.
+🧠 Memory trick: CSRF = “You click it, browser sends it”
+
+🛡CSRF Mitigations
+Anti-CSRF tokens
+SameSite cookies
+Re-authentication for sensitive actions
+CAPTCHAs (secondary control)
+
+XSS vs CSRF — Exam Comparison Table
+Feature				XSS				CSRF
+Attack target		User’s browser	User’s session
+Script injection	✅ Yes			❌ No
+Uses victim’s auth	Sometimes		✅ Always
+Steals data			✅ Yes			❌ Usually performs actions
+Primary threat on	Website			User
+
+🚨 CISSP Exam Traps
+“The attacker injects JavaScript that runs in the user’s browser.” ... ✅ XSS
+“The user unknowingly performs an action while logged in.” ... ✅ CSRF
+“Anti-CSRF tokens protect against XSS.” .... ❌ Wrong — they protect against CSRF, not XSS.
+“HTTPOnly cookies prevent CSRF.” ....❌ Wrong — they mitigate XSS session theft, not CSRF.
+
+3.5.17 SQL Injection (pg 400)
+**Structured Query Language (SQL) is the language used for communicating with databases.
+**SQL Injection is a method of attack that utilizes SQL code and commands. can be used for modification, corruption, insertion, or deletion of data in a database.
+
+**Input validation is the best method to prevent SQL Injection attacks from being successful.
+
+**dynamic website**, meaning that web pages can be created dynamically using data from the database, based upon user requests and interaction with the website.  a persistent
+connection to the database is required, but a web user should never be able to directly interact with the back-end database. However, SQL Injection makes that possible.
+
+pg 402
+...................................
 
 ----------------------------------------------------------------------------------
 Clark–Wilson Model
