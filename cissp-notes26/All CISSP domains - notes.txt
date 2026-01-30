@@ -1791,15 +1791,219 @@ Primary threat on	Website			User
 **Structured Query Language (SQL) is the language used for communicating with databases.
 **SQL Injection is a method of attack that utilizes SQL code and commands. can be used for modification, corruption, insertion, or deletion of data in a database.
 
-**Input validation is the best method to prevent SQL Injection attacks from being successful.
-
 **dynamic website**, meaning that web pages can be created dynamically using data from the database, based upon user requests and interaction with the website.  a persistent
 connection to the database is required, but a web user should never be able to directly interact with the back-end database. However, SQL Injection makes that possible.
+**web server passed unvalidated information directly to the database server.
+**Using SQL Injection, instead of normal username .. a bit of malform SQL code is entered to trick SQL server to act abmornally 
 
-pg 402
-...................................
+**Input validation is the best method to prevent SQL Injection attacks from being successful.
+Unvalidated data should never be passed directly from a web server to a database server.
+**input sanitized, or otherwise made to conform to expected formatting standards
+**Additionally, the use of things like prepared statement/parameterized queries and stored procedures can also help protect against SQL Injection attacks.
+	-	Prepared statement or parameterized query (PS/PQ) is to think of a template of SQL code, where variables are used and passed to the query later. The separation helps prevent the intent of a query from being changed
+	-	Stored procedures are like the PS/PQ but they are statements stored inside the database already compiled then ready to be invoked by the application
+
+common SQL commands
+CREATE ..SELECT FROM ..GRANT COMMIT
+ALTER INSERT INTO... REVOKE ROLLBACK
+DROP UPDATE SAVEPOINT TRUNCATE DELETE RENAME MERGE LOCK TABLE
+
+3.5.18 Input Validation
+**No input validation can lead to numerous web application vulnerabilities being exploited.
+**Server-side input validation reduces web-based vulnerabilities and the risk of XSS and SQL Injection attacks from succeeding.
+**Whitelist input validation only allows acceptable input.
+
+What is the best way to mitigate web-based vulnerabilities and what types of attacks can be mitigated or prevented
+**Server-side input validation—checking the contents of input fields —is one of the best ways to prevent XSS and SQL Injection attacks from succeeding.
+**Allow list (Whitelist)** input validation only allows acceptable input that consists of very well-defined characteristics, e.g., numbers, character, or both, size, or length, to name a few formats and standards.
+**Deny list (blacklist)** input validation where malicious characters can be discarded as they are considered signs of an attack, i.e., if the = or - characters are met in a “First Name” field, they can be safely discarded as a person’s first name wouldn’t need to include = or -.
+
+3.6 Select and determine cryptographic solutions (pg 409)
+3.6.1 Introduction to Cryptography
+
+**The most critical aspect of cryptography is key management 
+**Cryptographic systems can provide up to five services: confidentiality, integrity, authenticity, nonrepudiation, and access control 
+**Cryptography is used extensively and is often all around us in many different contexts
+**Cryptography is derived from two Greek words— crypto and graphia; crypto means “secret” or “covert” and graphia means “writing.” So, the foundation and meaning of cryptography is “secret writing”—creating a cipher.
+
+With any cryptographic system, one (or a combination of services) denoted in the following table can be achieved:
+-	Confidentiality:	Confidentiality helps prevent unauthorized disclosure of information and to make data available to only those authorized to view it.
+-	Integrity:	Integrity ensures that information has not been manipulated or changed by unauthorized individuals without our knowledge; it helps identify unauthorized or unexpected changes to data.
+-	Authenticity:	Authenticity allows verification that a message came from a particular sender.
+-	Nonrepudiation:	Nonrepudiation prevents someone from denying prior actions. There are two flavors of nonrepudiation:
+		Nonrepudiation of origin: the sender cannot deny that they sent a specific message.
+		Nonrepudiation of delivery: the receiver cannot deny that they received a specific message
+-	Access control:	Cryptography enables a form of access control; by controlling the distribution of ciphertext and the corresponding decryption key to only certain people, control over the decryption and, therefore, access to data can also be controlled
+
+high-level overview of the evolution of cryptography
+Manual	-	Caesar Cipher
+Mechanical	-	The Spartan Scytale,
+Electro-mechanical	-	Enigma machine, Japanese Red and Purple cipher
+Electronic	-	Most current way... software-based like PGP, and common algorithms include DES, AES, and RSA.
+Quantum	-	future/exprimental 
+
+3.6.2 Cryptographic Terminology
+**Cryptography involves its own nomenclature. practice of securing communications to prevent attackers from reading or manipulating information.
+**Important terms to be familiar with include: initialization vector (IV)/nonce, confusion, diffusion, avalanche, key space
+	
+	-	initialization vector (IV)/nonce 
+	-	Plaintext -	Plaintext, also known as cleartext, is simply data that is readable by anyone.
+		Plaintext (in this case, "CISSP is awesome") is provided as input into a cryptosystem, and a cryptographic algorithm transforms it into ciphertext. 
+	-	Encrypt/ Encryption -	Encryption is the process of converting plaintext into ciphertext using a cryptographic algorithm and a key/crypto variable.
+	-	Key/Crypto Variable -	A crypto variable is also referred to as a key. When a given piece of plaintext is encrypted with a key, the key determines how the algorithm processes the plaintext to produce ciphertext. Once plaintext has been encrypted with a key, the only way to decrypt the ciphertext is with the appropriate key.
+					-	The only way this ciphertext can be transformed back into plaintext by a recipient is through the use of a compatible cryptosystem and the same cryptographic algorithm.
+	-	Key space -	The term key space refers to the unique number of keys that is available based on the length of the key. For example, a 2-bit key has a total of four possible or unique keys: 00/01/10/11
+	-	Work factor -	an estimated amount of time or effort required by an attacker to break a cryptosystem. The higher the work factor, the more secure the cryptosystem.
+	-	Key Clustering -	describes what happens when two different keys generate the same ciphertext from the same plaintext. This is something that should be avoided in good  cryptographic algorithms design
+	-	Confusion -	focuses on hiding the relationship between the key and the resulting ciphertext.
+	-	Diffusion -	focuses on hiding the relationship between the plaintext and the resulting ciphertext.
+	-	Initialization Vector (IV)/ Nonce -	is a random number that is used in conjunction with the key and fed into a cryptographic algorithm when encrypting plaintext, need to prevent patterns in the resulting ciphertext.
+	-	Avalanche -	looks at the degree of confusion and diffusion that an algorithm provides. resulting small changes from key or plantext should result in BIG/Avalanche changes of ciphertext
+
+3.6.3 Substitution and Transposition (pg 419)
+
+**Encryption involves methods known as substitution and transposition.
+**Encryption is accomplished through the manipulation of bits —1s and 0s—via synchronous or asynchronous means.
+**Patterns must be avoided. 
+**When implemented and used correctly, one-time pads are the only unbreakable cipher systems. 
+**Bits are encrypted/decrypted as stream ciphers or block ciphers.
+	
+Substitution Transposition	-Characters are replaced with a different character
+GUBBINS > JXEELQV
+-	is a method of encryption where every plaintext character is replaced/substituted with a different character to create ciphertext.
+
+
+
+Transposition	-The order of characters is
+rearranged
+GUBBINS > BINBUGS
+-	is a method of encryption where every plaintext character is shifted around/rearranged based on a given key.
+-	Rail Fence (Zigzag)-	the text is transposed by writing it in a table where each row represents a rail, following a zigzag pattern.
+
+Cryptography --> Art of converting plain text to cipher text 
+Cryptanalysis --> Art of breaking the cipher
+Cryptology --> Science of Cryptography and Cryptanalysis
+Cryptosystem --> Implementation of code/cipher in Hardware or Software
+
+Synchronous versus Asynchronous
+**The bits of 0s and 1s are manipulated via synchronous or asynchronous methods.
+**Synchronous involves working with bits synchronized through some type of timing mechanism, for example, a clock, while encryption/decryption takes place immediately.
+	 - 	A timing element is involved
+	 -	Encryption/decryption requests are performed immediately
+
+**Asynchronous involves working with collections of bits, and the input is typically dictated by the user or some other element that requires input.
+	-	Dictated by some other element or entity that requires input
+	-	Encryption/decryptionrequests are processed in batches (queued)
+
+**Frequency analysis	-	The activity of trying to determine keys based upon letter usage patterns is known 
+simple substitution and transposition do not hide patterns in monoalphabetic ciphers. Frequency analysis can easily detect patterns in them, which can then lead to the determination of the key.
+
+Substitution—polyalphabetic ciphers
+By using polyalphabetic ciphers, frequency analysis becomes much more difficult because patterns are reduced significantly.
+The prefix poly means many, so with polyalphabetic ciphers, multiple alphabets are created and used.
+
+Substitution—running key ciphers
+Running key ciphers has been used since World War II. To utilize the running key cipher, the same "book" must exist at both ends of the communication channel.
+
+Substitution—one-time pads
+With a one-time pad, after every message is encrypted, the key is changed and never reused. One-time pads are the only unbreakable cipher systems.
+
+Stream versus block ciphers
+All symmetric and asymmetric algorithms in cryptography
+work with bits, not letters. Once a message has been turned
+into bits, two options exist with regards to how those bits
+are encrypted and decrypted.
+
+The two types of ciphers that exist are known as stream ciphers and block ciphers. Variables like speed and where it makes sense to use the block as opposed to stream help determine which cipher algorithm to use.
+	-	Stream	-	Encrypt/decrypt data one bit at a time ... faster suitable for networking and hardware level
+		-	Plaintext bits that need to be encrypted are combined with bits generated by a keystream generator.
+		-	The bits are combined using a logical operation called "exclusive or," or XOR. The result from each XOR operation becomes the ciphertext.
+		-	The most commonly used stream cipher is Rivest Cipher 4 (RC4).
+	-	Block	-	Encrypt/decrypt blocks of bits at a time (typically 64-bit blocks) .... slower but have a high diffusion rate and are very resistant to tampering.
+			These are five block cipher modes you need to know for the exam:  (pg 438 / 439)
+				Electronic Codebook (ECB)
+				Cipher Block Chaining (CBC)
+				Cipher Feedback (CFB)
+				Output Feedback (OFB)
+				Counter (CTR)
+
+3.6.4 Steganography and Null Ciphers
+Steganography is hiding information of a particular type
+within something else (like a sound file hidden in a picture).
+A null cipher involves hiding a plaintext message within
+other plaintext.
+
+Steganography Null Cipher
+Plaintext is hidden within
+something else (e.g., a picture)
+
+Null Cipher	-	Plaintext is mixed with a large amount of nonciphertext
+
+3.6.5 Symmetric Cryptography (pg 442)
+Symmetric key cryptography is fast.
+Key distribution and scalability are major disadvantages.
+Out-of-band communication can facilitate key distribution.
+Know symmetric algorithms from weakest (DES) to strongest
+(AES).
+
+Understand advantages and disadvantages of symmetric cryptography
+key distribution is a glaring and inherent
+weakness, especially if the parties involved in
+communication are separated by any amount of distance.
+Out-of-band communication can be used to overcome
+this weakness,
+
+A simple formula can be used to determine
+the number of keys required for a given number of people
+to securely communicate with each other:
+
+n * (n–1) / 2 = number of keys
+n = number of people
+
+Advantages :Fast/efficient / Strong
+Disadvantages : 
+Key distribution
+Scalability
+No authenticity, integrity, or nonrepudiation
+
+3.6.6 Asymmetric Cryptography (pg 452)
+Asymmetric cryptography
+Asymmetric cryptography solves the key exchange problem associated with symmetric cryptography. It enables digital signatures, digital certificates, authenticity, and nonrepudiation (of origin and delivery) and utilizes key pairs consisting of a public key and a private key.
+Asymmetric cryptography solves the key exchange problem
+associated with symmetric cryptography.
+Enables digital signatures, digital certificates, authenticity,
+and nonrepudiation (of origin and delivery)
+Utilizes key pairs consisting of a public key and a private key
+Two primary types of hard math problems: factoring and
+discrete logarithms
+Popular asymmetric algorithms include RSA (uses factoring)
+and Elliptic Curve (ECC, uses discrete logarithms)
+
+
+
+....................pg 452
+
 
 ----------------------------------------------------------------------------------
+ https://blog.balancedsec.com/archive?sort=new
+https://andreakaiserclouds.com/my-cissp-journey-how-i-prepared-and-passed-the-exam/
+https://www.linkedin.com/pulse/how-i-passed-cissp-my-experience-using-lean-study-strategy-saifee-uzaue/
+https://www.youtube.com/watch?v=_nyZhYnCNLA
+
+
+ 
+ list of domains: 
+
+1. Security and Risk Management
+2. Asset Security
+3. Security Architecture and Engineering
+4. Communication and Network Security
+5. Identity and Access Management (IAM)
+6. Security Assessment and Testing
+7. Security Operations
+8. Software Development Security
+
+*************************************************************************************
 Clark–Wilson Model
 Goal: ✅ Integrity (Commercial Focus)
 Used in: Banking, accounting, business applications
