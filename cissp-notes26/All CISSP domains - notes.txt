@@ -1967,21 +1967,37 @@ Scalability
 No authenticity, integrity, or nonrepudiation
 
 3.6.6 Asymmetric Cryptography (pg 452)
-Asymmetric cryptography
-Asymmetric cryptography solves the key exchange problem associated with symmetric cryptography. It enables digital signatures, digital certificates, authenticity, and nonrepudiation (of origin and delivery) and utilizes key pairs consisting of a public key and a private key.
-Asymmetric cryptography solves the key exchange problem
-associated with symmetric cryptography.
-Enables digital signatures, digital certificates, authenticity,
-and nonrepudiation (of origin and delivery)
-Utilizes key pairs consisting of a public key and a private key
-Two primary types of hard math problems: factoring and
-discrete logarithms
-Popular asymmetric algorithms include RSA (uses factoring)
-and Elliptic Curve (ECC, uses discrete logarithms)
+Asymmetric cryptography 
+**Asymmetric cryptography solves the key exchange problem associated with symmetric cryptography. It enables digital signatures, digital certificates, authenticity, and nonrepudiation (of origin and delivery) and utilizes key pairs consisting of a public key and a private key.
+**Enables digital signatures, digital certificates, authenticity, and nonrepudiation (of origin and delivery)
+**Utilizes key pairs consisting of a public key and a private key
+**Two primary types of hard math problems: factoring and discrete logarithms
+**Popular asymmetric algorithms include RSA (uses factoring) and Elliptic Curve (ECC, uses discrete logarithms)
+Advantages 
+	-	Solves key exchange problem
+	-	Enables digital signatures and other services, like authenticity (proof of origin), confidentiality, and access control
+	-	Solves scalability
+Disadvantages
+	-	Significantly slower
+	-	Requires large key sizes
+**To obtain authenticity or proof of origin—identify with certainty who a message came from
+	—	A sender should encrypt the message using the sender's private key.
+	-	Anybody with the sender's public key can decrypt the message and therefore know without a doubt who sent the message
+	-	As the sender is the only person having access to their private key.
 
+Hard math problems
+Factoring and discrete log asymmetric algorithms depend on using very large prime numbers. When using such large numbers, it is very difficult to work backward to determine the original integers.
+ -	Factoring and discrete log asymmetric algorithms depend on using very large prime numbers. When using such large numbers, it is very difficult to work backward to determine the original integers.
 
+Asymmetric algorithms
+The following table summarizes asymmetric algorithms:
+	-	Rivest, Shamir, and Adleman (RSA)	-	Uses factoring mathematics for key genertion.
+	-	Elliptic Curve(ECC)					-	Uses discrete algorithms mathematics for key generation. ECC uses shorter keys than RSA to achieve the same level of security, which means ECC is faster and more efficient.
+	-	Diffie–Hellman Key Exchange			-	Uses discrete algorithms mathematics for key generation is primarily used for the exchange of symmetric keys between parties
 
-....................pg 452
+3.6.7 Hybrid Key Exchange (pg464)
+Diffie–Hellman Key Exchange (uses discrete logarithms) is an asymmetric algorithm used primarily for symmetric key exchange.
+Hybrid cryptography blends the advantage of symmetric cryptography—extremely fast—with the advantage of asymmetric cryptography—solves the key distribution problem.
 
 
 ----------------------------------------------------------------------------------
