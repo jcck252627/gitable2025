@@ -18,7 +18,7 @@ Framework and Compliance lists:
  
 Business-focused IT governance framework.
 Aligns IT goals with business objectives and risk management.
- 
+  Electronic Communications Privacy Act (ECPA)
  SOX
 
 HIPAA
@@ -1996,8 +1996,232 @@ The following table summarizes asymmetric algorithms:
 	-	Diffie–Hellman Key Exchange			-	Uses discrete algorithms mathematics for key generation is primarily used for the exchange of symmetric keys between parties
 
 3.6.7 Hybrid Key Exchange (pg464)
-Diffie–Hellman Key Exchange (uses discrete logarithms) is an asymmetric algorithm used primarily for symmetric key exchange.
-Hybrid cryptography blends the advantage of symmetric cryptography—extremely fast—with the advantage of asymmetric cryptography—solves the key distribution problem.
+**Diffie–Hellman (DFH) Key Exchange (uses discrete logarithms) is an asymmetric algorithm used primarily for symmetric key exchange.
+**Hybrid cryptography blends the advantage of symmetric cryptography—extremely fast—with the advantage of asymmetric cryptography—solves the key distribution problem.
+
+**symmetric key cryptography is the best, when **speed and bulk processing are required**. 
+It is the only type of cryptography that can host the speeds required for being able to encrypt and decrypt fast enough, such as VPN traversing data over the network via session keys, one per session
+DFH process
+1. user a and b each picked a prime number
+2. each user multiply their prime number by 2 and send then exchange that with the other user
+3. each user multiply that given number by their own originial prime and that product would be equal for both user
+
+Hybrid cryptography
+Hybrid cryptography solutions employ the advantages of symmetric and asymmetric cryptography.
+**Symmetric algorithms are used for bulk processing and speed—for anything that requires frequent encryption and decryption and where both need to be done very quickly, 
+**while asymmetric algorithms are used to exchange symmetric keys.
+example of Hybrid cryptography:
+	1.	Alice wants to send Bob a very large message and she can only use symmetric cryptography
+	2.	Alice knows that for Bob to be able to decrypt using the exact same symmetric key
+	3.	To share the symmetric key securely with Bob, Alice knows that she can encrypt it with Bob’s public key send this to Bob.
+	4.	Bob can then use his private key to decrypt that message with the symmetric key sent by Alice
+	5.	Once decrypted, Bob will then have the same session key, which will allow him to quickly decrypt and read Alice’s very large message
+ 
+3.6.8 Message Integrity Controls (pg 470)
+**Message integrity checks (MIC) help to ensure the integrity of a message between the time it is created and the time it is read.
+**A MIC works by creating a representation of the message, which is sent with the message.
+**Message integrity checks are based upon math, some more complex—and therefore more effective—than others.
+**The use of simple math can result in a collision, meaning two different messages can result in the same representation.
+**Hashing is very effective as a MIC and works the same way, regardless of the length of input; the result is always a fixed length digest, based on the hashing algorithm used.
+**The birthday paradox best illustrates how collisions should be avoided to maintain integrity. ...more people entered the room, more with same birthdate . end hashed values are the same with two different input 
+**Cryptographic Hash Functions
+Purpose: Detect any change to data
+Examples: D5: 128-bit digest,SHA-1 (always 128): 160-bit digest (always 160), SHA-2: 224/256/384/512-bit digests, SHA-3: 224/256/384/512-bit digests
+		-	Fixed-length output	-	Any length input always equals the same length output.
+		-	One-way	-	it is not possible to determine the input of a hashing algorithm by inspecting theoutput.
+		-	Sensitive to bit changes (avalanche effect)	-	It should be very hard to find two inputs that hash to the same output.
+Exam hook:	Hash = integrity ONLY (no identity, no secrecy)
+✔ Correct answer: Cryptographic hash or HMAC
+“Verify software download integrity from a public website.”
+✅ Best answer: Cryptographic hash (SHA-256)
+
+**Message Authentication Code (MAC)
+Purpose: Integrity + authentication (shared secret)
+Examples: HMAC-SHA256
+	-	Sender and receiver share a secret key
+	-	Protects against tampering AND spoofing
+📌 Exam hook:	MAC requires shared secret → symmetric
+MAC uses shared keys → no non-repudiation
+
+**Digital Signatures
+Purpose: Integrity + authentication + non-repudiation
+Examples: RSA, ECDSA signatures
+	-	Signed with sender’s private key
+	-	Verified with public key
+📌 Exam hook: Integrity + non-repudiation → digital signature
+A digital signature uses include having the same legal significance as a written signature, code signing to verify the integrity and authenticity of software, and nonrepudiation (of origin and delivery).
+The process of creating a digital signature is quite easy and fundamentally involves two steps:
+	1.	The sender hashes the message, which produces a fixed-length message digest.
+	2.	The sender encrypts the hash value with the sender's private key.
+✔ Correct answer: Digital signature
+
+**Checksums / CRC
+Purpose: Error detection (not security)
+Examples: CRC32
+	-	Detects accidental corruption
+	-	Easily forged
+📌 Exam hook:	Checksums ≠ cryptographic integrity
+CRC detects errors, not attacks.
+“Detect accidental corruption in a low-risk internal system.”
+✅ Best answer: CRC
+
+**TLS / IPsec Integrity Protection
+Purpose: Transport-level message integrity
+Examples: TLS MAC, IPsec AH/ESP
+	-	Protects data in transit
+	-	Often combined with encryption
+📌 Exam hook:	TLS/IPsec protect integrity during transmission
+
+👉 Integrity answers “Was the message changed?”
+**What is the primary goal underlying the use of message integrity controls (MICs)?
+	-	Integrity-	✅ Yes	-Detects modification
+	-	Authenticity-	⚠️ Partial	-Only with HMAC
+Is the message altered?
+→ Integrity needed
+
+Need identity or non-repudiation? → Digital Signature
+Shared secret environment? → HMAC
+Public verification? → Hash
+Data in transit? → TLS / IPsec
+Accidental errors only? → CRC
+
+CIA Triad Mapping
+Integrity: Hash, MAC, Signature
+Authentication: MAC, Signature
+Non-repudiation: Signature only
+
+3.6.10 Digital Certificates (pg 484)
+**Digital certificates bind an individual to their public key.
+**All certificate authorities conform to the X.509 certificate standard.
+**The “root of trust” or “trust anchor” is the foundation of all digital certificates and is represented by a root certificate authority.
+**Digital certificate best practices suggest that public/private key pairs be periodically replaced, which means the associated digital certificate is also replaced.
+**When a private key has been compromised, a digital certificate should be revoked by the issuing certificate authority.
+**With certificate pinning, when a certificate from a web server is trusted, each subsequent visit to the site does not include a request for a new copy of the certificate.
+
+Digital certificate replacement and revocation are summarized here:
+	-	Replacement	-	Regular replacement of expired certificates	
+	-	Revocation	-	Replacement of certificate when associated private key has been compromised
+		Revocation confirmation methods, on the other hand, are: 
+			-	Certificate Revocation List (CRL)	-	Client downloads and searches the list of serial numbers of all revoked certificates from the CA
+			-	Online Certificate Status Protocol (OCSP)	-	Client queries CA for revocation status of specific certificate serial number
+
+With certificate pinning, when a certificate from a web server is trusted, each subsequent visit to the site does not include a request for a new copy of the certificate.
+Finally, a certificate's life cycle includes a number of distinct phases:
+Enrollment
+Issuance
+Validation
+Revocation
+Renewal
+
+A digital certificate is an electronic credential that binds an identity to a public key, issued and digitally signed by a trusted Certificate Authority (CA).
+
+👉 Certificates do NOT encrypt data themselves
+👉 They enable trust, authentication, and secure key exchang
+
+What Digital Certificates Provide (and Do NOT)
+✅ They PROVIDE
+Authentication (proof of identity)
+Integrity (certificate hasn’t been altered)
+Nonrepudiation (when used with digital signatures)
+Trust (via CA chain)
+
+❌ They DO NOT PROVIDE
+❌ Confidentiality (encryption happens later using keys)
+❌ Access control
+❌ Authorization
+
+Certificate Chain of Trust (VERY CISSP-Important)
+Root CA (self-signed, trusted)
+   ↓
+Intermediate CA
+   ↓
+End-entity certificate (server/user)
+
+Trust flows top → down
+Browsers trust Root CAs
+Intermediates reduce risk to Root
+📌 Exam trap: Trusting an intermediate without trusting the root = ❌
+
+🔄 Certificate Lifecycle (Know This Order)
+Key generation
+CSR (Certificate Signing Request) / Enrollment 
+CA validation
+Certificate issuance
+Deployment
+Renewal / Revocation
+
+📌 Exam trick: Revocation ≠ expiration
+
+🛑 Revocation Methods (Highly Testable)
+	-	***1️⃣ CRL (Certificate Revocation List) - Client downloads and searches list of serial numbers of all revoked certificates from the CA
+			Periodic list download
+			Can be stale
+			Offline capable
+	-	***2️⃣ OCSP (Online Certificate Status Protocol)	-	Client queries CA for revocation status of specific certificate serial number
+			Real-time status
+			Faster, more current
+			Availability dependent
+
+📌 Exam question clue:
+“Real-time status” → OCSP
+“Offline or cached” → CRL
+
+🧪 Common CISSP Exam Traps
+❌ Trap 1: Certificate = Encryption
+Wrong. Certificates only bind identity to public key.
+✔ Correct answer: Certificates support authentication, not encryption.
+
+
+Root of Trust
+Root of trust, or the trust anchor, is the foundation of digital certificates’ integrity. In the case of every digital certificate, ultimately a root CA’s key is used to sign the certificate, but oftentimes intermediary CAs (Subordinate CAs) act as proxies and sign and issue digital certificates on behalf of the root CA 
+
+From a security perspective, the reliability of the entire system is dependent on the security of the root CA’s private key. If this key were ever compromised, significant and farreaching global damage could take place, and the entire system could fall apart
+
+3.6.11 Public Key Infrastructure (PKI) (pg 497)
+**Public key infrastructure (PKI) is the basis for keys to be distributed and owners of public keys to be verified.
+**The standard used to create all digital certificates is X.509.
+**PKI consists of several components: certificate authority (CA), registration authority (RA), intermediate/issuing CA, certificate DB, certificate store.
+**The root of trust in any PKI is the CA, which ultimately issues certificates.
+
+Major components
+Certificate Authority (CA)	-	Root of trust
+Registration Authority (RA)	-	Identity proofs on behalf of CA
+Intermediate/ Issuing CA	-	Issues certificates on behalf of CA
+Validation Authority (VA)	-	Responds to revocation queries on behalf of CA - either use protocols, Revocation Methods (Highly Testable) or OCSP (Online Certificate Status Protocol)
+Certificate DB				-	List of certificates issued by CA and revocation list
+
+**Even without a PKI it is still possible to encrypt and send data, but you cannot verify the identities of the other participating parties, it’s impossible to entirely trust the digital identity of another entity or person.
+
+3.6.12 Key Management 
+**Proper key management is paramount to the security of any cryptographic system.
+**Kerckhoffs’ principle
+**Key management activities: generation/creation, distribution, storage, change/rotation, disposition/destruction, recovery
+**Kerckhoffs’ principle - If a key is secure, the underlying cryptographic system is secure. In other words, an attacker can know the ciphertext, the algorithm, the IV (initialization vector), and everything else about the system, and if the key remains secure, the system is secure.
+
+Proper key management is paramount to the security of any cryptographic system and contains numerous key management activities, which are summarized in the following table:
+	-	Key Creation/Generation	-	The key generation/creation process must have  attributes: fully automated process, keys are randomly chosen from all key space, asymmetric keys are much longer than symmetric keys	
+	-	Key Distribution	-	practice of securely distributing keys. Methods used could include: out-of-band distribution , key wrapping using key encrypting keys (KEK)
+	-	Key Storage	-	most critical , two types of systems for storage: Trusted Platform Module (TPM) / Hardware Security Module (HSM)
+	-	Key Change /Rotation	-	 refers to how often encryption keys should be replaced.
+	-	Key Destruction / Disposition	-	Key disposition refers to how keys are handled, especially data in cloud, 2 method : crypto shredding, key destruction
+	-	Key Recovery	-	Key recovery refers to techniques used to recover a key. Three primary techniques exist: split knowledge, dual control, and key escrow.
+
+S/MIME
+S/MIME is a standard for public key encryption and provides security services for digital messaging applications. It requires the establishment or utilization of public key infrastructure (PKI) in order to work properly.
+
+The basic security services offered by S/MIME are:
+
+Authentication
+Nonrepudiation of origin
+Message integrity
+Confidentiality
+MIME does not address security issues, but security features were developed and added to MIME to create S/MIME.
+
+S/MIME adds features to email messaging, including:
+Digital signatures for authentication of the sender
+Encryption for message privacy
+Hashing for message integrity and nonrepudiation of origin
+
 
 
 ----------------------------------------------------------------------------------
