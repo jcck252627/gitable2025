@@ -75,7 +75,7 @@ Use these principles:
  
  PCI DSS
  
- 
+ COBIT -	 COBIT (Control Objectives for Information and Related Technology) is a framework developed by ISACA for IT management and governance. It's a toolset that allows managers to bridge the gap between control requirements, technical issues, and business risks. It's the correct answer in this case because one of the objectives of COBIT is to help businesses create optimal value from IT by maintaining a balance between realizing benefits and optimizing risk levels. Therefore, it can be used for self-directed risk management. 
 
  CSA START
  FedRAMP (Federal Risk and Authorization Management Program)  .. 3PAO
@@ -161,8 +161,9 @@ They do not certify. They attest.
 Only Security is mandatory.
  
  
- 
+ : The Common Criteria for Information Technology Security Evaluation (Common Criteria or CC) is an international standard (ISO/IEC 15408) for computer security certification
  ISO / IEC (International Standards)
+ SO/IEC 27001 is an information security standard that is part of the ISO/IEC 27000 family of standards. It's used for the establishment, implementation, maintenance, and continual improvement of an information security management system (ISMS). This framework is focused more on managing information security
  ISO 27001
  ISO 27002: 
  ISO 27002 is a well-established international standard that provides best practice recommendations on information security controls, making it a suitable reference for listing security controls in application development.
@@ -175,6 +176,157 @@ Answers “How do we implement security controls?”
 ISO/IEC 27005
 Risk management framework aligned with ISO 27001.
 Focuses on identifying, analyzing, and treating information security risks.
+ Federal Information Processing Standards (FIPS) are publicly announced standards developed by the United States Federal government for use in computer systems by all non-military government agencies and by government contractors. FIPS standards specify certain requirements for IT products in terms of their security functionalities and capabilities. FIPS 140-2, for instance, is a widely recognized standard for cryptographic modules
+
+SABSA is more geared towards designing and implementing security architecture based on business requirements, and while risk management is a part of this
+
+
+ Common Weakness Enumeration (CWE).
+
+Brute force.
+Smurf attacks.
+Reply attack vs MIM attack
+ preponderance of the evidence
+Kerberos 
+ The user sends a request for a service ticket to the authentication server: In the Kerberos authentication process, the first step involves the user (or client) sending an authentication request to the Kerberos authentication server. This is to obtain a Ticket Granting Ticket (TGT), which is then used in subsequent steps to access services.
+
+(APT) group with a known modus operandi.
+ An access control list (ACL)  vs RBAC
+ 
+ syntactic validation
+  Regular expressions, also known as regex, are a fundamental tool in computer science and programming for pattern matching within text. They're primarily used to detect specific sequences of characters and are very useful in tasks related to parsing and validating the syntax of text. Syntactic validation involves verifying that the structure of data matches a specific pattern or sequence, and regular expressions are primarily used for this purpose. For example, a regular expression can be used to check if a user's input matches the format of an email address, a phone number, a date, and so forth. Regular expressions are the primary method of syntactic validation because they allow for precise and flexible definition of what constitutes valid syntax. 
+
+domain 3
+Cipher Block Chaining (CBC)
+Cipher Feedback (CFB)
+Counter Mode (CTR)
+Output Feedback (OFB)
+
+domain 4
+
+The primary purpose of a DMZ, or Demilitarized Zone, is to provide an additional layer of security by separating the internal network from the internet. This is achieved by creating a subnetwork where servers that need to be accessed from the internet (like web servers or email servers) are placed. In case these servers are compromised, the intruder still doesn't have direct access to the internal network because of the DMZ. The incorrect answers: While a DMZ does add a layer of security, its purpose is not specifically to secure communication between different internal networks. For securing such communications, techniques like VPNs (Virtual Private Networks), encryption, and internal firewalls are more appropriate. The main goal of a DMZ isn't to provide internet access for internal users, but rather to protect the internal network from external threats. Internet access for internal users can be managed through the use of firewalls and content filtering without necessarily needing a DMZ. To provide a secure environment for hosting public-facing web servers is partly correct in that a DMZ can host public-facing servers, but the primary purpose isn't to provide a secure environment for these servers, but rather to protect the internal network from potential attacks originating from these public-facing servers.
+
+
+domain 6
+ automated breach and attack simulations (BAS) with continuous compliance checks provides the most comprehensive insights. BAS can simulate a wide range of attack scenarios, both external and internal, 24/7, giving a holistic view of the organization's vulnerabilities. Continuous compliance checks ensure that the organization is adhering to all necessary regulatory requirements consistently, not just at a single point in time. This approach not only identifies vulnerabilities but also verifies that the company is meeting its regulatory obligations, making it the most comprehensive and actionable approach for this scenario.
+
+domain 8
+positive vs negative list 
+ A positive list only allows certain IP addresses, while a negative list blocks them: In cybersecurity, a positive list (also known as a whitelist) is a list of entities that are provided explicit permission to access a specific system or network. For instance, a positive list of IP addresses would mean that only those specific IP addresses on the list are allowed to access a system, while all others would be denied. In contrast, a negative list (often referred to as a blacklist) is a list of entities that are explicitly denied access. A negative list of IP addresses would block access to those specific IP addresses, but all others would be allowed   the concept of positive and negative lists can be applied to email addresses in some scenarios (like email filters), the question specifically asks about the main difference in the context of cybersecurity. The more common application in cybersecurity is with IP addresses, not email addresses
+  
+ domain 7 
+   In a chain of custody log, you should never record any modifications made to the original evidence. The chain of custody must maintain the integrity of the evidence; this means that the evidence should not be altered or tampered with in any way.
+  
+   Recovery Point Objective (RPO)
+   Maximum Tolerable Downtime (MTD), 
+   
+   The type of information compromised in the breach: The most important factor to consider when reporting a breach is the type of information compromised. This is because different types of data have different legal, regulatory, and compliance requirements when it comes to breach reporting. For example, breaches involving personal identifiable information (PII), health information, or financial data are subject to specific laws and regulations. Understanding the type of data compromised can help assess the potential impact of the breach on individuals and the organization, guiding the subsequent response actions and mitigation strategies
+  
+  domain 7 - prevent ransomware by backup ??
+implementing robust backup and recovery processes: This is the MOST effective way to prevent ransomware attacks. While it may not prevent the initial attack, having regular, secure backups can dramatically mitigate the effects of a ransomware attack by allowing a system or data to be restored without paying the ransom. It's crucial to ensure that backups are not connected to the systems they're backing up, as some ransomware can also infect connected backup systems
+
+ domain name phishing
+  cybersquatting and typo squatting threats.
+  
+  domain 7
+  Unallocated space refers to portions of the hard drive that are not currently assigned to hold data. An intelligent attacker might exploit this by marking a section of the drive as unallocated to conceal malicious software. This area isn't frequently scanned by standard antivirus or anti-malware software, making it a more likely hiding spot for malicious software. However, a comprehensive forensic analysis would include the scanning of unallocated space, increasing the chance of discovering any hidden threats. 
+
+. Slack space is the area at the end of a file, up to the end of the final disk cluster used by that file. It could contain fragments of deleted or old files, including potentially malicious software, but it's not the most common place for a sophisticated perpetrator to hide malware due to its limited space and the fact that some forensic tools will also scan this area. Although the metadata area holds valuable information about system files and can be a useful source of evidence in a forensic investigation, it is not the most likely place to find hidden malware. An advanced attacker would likely avoid placing malware in this area as changes in the metadata can raise flags during system audits and analysis.
+
+. Slack space is the area at the end of a file, up to the end of the final disk cluster used by that file. It could contain fragments of deleted or old files, including potentially malicious software, but it's not the most common place for a sophisticated perpetrator to hide malware due to its limited space and the fact that some forensic tools will also scan this area. Although the metadata area holds valuable information about system files and can be a useful source of evidence in a forensic investigation, it is not the most likely place to find hidden malware. An advanced attacker would likely avoid placing malware in this area as changes in the metadata can raise flags during system audits and analysis.
+
+In CISSP Disaster Recovery (DR) context, MTD and MAD are easy to mix up—but they answer different survival questions.
+
+🔹 MTD — Maximum Tolerable Downtime
+
+Question it answers:
+
+“How long can this business process be down before the organization suffers unacceptable damage?”
+
+Key points:
+
+Business-driven
+
+Set by senior management / BIA
+
+Includes all impacts: financial loss, reputation, legal, safety
+
+Defines the upper limit for recovery
+
+👉 Think: absolute pain threshold
+
+🔹 MAD — Maximum Allowable Downtime
+
+Question it answers:
+
+“What downtime limit can IT realistically design recovery solutions to meet?”
+
+Key points:
+
+IT / technical-driven
+
+Constrained by technology, cost, and complexity
+
+Must always be ≤ MTD
+
+Used to design DR strategy and controls
+
+👉 Think: engineering constraint
+
+🔁 Relationship (EXAM GOLD)
+MAD ≤ MTD
+
+
+If MAD > MTD → ❌ Business fails (IT can’t meet business needs)
+
+🔹 Where RTO fits (for exam clarity)
+
+RTO (Recovery Time Objective) is usually set at or below MAD
+
+RTO is what DR plans are actually tested against
+
+RTO ≤ MAD ≤ MTD
+
+🧠 CISSP Memory Trick
+
+MTD = Management Tolerance
+
+MAD = Admin (IT) Design Limit
+
+📝 Quick Example
+
+Online trading platform
+
+MTD: 2 hours (after that → regulatory + financial disaster)
+
+MAD: 90 minutes (best IT can guarantee)
+
+RTO: 60 minutes (chosen target)
+
+✅ Passes CISSP logic
+
+⚠️ Common CISSP Traps
+
+MTD is NOT set by IT
+
+MAD is NOT a business decision
+
+You never choose a solution where MAD exceeds MTD
+
+
+domain 8
+ The procurement process involves activities such as creating a business case, researching and selecting vendors, and involving stakeholders in decision-making. This process aligns the requirements of the organization with the capabilities of potential vendors to ensure that the procured goods or services will fulfill the needs of the business. It often involves a formal bidding or negotiation process with potential vendors and requires approval from relevant stakeholders. The incorrect answers: Requirements elicitation is the process of gathering requirements for a system from users, customers, and other stakeholders. While it involves stakeholders, it does not typically involve building a business case or researching vendors. Risk assessment involves identifying, analyzing, and evaluating risks that could potentially impact the success of a project or business goals. It's a critical part of any project management strategy, but it doesn't typically involve building a business case or researching vendors. Development and testing involve the actual creation of a system or product and the subsequent testing to ensure it meets the identified requirements and is free from defects. While stakeholders might be involved in providing feedback during this process, building a business case and researching vendors are not part of this process.
+
+Overall explanation
+The correct answer: Agile is a project management approach that emphasizes flexibility, collaboration, and rapid iteration in the development process. In an Agile environment, development work is broken down into smaller pieces, each of which can be developed, tested, and integrated regularly, even several times a day. It is well-suited for CI and CD because it allows for frequent code updates and testing, and encourages the use of automated tools to streamline the integration and delivery process. The incorrect answers: Waterfall is a linear, sequential project management approach that emphasizes strict planning and defined stages of development where one stage should be completed before moving on to the next. This approach doesn't align with the principles of CI/CD, which require frequent iterations, testing, and deployment of code changes. Sashimi is a project management term originating from a variation of the Waterfall model, often used in software development. While the Sashimi model introduces overlapping phases (thereby increasing communication and reducing the isolation of phases as compared to the pure Waterfall model), it's not inherently designed to accommodate the frequent integration and delivery required in CI/CD practices. TOGAF (The Open Group Architecture Framework) is a framework for enterprise architecture that helps organizations design, plan, implement, and govern their IT systems. It is not inherently designed for or tied to software development processes like CI/CD.
+
+Extreme Programming (XP) is a type of software development methodology that emphasizes collaboration between teams, frequent code testing, and constant feedback. One of the key principles of XP is pair programming, where two developers work together on the same code, with one person writing the code and the other reviewing it. 
+
+ The Waterfall model is a sequential software development process, in which progress is seen as flowing steadily downwards, hence "waterfall", through the phases of requirements analysis, design, implementation, testing, integration, and maintenance. Pair programming is not a specific part of the Waterfall methodology. Scrum is an Agile framework that is used for managing knowledge work, with an emphasis on software development. It is designed for small teams (about three to nine people) who break their work into goals that can be completed within time-boxed iterations. While collaboration is emphasized in Scrum,
+
+The correct answer: Cross-Site Scripting. If Rocket Raccoon does not properly filter out HTML tags from the input in the code for the Milano's communication system, he could potentially introduce a Cross-Site Scripting (XSS) vulnerability. XSS vulnerabilities occur when an application includes untrusted data in a new web page without proper validation or escaping, allowing an attacker to inject malicious scripts. The incorrect answers: Buffer Overflow: Buffer overflow vulnerabilities occur when a program writes more data to a buffer than it should, thereby overflowing the buffer's boundary and overwriting adjacent memory. The scenario given does not suggest any misuse of memory space. Insecure Direct Object References: This type of vulnerability occurs when a developer exposes a reference to an internal implementation object. The scenario does not suggest this is the case. Injection: Injection vulnerabilities arise when untrusted data is inserted into a system and then processed. In this scenario, the unfiltered HTML tags would more likely result in a Cross-Site Scripting vulnerability, not an injection vulnerability.
+
+The Delphi Technique is the most appropriate methodology for gathering input and consensus from a diverse group of stakeholders on the most effective security measures to implement. This technique is an iterative process used to collect and distill the anonymous judgments of experts using a series of data collection and analysis techniques. It is designed to combine opinions from diverse groups to converge towards the "correct" response. The process begins with a survey or questionnaire and incorporates multiple rounds of polling, with a facilitator summarizing the anonymous responses from the previous round and asking participants to reassess their views based on this feedback. The goal is to reduce the range of responses and arrive at something closer to expert consensus. This is particularly useful when dealing with complex problems like cybersecurity measures, where diverse stakeholder inputs and consensus are critical. The incorrect answers: While brainstorming sessions can be useful in generating a variety of ideas, they don't always facilitate consensus. They also tend to favor those with more assertive personalities or higher positions, potentially silencing other voices or ideas. Furthermore, ideas generated in brainstorming sessions can sometimes be surface level or uninformed without proper structure and expert guidance, and there's less emphasis on refining and converging ideas, which is essential for addressing complex issues like cybersecurity. A focus group discussion is another way to gather input, but it doesn't usually reach a consensus as effectively as the Delphi Technique. Like brainstorming, focus groups may be dominated by the loudest voices, not necessarily the most knowledgeable. They also typically involve a smaller number of participants, which can limit the diversity of input. Surveys and questionnaires are excellent for collecting information from a large group of people. However, they're less effective at driving consensus among the group members. Without the iterative feedback and adjustment process present in the Delphi Technique, surveys and questionnaires provide limited opportunity for stakeholders to understand others' viewpoints and refine their own based on that understanding.
 
 ****NISTs*****
 NIST CFS 
@@ -191,9 +343,9 @@ Use the acronym: I P D R R
 or
 👉 “I Protect Data, Respond & Recover.”
 You will see this flow repeatedly in questions.
+ 
+  The NIST (National Institute of Standards and Technology) Cybersecurity Framework is a policy framework of computer security guidance for how private sector organizations in the United States can assess and improve their ability to prevent, detect, and respond to cyber attacks. Although it includes risk management elements
 	
-	
-
 NIST SP 800-39	- framework any companies can use to assess risks ... "a holistic view rather than a checklist view ", 3 tiers, organization/mission-business/info-system, risks must be addresses in each tiers
 NIST 800-37
 NIST SP 800-53 is a comprehensive catalog of security and privacy controls for all U.S. federal information systems (except those related to national security) and is directly focused on listing such controls, making it highly relevant for application development.
@@ -517,14 +669,58 @@ Building/people? → Physical
 
 
 Patents: Protects inventions for 20 years (normally) – Cryptography algorithms can be patented. Inventions must be:Novel (New idea no one has had before). Useful (It is actually possible to use and it is useful to someone). Nonobvious (Inventive work involved).
-Trademark
-Copyright/Copyleft
-Trade Secret
+. A patent is a form of intellectual property that gives its owner the legal right to exclude others from making, using, selling, and importing an invention for a limited period of years. Patents are intended to encourage innovation by granting inventors exclusive rights to profit from their inventions. If someone copies a patented invention, the patent owner can sue for patent infringement
+
+Trademark -  A trademark is a recognizable sign, design, or expression which identifies products or services of a particular source from those of others. Trademark law prevents others from using a deceptively similar mark, but it doesn't prevent others from making the same goods or from selling the same goods or services under a clearly different mark. If someone were to copy your work under a different brand, a trademark would not protect you
+
+Copyright/Copyleft -  Copyright is a legal right that grants the creator of an original work exclusive rights to determine and decide whether, and under what conditions, this original work may be used by others. This includes the right to reproduce, distribute, display, perform, transmit, or transform the work. Copyright infringement can lead to legal ramifications.
+
+Trade Secret - A trade secret is information that is not generally known and is kept secret by a company or individual in order to gain an economic advantage. They are not protected by law in the same way as patents or copyrights. Instead, protection of a trade secret is typically handled through an agreement between parties, such as a non-disclosure agreement. If someone outside of these agreements were to independently develop or reverse engineer a product or idea that you consider a trade secret, you would have no legal recourse to stop them from using, manufacturing, or selling it.
 
 Due care: Due care refers to the level of care that an individual would reasonably be expected to exercise in a particular situation. 
 As the chief information security officer (CISO) at ThorTeaches.com, Jane is responsible for determining the security goals for the organization, and she must do so with due care. This means she should take reasonable steps to protect the company's data and systems from threats, aligning with industry best practices and regulatory requirements. 
 
 Due diligence is the investigative process conducted to assess a business transaction. When setting security goals, due diligence is part of the broader process Jane would undertake to understand the risks and requirements of the organization, but it is not the term that best describes the minimum standard required of her. 
+
+Intellectual property refers to intangible assets.  This mostly refers to software, proprietary code, and other digital assets owned by the organization, but can also refer to unpublished books, music, art, inventions, patents, trademarks, trades secrets, or other information that should be protected.
+
+Copyright: Creating a photograph or writing a song automatically grants copyright protection without requiring a formal process. The rights to control copies belong to the creator from the moment of creation. In a copyright dispute, parties must provide evidence proving they were the original creator.
+
+Trade Secrets: These are protected due to their commercial value, limited access, and reasonable security measures. Protection is enforced through an organization’s internal security protocols.
+
+Patents and Trademarks: Unlike copyrights and trade secrets, patents and trademarks require a formal review process, investigation, and associated costs before protection is granted.
+
+When talking about software, the following intellectual property terms apply – try to think about what your organization does for its non-proprietary software usage (e.g. MS Word, etc.):
+
+Site license – refers to bulk purchases, for all staff within the organization, done for a specific length, and there is typically a cap on the number of licenses
+Per-seat license – another bulk purchase (number of licenses is chosen rather than having a cap), or pay-per-copy (usually discounted)
+Shareware – use is allowed with constraints, free for non-commercial use, commercial use would require payment
+Public Chapter (previously “public domain”) – use is allowed without constraints, for any purpose, including modification and customization.  Support and extra features must be purchased.
+
+DRM is a concept that candidates need to be familiar with.  Here are the elements of a DRM solution:
+
+Persistency – Access controls follow the material wherever it goes.  The best example of this is a DVD that carries its encryption wherever it goes.
+
+Dynamic policy control – This refers to centralized permissions management typically for an organization that needs to allow the owner of the intellectual property to manage and update rights to access the data.  
+
+Automatic expiration – License can expire automatically on a specific date, whether for a specific installation or at a point in time where the software becomes public domain.
+
+Continuous audit trail – Captures all activity on the material, views, access, modification, copying, etc.Interoperability – This concept refers to the solution fitting into any environment, windows, linux, email, file structure, or access control methods.
+
+A copyleft license is a type of open-source license that allows users to freely use, modify, and distribute a work, provided that any derivative works are also distributed under the same license terms. This ensures that the software remains free for all users, even in modified versions, and mandates that derivative works be shared under the same conditions. Copyleft licenses guarantee freedoms to reproduce, adapt, or distribute a work, distinguishing them from more restrictive copyright licenses. Overall, copyleft promotes the idea of keeping software free and accessible to everyone
+
+Copyright grants exclusive rights to creators over their original works, while copyleft allows users to freely use, modify, and distribute works under the same licensing terms.
+Understanding Copyright
+Definition: Copyright is a legal framework that provides creators with exclusive rights to their original works, such as literature, music, art, and software. This means that the creator has control over how their work is used, reproduced, and distributed. 
+
+
+Understanding Copyleft
+Definition: Copyleft is a licensing method that allows creators to grant others the freedom to use, modify, and distribute their work, provided that any derivative works are also shared under the same or compatible terms. 
+
+Purpose: The philosophy behind copyleft is to promote collaboration and the sharing of knowledge, ensuring that all modifications and adaptations remain accessible to the community. 
+
+Key Feature: A fundamental principle of copyleft is the "share-alike" requirement, which mandates that any derivative works must be licensed under the same copyleft terms, preventing proprietary restrictions on the modified work. 
+
 
 
 What is the FIRST step in protecting a company's trademark?
