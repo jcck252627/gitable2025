@@ -178,6 +178,9 @@ Risk management framework aligned with ISO 27001.
 Focuses on identifying, analyzing, and treating information security risks.
  Federal Information Processing Standards (FIPS) are publicly announced standards developed by the United States Federal government for use in computer systems by all non-military government agencies and by government contractors. FIPS standards specify certain requirements for IT products in terms of their security functionalities and capabilities. FIPS 140-2, for instance, is a widely recognized standard for cryptographic modules
 
+ when evaluating a security product according to ISO/IEC 15408-1
+primary evaluation criterion, as it assesses the security features provided by the product. Functionality refers to the specific set of security functions that the product is designed to perform. These functions are evaluated against a set of specified security objectives to ensure that the product adequately addresses the identified threats and risks. 
+
 SABSA is more geared towards designing and implementing security architecture based on business requirements, and while risk management is a part of this
 
 
@@ -227,6 +230,9 @@ implementing robust backup and recovery processes: This is the MOST effective wa
 
  domain name phishing
   cybersquatting and typo squatting threats.
+  
+  domain 7
+  RAID 5: Block level striping with distributed parity, requires at least 3 disks. Combined speed with redundancy.
   
   domain 7
   Unallocated space refers to portions of the hard drive that are not currently assigned to hold data. An intelligent attacker might exploit this by marking a section of the drive as unallocated to conceal malicious software. This area isn't frequently scanned by standard antivirus or anti-malware software, making it a more likely hiding spot for malicious software. However, a comprehensive forensic analysis would include the scanning of unallocated space, increasing the chance of discovering any hidden threats. 
@@ -328,6 +334,10 @@ The correct answer: Cross-Site Scripting. If Rocket Raccoon does not properly fi
 
 The Delphi Technique is the most appropriate methodology for gathering input and consensus from a diverse group of stakeholders on the most effective security measures to implement. This technique is an iterative process used to collect and distill the anonymous judgments of experts using a series of data collection and analysis techniques. It is designed to combine opinions from diverse groups to converge towards the "correct" response. The process begins with a survey or questionnaire and incorporates multiple rounds of polling, with a facilitator summarizing the anonymous responses from the previous round and asking participants to reassess their views based on this feedback. The goal is to reduce the range of responses and arrive at something closer to expert consensus. This is particularly useful when dealing with complex problems like cybersecurity measures, where diverse stakeholder inputs and consensus are critical. The incorrect answers: While brainstorming sessions can be useful in generating a variety of ideas, they don't always facilitate consensus. They also tend to favor those with more assertive personalities or higher positions, potentially silencing other voices or ideas. Furthermore, ideas generated in brainstorming sessions can sometimes be surface level or uninformed without proper structure and expert guidance, and there's less emphasis on refining and converging ideas, which is essential for addressing complex issues like cybersecurity. A focus group discussion is another way to gather input, but it doesn't usually reach a consensus as effectively as the Delphi Technique. Like brainstorming, focus groups may be dominated by the loudest voices, not necessarily the most knowledgeable. They also typically involve a smaller number of participants, which can limit the diversity of input. Surveys and questionnaires are excellent for collecting information from a large group of people. However, they're less effective at driving consensus among the group members. Without the iterative feedback and adjustment process present in the Delphi Technique, surveys and questionnaires provide limited opportunity for stakeholders to understand others' viewpoints and refine their own based on that understanding.
 
+ The parent table's primary key is seen as the foreign key in the child table. In a relational database, relationships between tables are established through primary and foreign keys. A primary key in one table (parent table) is used as a foreign key in another table (child table) to create a link between the two tables. This relationship allows for efficient data retrieval and helps ensure data integrity. The incorrect answers: The parent table's primary key is seen as the parent key in the child table: This statement is not correct because there is no term like 'parent key' in relational database parlance. The parent table's primary key is seen as the child key in the child table: Again, this statement is incorrect as there is no such term as 'child key' in the context of relational databases. The parent table's primary key is seen as the sibling key in the child table: There is no such term as 'sibling key' in the context of relational databases. The term 'sibling' typically refers to nodes at the same level in a tree data structure, not to keys in a relational database.
+ 
+ Given the scale and complexity of the IT transformation project, it is imperative to have a unified security framework that extends across the entire portfolio. This means a common set of security protocols, standards, and controls that are uniformly implemented across all projects and programs in the portfolio. This provides a consistent security baseline, facilitating inter-project communication and integration, and enabling efficient identification and mitigation of potential security risks. Having a unified security framework also enables efficient resource allocation, since you can centrally manage and optimize the security measures for the entire portfolio, rather than separately for each project. This leads to more efficient use of resources, reduces duplicative efforts, and ensures consistency in the level of security across all sub-projects. The incorrect answers: Although regularly reviewing and updating security controls for each sub-project is important, it doesn't address the overarching need for a unified approach to security across the entire portfolio. In fact, without a unified security framework, you might end up with inconsistent security controls between sub-projects, which could create vulnerabilities and inefficiencies. An IPT can be instrumental in aligning the objectives and efforts of different stakeholders, but its formation doesn't directly ensure the security of the IT transformation project. The IPT would be more concerned with the strategic and operational aspects of the project, while the establishment and enforcement of a unified security framework is a more direct and effective strategy to ensure comprehensive security. Identifying and assessing the potential security risks of the project is a part of the process of ensuring the project's security, but without a unified security framework, the identified risks might not be adequately or consistently mitigated across the entire portfolio. The risk assessment should be done within the context of a comprehensive security framework that spans the whole portfolio.
+ 
 ****NISTs*****
 NIST CFS 
 NIST CSF = Identify → Protect → Detect → Respond → Recover
@@ -592,6 +602,17 @@ Work Recovery Time (WRT) is the duration of time it takes to catch up on work no
 
 Domain 1: Security and Risk Management
 **********************************************************
+he Chief Information Security Officer (CISO) is responsible for the overall security strategy and program of an organization. This position sits at the top of the IT security hierarchy in most organizations and is responsible for establishing and maintaining the enterprise vision, strategy, and program to ensure information assets and technologies are adequately protected. 
+
+a Data Protection Officer (DPO) plays a crucial role in overseeing data protection strategy and implementation within an organization, they are typically more focused on ensuring compliance with data protection regulations and laws, such as the EU's General Data Protection Regulation (GDPR). The DPO doesn't usually cover all aspects of an organization's security strategy and program. 
+
+The Chief Information Officer (CIO) is an executive role in charge of the overall strategic direction of the company's IT infrastructure and assets. While the CIO does have a role in security, their focus tends to be broader, covering areas like IT budgeting, planning, and personnel, as well as digital transformation strategies. 
+
+The Chief Risk Officer (CRO) is responsible for identifying, assessing, and mitigating risks across the organization. Although these risks can include those related to information security, the CRO's role is broader and includes other types of risks such as operational, financial, reputational, and strategic risks.
+
+
+ Implementing a risk management framework provides an organized and structured approach to identifying, assessing, and responding to risks. The aim of an RMF is to enable organizations to better understand the nature of the risks they face, make informed decisions about how to address those risks, and manage them in an ongoing, dynamic way. It provides a holistic view of the organization's risk profile, helps establish risk tolerance, and aids in decision-making processes related to risk treatment. The incorrect answers: Identifying and prioritizing vulnerabilities is an important part of risk management but it is not the primary benefit of implementing a risk management framework. The framework provides a comprehensive approach to managing risks including business, strategic, and operational risks, not just identifying vulnerabilities. Although implementing a risk management framework can help an organization maintain compliance with certain laws and regulations, it's not the primary purpose of an RMF. The primary purpose is to manage risks in a systematic and structured way. While compliance is often a beneficial side effect, it is not the main goal. It reduces the need for security controls is incorrect. Implementing a RMF doesn't reduce the need for security controls but rather it aids in determining which controls are necessary and how they should be applied to mitigate specific risks. The risk management process often results in the implementation of additional controls or the strengthening of existing ones to better manage identified risks.
+
 BIA/BCP/DRP /RMF
 
 Risk = Threat x Vulnerability. Impact - Can at times be added to give a more full picture. 
@@ -613,6 +634,13 @@ The EF will always be a percentage between 0 to 100 percent.
 **Annualized Rate of Occurrence (ARO)**: Denotes how many times each year the risk is expected to occur. For example, if the voltage spikes excessively three times a year, the ARO is 3.
 
 **Annualized Loss Expectancy (ALE):** Expresses the annual cost of the risk materializing.
+
+
+**Security assessment** is a thorough evaluation of an organization's information security posture, including its policies, procedures, and technical controls. It involves identifying potential vulnerabilities and risks, and determining the appropriate measures to mitigate those risks. Security testing, on the other hand, involves evaluating the effectiveness of an organization's security controls by simulating attacks and attempting to breach the system. 
+
+**Risk management**, meanwhile, involves identifying, assessing, and prioritizing risks to an organization's assets, and implementing strategies to mitigate those risks. 
+**Security policy** review, meanwhile, involves reviewing and updating an organization's security policies to ensure they are still relevant and effective.
+**Security testing** involves evaluating the effectiveness of an organization's security controls,
 
 Applicable Risk Controls
 **A complete control at minimum is a combination of preventive, detective, and corrective controls
@@ -1369,6 +1397,9 @@ FISMA
 FedRAMP
 SOX
 	
+**The Ring Model: 4 ring model that seperates Users (Untrusted) from the Kernel (Trusted). The full model is slow and rarely used; most OS’ only use rings 0 and 3. The applications are at layer 3. There is a new addition to the Ring Model: Hypervisor mode is called Ring -1 and is for VM Hosts. Ring -1 sits below the Client kernel in Ring 0.	
+
+
 3.4 Understand security capabilities of information systems (IS) (e.g., memory protection, Trusted Platform Module (TPM),encryption/decryption)
 3.4.1 RMC, Security Kernel, and TCB
 
