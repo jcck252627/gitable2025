@@ -241,6 +241,8 @@ implementing robust backup and recovery processes: This is the MOST effective wa
 
 . Slack space is the area at the end of a file, up to the end of the final disk cluster used by that file. It could contain fragments of deleted or old files, including potentially malicious software, but it's not the most common place for a sophisticated perpetrator to hide malware due to its limited space and the fact that some forensic tools will also scan this area. Although the metadata area holds valuable information about system files and can be a useful source of evidence in a forensic investigation, it is not the most likely place to find hidden malware. An advanced attacker would likely avoid placing malware in this area as changes in the metadata can raise flags during system audits and analysis.
 
+ Initiating containment procedures to prevent the threat from spreading to other systems is the most appropriate step after detecting an attack. Containment strategies, such as network segmentation, can isolate the affected systems and limit the damage caused by the attack. This is crucial in managing an APT, which often aims to move laterally through a network after gaining initial access. The incorrect answers: Additional intrusion detection systems may help detect further malicious activities in the network, but it's not the immediate next step after detecting an attack. The primary concern should be to contain the ongoing attack to prevent it from spreading to other systems. Although in some cases, powering down a system might be a valid containment strategy, doing so without attempting to capture more details about the attack might lead to the loss of valuable forensic data. Also, in the case of an APT, an immediate shutdown might alert the attacker, who might then alter their tactics, making future detection and mitigation more difficult. Internal communication is an important part of incident management, but it's not the immediate next step after detecting an attack. Such a communication should also be carefully planned and executed to avoid unnecessary panic and confusion among employees. The immediate focus should be on technical measures to contain the threat.
+
 In CISSP Disaster Recovery (DR) context, MTD and MAD are easy to mix up—but they answer different survival questions.
 
 🔹 MTD — Maximum Tolerable Downtime
@@ -1124,6 +1126,10 @@ PROM (Programmable Read Only Memory) – Can only be written once, normally at t
 APROM
 EEPROM
 EPROM
+DRAM
+SDRAM
+
+EEPROM, or Electrically Erasable Programmable Read-Only Memory, is the type of memory used in flash drives. This is a type of non-volatile memory used in computers and other electronic devices to store relatively small amounts of data. It can be electrically erased and reprogrammed, which is why it's used in flash drives. These can be repeatedly written to and erased without wear and can retain data without power. The incorrect answers: SDRAM (Synchronous Dynamic Random-Access Memory) is a type of DRAM that is synchronized with the clock speed that the microprocessor is optimized for. This maximizes the number of memory accesses the microprocessor can make. While used in computing systems, it isn't the memory type used in flash drives. Programmable Read-Only Memory (PROM) is a type of ROM that can be programmed using a special device. This programming is a one-time operation and once done the data stored in PROM cannot be changed. It's not used in flash drives because flash drives require memory that can be rewritten and erased. Dynamic Random-Access Memory (DRAM) is a type of RAM that stores each bit of data in a separate capacitor within an integrated circuit. The capacitors leak charges, hence they must be refreshed constantly. Because of this volatility and the required constant power supply, DRAM is not used in flash drives, which need to retain information even without power.
 
  tangible or intangible assets
 
@@ -1163,6 +1169,9 @@ Replacing names with random values, commonly referred to as pseudonymization, re
 
 Domain 3 Security Architecture and Engineering
 **********************************************************
+: Elliptic curve cryptography (ECC): ECC is considered the most secure method of public key cryptography, because it provides the same level of security as RSA and DSA, but with much shorter key lengths. Shorter keys are quicker to process, and thus ECC is more efficient. The strength of ECC lies in the complexity of the elliptic curve logarithm problem, which makes ECC more difficult to crack than RSA or DSA. Therefore, it is commonly used in resource-constrained environments, such as mobile devices. The incorrect answers: RSA (Rivest–Shamir–Adleman): RSA is one of the earliest and most widely used public key cryptosystems. It's used for secure data transmission and digital signatures. The security of RSA relies on the difficulty of factoring large numbers into primes. However, RSA requires longer key lengths than ECC for the same level of security, which makes RSA less efficient. DSA (Digital Signature Algorithm): DSA is a public key algorithm that's used to create digital signatures. It's part of the U.S. Federal Information Processing Standards (FIPS), and its security is based on the discrete logarithm problem. Like RSA, DSA requires longer key lengths than ECC to provide the same level of security, making it less efficient. Symmetric key cryptography: This is not a method of public key cryptography, but a different type of cryptography. Symmetric cryptography uses a single key to both encrypt and decrypt information. While symmetric key cryptography is efficient and fast, it's not as secure as public key methods like ECC, RSA, or DSA because it requires the secure distribution of the key to both parties.
+
+
 **The Security Architecture and Engineering CISSP domain contains the concepts, principles, structures, and standards used to design, implement, monitor, and secure various architectures such as systems, applications, operating systems, equipment, networks, and those controls used to enforce various appropriate levels of security
 
 **focuses on the different processes, standards, frameworks, and structures to design and implement secure architectures and how, in order to achieve that, the security function needs to be involved at the start of the engineering life cycle and throughout each of the subsequent phases
@@ -2749,6 +2758,9 @@ The transport layer is responsible for providing services to the application lay
 Broadcasts/unicast/
 The correct answer: A broadcast domain is a logical division of a computer network, in which all nodes can reach each other by broadcast at the data link layer. In simpler terms, a broadcast domain is a network segment where data is sent to every device in the network. This means that all devices within the broadcast domain will receive the same data, regardless of whether they were intended recipients or not. The incorrect answers: A network where only authorized users can access data refers to concepts of access control and authentication, rather than a broadcast domain. A network where data is only sent to specified devices would refer more accurately to a unicast communication, where data is sent from one sender to a single designated receiver. A network where data is sent to all devices in the network except for specified devices isn't a standard networking concept. It is possible to create rules to exclude devices from receiving the data but it does not describe a broadcast domain.
 
+ The Security Content Automation Protocol (SCAP) is a suite of specifications that standardize the way security software communicates information about software flaws and security configurations. The most important benefit of implementing SCAP is an improved security posture. By using SCAP, organizations can automate processes for managing vulnerabilities and measuring security, which can significantly improve their overall security posture. This includes identifying system weaknesses, mitigating risks, ensuring that security settings are correctly configured, and responding more effectively to any security threats. 
+
+
 
 D5
 **********************************************************
@@ -2930,6 +2942,15 @@ The interactions between different components of the software system: Interface 
 
 
 
+What type of analysis can help one quickly observe anomalous behavior in an application without needing access to source code?
+
+A. Static binary analysis
+
+B. Static source analysis
+
+C. Dynamic source analysis
+
+D. Dynamic binary analysis
 
 
 
