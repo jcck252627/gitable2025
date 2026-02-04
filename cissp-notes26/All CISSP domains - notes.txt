@@ -10,6 +10,25 @@
 https://drive.google.com/file/d/1y8LiZUfuVykYvsjY3GqNESLdyCEK4icf/view?usp=sharing
 https://drive.google.com/file/d/1y8LiZUfuVykYvsjY3GqNESLdyCEK4icf/view?usp=drive_link
 
+CISSP EASY/MID questions #3 - ALL CISSP domains 250 Q - 2025
+CISSP EASY/MID questions #4 - ALL CISSP domains 250 Q - 2025
+CISSP EASY/MID questions #5 - ALL CISSP domains 250 Q - 2025
+
+CISSP Easy/Mid practice questions: Domain 3 & 4 - 2025 Exam
+CISSP Easy/Mid practice questions: Domain 1 & 2 - 2025 Exam
+CISSP Easy/Mid practice questions: Domain 5 & 6 - 2025 Exam
+CISSP Easy/Mid practice questions: Domain 7 & 8 - 2025 Exam
+
+HARD CISSP practice questions #1: All CISSP domains - 125Q
+HARD CISSP practice questions #5: All CISSP domains - 125Q
+
+COMPLEX CISSP practice questions #4: All CISSP domains 125Q
+COMPLEX CISSP practice questions #3: All CISSP domains 125Q
+
+CISSP: How to study (plans, tips, materials, approach) 2025
+
+Latest CISSP Practice Tests 700 In-Depth Q/As & Explanations
+
 Framework and Compliance lists:
 
  COBIT 2019: 
@@ -205,10 +224,60 @@ Cipher Feedback (CFB)
 Counter Mode (CTR)
 Output Feedback (OFB)
 
+Correct Answer: B) Establishing a dedicated patient notification protocol
+
+Explanation:
+
+Establishing a dedicated patient notification protocol should be prioritized to improve the effectiveness of the incident response in a healthcare organization. In the event of a data breach involving patient information, healthcare providers are often legally required to notify affected individuals within a specific timeframe. A dedicated notification protocol ensures that the organization can quickly and effectively communicate with patients about the breach, what information was involved, and what steps are being taken to address the incident. This not only helps in maintaining transparency and trust with patients but also ensures compliance with health information privacy regulations, such as HIPAA in the United States.
+
+Incorrect Answer Explanations:
+
+A) Accelerating the escalation process to senior management is important for decision-making and resource allocation, but it does not directly address the need to communicate with affected individuals.
+
+C) Integrating a forensic analysis phase is crucial for understanding the breach and preventing future incidents, but it is secondary to the immediate requirement of patient notification.
+
+D) Creating a specialized response team for healthcare data incidents can improve response capabilities, but without a protocol for patient notification, the organization may still fail to meet regulatory obligations.
+
 domain 4
 
 The primary purpose of a DMZ, or Demilitarized Zone, is to provide an additional layer of security by separating the internal network from the internet. This is achieved by creating a subnetwork where servers that need to be accessed from the internet (like web servers or email servers) are placed. In case these servers are compromised, the intruder still doesn't have direct access to the internal network because of the DMZ. The incorrect answers: While a DMZ does add a layer of security, its purpose is not specifically to secure communication between different internal networks. For securing such communications, techniques like VPNs (Virtual Private Networks), encryption, and internal firewalls are more appropriate. The main goal of a DMZ isn't to provide internet access for internal users, but rather to protect the internal network from external threats. Internet access for internal users can be managed through the use of firewalls and content filtering without necessarily needing a DMZ. To provide a secure environment for hosting public-facing web servers is partly correct in that a DMZ can host public-facing servers, but the primary purpose isn't to provide a secure environment for these servers, but rather to protect the internal network from potential attacks originating from these public-facing servers.
 
+password Authentication Protocol (PAP) Explanation: The Password Authentication Protocol (PAP) is a simple authentication protocol that sends a username and password pair across the network in plaintext (unencrypted). PAP is considered static because it does not involve a challenge-response mechanism or any form of encryption, making it compatible with systems that require a straightforward authentication method without additional complexity.
+A. Routing Information Protocol (RIP) is a routing protocol used to exchange routing information within a network, not an authentication protocol.   
+C. Challenge Handshake Authentication Protocol (CHAP) is a more secure protocol that uses a challenge-response mechanism for authentication, which is considered dynamic, not static.   
+D. Point-to-Point Tunneling Protocol (PPTP) is a VPN protocol that can encapsulate PPP frames into IP datagrams for transmission over an IP-based network. PPTP can use different authentication methods, including PAP and CHAP, but it is not itself an authentication protocol.   
+
+Correct Answer: C) Integrating the Online Certificate Status Protocol (OCSP)
+
+Explanation:
+
+Integrating the Online Certificate Status Protocol (OCSP) should be prioritized to streamline the validation process for digital certificates within the agency. OCSP allows for real-time checks of a digital certificate's revocation status, providing a faster and more efficient method than traditional Certificate Revocation Lists (CRLs). This is particularly important for a government agency where the timely validation of digital identities is critical for maintaining secure communications and operations. OCSP reduces the overhead associated with downloading and parsing CRLs, thereby enhancing the overall performance and responsiveness of the PKI.
+
+Incorrect Answer Explanations:
+
+A) Deploying a Certificate Authority (CA) is a fundamental part of a PKI, responsible for issuing and managing digital certificates, but it does not directly address the efficiency of certificate validation.
+
+B) Implementing Certificate Revocation Lists (CRLs) provides a list of revoked certificates, but CRLs can become large and unwieldy, leading to slower validation times compared to OCSP.
+
+D) Establishing a Registration Authority (RA) assists with the vetting and registration of entities before they are issued certificates by the CA, but it does not improve the efficiency of certificate status checking.
+
+Domain
+Communications and Network Security
+
+domain 5 IAM
+Adopting a data-centric security model with tokenization
+
+Explanation:
+
+Adopting a data-centric security model with tokenization should be the priority to ensure data security and regulatory compliance across diverse environments. A data-centric approach focuses on securing the data itself rather than the surrounding infrastructure. Tokenization replaces sensitive data elements with non-sensitive equivalents, known as tokens, which have no exploitable value. This method allows the secure processing and storage of proprietary research data while maintaining its usability for analysis and collaboration. Tokenization also helps in meeting various regulatory requirements by reducing the risk of data exposure, as the original sensitive data does not need to be stored or processed in its raw form.
+
+Incorrect Answer Explanations:
+
+A) Centralizing all data storage can create a single point of failure and may not address the regulatory requirements of different countries regarding data residency and sovereignty.
+
+B) Implementing distributed ledger technology like blockchain can provide transparency and immutability but may not be the most efficient or compliant solution for proprietary research data that requires confidentiality and access controls.
+
+D) Utilizing a hybrid cloud model with data residency controls can offer flexibility and compliance with data residency laws, but it does not inherently protect the data itself as effectively as tokenization does within the data-centric security model.
 
 domain 6
  automated breach and attack simulations (BAS) with continuous compliance checks provides the most comprehensive insights. BAS can simulate a wide range of attack scenarios, both external and internal, 24/7, giving a holistic view of the organization's vulnerabilities. Continuous compliance checks ensure that the organization is adhering to all necessary regulatory requirements consistently, not just at a single point in time. This approach not only identifies vulnerabilities but also verifies that the company is meeting its regulatory obligations, making it the most comprehensive and actionable approach for this scenario.
