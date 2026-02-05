@@ -11,7 +11,7 @@ https://drive.google.com/file/d/1y8LiZUfuVykYvsjY3GqNESLdyCEK4icf/view?usp=shari
 https://drive.google.com/file/d/1y8LiZUfuVykYvsjY3GqNESLdyCEK4icf/view?usp=drive_link
 
 CISSP EASY/MID questions #3 - ALL CISSP domains 250 Q - 2025
-CISSP EASY/MID questions #4 - ALL CISSP domains 250 Q - 2025
+CISSP EASY/MID questions #4 - ALL CISSP domains 250 Q - 2025 **
 CISSP EASY/MID questions #5 - ALL CISSP domains 250 Q - 2025
 
 CISSP Easy/Mid practice questions: Domain 3 & 4 - 2025 Exam
@@ -2829,6 +2829,8 @@ The correct answer: A broadcast domain is a logical division of a computer netwo
 
  The Security Content Automation Protocol (SCAP) is a suite of specifications that standardize the way security software communicates information about software flaws and security configurations. The most important benefit of implementing SCAP is an improved security posture. By using SCAP, organizations can automate processes for managing vulnerabilities and measuring security, which can significantly improve their overall security posture. This includes identifying system weaknesses, mitigating risks, ensuring that security settings are correctly configured, and responding more effectively to any security threats. 
 
+Gateway Protocols (IGP) and Border Gateway Protocol (BGP) for internal and internet-wide routing, respectively.
+
 
 
 D5
@@ -2877,7 +2879,7 @@ exmaples of something you have/know/are, type1/2/3
 
 Federated access control relies on the concept of trust between different organizations or domains. In this model, a user's authentication process in one domain is trusted by another domain without the need to re-authenticate when accessing resources. A trusted third party (often an identity provider) vouches for or authenticates the user, and other entities (service providers) trust this authentication. A common example is Single Sign-On (SSO) solutions across different web services. The incorrect answers: Role-based access control (RBAC) is an approach where permissions are assigned to specific roles, and users are assigned roles. It's not based on the concept of a trusted third party for authentication. Instead, it centralizes permissions around roles within the system. In rule-based access control, access is granted or denied based on a set of rules, often defined by system policies. These rules can include aspects like time of day, the network source of a request, or other conditions. This model doesn't inherently rely on a trusted third party for authentication. Multi-factor authentication (MFA) is a method that requires a user to provide multiple types of credentials to authenticate their identity. This often includes something they know (like a password), something they have (like a smart card or a token), and something they are (like a fingerprint). MFA does not revolve around the concept of a trusted third party.
 
-
+Verifying the identity of certificate holders: In a Public Key Infrastructure (PKI) system, RAs are responsible for verifying the identities of entities (e.g., individuals, organizations, or devices) before they are issued digital certificates by a Certificate Authority (CA). This process ensures that the digital certificates, which are used to establish secure communications and authenticate entities in a network, are issued to the correct and legitimate entities. The incorrect answers: Issuing digital certificates: This is primarily the role of a Certificate Authority (CA), not an RA. Although an RA assists in the process, the final issuance of a digital certificate is done by the CA. Providing support for certificate revocation: While an RA might assist in the certificate revocation process, it's the CA that holds the ultimate responsibility to revoke certificates when necessary. The RA can help identify instances where revocation may be needed, but the action of revocation itself is typically handled by the CA. Coordinating with other RAs: While it's true that RAs may need to coordinate with each other in large or complex systems, this is not their primary function. Their main role is to authenticate the identities of entities before a CA issues a certificate, ensuring the overall trustworthiness of the system.
 
 D6
 **********************************************************
@@ -2979,8 +2981,16 @@ Database transactions require atomicity, consistency, isolation, and durability,
 **Isolation** - Ensuring that a transaction cannot be interrupted by other transactions  This relates more to 'Isolation' in the ACID model
 **Durability** - Durability guarantees that once a transaction is committed, its changes are permanently saved. The data remains intact even in the event of system crashes or power failures.
 
+**Principle of Flow. The Fellowship's practice of prioritizing the completion of their mission (destroying the Ring) over battling every enemy they encounter aligns with the Principle of Flow in the Scaled Agile Framework (SAFe). This principle highlights the importance of delivering value through solutions that smoothly flow through the entire system on an ongoing basis, as opposed to focusing on individual tasks or obstacles. 
+
+**Value Streams: Value streams represent the series of steps an organization uses to build Solutions that provide a continuous flow of value to a customer. While the Fellowship is focused on delivering value (completing their mission), their practice doesn't directly relate to this concept. 
+
+**Built-in Quality: This principle is about ensuring that each solution component meets appropriate quality standards throughout the development process. The Fellowship's strategy doesn't directly relate to this principle. **Lean-Agile Leadership: This principle emphasizes the role of leaders in embodying the core values and principles of Lean and Agile. The Fellowship's strategy of prioritizing the mission over individual battles isn't directly related to leadership.
+
  Address space layout randomization (ASLR)
  is a technique used to prevent code injection attacks by randomizing the memory locations of executables, making it difficult for attackers to predict where they will be stored and therefore makes code injection attacks significantly more challenging. The incorrect answers: Encrypting memory is used to protect sensitive information residing in a computer's memory from being read by unauthorized individuals or processes. However, it does not randomize the memory locations of executable code and, hence, doesn't directly prevent code injection attacks. Input validation is a method used to check and clean input from users to prevent things like SQL injection and cross-site scripting attacks. It is an important security practice but doesn't protect against memory-based attacks like code injection by randomizing memory locations. Disabling unnecessary kernel extensions can enhance system security, but it does not directly prevent code injection attacks, nor does it randomize memory locations of executable code.
+ 
+ A synthetic transaction is a testing method that uses automated simulations of user interactions or transactions to monitor system performance. These transactions are called "synthetic" because they're not derived from actual user interactions, but are rather artificially created for testing purposes. They are designed to simulate an action or path that a user might take in an application. They are 'self-contained' because they are completely constructed and executed within a test environment and do not depend on external factors or real user data. 
  
  The Common Weakness Scoring System (CWSS) is a methodology used to score and rank software weaknesses. CWSS considers a variety of factors when scoring a weakness, such as the attack surface, the attack impact, and the environmental impact. However, the length of time the weakness has existed is not directly factored into the scoring system. While it's true that weaknesses that have existed for a longer time may have a higher chance of being exploited, the CWSS focuses more on the characteristics of the weakness itself and the impact it could have if exploited. 
  
