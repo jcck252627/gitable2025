@@ -11,7 +11,7 @@ https://drive.google.com/file/d/1y8LiZUfuVykYvsjY3GqNESLdyCEK4icf/view?usp=shari
 https://drive.google.com/file/d/1y8LiZUfuVykYvsjY3GqNESLdyCEK4icf/view?usp=drive_link
 
 CISSP EASY/MID questions #3 - ALL CISSP domains 250 Q - 2025
-CISSP EASY/MID questions #4 - ALL CISSP domains 250 Q - 2025 ****
+CISSP EASY/MID questions #4 - ALL CISSP domains 250 Q - 2025 ******
 CISSP EASY/MID questions #5 - ALL CISSP domains 250 Q - 2025
 
 CISSP Easy/Mid practice questions: Domain 3 & 4 - 2025 Exam
@@ -199,6 +199,7 @@ Focuses on identifying, analyzing, and treating information security risks.
 
  when evaluating a security product according to ISO/IEC 15408-1
 primary evaluation criterion, as it assesses the security features provided by the product. Functionality refers to the specific set of security functions that the product is designed to perform. These functions are evaluated against a set of specified security objectives to ensure that the product adequately addresses the identified threats and risks. 
+ ISO 15489-1 emphasizes the importance of ensuring the confidentiality of records by implementing appropriate access controls.
 
 SABSA is more geared towards designing and implementing security architecture based on business requirements, and while risk management is a part of this
 
@@ -239,6 +240,8 @@ C) Integrating a forensic analysis phase is crucial for understanding the breach
 D) Creating a specialized response team for healthcare data incidents can improve response capabilities, but without a protocol for patient notification, the organization may still fail to meet regulatory obligations.
 
 domain 4
+
+to learn from chatgtp about different type of firewall and which situation are best for which type in cissp context ......
 
 The primary purpose of a DMZ, or Demilitarized Zone, is to provide an additional layer of security by separating the internal network from the internet. This is achieved by creating a subnetwork where servers that need to be accessed from the internet (like web servers or email servers) are placed. In case these servers are compromised, the intruder still doesn't have direct access to the internal network because of the DMZ. The incorrect answers: While a DMZ does add a layer of security, its purpose is not specifically to secure communication between different internal networks. For securing such communications, techniques like VPNs (Virtual Private Networks), encryption, and internal firewalls are more appropriate. The main goal of a DMZ isn't to provide internet access for internal users, but rather to protect the internal network from external threats. Internet access for internal users can be managed through the use of firewalls and content filtering without necessarily needing a DMZ. To provide a secure environment for hosting public-facing web servers is partly correct in that a DMZ can host public-facing servers, but the primary purpose isn't to provide a secure environment for these servers, but rather to protect the internal network from potential attacks originating from these public-facing servers.
 
