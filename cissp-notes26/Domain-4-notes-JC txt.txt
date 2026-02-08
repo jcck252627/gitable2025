@@ -19,8 +19,77 @@
 
 
 
-D4
+• Domain 4: Communication and Network Security	
 **********************************************************
+4.1  Implement secure design principles in network architectures (pg 592)
+4.1.1 Open System Interconnection (OSI) Model
+
+CORE CONCEPTS
+**Open System Interconnection (OSI) and TCP/IP models
+**General understanding of what happens at each layer
+**General understanding of common devices and protocols found at each layer
+**Concepts of encapsulation and decapsulation
+
+What Is a Network - A network is at least two devices that are connected to each other
+- speak a common language (which is what a protocol does) -  common rules of network communication are called protocols. A protocol is simply a standard set of rules that are understood, conformed to, and abided by so that two or more devices on a network can communicat
+
+OSI (Open System Interconnection) Model
+
+7.	Application	(data)
+6.	Presentation (data)
+5.	Session (data)
+4.	Transport (segment/datagram)
+3.	Network (packet)
+2.	Data Link (frames)
+1.	Physical (bits)
+
+
+ Information within the uppermost
+three OSI layers (Application, Presentation, and Session) is referred to
+as “data.” When that reaches the Transport layer it is referred to as
+“segments” or “datagrams.” At Layer 3 (Network), the term “packets” is
+used. Layer 2 (Data Link) uses the term “frames” while at Layer 1 used. Layer 2 (Data Link) uses the term “frames” while at Layer 1
+(Physical) everything is just referred to as bits (or 0s and 1s).
+
+ The two most commonly used mnemonics for OSI are: 
+**All People Seem To Need Data Processing  ....  top-down approach (Layer 7 to Layer 1)
+**Please Do Not Throw Sausage Pizza Away. .... bottom-up perspective (Layer 1 to Layer 7).
+
+ very important to know what security-specific features exist at different layers of the OSI model. 
+ higher layer - more functional and comprehensive control of the security feature but slower speed and efficiency
+ lower layer - less complexity, no intelligence but higher speed and efficiency
+
+Network layer is primarily responsible for taking
+information and routing that, breaking it—fragmentation—into
+manageable chunks called packets and providing addressing so
+those chunks can be communicated across a network using a logical
+addressing scheme called IP addresses.
+
+Transport layer is responsible for transporting information that is
+being exchanged between devices. Think of it as the truck that carries
+information between two people. To provide reliable transportation, a
+road should be built that facilitates ordered flow of traffic, including
+consistent reporting of road conditions  : TCP vs UDP
+
+some type of devices can exist at different level like in a firewall .... can be in network, transport and application layers
+
+**As information moves down, from the Application layer to the Physical layer, **encapsulation** is taking place.
+**when the fully encapsulated information arrives, a process calleddecapsulation takes place, where the header and trailer information is removed layer by layer all the way up to the Application layer.
+
+(need find summarize table on pg 498)
+
+4.1.2 Layer 1: Physical (pg 599)
+CORE CONCEPTS
+Data at Physical layer exists as bits—0s and 1s
+Transmission media—wired, wireless, and so on
+Network topologies: Bus, Tree, Star, Mesh, Ring
+Collisions and collision avoidance; CSMA
+Transmission methods: unicast, multicast, broadcast
+Layer 1 devices: hubs, repeaters, concentrators, network interface cards
+(NICs)
+
+
+
 The OSI model consists of 7 layers, with the Physical layer being the last to be used. This layer is responsible for transmitting the raw bits over a physical medium, such as a cable or wireless connection. Traffic is sent from Layer 7-1, then 1-7 on the receiving end. 
 
 Physical Layer: This is the lowest (first) layer in the OSI model. The Physical layer deals with the physical aspects of the data transmission, including the hardware devices, cables, connectors, signals, binary transmission, and other aspects related to the physical transmission of data. It does not interpret any data and works simply to send and receive a raw bit stream over the physical medium. 
