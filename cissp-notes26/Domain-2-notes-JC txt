@@ -1,0 +1,179 @@
+• Domain 1: Security and Risk Management	
+• Domain 2: Asset Security			***************************************************
+• Domain 3: Security Architecture and Engineering
+• Domain 4: Communication and Network Security
+• Domain 5: Identity and Access Management (IAM)
+• Domain 6: Security Assessment and Testing
+• Domain 7: Security Operations
+• Domain 8: Software Development Security
+
+
+
+
+
+Domain 2: Asset Security
+**********************************************************
+
+
+**Asset security includes the concepts, structures, principles, and controls we are aimed at protecting ..
+**Assets—anything that represents value to the organization.
+
+**Asset classification policies, procedures, and processes help achieve proper protection of assets
+**Classification is driven by the value of the asset
+**Protecting assets should always be based on the value of the asset, and therefore, for security to be an enabler, protecting assets should always be cost-effective. As the value of an asset
+increases, so does the effort invested in protecting it. Less valuable assets might not warrant costly protection
+
+**Once the asset captured, inventoried, and classification system is in place and asset owners have been identified, security can then work with owners to assign assets an appropriate classification level that determines
+how the assets are protected.
+
+**owners are ultimately accountable for ensuring their assets are classified and thus protected appropriately.
+**It's not uncommon for some owners to challenge ownership to avoid being accountable, governance committee must set the tone from the top, stating that owners must own the asset, and the security function is there to support the implementation of suitable controls.
+
+**Information Classification Benefits The information classification process provides several benefits,
+**Identification of **critical information**: identifies information that the organization considers critical to business success.
+**Identification of **sensitivity** to modification: classification helps identify data that must only be modified in specifically authorized ways.
+**Commitment to protect valuable assets and Commitment to confidentiality where applicable
+**The value to assets can be represented through confidentiality (sensitivity), integrity (accuracy and meaningfulness), and availability (criticality). 
+
+**For classification to be done properly, it needs to be driven by the owners and an asset classification committee or working group, comprised of qualified representatives from different areas of the organization which  can provide a more objective classification process without bias
+** Est a consistent process to classify assets. This could be achieved through a consistent asset classification scoring system
+** Asset classification is ongoing. Because asset classification helps identify the appropriate controls for a given asset, and the nature of assets changes over time
+** The classification of an asset also driven by . Laws, regulations, industry standards, privacy requirements, company policies, and related guidance lifecycle and archiving and retention requirements 
+
+**Classification versus Categorization**
+**Classification refers to a system of classes, ordered according to value
+**Categorization refers to the act of sorting assets into defined classes
+**Ideally, all assets should be categorized into a classification system to allow them to be protected based on value
+
+Classification Examples:  Top secret, secret, confidential, sensitive but unclassified, and unclassified ...Financially sensitive ... Company restricte .. Proprietary ... PII/PHI
+
+**Labeling refers to the classification of the asset and is **system-re**adable**
+	-	Association of security attributes with subjects and objects represented by internal data structures, Enables **system-based enforcement**
+	-	Metadata, Barcodes, QR codes, RFID tags, GPS tags
+**Marking refers to the handling instructions of the asset and is **human-readable**
+	-	Association of security attributes with objects in a human-readable form, Enables **process-based enforcement**
+**Should be consistently applied to all assets within an organization, Labeling should be cost-effective, Enables system-based enforcement
+
+**Owners can delegate responsibility for an asset, but they always remain accountable for the protection of the asset. In other words, accountability cannot be delegated to anyone else. The owner can delegate the
+responsibility, but accountability remains with the owner.
+
+Types of asset owners ..Data owners
+   Process owners
+   System owners
+   Product owners
+   Service owners
+   Hardware owners
+   Applications owners
+   Intellectual property owners
+
+
+**CISSP Data Roles**
+Data Controller -👉 Determines why and how personal data is processed (GDPR-focused role).
+📌 Exam scenario: Decides purpose and legal basis for PII processing.
+
+Data Owner - 👉 Accountable for the data; defines classification, access rules, and risk tolerance.
+📌 Exam scenario: Decides who may access the data.
+
+Data Custodian -👉 Implements and maintains controls defined by the data owner (backups, access enforcement).
+📌 Exam scenario: Configures permissions and performs backups.
+
+Data Steward -👉 Ensures data quality, consistency, and compliance with policies and regulations.
+📌 Exam scenario: Validates data accuracy and regulatory adherence.
+
+Data Processor -👉 Processes data on behalf of the data controller under contractual terms.
+📌 Exam scenario: Cloud provider handling customer PII.
+
+Data User -👉 Authorized individual who accesses and uses data according to policy.
+📌 Exam scenario: Employee viewing customer records.
+
+Data Subject -👉 Individual to whom the personal data belongs.
+📌 Exam scenario: Customer exercising GDPR rights.
+
+Steward ≠ Custodian
+Steward = data quality & compliance
+Custodian = technical handling
+Owner vs Custodian, Owner decides, Custodian enforces
+
+
+Manage **data life cycle** -  2.4.1 Information Life Cycle
+Data must be protected at each stage of its life cycle. The concept of the information life cycle is founded on the principle that proper controls should be in place at the time
+of creation and throughout the life cycle. Immediately upon creation, collection, or update, information should be assigned a classification (by the owner), which then drives
+all other activities, such as storage, use, sharing, archiving, and final disposal or destruction, to protect information throughout its life cycle. 
+
+Stages
+Create - Generation of new digital content, or the alteration/updating/modifying of existing content
+Store - Committing digital data to some sort of storage repository, which typically occurs nearly simultaneously with creation
+Use - Data viewed, processed, or otherwise used in some sort of activity, not including modification
+Share - Information made accessible to others, such as company users, customers, and partners
+Archive - Data leaves active use and enters long-term storage 
+Destroy - Data is permanently destroyed using physical or digital means (e.g., crypto shredding)
+
+
+2.4.2 Data Destruction
+**Data remanence refers to residual representation of information even after attempts to securely delete or remove the data 
+**Categories of sanitization—destruction, purging, clearing
+**Secure removal of data in the cloud
+**Defensible destruction** means being able to prove that there’s no possible way for anyone to recover data that has been securely destroyed. Data owners are responsible for
+ensuring the proper sanitization of the data assets they own
+
+Destroy - Physical destruction of media; this is the most effective means of sanitization.
+Purge - Logical/physical techniques used to sanitize; data cannot be reconstructed.
+Clear - Logical techniques used to sanitize; data may be reconstructed. This is the least effective means of sanitization.
+NIST SP 800-88 revision 1 provides guidelines for media sanitization 
+
+
+
+
+pg216 - pg 243 marked end of D2 on Destination book need notes ...............................
+
+
+
+
+
+PROM (Programmable Read Only Memory) – Can only be written once, normally at the factory.
+APROM
+EEPROM
+EPROM
+DRAM -  Dynamic Random Access Memory (DRAM) is slower than SRAM and needs to constantly refresh the data to maintain integrity. DRAM is cheaper than SRAM
+SRAM - uses flip-flops (latches) to store bits, meaning that it retains data until it is overwritten or power is lost. This makes SRAM particularly suited to high-performance environments where speed is critical.
+SDRAM -  Synchronous Dynamic Random Access Memory (SDRAM) is synchronized with the computer's bus speed, which allows for faster data transfers than standard DRAM, but SRAM still provides better performance than SDRAM,
+PLD (Programmable Logic Device) - Devices (PLDs) are not a type of memory but are hardware components that can be programmed to perform specific functions. PLDs can include EPROM or EEPROM memory, but they are not directly comparable to SRAM, DRAM, or SDRAM in terms of functionality and performance
+
+EEPROM, or Electrically Erasable Programmable Read-Only Memory, is the type of memory used in flash drives. This is a type of non-volatile memory used in computers and other electronic devices to store relatively small amounts of data. It can be electrically erased and reprogrammed, which is why it's used in flash drives. These can be repeatedly written to and erased without wear and can retain data without power. The incorrect answers: SDRAM (Synchronous Dynamic Random-Access Memory) is a type of DRAM that is synchronized with the clock speed that the microprocessor is optimized for. This maximizes the number of memory accesses the microprocessor can make. While used in computing systems, it isn't the memory type used in flash drives. Programmable Read-Only Memory (PROM) is a type of ROM that can be programmed using a special device. This programming is a one-time operation and once done the data stored in PROM cannot be changed. It's not used in flash drives because flash drives require memory that can be rewritten and erased. Dynamic Random-Access Memory (DRAM) is a type of RAM that stores each bit of data in a separate capacitor within an integrated circuit. The capacitors leak charges, hence they must be refreshed constantly. Because of this volatility and the required constant power supply, DRAM is not used in flash drives, which need to retain information even without power.
+
+ tangible or intangible assets
+
+Statistical techniques are considered to be the most effective methods for de-identifying personal data. 
+Techniques can include noise addition, permutation, data swapping, and more complex methods like differential privacy. The goal is to ensure that the data, when released, does not contain information that can be linked back to an individual, making it the most effective method for de-identifying personal data. 
+
+Redaction is a method used to remove sensitive information from a document or data set. However, it's not the most effective method for de-identifying personal data as it can still leave other potentially identifying information intact. Additionally, in some cases, redacted data can be re-identified through inference. While encryption can protect data from unauthorized access, it doesn't necessarily de-identify the data. Moreover, using a weak cipher could make the encrypted data vulnerable to decryption. This option also assumes that data recipients have the decryption key, which could potentially expose the original, identifiable data. 
+
+Replacing names with random values, commonly referred to as pseudonymization, replaces identifiers with other values. While it can provide some level of de-identification, it can still leave data susceptible to re-identification if the pseudonymized data can be linked back to the original data via a "lookup table" or other method.
+
+
+ COBIT 2019: COBIT, which stands for Control Objectives for Information and Related Technologies, is primarily a framework focused on governance and management of enterprise IT. Although COBIT can help organizations align IT with business strategies and manage IT-related risks, it is less likely to be directly used for listing specific security controls for application development compared to other standards that provide detailed control catalogs. 
+ 
+ ISO 27002: ISO 27002 is a well-established international standard that provides best practice recommendations on information security controls, making it a suitable reference for listing security controls in application development. 
+ 
+ NIST SP 800-53: NIST SP 800-53 is a comprehensive catalog of security and privacy controls for all U.S. federal information systems (except those related to national security) and is directly focused on listing such controls, making it highly relevant for application development. NIST SP 800-53A: NIST SP 800-53A provides guidelines for assessing the effectiveness of security controls, and while it is not the primary resource for listing controls, it is related to the implementation of the controls listed in NIST SP 800-53, which itself is applicable for the development process.
+
+ System interconnectivity and poor security management. High system interconnectivity can increase the risk exposure of IT assets, especially if combined with poor security management. If security management practices are deficient, potential vulnerabilities might not be effectively identified or mitigated, making the interconnected systems more susceptible to security breaches or data loss. Security management can also encompass keeping data secure during disasters, which would include having backups. 
+ 
+ The incorrect answers: System interconnectivity and poor controls over data sensitivity: Although this could increase risk, poor security management generally poses a greater overall risk as it affects all aspects of security, not only those related to data sensitivity. 
+ 
+ System interconnectivity and lack of system backups: While lack of backups could be a significant issue in case of data loss, the immediate risk due to lack of proper security management can be higher. 
+ 
+ System interconnectivity and inadequate physical security: Physical security is crucial, but in a highly interconnected system, poor security management practices can potentially expose the system to more immediate and expansive risks.
+ 
+ 
+ Conflict of interest: Naomi, as the VP of Sales, is responsible for managing the customer data. By deciding to run a report that involves analyzing customer stability based on the length of time they stay in the same house, and doing so using her desktop, she may inadvertently create a conflict of interest. This is especially true if the information is sensitive, and running the report on her desktop could lead to a potential breach of trust or security. As a data owner, she should be aware of the proper channels and procedures for handling PII and should avoid situations where her personal handling of data could conflict with the company's data protection policies or legal obligations regarding customer privacy. Specifically, this may breach any agreements between the business and customers on what data will be used and how. 
+ 
+ Data controller: The data controller is an entity that determines the purposes and means of processing personal data. In many organizational contexts, the VP of Sales would be considered a data controller since they decide how customer data is used. However, in this scenario, Naomi's actions involving the processing of PII on her personal desktop raise concerns about a potential conflict of interest or breach of data governance practices. 
+ 
+ Data processor: A data processor processes personal data on behalf of the data controller. While Naomi's actions involve processing data, the primary concern here is not her role in processing but the possibility that her actions may lead to a misuse of customer data or an insecure handling of sensitive information, which depicts a conflict of interest. 
+ 
+ Data steward: A data steward manages the integrity, usability, and security of the data based on the organization's guidelines. Although Naomi has stewardship over the data being the VP of Sales, the scenario raises issues about personal handling and potential conflicts of interest rather than issues related to data quality or integrity management.
+
+ The 'Sensitive but Unclassified' classification, aligns well with the type of data in question. This data, although not strictly classified, requires a higher level of protection due to its sensitive nature. PII, PHI, payroll, and other similar data types, if exposed, can lead to significant harm to individuals and potentially result in legal and financial liabilities for the organization. By introducing a separate classification level for these types of data, the organization can ensure that unique and adequate protection measures are implemented. This approach also allows for a more refined allocation of security resources. The incorrect answers: Implementing a blanket classification as 'Sensitive' for all unclassified data oversimplifies the complex nature of data sensitivity. Not all unclassified data requires the same level of protection, and such an approach may lead to overprotection of some data and underprotection of others. Assigning a 'Public' classification to all unclassified data fails to account for the varying sensitivity levels of unclassified data. Certain unclassified data types, such as PII or payroll information, should have higher protection levels despite their unclassified status. This classification might expose sensitive data to unnecessary risk. Classifying all data, including sensitive but unclassified data, as 'Confidential' can be overkill for certain types of data and lead to inefficient resource allocation. It provides a high level of protection, but it doesn't necessarily match the risk or sensitivity of the data, which could be lower than what is typically protected under a 'Confidential' classification.
+
+gather a table or list of how to destory data , tapes, disks, hardware devices etc ....

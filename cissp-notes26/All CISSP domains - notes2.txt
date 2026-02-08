@@ -14,9 +14,6 @@ CISSP EASY/MID questions #3 - ALL CISSP domains 250 Q - 2025
 CISSP EASY/MID questions #4 - ALL CISSP domains 250 Q - 2025 ******
 CISSP EASY/MID questions #5 - ALL CISSP domains 250 Q - 2025
 
-break fluid level
-transmission fluid
-
 CISSP Easy/Mid practice questions: Domain 3 & 4 - 2025 Exam
 CISSP Easy/Mid practice questions: Domain 1 & 2 - 2025 Exam
 CISSP Easy/Mid practice questions: Domain 5 & 6 - 2025 Exam
@@ -96,7 +93,6 @@ Use these principles:
 ✔ PHI = highly regulated, no exceptions
  
  PCI DSS
- 
  COBIT -	 COBIT (Control Objectives for Information and Related Technology) is a framework developed by ISACA for IT management and governance. It's a toolset that allows managers to bridge the gap between control requirements, technical issues, and business risks. It's the correct answer in this case because one of the objectives of COBIT is to help businesses create optimal value from IT by maintaining a balance between realizing benefits and optimizing risk levels. Therefore, it can be used for self-directed risk management. 
 
  CSA START
@@ -186,7 +182,7 @@ They do not certify. They attest.
 Only Security is mandatory.
  
  
- : The Common Criteria for Information Technology Security Evaluation (Common Criteria or CC) is an international standard (ISO/IEC 15408) for computer security certification
+ The Common Criteria for Information Technology Security Evaluation (Common Criteria or CC) is an international standard (ISO/IEC 15408) for computer security certification
  ISO / IEC (International Standards)
  SO/IEC 27001 is an information security standard that is part of the ISO/IEC 27000 family of standards. It's used for the establishment, implementation, maintenance, and continual improvement of an information security management system (ISMS). This framework is focused more on managing information security
  ISO 27001
@@ -209,6 +205,7 @@ primary evaluation criterion, as it assesses the security features provided by t
 
 SABSA is more geared towards designing and implementing security architecture based on business requirements, and while risk management is a part of this
 
+: The US-EU Privacy Shield framework is designed to protect personal data transferred from the European Union to the United States. A key aspect of this protection is ensuring that individuals are aware of how their personal data is being used and processed.
 
  Common Weakness Enumeration (CWE).
 
@@ -225,28 +222,8 @@ Kerberos
  syntactic validation
   Regular expressions, also known as regex, are a fundamental tool in computer science and programming for pattern matching within text. They're primarily used to detect specific sequences of characters and are very useful in tasks related to parsing and validating the syntax of text. Syntactic validation involves verifying that the structure of data matches a specific pattern or sequence, and regular expressions are primarily used for this purpose. For example, a regular expression can be used to check if a user's input matches the format of an email address, a phone number, a date, and so forth. Regular expressions are the primary method of syntactic validation because they allow for precise and flexible definition of what constitutes valid syntax. 
 
-domain 3
-Cipher Block Chaining (CBC)
-Cipher Feedback (CFB)
-Counter Mode (CTR)
-Output Feedback (OFB)
-
-Correct Answer: B) Establishing a dedicated patient notification protocol
-
-Explanation:
-
-Establishing a dedicated patient notification protocol should be prioritized to improve the effectiveness of the incident response in a healthcare organization. In the event of a data breach involving patient information, healthcare providers are often legally required to notify affected individuals within a specific timeframe. A dedicated notification protocol ensures that the organization can quickly and effectively communicate with patients about the breach, what information was involved, and what steps are being taken to address the incident. This not only helps in maintaining transparency and trust with patients but also ensures compliance with health information privacy regulations, such as HIPAA in the United States.
-
-Incorrect Answer Explanations:
-
-A) Accelerating the escalation process to senior management is important for decision-making and resource allocation, but it does not directly address the need to communicate with affected individuals.
-
-C) Integrating a forensic analysis phase is crucial for understanding the breach and preventing future incidents, but it is secondary to the immediate requirement of patient notification.
-
-D) Creating a specialized response team for healthcare data incidents can improve response capabilities, but without a protocol for patient notification, the organization may still fail to meet regulatory obligations.
 
 domain 4
-
 to learn from chatgtp about different type of firewall and which situation are best for which type in cissp context ......
 
 The primary purpose of a DMZ, or Demilitarized Zone, is to provide an additional layer of security by separating the internal network from the internet. This is achieved by creating a subnetwork where servers that need to be accessed from the internet (like web servers or email servers) are placed. In case these servers are compromised, the intruder still doesn't have direct access to the internal network because of the DMZ. The incorrect answers: While a DMZ does add a layer of security, its purpose is not specifically to secure communication between different internal networks. For securing such communications, techniques like VPNs (Virtual Private Networks), encryption, and internal firewalls are more appropriate. The main goal of a DMZ isn't to provide internet access for internal users, but rather to protect the internal network from external threats. Internet access for internal users can be managed through the use of firewalls and content filtering without necessarily needing a DMZ. To provide a secure environment for hosting public-facing web servers is partly correct in that a DMZ can host public-facing servers, but the primary purpose isn't to provide a secure environment for these servers, but rather to protect the internal network from potential attacks originating from these public-facing servers.
@@ -265,12 +242,10 @@ Integrating the Online Certificate Status Protocol (OCSP) should be prioritized 
 Incorrect Answer Explanations:
 
 A) Deploying a Certificate Authority (CA) is a fundamental part of a PKI, responsible for issuing and managing digital certificates, but it does not directly address the efficiency of certificate validation.
-
 B) Implementing Certificate Revocation Lists (CRLs) provides a list of revoked certificates, but CRLs can become large and unwieldy, leading to slower validation times compared to OCSP.
-
 D) Establishing a Registration Authority (RA) assists with the vetting and registration of entities before they are issued certificates by the CA, but it does not improve the efficiency of certificate status checking.
 
-Domain
+Domain 4
 Communications and Network Security
 
 domain 5 IAM
@@ -1077,9 +1052,22 @@ building and the assets within.
 
 Methods and Techniques to Provide Awareness and Training (e.g., social engineering, phishing, security champions (promoters), gamification)
 
-
-
 Enforceable via penalties
+
+Ris Mamagement processes and steps ....
+The first critical step towards effective risk management is the accurate identification and cataloging of all assets, both tangible and intangible.
+
+
+quantitative analysis  VS  risk analysis ......
+
+ Likelihood and impact matrix: A qualitative risk analysis approach focuses on identifying the risks involved in a project or any business activity and assesses them based on their potential impact and the likelihood of their occurrence. It doesn't involve numerical or financial measures but rather uses descriptive or categorical scales. The risk is evaluated based on its perceived impact and the probability or likelihood of its occurrence, which is why a "likelihood and impact matrix" would be used in a qualitative risk analysis approach. This matrix helps in prioritizing risks based on their potential effect and the probability of their occurrence. 
+ 
+ The incorrect answers: 
+ Probability and impact matrix: This is a common confusion as the terms "probability" and "likelihood" are often used interchangeably. In the context of risk management, however, they have different meanings. Probability is more associated with a quantitative approach to risk analysis, which involves numerical measures such as financial impact or statistical data. Since the question is about qualitative risk analysis, "likelihood and impact matrix" is more appropriate than "probability and impact matrix." 
+ 
+ A probability and likelihood matrix doesn't exist in risk management methodology. It's not a tool used in either qualitative or quantitative risk analysis. As previously explained, probability is typically used in a quantitative risk analysis context, whereas likelihood is used in a qualitative context. Having both in a single matrix would be redundant and confusing, as they refer to the same concept but in different contexts. A threat and vulnerability matrix is more specifically related to information security risk assessments, not to general risk analysis. It's used to identify potential threats to an information system and the system's vulnerabilities that those threats could exploit. While threat and vulnerability are elements of risk, they do not capture the full scope of a risk, which includes impact and likelihood/probability of occurrence. Therefore, it's not the right answer in the context of a qualitative risk analysis approach.
+
+
 
 Domain 2: Asset Security
 **********************************************************
@@ -1204,8 +1192,10 @@ PROM (Programmable Read Only Memory) – Can only be written once, normally at t
 APROM
 EEPROM
 EPROM
-DRAM
-SDRAM
+DRAM -  Dynamic Random Access Memory (DRAM) is slower than SRAM and needs to constantly refresh the data to maintain integrity. DRAM is cheaper than SRAM
+SRAM - uses flip-flops (latches) to store bits, meaning that it retains data until it is overwritten or power is lost. This makes SRAM particularly suited to high-performance environments where speed is critical.
+SDRAM -  Synchronous Dynamic Random Access Memory (SDRAM) is synchronized with the computer's bus speed, which allows for faster data transfers than standard DRAM, but SRAM still provides better performance than SDRAM,
+PLD (Programmable Logic Device) - Devices (PLDs) are not a type of memory but are hardware components that can be programmed to perform specific functions. PLDs can include EPROM or EEPROM memory, but they are not directly comparable to SRAM, DRAM, or SDRAM in terms of functionality and performance
 
 EEPROM, or Electrically Erasable Programmable Read-Only Memory, is the type of memory used in flash drives. This is a type of non-volatile memory used in computers and other electronic devices to store relatively small amounts of data. It can be electrically erased and reprogrammed, which is why it's used in flash drives. These can be repeatedly written to and erased without wear and can retain data without power. The incorrect answers: SDRAM (Synchronous Dynamic Random-Access Memory) is a type of DRAM that is synchronized with the clock speed that the microprocessor is optimized for. This maximizes the number of memory accesses the microprocessor can make. While used in computing systems, it isn't the memory type used in flash drives. Programmable Read-Only Memory (PROM) is a type of ROM that can be programmed using a special device. This programming is a one-time operation and once done the data stored in PROM cannot be changed. It's not used in flash drives because flash drives require memory that can be rewritten and erased. Dynamic Random-Access Memory (DRAM) is a type of RAM that stores each bit of data in a separate capacitor within an integrated circuit. The capacitors leak charges, hence they must be refreshed constantly. Because of this volatility and the required constant power supply, DRAM is not used in flash drives, which need to retain information even without power.
 
@@ -1225,9 +1215,6 @@ Replacing names with random values, commonly referred to as pseudonymization, re
  
  NIST SP 800-53: NIST SP 800-53 is a comprehensive catalog of security and privacy controls for all U.S. federal information systems (except those related to national security) and is directly focused on listing such controls, making it highly relevant for application development. NIST SP 800-53A: NIST SP 800-53A provides guidelines for assessing the effectiveness of security controls, and while it is not the primary resource for listing controls, it is related to the implementation of the controls listed in NIST SP 800-53, which itself is applicable for the development process.
 
-
-
-
  System interconnectivity and poor security management. High system interconnectivity can increase the risk exposure of IT assets, especially if combined with poor security management. If security management practices are deficient, potential vulnerabilities might not be effectively identified or mitigated, making the interconnected systems more susceptible to security breaches or data loss. Security management can also encompass keeping data secure during disasters, which would include having backups. 
  
  The incorrect answers: System interconnectivity and poor controls over data sensitivity: Although this could increase risk, poor security management generally poses a greater overall risk as it affects all aspects of security, not only those related to data sensitivity. 
@@ -1246,6 +1233,8 @@ Replacing names with random values, commonly referred to as pseudonymization, re
  Data steward: A data steward manages the integrity, usability, and security of the data based on the organization's guidelines. Although Naomi has stewardship over the data being the VP of Sales, the scenario raises issues about personal handling and potential conflicts of interest rather than issues related to data quality or integrity management.
 
  The 'Sensitive but Unclassified' classification, aligns well with the type of data in question. This data, although not strictly classified, requires a higher level of protection due to its sensitive nature. PII, PHI, payroll, and other similar data types, if exposed, can lead to significant harm to individuals and potentially result in legal and financial liabilities for the organization. By introducing a separate classification level for these types of data, the organization can ensure that unique and adequate protection measures are implemented. This approach also allows for a more refined allocation of security resources. The incorrect answers: Implementing a blanket classification as 'Sensitive' for all unclassified data oversimplifies the complex nature of data sensitivity. Not all unclassified data requires the same level of protection, and such an approach may lead to overprotection of some data and underprotection of others. Assigning a 'Public' classification to all unclassified data fails to account for the varying sensitivity levels of unclassified data. Certain unclassified data types, such as PII or payroll information, should have higher protection levels despite their unclassified status. This classification might expose sensitive data to unnecessary risk. Classifying all data, including sensitive but unclassified data, as 'Confidential' can be overkill for certain types of data and lead to inefficient resource allocation. It provides a high level of protection, but it doesn't necessarily match the risk or sensitivity of the data, which could be lower than what is typically protected under a 'Confidential' classification.
+
+gather a table or list of how to destory data , tapes, disks, hardware devices etc ....
 
 
 Domain 3 Security Architecture and Engineering
@@ -2677,10 +2666,6 @@ HARD CISSP practice questions #1: All CISSP domains - 125Q   ... notes
 
 ***************************************
 
-
-
-
-
 The Graham-Denning model is a framework for identifying and selecting appropriate security controls for an organization. It takes into account the organization's goals, threats, and vulnerabilities to determine the most effective controls. 
 
 **links or attachments to targets.
@@ -2750,8 +2735,12 @@ FIRST principle that should be considered when assessing and implementing secure
 
  Message Authentication Code (MAC): In the context of hashing and cybersecurity, a Message Authentication Code (MAC) refers to a short piece of information used to authenticate a message and to ensure the integrity and authenticity of the message. A MAC is computed from a message and a secret key, and any change to the message will result in a different MAC. It provides assurance that the message is from the claimed sender (authentication) and that it hasn't been tampered with during transmission (integrity). The incorrect answers: Media Access Control: While MAC can also stand for Media Access Control, this refers to a unique identifier assigned to a network interface controller (NIC) for use as a network address in communications within a network segment. This context is related to networking and not directly to hashing or cryptography. Most Accessible Control and Multi-Application Control: These options are not standard terms in the context of hashing, cryptography, or networking.
 
+: A root certificate is used to sign other certificates, while a self-signed certificate is used to secure a single website: Root Certificate: A root certificate is at the top of the trust chain in the public key infrastructure (PKI) hierarchy. It belongs to a certificate authority (CA) and is used to sign the intermediary certificates. These intermediary certificates can then sign end-entity or leaf certificates, which are used for various purposes, such as securing websites. Because the root certificate is crucial to the trust model, it's typically stored offline and in highly secure environments to prevent any potential compromise. Self-Signed Certificate: A self-signed certificate is a certificate that is not signed by a trusted CA. Instead, it's signed by its own private key, essentially vouching for its own authenticity. This type of certificate is typically used for testing purposes or within environments where the entities communicating already trust each other. For publicly accessible websites, self-signed certificates are not recommended because browsers and systems will not trust them by default, leading to security warnings. 
+
 D4
 **********************************************************
+The OSI model consists of 7 layers, with the Physical layer being the last to be used. This layer is responsible for transmitting the raw bits over a physical medium, such as a cable or wireless connection. Traffic is sent from Layer 7-1, then 1-7 on the receiving end. 
+
 Physical Layer: This is the lowest (first) layer in the OSI model. The Physical layer deals with the physical aspects of the data transmission, including the hardware devices, cables, connectors, signals, binary transmission, and other aspects related to the physical transmission of data. It does not interpret any data and works simply to send and receive a raw bit stream over the physical medium. 
 Example: Cables, hubs, fiber, radio signals, NICs
 Threats: Wiretapping, jamming, cutting cables, EMI
@@ -2814,6 +2803,8 @@ Strong security protocols: Security depends on higher-level network controls, no
 
 The firewall will allow malicious attacks: If the firewall is designed to fail open and it exceeds its threshold of handling more than 10,000 concurrent sessions, it will stop blocking traffic, which includes potentially malicious attacks. With 50 application servers each allowing 201 sessions to be opened, the total number of concurrent sessions would be 10,050 (50 servers * 201 sessions), just over the threshold. This means the firewall's default behavior when overwhelmed will be to let all traffic through, including what would normally be blocked under normal operating conditions. The incorrect answers: The firewall will allow only the previously allowed traffic: A firewall that fails open when overwhelmed will not discriminate between previously allowed traffic and new traffic. It will allow all traffic to pass, not just the traffic that was previously allowed. The firewall will block malicious attacks: In this scenario, since the firewall fails open, it will not continue to block malicious attacks once it is overwhelmed with more than 10,000 concurrent sessions. The firewall will block any further use of the previously allowed traffic: A firewall that fails open will not block further use of any traffic because it allows all traffic through when it fails, regardless of whether it was previously allowed or not.
 
+ A VPN is used to securely connect to a network whereas a proxy server is used to hide the user's IP address. A VPN, or Virtual Private Network, creates an encrypted tunnel between your device and a remote server operated by the VPN service. All your internet traffic is routed through this tunnel, ensuring that your data is secure from prying eyes along the way. Besides its security attributes, a VPN also changes your IP address to that of the VPN server, which can be anywhere in the world. On the other hand, a proxy server serves as a gateway between you and the internet. It's an intermediary server separating end users from the websites they browse. Proxy servers provide varying levels of security, privacy, and functionality depending on use cases, needs, or company policies. The primary purpose of a proxy server is to hide your IP address and present another one to the internet.
+
 
 Send log entries to a separate server on UDP port 514: Sending log entries to a separate server on UDP port 514 is the most appropriate method for increasing controls over accountability, as this is the standard port for Syslog, a protocol used widely for sending event notification messages across IP networks to event message collectors (Syslog servers). By directing logs to a separate server, Linda can ensure that the logs are not tampered with on the source device and that there is a central place for log review and analysis, enhancing accountability. The incorrect answers: Send log entries to a separate server on UDP port 162: UDP port 162 is the standard port for SNMP Trap, which is used for sending alert messages from network devices to a management station. It is not primarily used for log transfer and hence is not the most appropriate choice for improving log accountability. Keep log entries on a different partition on the hard drive: Keeping logs on a different partition on the same physical hard drive does not increase controls over accountability significantly, because if the system is compromised, an attacker could gain access to the logs and alter or delete them, compromising the integrity of the logs. Send log entries to a separate server on TCP port 1433: TCP port 1433 is the default port for Microsoft SQL Server. Sending log entries to a server on this port would imply that they are being sent to a database server, which is not the standard practice for log transfer. Moreover, using a database server does not necessarily increase controls over accountability compared to dedicated log management systems.
 
@@ -2852,7 +2843,19 @@ Gateway Protocols (IGP) and Border Gateway Protocol (BGP) for internal and inter
  Symmetric plaintext key storage is one of the main security concerns with implementing Kerberos is that the symmetric keys used to encrypt and decrypt data are stored in plaintext on the authentication server.
  
  Kerberos
+  Kerberos authentication processes
+  1 ... **The client sends a request for a ticket (TGT) to the authentication server (AS)** this involves the client sending a request for a Ticket Granting Ticket (TGT) to the authentication server (AS). The client does not need to provide its password at this stage; it simply notifies the AS of its intention to start the authentication process.
+  2...  **The authentication server encrypts the ticket and sends it back to the client** ... Once the authentication server verifies the client's credentials, it sends back an encrypted TGT
+  .... and more ??
+  
+  
  : The Authentication Server (AS) in a Kerberos network is responsible for verifying the identity of users and services by issuing tickets to them. When a user attempts to log on to the network, they send their credentials to the AS. If the AS can verify these credentials against the user database, it generates and sends back a Ticket-Granting Ticket (TGT), which the user's system can use to request service tickets from the Ticket Granting Server (TGS), another component of the Key Distribution Center (KDC). The incorrect answers: The Access Control Server (ACS) is incorrect because there is no component called the Access Control Server in a Kerberos network. Access control is a process or a system in itself which regulates who or what can view or use resources in a computing environment. The Key Distribution Center (KDC) in a Kerberos network is responsible for securely distributing keys to users and services for encrypting and decrypting messages. It could be seen as partly correct, because the KDC does indeed include the AS as a component. However, the KDC also includes the Ticket Granting Server (TGS), which provides service tickets to authenticated users. If the question is specifically focusing on the verification of users, the AS would be the more specific answer. The Security Access Server (SAS) is not a component of a Kerberos network. It is a fictional component that does not exist.
+ 
+  D4 .... memorize all the common/cissp ports numbers ,,,
+  
+  
+ **The FIRST **principle of nonrepudiation** is that the sender cannot deny sending the message. This ensures that the sender cannot later claim that they did not send the message, which would be necessary in the case of a legal dispute or contract negotiation.
+ ** The recipient cannot deny receiving the message: Ensuring that a recipient cannot deny receiving a message is also a facet of nonrepudiation
  
 
 D5
@@ -2905,6 +2908,12 @@ Federated access control relies on the concept of trust between different organi
 
 Verifying the identity of certificate holders: In a Public Key Infrastructure (PKI) system, RAs are responsible for verifying the identities of entities (e.g., individuals, organizations, or devices) before they are issued digital certificates by a Certificate Authority (CA). This process ensures that the digital certificates, which are used to establish secure communications and authenticate entities in a network, are issued to the correct and legitimate entities. The incorrect answers: Issuing digital certificates: This is primarily the role of a Certificate Authority (CA), not an RA. Although an RA assists in the process, the final issuance of a digital certificate is done by the CA. Providing support for certificate revocation: While an RA might assist in the certificate revocation process, it's the CA that holds the ultimate responsibility to revoke certificates when necessary. The RA can help identify instances where revocation may be needed, but the action of revocation itself is typically handled by the CA. Coordinating with other RAs: While it's true that RAs may need to coordinate with each other in large or complex systems, this is not their primary function. Their main role is to authenticate the identities of entities before a CA issues a certificate, ensuring the overall trustworthiness of the system.
 
+An active detective control involves manual intervention, such as audits and reviews to identify and react to issues or irregularities
+ The term "active" refers to the proactive nature of this process, while "detective" signifies its purpose of detecting potential issues
+A Passive detective control: This type of control involves automated systems that detect and alert anomalies, errors, or potential security issues without human intervention. An example of a passive detective control could be an intrusion detection system (IDS) that continuously monitors network traffic for suspicious activity
+An Active physical control: This type of control refers to physical measures that prevent unauthorized access to physical assets, like CCTV cameras, security personnel, or locked doors. It actively prevents incidents by existing as a physical barrier or deterrent.
+Passive preventative control: These controls are designed to prevent an undesirable event from occurring, and they are typically "passive" in the sense that they don't require regular active human intervention. Examples of passive preventative controls are firewall systems, encryption, or user access controls
+
 D6
 **********************************************************
 Gray (Grey) box Pent test or attack (Partial Knowledge) Pen testing: The attacker has limited knowledge, a normal user, vendor or someone with limited environment knowledge.
@@ -2943,6 +2952,11 @@ The goals and objectives are clearly defined: Before having outside contractors 
   
 Use the CWSS to identify only high-impact vulnerabilities that have a high likelihood of being exploited is the correct answer because it is the most effective way to use the CWSS (Common Weakness Scoring System) to identify and prioritize vulnerabilities in a company's IT security system. By focusing on high-impact vulnerabilities that have a high likelihood of being exploited, the company can prioritize their efforts in addressing these vulnerabilities first and minimize the risk of a potential cyber attack. The incorrect answers: Use the CWSS to identify all vulnerabilities in the system, regardless of their potential impact or likelihood of exploitation is incorrect because it is not effective to identify all vulnerabilities in the system without considering their potential impact or likelihood of exploitation. This would result in a large list of vulnerabilities that may not all be critical to address and could waste valuable resources in addressing less critical vulnerabilities. Use the CWSS to identify vulnerabilities that have a high likelihood of being exploited, regardless of their potential impact is incorrect because it is not effective to prioritize vulnerabilities based solely on their likelihood of being exploited without considering their potential impact. This could result in prioritizing low impact vulnerabilities that are more likely to be exploited, rather than high impact vulnerabilities that have a lower likelihood of being exploited. Use the CWSS to identify vulnerabilities that have a high potential impact, regardless of their likelihood of being exploited is incorrect because it is not effective to prioritize vulnerabilities based solely on their potential impact without considering their likelihood of being exploited. This could result in prioritizing high impact vulnerabilities that have a low likelihood of being exploited, rather than high impact vulnerabilities that have a higher likelihood of being exploited.
 
+: To provide a comprehensive list of all known cybersecurity threats and vulnerabilities: CWE does identify and classify known cybersecurity threats and vulnerabilities, it does not provide a comprehensive list of all such threats and vulnerabilities. Instead, it focuses on common software weaknesses that could lead to security vulnerabilities. To provide guidance on how to design secure software systems: CWE does provide guidance on how to design secure software systems, it is not its primary purpose. Its primary purpose is to identify and classify common software weaknesses that could lead to security vulnerabilities. To provide a standard framework for reporting and tracking cybersecurity incidents: CWE does not directly provide a standard framework for reporting and tracking cybersecurity incidents, it does play a role in identifying and classifying the weaknesses that could lead to such incidents. However, this is not its primary purpose.
+
+: The Common Vulnerability Scoring System (CVSS) provides a way to capture the principal characteristics of a vulnerability and produces a numerical score reflecting its severity. The scores range from 0 to 10, with a higher number indicating a higher severity. As per the CVSS version 3.1 rating scale, a base score of 6.5 is classified as Medium severity. Medium severity indicates that the vulnerability poses a moderate level of danger to the system. It should be addressed in a timely manner to prevent potential exploitation. The incorrect answers: Low: Low severity scores in CVSS are typically assigned to vulnerabilities that pose a minimal threat to the system. These are vulnerabilities that either have limited impact, require a complex exploit, or affect non-critical systems. In CVSS scoring, a base score of 0.0 to 3.9 is considered Low. High: High severity vulnerabilities are those that pose a significant threat to the system. These are typically vulnerabilities that can be exploited to completely compromise a system or lead to significant disruption of services. In CVSS scoring, a base score of 7.0 to 8.9 is considered High. Critical: Critical vulnerabilities represent the most severe level of risk. They are typically exploitable vulnerabilities that can lead to complete system compromise, potentially without any user interaction. In CVSS scoring, a base score of 9.0 to 10.0 is considered Critical.
+
+
 D7
 **********************************************************
 A high number of emergency change requests can be an indicator of insufficient or ineffective planning and control within the change management process. Emergency changes are typically unplanned and urgent, suggesting that the standard change request procedures may not be adequately addressing the needs of the organization or that changes are not being anticipated and managed proactively.
@@ -2956,6 +2970,11 @@ The minimum hardware and software specifications required to run the system: The
 Which of the following statements best describes the roles and responsibilities in communicating and responding to a significant cyberattack?
  The IT team communicates the severity of the situation to their immediate superior, who then disseminates the information as per the disaster response plan is the most accurate answer because it follows the established protocol for disaster communication in an organization. The IT team's primary responsibility in a crisis is to mitigate and contain the situation. They inform their immediate superiors about the situation's severity, who then, based on the predefined disaster response plan, communicate the details to the necessary stakeholders like HR, Legal, Board of Directors, and others. This keeps the lines of communication clear and ensures that the right information is delivered to the right people at the right time. 
 
+software update processes ...
+ very first step is to identify the need for the update. This could be due to various reasons such as fixing security vulnerabilities, improving performance, adding new features, or addressing software bugs. Identifying the need for an update typically involves monitoring software performance, getting feedback from users, and staying informed about new security threats that could affect the software. It's the basis for all subsequent actions and without this step, one wouldn't know what to update or why it needs to be updated.
+ 
+ : Installing anti-shimmer technology on credit card readers: A shimmer attack involves inserting a small device, known as a shimmer, into a credit or debit card reader, particularly an ATM or gas pump, to steal data from the card's chip. This attack is more advanced than the previous skimming attacks because it targets the chip on the card instead of the magnetic strip, which makes the attack harder to detect. Anti-shimmer technology specifically counters this threat
+ 
 
 Communications team: Following the formal declaration of a disaster and the initial triage team assessment, the Communications team would most likely be called upon next. They play a crucial role in managing internal and external communications, informing stakeholders, coordinating with emergency services, issuing public statements, and keeping employees updated on the situation. Effective communication is critical in managing the aftermath of a disaster and in the recovery process. The incorrect answers: Facilities management: While Facilities management is important in addressing the physical impact of a disaster on the organization's property, the immediate next step after triage typically involves communication rather than facility repair or management. IT Services department: The IT Services department will be essential in restoring technological infrastructure and systems, but they are more likely to be called upon after the initial communication phase unless the disaster specifically impacted IT systems directly. Legal department: The Legal department will be important in navigating any legal implications of the disaster and for advising on regulatory reporting requirements. However, they are generally not the next team called upon immediately following the triage, unless there are immediate legal considerations that need to be addressed.
 
@@ -3000,7 +3019,7 @@ Redundant/Reciprocal/Mobile /Subscription/community  / hot/cold/warm sites
 
 The most effective way to evaluate the success of a Configuration Management (CM) program is to check if the documentation is updated frequently. This means that the CM program is actively managing the items and maintaining a consistent record of configurations and changes. Up-to-date documentation suggests the ongoing management of the CM system, implying the program is functioning well in tracking and documenting changes, which is the primary goal of CM. The incorrect answers: The highest number of configuration items does not necessarily indicate an effective CM program. It could just mean that the organization is large or that it has many systems or components. A high number of configuration items could even be a problem if they are not effectively managed, leading to potential configuration errors and issues. The initial implementation of CM policies is an important step, but it doesn't serve as an indicator of ongoing effectiveness. It is more important to evaluate how these policies are being maintained and followed over time. The least amount of change requests does not necessarily mean a successful CM program. It may indicate a lack of change or innovation within the organization. An effective CM program should be capable of managing a high volume of changes efficiently, ensuring all changes are tracked and properly implemented. So the effectiveness should be measured by how well changes are managed, not by the number of changes.
 
-
+ While the financial impact of a data breach is certainly important, it is not the most vital information for a Data Breach Investigation Report (DBIR). The primary goal of a DBIR is to understand the nature, scope, and cause of the data breach, to find out how it happened, what vulnerabilities were exploited, and how similar incidents can be prevented in the future. While the cost of the breach does provide some context about the seriousness of the incident, it is not as critical to the investigative process as the other factors. The incorrect answers: The extent of the breach is an important factor because it provides insight into how widespread the incident was and how much data was potentially compromised. This helps determine the scale of the issue and the potential level of damage caused by the breach. The sensitivity of the data involved is critical because it can indicate the potential impact of the breach on the affected individuals and the organization. The loss or exposure of sensitive data, such as personal information or trade secrets, can have serious ramifications, including financial loss, damage to reputation, and legal consequences. The number of affected individuals is an important factor because it indicates the scale of the breach in terms of potential harm to individuals. The greater the number of people affected, the more severe the consequences of the breach are likely to be. Knowing the number of affected individuals can also help organizations to manage their response and remediation efforts.
 
 
 D8
@@ -3030,6 +3049,10 @@ Build first, structure later,Often reactive security
 💡 CISSP usually treats this as: Less secure and Less strategic and Tactical
  
  
+ Different generations of programming languages 1st.2nd,3rd,4th .....
+ 
+ 
+ 
 
  A Primary key in a database is used to uniquely identify each record in a table. It is a column (or combination of columns) whose values are unique across the table, and every table in a relational database should ideally have a primary key to ensure data integrity. No two rows in a table can have the same primary key value. This uniqueness makes it the best choice for identifying each unique record in a table. 
  
@@ -3045,6 +3068,8 @@ Build first, structure later,Often reactive security
  Semantic Integrity.
  
  Database ACID
+ 
+ : A referential integrity error occurs when there are foreign keys in a database that do not match the primary keys. In relational databases, a foreign key is a set of one or more columns that is used to establish a link between the data in two tables. The foreign key in one table should match the primary key in another table to ensure consistency and accuracy of data. If there are foreign keys that do not match the primary keys, it could result in inaccurate data retrieval and potential data loss. The incorrect answers: Semantic Integrity Error: This type of error occurs when the structure or meaning of the data does not adhere to the defined business rules or constraints. Domain Integrity Error: This error occurs when the values entered into a column do not fall within the defined domain of that column. Entity Integrity Error: An entity integrity error occurs when there are duplicate records in a table, or when a primary key field contains null values.
  
   Data normalization is a process in database design to minimize redundancy and dependency by organizing data into separate tables based on their functions. This action facilitates data management and improves security because it limits the exposure of data. If a breach occurs, it might affect only a portion of the data, minimizing the overall damage
  
@@ -3084,6 +3109,8 @@ Database transactions require atomicity, consistency, isolation, and durability,
 
  Address space layout randomization (ASLR)
  is a technique used to prevent code injection attacks by randomizing the memory locations of executables, making it difficult for attackers to predict where they will be stored and therefore makes code injection attacks significantly more challenging. The incorrect answers: Encrypting memory is used to protect sensitive information residing in a computer's memory from being read by unauthorized individuals or processes. However, it does not randomize the memory locations of executable code and, hence, doesn't directly prevent code injection attacks. Input validation is a method used to check and clean input from users to prevent things like SQL injection and cross-site scripting attacks. It is an important security practice but doesn't protect against memory-based attacks like code injection by randomizing memory locations. Disabling unnecessary kernel extensions can enhance system security, but it does not directly prevent code injection attacks, nor does it randomize memory locations of executable code.
+ 
+ SDLC, or Software Development Life Cycle, is not in itself a methodology but rather a descriptive framework that outlines the stages of the software development process. These stages typically include: requirements gathering, design, implementation, testing, deployment, and maintenance. Various methodologies, such as Waterfall, RAD (Rapid Application Development), and Agile, all fit within this overarching framework, each offering different approaches for progressing through the stages. The incorrect answers: Waterfall is a linear, sequential methodology that involves completing one phase of the software development process before moving on to the next. It is a well-known and widely used methodology, but it is not the same as the overall SDLC framework. RAD, or Rapid Application Development, is a software development methodology that emphasizes rapid prototyping and iterative delivery. It's designed to give much faster development and higher-quality results than traditional systems, fitting within the SDLC as an approach to navigating its stages. Agile is another software development methodology that is characterized by the division of tasks into short phases of work and frequent reassessment and adaptation of plans. It's a specific approach to the software development process and fits within the broader SDLC framework.
  
  A synthetic transaction is a testing method that uses automated simulations of user interactions or transactions to monitor system performance. These transactions are called "synthetic" because they're not derived from actual user interactions, but are rather artificially created for testing purposes. They are designed to simulate an action or path that a user might take in an application. They are 'self-contained' because they are completely constructed and executed within a test environment and do not depend on external factors or real user data. 
  

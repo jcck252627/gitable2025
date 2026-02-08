@@ -1,0 +1,423 @@
+
+• Domain 1: Security and Risk Management	***************************************************
+• Domain 2: Asset Security
+• Domain 3: Security Architecture and Engineering
+• Domain 4: Communication and Network Security
+• Domain 5: Identity and Access Management (IAM)
+• Domain 6: Security Assessment and Testing
+• Domain 7: Security Operations
+• Domain 8: Software Development Security
+
+
+
+Domain 1: Security and Risk Management
+**********************************************************
+he Chief Information Security Officer (CISO) is responsible for the overall security strategy and program of an organization. This position sits at the top of the IT security hierarchy in most organizations and is responsible for establishing and maintaining the enterprise vision, strategy, and program to ensure information assets and technologies are adequately protected. 
+
+a Data Protection Officer (DPO) plays a crucial role in overseeing data protection strategy and implementation within an organization, they are typically more focused on ensuring compliance with data protection regulations and laws, such as the EU's General Data Protection Regulation (GDPR). The DPO doesn't usually cover all aspects of an organization's security strategy and program. 
+
+The Chief Information Officer (CIO) is an executive role in charge of the overall strategic direction of the company's IT infrastructure and assets. While the CIO does have a role in security, their focus tends to be broader, covering areas like IT budgeting, planning, and personnel, as well as digital transformation strategies. 
+
+The Chief Risk Officer (CRO) is responsible for identifying, assessing, and mitigating risks across the organization. Although these risks can include those related to information security, the CRO's role is broader and includes other types of risks such as operational, financial, reputational, and strategic risks.
+
+
+ Implementing a risk management framework provides an organized and structured approach to identifying, assessing, and responding to risks. The aim of an RMF is to enable organizations to better understand the nature of the risks they face, make informed decisions about how to address those risks, and manage them in an ongoing, dynamic way. It provides a holistic view of the organization's risk profile, helps establish risk tolerance, and aids in decision-making processes related to risk treatment. The incorrect answers: Identifying and prioritizing vulnerabilities is an important part of risk management but it is not the primary benefit of implementing a risk management framework. The framework provides a comprehensive approach to managing risks including business, strategic, and operational risks, not just identifying vulnerabilities. Although implementing a risk management framework can help an organization maintain compliance with certain laws and regulations, it's not the primary purpose of an RMF. The primary purpose is to manage risks in a systematic and structured way. While compliance is often a beneficial side effect, it is not the main goal. It reduces the need for security controls is incorrect. Implementing a RMF doesn't reduce the need for security controls but rather it aids in determining which controls are necessary and how they should be applied to mitigate specific risks. The risk management process often results in the implementation of additional controls or the strengthening of existing ones to better manage identified risks.
+
+BIA/BCP/DRP /RMF
+
+Risk = Threat x Vulnerability. Impact - Can at times be added to give a more full picture. 
+Risk = Threat x Vulnerability x Impact (How bad is it?). 
+Total Risk = Threat x Vulnerability x Asset Value. 
+Residual Risk = Total Risk – Countermeasures.
+
+Single Loss Expectancy (SLE) = Asset Value (AV) x Exposure Factor (EF)
+Annualized Loss Expectancy (ALE) = Single Loss Expectancy (SLE) x Annualized Rate of Occurrence (ARO)
+
+**Asset Value (AV)**: The cost of the asset in a monetary
+value, e.g., a CCTV system that costs $2,000
+
+**Exposure Factor (EF)**: Measured as a percentage and expresses how much of the asset’s value stands to be lost in case of a risk materializing
+The EF will always be a percentage between 0 to 100 percent.
+
+**Single Loss Expectancy (SLE)**: Denotes how much it will cost if the risk occurs once. To calculate the SLE, simply multiply the AV by the EF:
+
+**Annualized Rate of Occurrence (ARO)**: Denotes how many times each year the risk is expected to occur. For example, if the voltage spikes excessively three times a year, the ARO is 3.
+
+**Annualized Loss Expectancy (ALE):** Expresses the annual cost of the risk materializing.
+
+
+**Security assessment** is a thorough evaluation of an organization's information security posture, including its policies, procedures, and technical controls. It involves identifying potential vulnerabilities and risks, and determining the appropriate measures to mitigate those risks. Security testing, on the other hand, involves evaluating the effectiveness of an organization's security controls by simulating attacks and attempting to breach the system. 
+
+**Risk management**, meanwhile, involves identifying, assessing, and prioritizing risks to an organization's assets, and implementing strategies to mitigate those risks. 
+**Security policy** review, meanwhile, involves reviewing and updating an organization's security policies to ensure they are still relevant and effective.
+**Security testing** involves evaluating the effectiveness of an organization's security controls,
+
+Applicable Risk Controls
+**A complete control at minimum is a combination of preventive, detective, and corrective controls
+
+1. Directive Controls
+Definition: Controls that guide or mandate desired behavior but do not directly stop incidents.
+Example: An information security policy requiring strong passwords.
+
+2. Preventive Controls
+Definition: Controls that stop or block security incidents before they occur.
+Example: Firewall rules blocking unauthorized network traffic.
+
+3. Detective Controls
+Definition: Controls that identify and alert on security events after or during occurrence.
+Example: Intrusion Detection Systems (IDS) generating alerts on suspicious activity.
+
+4. Corrective Controls
+Definition: Controls that fix or remediate issues after an incident has occurred.
+Example: Applying security patches after discovering a vulnerability.
+
+5. Deterrent Controls
+Definition: Controls that discourage potential attackers through fear of detection or consequences.
+Example: Warning banners stating systems are monitored and logged.
+
+6. Compensating Controls
+Definition: Alternative controls used when primary controls are not feasible.
+Example: Increased logging and monitoring when encryption cannot be implemented.
+
+7. Recovery Controls
+Definition: Controls that restore systems and operations after an incident.
+Example: Backups and disaster recovery plans used to restore systems after ransomware.
+
+Key CISSP rule:
+A control has two dimensions
+What it does → Directive / Preventive / Detective / etc. 
+Directive/Detective/Deterrent/Corrective/Compenseation/Preventive/Recovery ...D3C2PR
+How each is implemented → Administrative / Technical / Physical
+
+One-Minute CISSP Decision Tree 🧠
+
+1️⃣ Does it tell people what to do? → Directive
+2️⃣ Does it scare or discourage? → Deterrent
+3️⃣ Does it block the action? → Preventive
+4️⃣ Does it detect or alert? → Detective
+5️⃣ Does it fix after damage? → Corrective
+6️⃣ Is it a backup control? → Compensating
+7️⃣ Does it restore operations? → Recovery
+
+Then ask:
+Policy/process? → Administrative
+System/software? → Technical
+Building/people? → Physical
+**Functional and Assurance** - The control should perform some function (e.g., control the flow of network traffic, only allow authorized employees to enter a building, detect smoke from a fire), ....and there should be some means of verifying/obtaining assurance that the control is working effectively on an ongoing basis.
+
+
+Patents: Protects inventions for 20 years (normally) – Cryptography algorithms can be patented. Inventions must be:Novel (New idea no one has had before). Useful (It is actually possible to use and it is useful to someone). Nonobvious (Inventive work involved).
+. A patent is a form of intellectual property that gives its owner the legal right to exclude others from making, using, selling, and importing an invention for a limited period of years. Patents are intended to encourage innovation by granting inventors exclusive rights to profit from their inventions. If someone copies a patented invention, the patent owner can sue for patent infringement
+
+Trademark -  A trademark is a recognizable sign, design, or expression which identifies products or services of a particular source from those of others. Trademark law prevents others from using a deceptively similar mark, but it doesn't prevent others from making the same goods or from selling the same goods or services under a clearly different mark. If someone were to copy your work under a different brand, a trademark would not protect you
+
+Copyright/Copyleft -  Copyright is a legal right that grants the creator of an original work exclusive rights to determine and decide whether, and under what conditions, this original work may be used by others. This includes the right to reproduce, distribute, display, perform, transmit, or transform the work. Copyright infringement can lead to legal ramifications.
+
+Trade Secret - A trade secret is information that is not generally known and is kept secret by a company or individual in order to gain an economic advantage. They are not protected by law in the same way as patents or copyrights. Instead, protection of a trade secret is typically handled through an agreement between parties, such as a non-disclosure agreement. If someone outside of these agreements were to independently develop or reverse engineer a product or idea that you consider a trade secret, you would have no legal recourse to stop them from using, manufacturing, or selling it.
+
+Due care: Due care refers to the level of care that an individual would reasonably be expected to exercise in a particular situation. 
+As the chief information security officer (CISO) at ThorTeaches.com, Jane is responsible for determining the security goals for the organization, and she must do so with due care. This means she should take reasonable steps to protect the company's data and systems from threats, aligning with industry best practices and regulatory requirements. 
+
+Due diligence is the investigative process conducted to assess a business transaction. When setting security goals, due diligence is part of the broader process Jane would undertake to understand the risks and requirements of the organization, but it is not the term that best describes the minimum standard required of her. 
+
+Intellectual property refers to intangible assets.  This mostly refers to software, proprietary code, and other digital assets owned by the organization, but can also refer to unpublished books, music, art, inventions, patents, trademarks, trades secrets, or other information that should be protected.
+
+Copyright: Creating a photograph or writing a song automatically grants copyright protection without requiring a formal process. The rights to control copies belong to the creator from the moment of creation. In a copyright dispute, parties must provide evidence proving they were the original creator.
+
+Trade Secrets: These are protected due to their commercial value, limited access, and reasonable security measures. Protection is enforced through an organization’s internal security protocols.
+
+Patents and Trademarks: Unlike copyrights and trade secrets, patents and trademarks require a formal review process, investigation, and associated costs before protection is granted.
+
+When talking about software, the following intellectual property terms apply – try to think about what your organization does for its non-proprietary software usage (e.g. MS Word, etc.):
+
+Site license – refers to bulk purchases, for all staff within the organization, done for a specific length, and there is typically a cap on the number of licenses
+Per-seat license – another bulk purchase (number of licenses is chosen rather than having a cap), or pay-per-copy (usually discounted)
+Shareware – use is allowed with constraints, free for non-commercial use, commercial use would require payment
+Public Chapter (previously “public domain”) – use is allowed without constraints, for any purpose, including modification and customization.  Support and extra features must be purchased.
+
+DRM is a concept that candidates need to be familiar with.  Here are the elements of a DRM solution:
+
+Persistency – Access controls follow the material wherever it goes.  The best example of this is a DVD that carries its encryption wherever it goes.
+
+Dynamic policy control – This refers to centralized permissions management typically for an organization that needs to allow the owner of the intellectual property to manage and update rights to access the data.  
+
+Automatic expiration – License can expire automatically on a specific date, whether for a specific installation or at a point in time where the software becomes public domain.
+
+Continuous audit trail – Captures all activity on the material, views, access, modification, copying, etc.Interoperability – This concept refers to the solution fitting into any environment, windows, linux, email, file structure, or access control methods.
+
+A copyleft license is a type of open-source license that allows users to freely use, modify, and distribute a work, provided that any derivative works are also distributed under the same license terms. This ensures that the software remains free for all users, even in modified versions, and mandates that derivative works be shared under the same conditions. Copyleft licenses guarantee freedoms to reproduce, adapt, or distribute a work, distinguishing them from more restrictive copyright licenses. Overall, copyleft promotes the idea of keeping software free and accessible to everyone
+
+Copyright grants exclusive rights to creators over their original works, while copyleft allows users to freely use, modify, and distribute works under the same licensing terms.
+Understanding Copyright
+Definition: Copyright is a legal framework that provides creators with exclusive rights to their original works, such as literature, music, art, and software. This means that the creator has control over how their work is used, reproduced, and distributed. 
+
+
+Understanding Copyleft
+Definition: Copyleft is a licensing method that allows creators to grant others the freedom to use, modify, and distribute their work, provided that any derivative works are also shared under the same or compatible terms. 
+
+Purpose: The philosophy behind copyleft is to promote collaboration and the sharing of knowledge, ensuring that all modifications and adaptations remain accessible to the community. 
+
+Key Feature: A fundamental principle of copyleft is the "share-alike" requirement, which mandates that any derivative works must be licensed under the same copyleft terms, preventing proprietary restrictions on the modified work. 
+
+
+
+What is the FIRST step in protecting a company's trademark?
+Conducting a trademark search: Before you can protect a company's trademark, it's important to first conduct a trademark search. This is a critical step to ensure that the trademark you're planning to use is not already registered or in use by another company. Using an existing trademark can result in legal consequences, such as lawsuits and fines. It can also undermine your brand identity and lead to confusion in the marketplace. The first step to protecting your trademark is to make sure it's unique and available for use. 
+
+Registering the trademark with the United States Patent and Trademark Office (USPTO) is an important step in protecting a trademark. However, it is not the first step. Registration can only happen after you've conducted a trademark search to verify that your desired trademark isn't already in use by another company. If you try to register a trademark that's already in use, the USPTO will reject your application. 
+
+Monitoring the use of your trademark is crucial in maintaining its protection. This process involves keeping an eye out for any unauthorized use or infringement of your trademark by other businesses. This is an ongoing process that comes after the initial stages of conducting a trademark search and registering the trademark with the USPTO. You can't monitor the use of a trademark that hasn't been established as yours in the first place. 
+
+Implementing a trademark usage policy is an integral part of protecting a company's trademark. This policy guides how the trademark can be used within the company and by third parties, helping to maintain consistency and prevent dilution of the brand. Nonetheless, this step is downstream from conducting a trademark search and registering the trademark. The policy would be irrelevant if the trademark you plan to protect is already registered or in use by another entity.
+
+vulnerabilities vs exploit vs threats vs risk 
+
+
+ "Conduct a risk assessment of the company's current IT systems and practices." would be the option to pick here. It is far more beneficial to inventory all assets through a risk assessment, then decide from there how to handle security. Otherwise, a business is taking things into consideration that have no effect on them. The incorrect answers:
+  Determine the company's overall goals and objectives for IT security is the first step in identifying the business needs for improving the IT security practices. 
+  Understanding the overarching goals and objectives ensures that such feedback is collected and analyzed in the context of the company's strategic direction.
+ 
+The primary objective of any risk management program is to minimize residual risk to an acceptable level. Residual risk is the risk that remains after all risk management strategies have been applied. 
+To eliminate business risk: It's unrealistic and impractical to completely eliminate business risk. The goal is to manage risk within acceptable levels. 
+To implement effective controls: While this is a part of managing risk 
+To minimize inherent risk: Inherent risk is the risk that exists before any controls or mitigation strategies are implemented. 
+ 
+Prudent person rule: While the prudent person rule is related to due care, it is a legal concept that typically applies to the management of another's affairs, especially in a fiduciary capacity. It is not specifically a term used to describe the process of setting security goals for an organization. 
+
+Due diligence: Due diligence is the investigative process conducted to assess a business transaction. When setting security goals, due diligence is part of the broader process Jane would undertake to understand the risks and requirements of the organization, but it is not the term that best describes the minimum standard required of her. 
+
+Building consensus: Building consensus is about obtaining agreement from various stakeholders or team members. While gaining agreement on security goals is an important part of the CISO's role
+ 
+ Due care: While due care is a legal and ethical obligation to act responsibly and is often associated with the prudent person rule, it is more specific to taking the necessary care to protect the company and its assets. In contrast, the prudent person rule is a broader standard that emphasizes the decision-making process and the approach that someone in a position of trust should take, which is why it's the best descriptor for Thor's role. 
+  
+  Due diligence: Due diligence is the investigation and evaluation process undertaken to understand the risks associated with a business decision or transaction. It's evidence of the prudent person rule in action, but as a term, it specifically refers to the careful examination and research done before concluding agreements or investments, rather than the ongoing risk oversight provided by an executive like Thor.
+  
+  Building consensus: Building consensus involves uniting a group behind a decision or strategy. It is a crucial part of leadership, especially for a CEO who needs the support of various stakeholders to move the company forward. 
+ 
+ Controls. When defining inherent risk, you're looking at the risk that exists assuming no controls or other mitigation actions are in place. Thus, controls are not a factor typically considered when calculating inherent risk, as they are measures implemented to reduce that inherent risk. The incorrect answers: Likelihood or Probability: This is an essential facet of determining risk. It measures the chance of a given threat exploiting a vulnerability. 
+ 
+ Asset Valuation (AV): The value of the asset is a key component of risk. The more valuable the asset, the higher the potential risk. 
+ Impact or Consequence: This is another crucial variable for assessing risk. It measures the potential damage or consequences to the organization if a threat exploits a vulnerability.
+
+Establish baseline standards for all locations, and then add additional standards for locations that require more security. This approach allows for creating a consistent minimum level of security across the organization while acknowledging and addressing the specific regulatory requirements of each location. 
+
+The incorrect answers: Incorporate all of the regulations into one overarching policy that covers all the requirements of all the locations and ensure all locations follow it: This approach might be unnecessarily strict for some locations and may not fully address the specific needs of each location. 
+
+Find the industry best practices and ensure all locations are in compliance with those: Best practices are useful guides, but complying with them doesn't necessarily ensure compliance with specific regulations in each location. 
+
+Find the common requirements that all locations have and implement those: This approach may miss specific requirements that are unique to certain locations. While it creates uniformity, it might not fully comply with all regulations.
+
+Privacy by Design (PbD) — CISSP Definition (Plain English) - Privacy is built into systems, processes, and technologies from the beginning, not added later.
+is about: Proactive, not reactive, Default privacy protections ..Minimizing data collection ... Embedding privacy into architecture, SDLC, and governance 📌 Think architecture principle, not a single control.
+2️⃣ The 7 PbD Principles (EXAM-WORTHY)
+CISSP doesn’t always ask all seven, but keywords from them appear constantly.
+1️⃣ Proactive, not Reactive – prevent privacy issues before they happen
+2️⃣ Privacy as the Default – no action required by the user to protect privacy
+3️⃣ Privacy Embedded into Design – part of architecture and SDLC
+4️⃣ Full Functionality (Positive-Sum) – privacy AND security/business goals
+5️⃣ End-to-End Security – data protected through entire lifecycle
+6️⃣ Visibility & Transparency – clear policies and processing
+7️⃣ User-Centric – respect user privacy choices
+Privacy by Default - Configuration state
+Privacy by Design - Architectural principle
+
+Where PbD Fits in CISSP Domains
+Domain	How PbD Appears
+Domain 1 – Security & Risk	Privacy governance, policy, legal compliance
+Domain 3 – Security Architecture	Data flow design, minimization, encryption
+Domain 7 – SDLC	Privacy requirements, secure design
+Domain 8 – Software Dev	Secure coding, data handling
+
+Continous Risk Management - Plan Do Check Act / Deming Cycle
+Plan - Determine which controls to implement based on the risks identified
+Do - Implement the controls
+Check -  Check Monitoring and assurance; are the controls operating effectively
+Act - Based upon findings during the “Check” step, take additional, actions as necessary (react), which leads back to planning
+ 
+ The CIA triad stands for Confidentiality, Integrity, and Availability. 
+ 
+ Purpose of threat modeling
+In order to perform proper risk management, it is important to identify the threats and vulnerabilities associated with each asset. Threat modeling methodologies aid in systematically identifying
+threats and their severity, which in turn makes risk management more accurate and effective
+ They enable: the systematic identification, enumeration, and prioritization of threats related to an asset.
+ . Three of the major threat modeling methodologies you need to know about for the exam are STRIDE, PASTA and DREAD.
+
+***STRIDE*** 
+***STRIDE*** was developed by Microsoft. Though it was initially developed as a means of assessing threats to applications and operating systems, it can be used in other contexts too. STRIDE is a threat-focused methodology
+**Spoofing - threat against Authentication
+An attacker pretends to be something or someone to gain unauthorized access
+**Tampering - threat againstIntegrity
+An attacker modifies data at rest (e.g., in a database) or in transit (e.g.,over the network)
+**Repudiation - threat against Nonrepudiation
+An attacker performs an action on a system that is not attributable to them
+**Information Disclosure - threat against Confidentiality
+An attacker can read sensitive information
+**Denial of Service - threat against Availability 
+An attacker prevents legitimate users from accessing an application/service
+** Elevation of Privilege - threat against Authorization
+An attacker gains elevated access rights (e.g., administrative/root access)
+
+**DREAD**
+**DREAD** is a threat model primarily used to rank the severity of threats. DREAD is often used in combination with the STRIDE model, where STRIDE identifies the threats, and DREAD is then used **to rank the severity** of threats. Five key points are considered and a score for each is determined between 1 and 10 (1 being low-risk, and 10 being high-risk). The score from each of thefive key points is then tallied up and divided by five to produce a final score out of ten. This final score is then used to understand the severity of a threat.
+D Damage
+Total amount of damage the threat can cause?
+R Reproducibility How easily can the threat be replicated? 
+E Exploitability
+How difficult is it to exploit the threat?
+A Affected Users
+How many people, inside or outside the organization, will be affected by the threat?
+D Discoverability
+How easily can the threat be discovered?
+  
+  **Damage** refers to the potential harm that could be caused if a vulnerability were to be exploited. This impact considers how bad the consequences would be, ranging from minimal disruptions to significant data breaches or system outages. The severity of the potential damage is often considered the most critical factor because it directly relates to the potential consequences an organization could face from a security incident. 
+  
+  **Reproducibility** refers to how easily and consistently the vulnerability can be exploited. While an easily reproducible vulnerability is concerning, it is the damage caused by the exploitation, not the frequency or ease of reproduction, that holds the highest impact. 
+  
+  **Exploitability** gauges how easy it is for an attacker to exploit the vulnerability. While this is a crucial factor in the overall risk assessment, it is the potential damage that often holds greater weight in the decision-making process regarding the risk. 
+  **Awareness(( measures how well-known the vulnerability is, both to potential attackers and the public. A widely known vulnerability might be seen as a higher risk because many attackers are aware of it, but again, it's the potential damage that results from the exploitation that generally carries the most weight in the assessment.
+
+**Attack Simulation and Threat Analysis (PASTA)**
+Process for **Attack Simulation and Threat Analysis (PASTA)**, contrary to STRIDE, is an attacker-focused, risk-centric methodology. It is much more detailed than STRIDE and performs threat analysis from a strategic perspective that includes input from governance, operations, architecture, and development, in both tech and business views
+
+**Define Objectives—This considers the inherent application risk profile and addresses other business impact considerations early.
+**Define Technical Scope—The philosophy behind this stage is that you can’t protect what you don’t know. It’s intended to decompose the technology stack that supports the application components that realize the business objectives identified from Stage 1.
+**Application Decomposition—This stage focuses on understanding the data flows among application components and services in the application threat model.
+**Threat Analysis—Reviews threat assertions from data within the environment as well as industry threat intelligence that is relevant to service, data, and deployment model.
+**Vulnerability and Weakness Analysis—Identifies the vulnerabilities and weaknesses within the application design and code and correlates to see if it supports the threat assertions from the prior stage.
+**Attack Modeling—This stage focuses on emulating attacks that could exploit identified weaknesses/vulnerabilities from the prior stage. It helps to also determine the threat viability via attack patterns.
+**Risk and Impact Analysis—This stage centers around remediating vulnerabilities or weaknesses in code or design that can facilitate threats and underlying attack patterns. It may warrant some risk acceptance by broader application owners or development managers.
+
+**Social engineering** 
+Manipulation of people’s actions through intimidation and/or deception .. it is a prevalent means of attack against organizations Best way to combat social engineering is through awareness/education/training
+
+**intimidation (involves inducing fear in order to manipulate someone into a specific course of action) ... blackmail
+**deception (involves tricking someone in one manner or another) ...lying 
+**rapport (building a gradual relationship with a victim in order to take advantage of it down the line) ...pretending to be from the IT team
+**Phishing -  where an attacker sends many emails with the hope that the target will open an email and click on a link or open a file that leads to a malicious action ... email 
+**Spear phishing -  a targeted form of phishing that typically focuses on certain individuals or groups of individuals ... sending fake invoice to payable team
+**Whaling Like spear phishing, this is also an email attack and targets the big fish—the whales—in an organization. Typically, targeting people like the CEO, COO, and CFO
+**Smishing - Smishing is a form of phishing that targets mobile phone users. Typically, an attacker purporting legit company sends a fraudulent text/SMS message to a potential victim, 
+**Vishing- Vishing is another form of phishing, and the name refers to the way it is typically presented to a potential victim—via voice over IP (VoIP) phone systems to their phones
+**Pretexting involves the attacker creating a scenario, almost like a script, that very ingeniously and subtly spurs the victim into action. a“friend” texting you with news about an unfortunate incident that’s left them stranded someplace. Ultimately, a request is made for money, sensitive information, or both.
+**Baiting -  a form of social engineering that preys on people’s curiosity via the use of physical tools, like USB drives. Usually, the attacker will drop some USB drives in a building parking lot, 
+**Tailgating or piggybacking -  the action of following a person who is authorized to enter a restricted area through a door and thus gaining unauthorized access. The difference is that in tailgating the attacker possesses a
+badge that is fake but looks real. In piggybacking, the attacker doesn’t have any badge at all.
+
+Apply supply chain risk management (SCRM) concepts
+**Risk management methodologies should be applied to all vendors, suppliers, service providers
+**The process of identifying, assessing, mitigating, and monitoring risks introduced by third parties, vendors, suppliers, and service providers across the entire lifecycle.
+**CISSP frames SCRM in domain 1 as: Governance responsibility, Risk ownership by the organization, Policy-driven, contract-enforced ...  not purely technical risk
+**CISSP Considers “Supply Chain” examples : Software vendors (OS, apps, SaaS), Cloud providers, MSPs / MSSPs, Hardware manufacturers, Open-source components, Logistics and maintenance vendors
+**Supply chain risk management ensures third-party risks are governed through due diligence, contractual controls, and continuous monitoring.
+
+1. Identify
+Who are the vendors?
+What do they access?
+What data do they handle? 📌 Vendor inventory is critical.
+2. Assess
+Security posture
+Compliance (SOC 2, ISO 27001)
+Financial stability
+Geographic / geopolitical risk 📌 Use due diligence, not trust.
+3. Mitigate
+Contract clauses, SLAs / SRAs, Right-to-audit
+Security requirements ...Segmentation & least privilege 📌 Contracts are security controls.
+4. Monitor (Continuous)
+Ongoing assessments
+Audit reports
+Incident notifications
+Performance metrics 📌 One-time assessments = ❌ wrong answer.
+
+SCRM vs Third-Party Risk (Trick!)
+Third-party risk	Risks from any external party
+SCRM		Focused on supply chain dependencies
+
+**SCRM mitigation controls(Know These)**
+Administrative - Vendor policies, contracts, NDAs, SLA/SLR
+Technical	Network segmentation, access controls
+Legal	Right-to-audit, breach notification
+Operational	Monitoring, audits, performance reviews
+
+**Other various supply chain risk mitigations**
+**Software Bill of Materials - A comprehensive list of components, libraries and modules that are used to build a software product, often detailing versions, sources and dependencies. 
+With this list, we can check what changes have been made in new versions. This can help us detect things like backdoors and othervulnerabilities.
+**Third-party Assessment and Monitoring - Evaluating and continuously monitoring the security practices and performance of third-party vendors or suppliers.
+**Minimum Security Requirements - Predefined baseline security standards that vendors must meet.
+**Service-level Requirements - Specifications set in contracts that dictate the expected performance, availability, and responsiveness of a service provided by a vendor.
+**Silicon Root of Trust - A secure cryptographic identity embedded in hardware, ensuring that the hardware starts in a trusted state and that the firmware loaded onto it is genuine
+Physically Unclonable Function - A hardware feature that uses the unique physical characteristics of semiconductor devices to generate cryptographic keys, ensuring that each device has a unique and unclonable identity. 
+
+**SLR, SLA, and Service Level Reports**
+1**SLR — Service Level Requirements - Business-defined minimum service expectations (availability, RTO, response time).
+CISSP framing: Input to risk assessment,  Defined by business, not vendor, Occurs before SLA
+With the acquisition of a service, additional organizational requirements must be considered, and this is done through a document called an SLR.
+Detailed service descriptions, Detailed service level targets, Mutual responsibilities
+.....it defines the security services and service level targets that each potential supplier can be evaluated agains
+
+
+2**SLA — Service Level Agreement - A contractual agreement that commits a provider to meet defined service levels.
+CISSP framing: Legal / administrative control, Risk transfer & risk mitigation
+SLAs are addendums to the contract and are therefore enforceable. SLAs often include expectations and stipulations such as **Service Levels (performance levels)**, **Governance**—the customer and the service provider know
+who is responsible for what, **Security** —expected security controls put in place by the service provider that speak to the topic of accountability
+and responsibility. Accountability can never be outsourced,  Compliance with all laws and regulations, and Liability/Indemnification when any element of the SLA is not met or is below threshold standards
+
+
+3** Service Level Reports (SLRpt / SLM Reports)- Operational evidence showing whether SLAs are being met.
+CISSP framing: Monitoring and assurance, Supports audits and RMF “Monitor” step, Detective control
+-Service level reports are issued by a vendor or service provider to a client and provide insight and information about the service provider’s ability to deliver services as defined by the SLA.
+- The service level report compares anticipated and agreed upon service levels with actual service levels and documents the effectiveness of security controls, which allows the customer—the owner—to gain assurance that expectations are being met. such ... Achievement of metrics defined in the SLA, issues identified, Reporting channels, Third-party SOC2 type2 reports, which provide independent verification and assurance
+
+**Order matters — CISSP loves order questions
+SLR → SLA → Service Level Reports   (SLA is based on SLR, not the other way around.)
+(Step	RMF / PDCA Phase / RMF mapping )
+SLR	- PLAN  - Categorize /Select / Define SLRs
+SLA	- DO - Implement / Establish SLAs  - SLA ≠ Risk Transfer - SLA transfers financial accountability, not risk ownership.
+Reports -	CHECK assess / Review service reports  - Define SLRs and enforce SLAs with reporting
+Adjust SLA / Controls -	ACT / Monitor Continuous service reporting - SLA without reporting = false sense of security.
+
+Item	Control Type
+SLR	Administrative (governance)
+SLA	Administrative / Legal
+Reports	Detective / Administrative
+
+SLR = What we need
+SLA = What we agree
+Reports = What we prove
+
+SLRs define business service expectations, SLAs contractually enforce them, and service level reports provide ongoing assurance as part of continuous risk monitoring.
+
+Exam Keywords to Circle ✏️ If you see keywords like:
+Vendor, Supplier, Outsourcing, Cloud provider, Third-party access, Contracts
+➡️ Think SCRM
+
+**Risks associated with the acquisition of products and services from suppliers and providers**
+**Product Tampering - Unauthorized alteration or modification of a product after manufacturing, but before the product reaches the consumer. 
+As an example, an attacker could intercept a keyboard delivery, solder a keylogger inside it, and then repackage it. 
+**Counterfeits - Unauthorized replicas or imitations of products that are made to deceive consumers into thinking that they are purchasing the real thing. Counterfeits may result in reduced
+performance, hazards, regulatory violations, inappropriate security, or increased vulnerabilities.
+**Implants - Hardware or software components stealthily inserted into products to perform unauthorized activities, such as espionage or data theft. Implants can result in sensitiveinformation being sent to unauthorized entities and unauthorized access to systems. 
+
+**Methods and Techniques to Increase Awareness, Training, and Education**
+**Awareness is to change cultural sensitivity to a topic or issue
+Examples of awareness include internal phishing campaigns, lunch and learns, and awareness posters hung in visible places.
+**Training provides specific skills needed to perform tasks for security or tech spec in a role
+Examples of training might include a firewall administrator learning how to write firewall rules or a security guard learning how to respond to different situations related to protecting a
+building and the assets within.
+**Education helps people understand fundamental concepts and therefore develop decision-making skills and abilitie
+
+Methods and Techniques to Provide Awareness and Training (e.g., social engineering, phishing, security champions (promoters), gamification)
+
+Enforceable via penalties
+
+Ris Mamagement processes and steps ....
+The first critical step towards effective risk management is the accurate identification and cataloging of all assets, both tangible and intangible.
+
+
+quantitative analysis  VS  risk analysis ......
+
+ Likelihood and impact matrix: A qualitative risk analysis approach focuses on identifying the risks involved in a project or any business activity and assesses them based on their potential impact and the likelihood of their occurrence. It doesn't involve numerical or financial measures but rather uses descriptive or categorical scales. The risk is evaluated based on its perceived impact and the probability or likelihood of its occurrence, which is why a "likelihood and impact matrix" would be used in a qualitative risk analysis approach. This matrix helps in prioritizing risks based on their potential effect and the probability of their occurrence. 
+ 
+ The incorrect answers: 
+ Probability and impact matrix: This is a common confusion as the terms "probability" and "likelihood" are often used interchangeably. In the context of risk management, however, they have different meanings. Probability is more associated with a quantitative approach to risk analysis, which involves numerical measures such as financial impact or statistical data. Since the question is about qualitative risk analysis, "likelihood and impact matrix" is more appropriate than "probability and impact matrix." 
+ 
+ A probability and likelihood matrix doesn't exist in risk management methodology. It's not a tool used in either qualitative or quantitative risk analysis. As previously explained, probability is typically used in a quantitative risk analysis context, whereas likelihood is used in a qualitative context. Having both in a single matrix would be redundant and confusing, as they refer to the same concept but in different contexts. A threat and vulnerability matrix is more specifically related to information security risk assessments, not to general risk analysis. It's used to identify potential threats to an information system and the system's vulnerabilities that those threats could exploit. While threat and vulnerability are elements of risk, they do not capture the full scope of a risk, which includes impact and likelihood/probability of occurrence. Therefore, it's not the right answer in the context of a qualitative risk analysis approach.

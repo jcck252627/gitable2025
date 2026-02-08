@@ -1,0 +1,1534 @@
+
+• Domain 1: Security and Risk Management	
+• Domain 2: Asset Security
+• Domain 3: Security Architecture and Engineering	***************************************************
+• Domain 4: Communication and Network Security
+• Domain 5: Identity and Access Management (IAM)
+• Domain 6: Security Assessment and Testing
+• Domain 7: Security Operations
+• Domain 8: Software Development Security
+
+
+
+
+Domain 3 Security Architecture and Engineering
+**********************************************************
+: Elliptic curve cryptography (ECC): ECC is considered the most secure method of public key cryptography, because it provides the same level of security as RSA and DSA, but with much shorter key lengths. Shorter keys are quicker to process, and thus ECC is more efficient. The strength of ECC lies in the complexity of the elliptic curve logarithm problem, which makes ECC more difficult to crack than RSA or DSA. Therefore, it is commonly used in resource-constrained environments, such as mobile devices. The incorrect answers: RSA (Rivest–Shamir–Adleman): RSA is one of the earliest and most widely used public key cryptosystems. It's used for secure data transmission and digital signatures. The security of RSA relies on the difficulty of factoring large numbers into primes. However, RSA requires longer key lengths than ECC for the same level of security, which makes RSA less efficient. DSA (Digital Signature Algorithm): DSA is a public key algorithm that's used to create digital signatures. It's part of the U.S. Federal Information Processing Standards (FIPS), and its security is based on the discrete logarithm problem. Like RSA, DSA requires longer key lengths than ECC to provide the same level of security, making it less efficient. Symmetric key cryptography: This is not a method of public key cryptography, but a different type of cryptography. Symmetric cryptography uses a single key to both encrypt and decrypt information. While symmetric key cryptography is efficient and fast, it's not as secure as public key methods like ECC, RSA, or DSA because it requires the secure distribution of the key to both parties.
+
+
+**The Security Architecture and Engineering CISSP domain contains the concepts, principles, structures, and standards used to design, implement, monitor, and secure various architectures such as systems, applications, operating systems, equipment, networks, and those controls used to enforce various appropriate levels of security
+
+**focuses on the different processes, standards, frameworks, and structures to design and implement secure architectures and how, in order to achieve that, the security function needs to be involved at the start of the engineering life cycle and throughout each of the subsequent phases
+
+**security architecture. - Security policies, knowledge, and experience must be applied to protect this architecture to the level of value relating to the individual components and to the overall architecture
+
+**the word architecture implies many components that work together to allow that architecture to be used for the purposes for which it was intended
+
+**enterprise security architecture. -  the entire organization can be protected by breaking the enterprise into different components and protecting each component. What makes up any company or enterprise? Typical components include people, technology, processes, functions, information, hardware, and networks.
+
+** Security considered from the beginning leads to the best outcome, and it is the most cost-effective approach. It leads to what is known as security by design, which means that security should be embedded from the beginning and not just as an afterthought.
+
+** Regardless of the framework, model, or methodology used, the risk management process should be used to identify the most valuable assets and risks to those assets, and to determine appropriate and cost-effective security controls to implement this.
+
+** SOME Examples of Secure Design Principles:
+ Threat modeling (discussed in section 1.10)
+   Least privilege (discussed in section 1.8.2)
+   Defense in depth (discussed in section 3.4.9)
+  Secure defaults - Any default settings a system has should be secured to the extent possible, so no compromise is facilitated   
+  Fail securely - If a system or its components fail, they should do so in a manner that doesn’t expose the system to a potential attack
+   Separation of duties (discussed in section 1.8.2)
+   Keep it simple and small (KISS)  - Remove as much complexity from a situation as possible and focus on what matters most,  Smaller attack surface,   Less errors and vulnerabilities, testing, easier troubleshooting
+   
+**Zero trust or trust but verify -  Zero trust essentially means trust nothing, and it is based upon the premise that organizations should not automatically trust anything internal or external to enter their perimeter
+   (more pg 250-254)
+	-	"trust but verify" really means being able to authenticate users and perform authorization based on their permissions to perform activities on the network so they can access the various resources. 
+	-	Micro-segmentation of networks, Granular enforcement of perimeter ingress/egress points, based upon identity, user location, and other data to determine whether to trust the user, device, or application seeking access to enterprise resources.
+	- 	inherent trust should not exist. Simply because a device is connected to a network does not mean the device should have access to anything on the network.
+	-	Access to network resources should only come as a result of confidence gained through proper authentication, authorization, and accounting (AAA) of users, devices, and services.
+	-	 user’s identity (user authentication), associated user devices (device verification), and the services they access (service authorization and associated accounting, which is achieved by logging).
+	- 	elements like: Strong user authentication / Authentication and Authorization of services /  Logging and monitoring
+	-	principles like: understanding the architecture, identities, health of (users, devices, and services), Authenticate everywhere, Focus your monitoring on devices and services, and which to design for ZTrust
+
+	-	due to the growth in reliance on third-party services, trust should be verified through additional assurance mechanisms like Audits, Ongoing monitoring, SOC reporting, Contracts/agreements, like SLAs and SLRs
+   
+   
+**Privacy by Design - Privacy by Design is premised on the belief that privacy should be incorporated into networked systems and technologies by default and designed into the architecture Shared responsibility    
+	-	Privacy as proactive and preventive, not reactive and remedial. Privacy by Design (PbD) should anticipate and prevent privacy shortcomings before they occur. PbD does not wait for risks to privacy to arise, nor does it 	attempt to resolve privacy breaches once they’ve taken place
+	-	 Privacy as the default setting. Like many firewalls that include implicit deny as the default treatment of all traffic, PbD seeks to ensure the automatic—default—protection of personal data in IT systems and business practices
+	-	Privacy embedded into design. PbD is considered from the inception of a system, application, or process and is included in the architecture, design, and development of the system, application, and process. 
+	-	**Full functionality within a given solution**. PbD seeks a “win-win” situation for all parties involved and attempts to accommodate all interests, goals, and objectives rather than demand trade-offs that reduce overall effectivenes
+	-	End-to-End Security. PbD, having been considered from the inception of a system, application, or process, should securely extend through the life cycle of the data involved.
+	-	Visibility and Transparency. PbD calls for visibility and transparency of all components and processes related to the technology or business practice being used.
+	-	 Respect for User Privacy. PbD ultimately requires the individual to be treated with the utmost respect and care.
+
+**Shared Responsibility 
+	-	defines which security responsibilities belong to the cloud provider and which belong to the customer.
+	-	consumers and providers must act on these responsibilities and define clear contracts and agreements, which can then be implemented through appropriate policies, procedures, and controls.
+	-	CISSP tests : Accountability, Risk ownership and Legal and governance implications
+	-	You can outsource operations — you CANNOT outsource responsibility,  Even if the cloud provider causes the issue, the organization remains accountable.
+	-	defined and understood, especially since accountability may never be delegated or otherwise transferred, regardless of the customer provider relationship.
+	-	High level:
+		-	Cloud Provider (Always Responsible For) -Physical security of data centers, Power, HVAC, Physical network infrastructure, Hypervisor (usually)
+		-	Customer (Always Responsible For) - Data classification, Access control, Identity management, Configuration, Compliance
+	-	By Service Model (Exam Favorite)
+		-	IaaS Customer responsible for: OS patching, Firewall rules, Applications Data, 
+		-	IaaS Provider responsible for: Physical servers, Hypervisor, Facilities
+		-	PaaS Customer responsible for: Applications, Data, User access
+		-	PaaS Provider responsible for: OS, Runtime, Platform services
+		-	SaaS Customer responsible for: Data, User access, Configuration settings, 
+		-	SaaS Provider responsible for: Application, OS, Infrastructure
+	-	SaaS is NOT zero customer security duties ✅ Identity, access, data remain customer's accountability
+
+**Break some links in the Cyber Kill Chain.
+	- 	framework describing the stages of a cyberattack, originally developed by Lockheed Martin, used to understand, detect, and disrupt attacks at multiple points.
+	-	CISSP need to Mapping controls to attack phases, to where to break the chain and to Choosing preventive vs detective vs corrective controls
+	-	7 stages of CKC
+		**	1. Reconnaissance - involves identifying a target, gather information that will be useful to the attacker
+				stage controls: Reduce attack surface, info disclosure
+		**	2. Weaponization - Malware/exploit prepared, building an exploit that aims to take advantage of any vulnerabilities identified in the previous step.
+				stage controls: Secure SDLC, patching
+		**	3. Delivery - Payload delivered (email, USB, web), involves the attacker launching their attack. Common delivery methods include sending malicious
+				stage controls: Email security, user training
+		**	4. Exploitation - 	Vulnerability exploited, the attacker executes their malicious code on the target’s systems.
+				stage controls : Hardening, patching
+		**	5. Installation - 	Malware installed, comes immediately after exploitation, and the attacker now has software installed on the target’s systems.
+				stage controls : Endpoint protection
+		**	6. Command & Control (C2) - Attacker establishes control, allows the attacker to remotely control their malware running within the target’s systems. The attacker can move laterally and install backdoors to advance
+				stage controls : Network monitoring
+		**	7. Actions on Objectives - Execute utimate goals such as Data exfiltration, lateral movement, or encrypting the target’s files in a ransomware attack.
+				stage controls : DLP, IR
+	- 	Stopping the attack at ANY stage of the CKC is a success
+	-	CISSP prefers : Earlier stages → cheaper, less damage, Defense in depth → multiple chances to stop attacker
+	-	CISSP must see CKC stage controls ..is NOT only prevention but expects detection + response
+	-	DO NOT memorizing steps without control mapping, Always ask: Which control stops this stage?
+
+
+
+**Secure access service edge - We discuss secure access service edge when we talk about edge computing in section 3.5.15.
+
+3.2 Understand the fundamental concepts of security models (e.g., Biba, Star Model, Bell–LaPadula)
+3.2.1 Security Models
+**A model is a representation of something real.
+**A security model is a representation of what security should look like in an architecture.
+**Some of these models include Bell– LaPadula, Biba, Clark–Wilson and Brewer–Nash (also referred to as the Chinese Wall model). 
+**These are simple models that provide the basis—the fundamental means—for building confidentiality or integrity into architectures that require these core principles. 
+**Like any model, security models represent what security needs to look like.
+
+
+3.2.2 Enterprise Security Architecture
+**An architecture is a group of components that work together.
+**Security architecture involves breaking down a system to its components and protecting each component based upon its value.
+**Frameworks existto serve as guidelines. THREE of the most popular enterprise security architectures 
+**Though each differs a bit in structure and terminology, they each basically do the same thing to protect any architecture are:
+	-	**Zachman**
+		**The Zachman Framework is a taxonomy (classification schema) that organizes enterprise architecture artifacts by perspective and interrogatives.
+		**Tells you how to organize and describe architecture
+		**Focuses on answering basic questions like how, where, who, when, and why 
+		**Directing those questions to the various company teams (e.g., designers, owners, architects, strategists, engineers, operators) and acquiring their feedback
+		**outdated ...as it merely focuses on science of sysmatic classification (taxonomy) and organization of enterprise security.
+		
+	-	**Sherwood Applied Business Security Architecture (SABSA)** 
+			**a business‑driven security architecture framework that starts with business requirements and risk, then derives security services and controls.
+			**Built specifically for security, ✅ Strong alignment with risk management,✅ Very popular in CISSP questions
+			**CISSP keywords in the question: Business drivers, Risk appetite, Security metrics, Business alignment
+			
+	-	**The Open Group Architecture Framework (TOGAF).** 
+		**focuses on efficient resource utilization and cost minimization while having a modular structure increasing its adoption, a content framework providing consistency, and a style that allows architectural flexibility.
+		** is a methodology and framework for developing, implementing, and governing enterprise architecture.
+		**✅ It includes process, ✅ governance, ✅Architecture  Lifecycle management
+	
+
+
+✅ Mnemonic
+Zachman = WHAT exists, Classification & taxonomyOrganizing architecture artifacts
+TOGAF   = HOW to build it, Security‑driven architectureAligning security to business
+SABSA   = WHY security exists, Enterprise architecture processBuilding and governing architecture
+
+Zachman = Structure
+TOGAF   = Process
+SABSA   = Security + Business
+	
+If the question says…
+“Classification, viewpoints, completeness” → Zachman
+“Business‑driven security, risk appetite” → SABSA
+“Architecture process, governance, lifecycle” → TOGAF
+   
+**Security models:**
+-	**ABOUT Who can read/write what ..What property is being protected ..Confidentiality or Integrity or Availability (less common in classic models)
+-	**Two most common types: **lattice-based** or **rule-based**
+	-	A good way to envision a **lattice-based model** is to think of a ladder, where a framework and steps exist that look a bit like layers, going up and down. In other words, a lattice-based model is a layer-based model. It requires layers of security to address the requirements. 2 main lattice-based models exists: **Bell–LaPadula** and **Biba**.
+	-	Lattice-based models do include rules, but those rules are confined to layers within the model; hence, the term lattice-based is more applicable.
+		**Bell–LaPadula - The Bell–LaPadula model is a formal state machine model designed to **preserve confidentiality** in multilevel security systems (e.g., military or government environments).
+			-	BLP ...**No Read Up and No Write Down**, protects **Confidentiality ONLY"
+			-	**When Bell–LaPadula is the right answer**: ✅ Confidentiality‑focused questions, ✅ Government / military environments, ✅ Data classification and clearance levels, ✅ Mandatory Access Control (MAC)
+			-	**Core rules: No Read Up (ss‑property) and No Write Down (*-property).
+			-	Goal: prevent disclosure of higher‑classified data to lower levels.
+		**Biba - formal access control model designed to preserve integrity, ensuring that data is not improperly modified in a system.
+			-	Biba ...**No Write Up and No Read Down**, protects **Integrity ONLY"
+			-	Biba is opposite of BLP
+			-	**When Biba is the right answer**: ✅ Focus on data integrity ✅ Preventing unauthorized modification ✅ Trusted vs untrusted data sources ✅ Financial, transactional, or safety‑critical systems
+			-	Core rules: No Read Down (simple integrity) and No Write Up (*-integrity).
+			-	Goal: prevent corruption of high‑integrity data by lower‑integrity subjects.			
+		**Lipner implementation is not a model; it is an implementation that combines the best features of Bell–LaPadula and Biba, protects both confidentiality and integrity
+		**Star-Rules (BLP): Normal Star  = write up allowed ... Strong Star = same level only
+		**Invocation property says (Biba): a subject cannot invoke a subject at a higher integrity level. = no write up
+-	**All other models are **rule-based**, meaning specific rules dictate how security operates. is a set of rules that mediate access between subject and objects. 
+		-	Information Flow - models track the flow of information and can help uncover vulnerabilities and insecurities like covert channels.
+		-	Covert channels are unintentional information communications/disclosure paths; two types exist: storage and timing. 
+				**timing -huge/sudden pizza order delivery hinting something big... when they exist, confidentiality may be compromised
+				**storage - sensitive info intentionally remain in memory of a laptop
+		-	Clark–Wilson - focuses on enforcing integrity in commercial transaction systems. Well‑formed transactions
+				**Prevent authorized subjects from making bad changes
+				**Maintain consistency of the system
+				**Prevent unauthorized subjects from making any changes (this is the only of the three that Biba addresses)
+				**Rules of integrity: Well-form transaction(Good, consis**tent, validated data.), Separation of Duties (One person shouldn’t be allowed to perform all tasks related to a critical function.) and Access Triple (subject cannot directly access object but must go through a program that enforces access rules)
+		-	Brewer–Nash (Chinese Wall) -   one primary goal: Preventingconflicts of interest.
+				**AKA the 'cinderella' or 'chinese wall' model, it's core rule is dynamic separation and protect from Conflict of interest
+				**stipulates and ensures that information flows between subjects and objects are only allowed if the information does not provide a conflict of interest
+				**ie. Development and Production departments in an organization, should not be able to influence each other or even allow access between each other.
+		-	Graham–Denning - integrity-focused rule-based model that specifies rules allowing a subject to access an object.
+		-	Harrison–Ruzzo–Ullman - like GD focusing integrity via a finite set of rules to assign access rights of a subject to an object. It adds the ability to add generic rights to groups of individuals.
+	
+	
+**3.2.5 Certification and Accreditation   ..... pg 276 in Destin**
+	-	**Certification** is the **comprehensive technical analysis** of a solution to confirm it meets the desired needs.
+	-	**Accreditation is **management’s official sign-off** of certification for a predetermined period of time, then the certifcation/accreditation processes repeated
+	-	An architectures..especially security architectures—are built, products are often purchased from vendors. Security today often relies on solutions and mechanisms provided by vendors. 
+	-	would need an independent and objective measurement system that vendors can use for evaluation and purchasing purposes, which is called **evaluation criteria systems**, 3 system well known:
+		-	Trusted Computer System Evaluation Criteria (TCSEC)**	—also known as the **Orange Book**
+				**was written as part of a series of books known as the “rainbow series,” published by the US DOD in the ’80s. different books each with a different color
+				**There’s one book called the Light Blue Book that deals with password guidelines, while the Red Book deals with network security, and the Orange Book focuses on measuring security products.
+				**Focus on Confidentiality only, Military / government systems, Mandatory Access Control (MAC) and BLP model, Old, rigid, confidentiality-focused.
+				**it only measures single-box type of architectures; it does not map well to networked environments.
+				**Functional levels Ratings: D → C → B → A (A1 highest)
+		-	The European-equivalent of TCSEC called **Information Technology Security Evaluation Criteria (ITSEC)**
+				**Focus on all 3 CIA triad (broader than TCSEC and includes network environment), Separates functionality from assurance
+				**Improvement over TCSEC but still fragmented internationally, Flexible security targets
+				**"E" for Levels of assurance Ratings: E0 → E6 (E6 highest) and also "F" Functional level rating which same as the Orange Book
+		-	An ISO standard, called the **Common Criteria (ISO/IEC 15408)** 
+				**Common Criteria is an international evaluation standard that assesses security functions and assurance levels using **Protection Profiles, Security Target and Evaluation Assurance Levels**
+				**International standard replacing TCSEC and ITSEC
+				**Focus on CIA triad and Customizable security requirements
+				**4 Evaluation processes : 
+					**Protection Profile** (PP) – “What are needed” -  lists the security capabilities that a type or category of security products should possess
+					**Target of Evaluation** (TOE) - a vendor desires their target product to be rated according to the Common Criteria,  under eval of functional and assurance security capabilities
+					**Security Target** (ST) – “How this product meets it” - from the vendor's perspective—each of the firewall's security capabilities that match up with capabilities outlined in the Protection Profile.
+					**Evaluation Assurance** Levels (EAL 1–7, 7 most rigorously tested, EAL7/6/5 too high-maintenance/cost/risks, typically EAL3 for OS and EAL4 for Firewall), same in lifespan until major product changes
+				**It’s called the Common Criteria because several countries joined together with a common goal: to create a common measurement system that could be trusted globally. 
+				**For example, if a German-made product is rated, the rating can be trusted by US-based companies, because the rigorous rating process is independent and objective and globally applicable. 
+				**To make this possible, globally dispersed, independent, Common Criteria–licensed organizations evaluate and rate products. 
+			
+	Evaluation criteria systems 
+		**Timeline Trick**
+			Orange → Europe → World
+			TCSEC → ITSEC → Common Criteria
+		**Scope Trick**
+			TCSEC = Top Secret focus
+			ITSEC = Improved triad
+			Common Criteria = Custom Criteria
+
+
+3.3  Select controls based upon systems security requirements
+3.3.1 Security Control Frameworks
+
+**Security control frameworks aid with the control selection process.
+**Security control frameworks provide guidance, based upon best practices.
+**Features from multiple frameworks can be used to meet the needs of an organization.
+**When considered, especially mitigating controls, control frameworks can be utilized to aid with the control selection process. Control frameworks provide comprehensive guidance, based upon best practices
+**Understand the major frameworks at a high level, especially ISO 27001/02, which is an internationally recognized framework
+		**ISO 27001
+		**ISO 27002
+	
+
+COBIT
+ITIL
+NIST SP 800-53
+PCI DSS
+COSO
+HIPAA
+FISMA
+FedRAMP
+SOX
+	
+**The Ring Model: 4 ring model that seperates Users (Untrusted) from the Kernel (Trusted). The full model is slow and rarely used; most OS’ only use rings 0 and 3. The applications are at layer 3. There is a new addition to the Ring Model: Hypervisor mode is called Ring -1 and is for VM Hosts. Ring -1 sits below the Client kernel in Ring 0.	
+
+
+3.4 Understand security capabilities of information systems (IS) (e.g., memory protection, Trusted Platform Module (TPM),encryption/decryption)
+3.4.1 RMC, Security Kernel, and TCB
+
+**Security within information systems always pertains to **subjects and objects**.
+**The **Reference Monitor Concept (RMC)** is a concept.
+**Implementation of the RMC is known as a **security kernel**.
+**A security kernel should consist of three properties, or characteristics: **completeness, isolation, and verifiability**.
+**The term **Trusted Computing Base (TCB)** refers to all the protection mechanisms within an architecture; the TCB is the totality of protection mechanisms within an architecture.
+
+**subjects and objects**
+	-	Subject: Active entities A subject is a person, process, program, or anything similar that actively tries to access an object.
+	-	Object: Passive entities An object is anything that is being passively accessed by a subject, like a file, server, process, or hardware component.
+**Reference Monitor Concept (RMC)**
+	-	The RMC is simply the concept of a subject accessing an object through some form of mediation that is based on a set of rules, with this access being logged and monitored. 
+	-	there—as a subject is accessing an object— based on a set of rules, and this activity is logged and monitored.
+	-	Need features like: Must mediate all access, Be protected from modification, Be verifiable as correct and Always be invoked
+
+**Security Kernel**
+	- 	The implementation of the reference monitor concept (concept only) is known as a **security kernel**, that is must be an implementation of a system that actually controlling access 
+	-	When implemented, **a viable security kernel should contain three properties or characteristics**
+			-	completeness - it is impossible to bypass the mediation/security kernel, subject must always go through the security kernel when accessing the object.
+			-	isolation - relates to the mediation rules and specifically ensures that the mediation rules are tamper-proof. Only authorized individuals should be able to change these rules.
+			- 	verifiability - relates to the aspect of assurance. It means being able to verify that the security kernel is functioning correctly by means of logging and monitoring, and other forms of testing.
+
+**Trusted Computing Base (TCB)**	
+	-	Refer to all the protection mechanisms within a system, within an architecture; the TCB is the totality of protection mechanisms within an architecture.
+	-	all the security controls that are implemented to protect an architecture 
+	-	Examples of components that would be within the TCB include all the system kernel, hardware, firmware, and software processes that make up the security system.
+	
+3.4.2 Processors (CPUs)
+**A central processing unit (CPU) is the brain of a computer; it processes all of the instructions and ultimately solves problems.
+**CPU processing involves an ongoing, four-step process: Fetch, Decode, Execute, and Store.
+	- Fetching instructions and data- 
+	- Decoding instructions-
+	- Executing instructions-
+	- Storing results-
+**A CPU operates in one of two states: the supervisor state or the problem state - operating modes for the processor that restrict the operations that can be performed by certain processes.
+	- Supervisor State (higher privillege)-  Typically, where the system kernel runs, allowing full access to all of the instructions and capabilities of a CPU
+	- Problem state (lower privilege) - Limited access to CPU instructions, this is the standard operation mode of the CPU, means does the "solve problems" job
+
+3.4.3 Process Isolation
+**Prevents interactions that could result in negative consequences
+**Two primary methods: memory segmentation and time-division multiplexing
+**From a security perspective, process isolation is a critical element of computing, as it prevents objects from interacting with each other
+**the actions of one object should not affect the state of other objects and their resources.... acomplished by **Memory segmentation and Time-division multiplexing**
+	-	Time-division multiplexing - more to the CPU. With time-division multiplexing, process isolation is determined by the CPU allocates very small slots of time to each process.
+	-	Memory segmentation - all about separating memory (RAM)segments from each other to protect the contents, including processes thatmay be running in those segments. - each segment accessible by one application only 
+
+3.4.4 Types of Storage
+**Two types of storage: primary and secondary storage
+**Primary storage is small, fast and Volatile—data is lost when device gets powered off (RAM, CPU register, cache)
+**Secondary storage is slow and non-volatile (Disks, optical, virtual memory or tapes storage)
+Faster -----------------------------------> Slower
+Register -> Cache ----> RAM -----> Disks 
+Small cap  -------------------------------> Large cap
+
+3.4.5 System Kernel
+**Core of the operating system that has complete control over everything in the system
+**The system kernel and the security kernel are NOT the same thing.
+**Relies on privilege levels for smooth and safe operation
+**As noted, the system kernel drives the operating system. The security kernel is the implementation of the reference monitor concept.
+**security perspective, it’s critical to protect the system kernel and ensure that it is operating correctly, and privilege levels aid in this regard.
+
+3.4.6 Privilege Levels
+**Privilege levels establish operational trust boundaries for software running on a computer.
+**User mode results in lower trust and only allows access to a small subset of system capabilities.
+**Privileged mode, also known as kernel mode, results in higher trust and allows access to more system capabilities.
+**The ring protection model describes a form of CPU layering that is designed to protect critical elements of a computing system, Right level 0-3
+	-	Ring 0 *system kernel* is the most trusted and thus the most secured ring which runs critical system related processes such as firmware
+	-	The idea behind the model is that each ring communicates with the adjacent ring via system calls, protect from malware
+	-	The outer rings can only communicate with the inner rings via the most trusted system calls.
+	-	Ring 1 *drivers**
+	-	Ring 2 *library*
+	-	Ring 3 *user programs*
+** Firmware is software that provides low-level control of hardware systems; it’s the code that boots up hardware and brings it online. may be modified or exploitable
+
+3.4.7 Middleware
+**Middleware acts as an intermediary between two applications.
+**Middleware is a layer of software that can speak the languages of two disparate applications and thereby facilitate communication between them.
+**Example would be bank mainframe and web app tied in together ...A translator—middleware—must be present. Middleware is an intermediary that allows disparate applications to communicate with each other.
+
+3.4.8 Abstraction and Virtualization
+**Abstraction refers to the underlying complexity and details of a system being hidden. ... like driver dont think about complexity of car mechanism when driving 
+**Examples of abstraction include driving a car and computing. 
+**Virtualization extends the computing example further.
+**Virtualization - Carrying the concept of abstraction further, virtualization is the process of creating a virtual version of something to abstract away from the true underlying hardware or software.
+** A hypervisor serves as a layer of abstraction between underlying physical hardware and virtual machines (VMs).
+
+3.4.9 Layering/Defense-in-Depth
+** Protection of an asset is best accomplished through the implementation of multiple control layers.
+** is the protection of a valuable asset should never rely on just one control. If that control fails, the asset would be unprotected.
+** This is the concept of layered security, where multiple layers of controls exist. If there’s a failure at one layer, controls at other layers can effectively protect whatever valuable asset, like sensitive research and development data.
+
+3.4.10 Trusted Platform Modules (TPM) - incorporates the international standard denoted by ISO/IEC 11889
+** A trusted platform module (TPM) is a piece of hardware that implements an ISO standard, resulting in the ability to establish trust involving security and privacy.
+** A TPM is an independent component of a computing system and functions similarly to a black box.
+** Binding and sealing are important elements that help a TPM maintain integrity.
+
+** A TPM is a chip that performs cryptographic operations like key generation and storage in addition to platform integrity. hardware—usually installed on the motherboard—that
+** For example, when a machine boots the TPM can be used to identify if there has been any tampering of critical system components, in which case the system wouldn’t boot.
+** TPM is a black box, meaning that commands can be sent to the TPM, but information stored within the TPM cannot be extracted. 
+** TPMs do not rely on an operating system or components external to the device for processing instructions;
+
+** every TPM chip is unique because a unique and secret endorsement key is burned into the chip during production. An endorsement key is a special purpose RSA key that remains hidden and can only be used
+for encryption, which allows for TPM authentication.
+
+**Binding** – A cryptographic operation in which data is encrypted in such a way that it is tied (bound) to a specific TPM’s hardware and software configuration. For example, encryption keys that are
+stored on a TPM can be bound to it, ensuring that keys are only accessible by that specific TPM and that the system’s integrity has not been compromised.
+
+**Sealing** – A cryptographic operation that involves encrypting data. However, unlike binding, sealing is not tied to the TPM’s state or configuration. Instead, sealing is used to only allow the data to be
+decrypted in certain conditions, such as in the presence of certain software or after user authentication.
+
+3.5 Assess and mitigate the vulnerabilities of security
+architectures, designs, and solution elements
+3.5.1 Vulnerabilities in Systems
+
+** A single point of failure is something that exists in a system or security architecture, when a failure is realized, will result in negative operational impact of the whole system....
+** Redundancy can help alleviate the risk associated with a single point of failure, and it should be implemented where it is cost-justifiable.
+** Bypass controls are a potential vulnerability or new source of risk, but they are intentional..... example such as reset home wireless router to factory default
+** The risks associated with bypass controls can be mitigated using other compensating controls like ... segregation of duties, logging and monitoring, and physical security.
+** Time-of-Check Time-of-Use (TOCTOU), also known as a race condition, represents a short window between two events, typically when something is used and when authorization for that use is checked.
+** Example of race condition ... A user or process attempts to “race in” and make changes to a system before another check to confirm that access is still appropriate.
+** Frequent access or authorization checks can reduce the risk of race conditions.
+** Emanations are unseen elements leaking out of systems that might reveal confidential and valuable information if captured and analyzed with the proper equipment. wifi, magnetic waves, shoulder surfing
+
+** Shielding (tempest), white noise, and control zones can prevent emanations from being captured.
+	-Shielding (TEMPEST) - Walls, Faraday cages, copper-lined envelopes, and othermethods of preventing sensitive information from leaking out or being intercepted. TEMPEST is a specification that covers techniques for shielding equipment to prevent emanations from being detected
+	-White Noise -  Strong signal of random noise emanated where sensitive information is being processed
+	-Control zone- Preventing access or proximity to locations where sensitive
+
+3.5.2 Hardening
+**Hardening is the process of looking at individual components of a system and then securing each component to reduce the overall vulnerability of the system.
+**What drives hardening decisions?
+**The most important question to ask is, “What is this system meant to do?” That will guide the hardening effort. If a system is supposed to act as a web server, then it shouldn’t have fifty different ports open and services installed, as that heavily increases an attacker’s chances of breaching it.
+**  If a vendor checklist does not exist, Center for Internet Security (CIS) and similar organizations publish hardening guidelines, which are great starting points and can then be customized as needed.
+** Each time a system is deployed, a hardening procedure should be followed, and after each hardening process the resulting configuration should be verified to confirm the system is working as expected.
+
+3.5.3 Risk in Mobile Systems
+**Mobile device management (MDM) and mobile application management (MAM) solutions help organizations secure devices and the applications that run on them.
+**Mobile device management solutions should particularly focus on securing remote access using a VPN and end-point security as well as securing applications on the device through application whitelisting.
+**small-form factor computing devices that are unbelievably powerful for their size and are typically carried in pockets and purses. The fact that they’re small and powerful can allow them to store and access so much data and their mobility presents significant risk to most organizations.
+
+**Control and management - What is the primary difference between MDM and MAM?
+	-	MDM software allows a security administrator to perform tasks like enforcing different security controls or even wiping a device remotely
+	-	Mobile application management (MAM) software can secure applications that interact with corporate data. Note that oftentimes the two are included within a single application.
+	-	MDM and MAM can be combined with policy enforcement, application of device encryption, and related policies to adequately protect mobile devices if they are lost or stolen.
+
+What are ways to reduce risk associated with mobile devices and workers?
+
+Policies: One of the best ways to reduce risk related to mobile devices is using policies, like: Acceptable Use, Personal Computers, BYOD/CYOD (Bring Your Own Device/Choose Your Own Device), and Education, Awareness, and Training.
+
+Process related to lost or stolen devices: Typically, this involves notification of IT and security personnel as well as a means by which the device can be remotely wiped. Note that remotely wiping is dependent upon the device being connected to the internet and a savvy attacker can easily prevent this from happening.
+
+Remote access security: VPN and 2FA capabilities should be enabled by default, to prevent a mobile device from being used to connect to a remote network in an insecure manner 
+
+Endpoint security: Antivirus/malware, DLP, and similar MDM-provisioned software should be installed on mobile devices just like standard computing equipment. Additionally, the concept of hardening should be employed to minimize the potential attack surface of the devices.
+
+Application whitelisting: Organizations should control which
+applications users may install on their mobile device through
+application whitelisting and not allow them to install anything not
+present on the approved application list.
+
+3.5.4 OWASP Mobile Top 10
+**The Open Web Application Security Project (OWASP) Foundation is an organization that is driven by community-led efforts dedicated to improving the security of software, including software and
+applications that run on mobile devices. 
+**The OWASP Top 10
+**The OWASP Mobile Security Testing Guide is a manual for mobile application security testing and reverse engineering for mobile security testers.
+
+the globally recognized OWASP Top 10 and OWASP Mobile Top 10 lists that are based on data from a variety of sources like security vendors and consultancies, bug bounties, and numerous organizations located around the world.
+
+The key element collected
+in every case is the Common Weakness Enumeration (CWE) and
+associated software or hardware that contain the CWE. In addition
+to collected data, OWASP surveys members of the community to
+identify potential new categories for inclusion in the Top 10.
+
+OWASP Mobile Top 10 adheres loosely to OWASP Top 10 methodology, with the focus and categories being on mobile applications.
+
+What are the top vulnerabilities on mobile devices?
+
+In addition to the valuable information provided in the OWASP Mobile Top 10 list, the OWASP Foundation has developed a security standard for mobile applications that helps with security testing and reverse engineering. It’s called the Mobile Application Security Testing Guide (MASTG). Another interesting OWASP project is the Mobile Application Security Verification Standard (MASVS), which helps guide secure development and testing for mobile
+applications.
+
+3.5.5 Distributed Systems
+**Distributed systems are systems that are spread out and can communicate with each other across a network. The internet is a great example of a distributed system.
+
+**Distributed file systems are systems where files are spread across multiple hosts and made available via sharing across a network.
+
+**Grid systems are interconnected systems that are usually working together to solve a specific and usually very complex problem.
+
+A great example of the world’s largest distributed system is **the internet**. A company network is an example of a distributed system. Although there is significant value
+in connecting the systems within an organization and then connecting the organization to the internet, there are also significant risks,
+
+What is an underlying risk related to distributed file systems (DFS)?
+**Distributed systems are a number of different systems that are networked together and can communicate with each other
+
+**Distributed file systems (DFS) take the concept of distributed systems a step further by allowing files to be hosted by multiple hosts and shared and accessed across a network. DFS software helps manage the files being hosted and presents them to users as if they’re stored in one central location.
+
+Grid Computing
+**Grid computing is like distributed systems as it still relates to systems that are connected together, but the thinking behind grid systems is that they’re usually connected via a very high-speed connection to serve a greater purpose than simply passing the occasional email or file back and forth.
+**A grid systems are multiple systems working together to solve very complex problems that require more computing power that one system can provide; so, a number of systems are interconnected into a grid and programmed to work in unison to solve difficult problems.
+**Example , users downloaded "SETI at Home" screen saver on their home computer and processed these little chunks of data. And in doing so they essentially created the world’s largest distributed grid computer.
+** data integrity and data validation can be comprised 
+
+3.5.6 Inference and Aggregation
+**Data warehouse
+	-	To perform data analytics from a number of different data sets in different systems, with the hope of identifying interesting bits of information. 
+	-	Each Data set are its own island , DW is bringing them to one location for easy analyze and search and trending  
+	-	Security risks to  availability. If the data warehouse goes down, access to valuable data insights could be lost.
+	-	Also to the fact that if someone gains unauthorized access to the data warehouses, they could have access to significant amounts of valuable information ... all at once
+	-	Need redundancy and fine-grained access control which are more complex in DW
+	
+**Big data
+	-	Similiar useage to DW but difference in variety, volume, and velocity.
+	-	**Variety** refer to that any kind of data from any source can be found within a big data repository, not just relational data can be stored only data in a clean table format, with rows and columns as in DW
+	-	**Volume** refers to the size of the data sets. With a data warehouse, storage is typically restricted to the storage capacity of a single system; with big data, storage spans multiple systems. ie. Hadoop
+	-	**Velocity** refers to the fact that data can be ingested and analyzed very rapidly in big data—even faster than is possible with data warehouses.
+	-	Big data tools: include Hadoop, MongoDB, and Tableau.
+	
+**Data Mining and Analytics
+	-	Through the analysis of seemingly disparate data, otherwise invisible relationships and little nuggets of valuable information can be gleaned.
+	-	Aggregation pulls data into one location. 
+	-	Inference tries to infer things; it tries to identify bits of information in the data.
+	-	inference, especially unauthorized inference, can create a significant risk to an organization.
+	-	Unauthorized inference can take information from the hands of key decision makers or secure systems and expose it to an entire organization, the competition, or even to the enemy.
+Aggregation -	Collecting, gathering, or combining data for the purpose of statistical analysis
+Inference - 	Deducing information from evidence and reasoning rather than from explicit statements
+
+Understand the difference between aggregation and inference and how inference can be mitigated
+
+Reduce Risk of Inference and Aggregation One method to reduce the risk of unauthorized inference is using “polyinstantiation,” which allows information to exist in different classification levels for the purpose of preventing unauthorized inference and aggregation
+
+3.5.7 Industrial Control Systems (ICS)
+
+**Industrial control system (ICS) is a general term used to describe control systems (HW and SW) related to industrial processes and critical infrastructure: factory, power/nuclear,manufacturing plants, 
+**Three primary types of ICSs: Supervisory Control and Data Acquisition(SCADA), Distributed Control System (DCS), Programmable Logic Controller (PLC)
+**Due to their inherent complexity and the things they help control/manage, ICS can be quite vulnerable to attack; the best way to reduce risk to ICS is to keep them offline—to “air gap” them from direct or indirect access to the internet.
+** Operational technology (OT) is a broader term than ICS. It refers to the hardware and software technology used to monitor and control physical processes, devices, and industrial systems. ICS is a subset of OT that focuses on the control and automation of industrial processes.
+
+Reduce Risk in Industrial Control Systems
+Understand the risk associated with ICS and how best to reduce this risk
+
+One of the best ways to protect ICS is keeping them offline, also
+known as “air gapping” or creating an “air gap.” What this simply
+means is that ICS devices can communicate with each other, but
+the ICS network is not connected to the internet or even the
+corporate network in any way. So, even if someone does try to
+connect to these ICS systems from the internet or corporate
+network, they’ll be unable to do so.
+
+Patching Industrial Control Systems
+	-	Understand the implications of patching ICS or alternative ways to mitigate risk if patching is not possible
+	-	Industrial control systems by their very nature are difficult to maintain, especially where security is concerned. Often patching of ICS has been avoided, as patching these critical systems may cause unintended consequences and downtime.
+	-	Strong configuration management processes, good patch management and backup/archive plans, and so on should be in place and used when and where possible.
+	-	When patching ICS systems is not possible (or not possible to the degree needed), additional mitigating steps can be taken to reduce the risk and impact of disruption of critical infrastructure:
+
+Understand each type of ICS at a high level
+	-	Implement nonstop logging and monitoring and anomaly detection systems to rapidly detect nefarious activities within ICS networks.
+	-	Conduct regular vulnerability assessments of ICS networks, with particular focus on connections to the internet or direct connections to internet-connected systems, rogue devices, and plaintext authentication.
+	-	Use VLANs and zoning techniques to mitigate or prevent an attacker from pivoting to other neighboring systems if the ICS is breached.
+	-	Additionally, privileged access management and privilege task automation tools can potentially be deployed to help manage risks associated with legacy systems often found within ICS.
+	
+Three major types of Industrial Control Systems (ICS)
+**SCADA (Supervisory Control and Data Acquisition)
+	-	System architecture that comprises computers, networking, and proprietary devices as well as graphical interfaces for management of the entire system
+	-	Used to manage	small and large-scale industrial, infrastructure, and facility processes
+**DCS (Distributed Control System)
+	-	Process control system that monitors, controls,and gathers data from components like controllers, sensors, and other devices typically found in large processing facilities.
+	-	DSC mostly can only be controlled locally ...Unlike SCADA which includes local and remote management capabilities
+**PLC (Programmable Logic Controller)
+Industrial computer, specifically used for the control of manufacturing processes Key features include high reliability, ease of programming and diagnosis of process problems. Often networked
+with other PLC devices and SCADA systems
+
+3.5.8 Internet of Things (IoT)
+	-	Internet of Things (IoT) refers to all the devices, like home appliances, that are connected to the internet.
+	-	IoT devices, by their nature, are risky. Reducing their risk involves making different purchase decisions, taking every precaution when installing and keeping the technology up to date.
+	-	Risks: built-in computer and networking, never updated, cheap, insecurely configured password, vunlerable to network open doors
+	-	Prone to malware and DDOS attacks if not secured 
+	-	Reduce Risk of Internet of Things (IoT) by planning, Make sure the technology remains up to date, connect them to a segregated part of the network, and ensure adequate protection is built around it and ensure you scan that network for vulnerabilities and mitigate those accordingly., and segement off the network from regular production networks to be safe ...
+
+3.5.9 Cloud Service and Deployment Models
+**Characteristics of cloud computing: on-demand self-service, broad network access, resource pooling, rapid elasticity and scalability, measured service, multitenancy 
+**Cloud service models: IaaS, PaaS, SaaS, CaaS, FaaS
+**Cloud deployment models: Public, Private, Community, Hybrid Protection and privacy of data in the cloud should be carefully considered.
+
+Cloud Computing Cloud computing allows individuals and organizations to access and use computing resources 
+**like servers,, storage, databases, networking, software, and more) over the internet, on a pay-as-yougo basis. 
+**This enables users to access data and applications from anywhere, without having to maintain physical hardware and software infrastructure themselves. 
+
+Cloud computing
+A cloud can be a private, public, or hybrid model. It can also allow greater or smaller control to fall on the client or the cloud service provider. It all depends on what the goals are. So many options and variations exist. Some of the most common characteristics of a cloud provider are:
+
+**On-demand self-service
+**Broad network access
+**Resource pooling
+**Rapid elasticity and scalability
+**Measured service
+**Multitenancy
+
+Cloud service models	-	There are three primary service models used in the cloud:
+**Software as a Service (SaaS) provides access to an application that is rented—usually via a monthly/annual, subscriber-based fee—and the application is typically web-based.
+**Infrastructure as a Service (IaaS) is an environment where customers can deploy virtualized infrastructure servers, appliances, storage, and networking components.
+**Platform as a Service (PaaS) is a platform that provides the services and functionality for customers to develop and deploy applications.
+**Containers as a Service (CaaS). It allows for multiple programming language stacks, like Ruby on Rails or node.js, to name a couple, to be deployed in one container. 
+**Function as a Service (FaaS). It describes serverless and the use of microservices to accomplish business goals inexpensively and quickly.
+
+Understand cloud service provider and cloud customer responsibilities, depending upon the cloud service model in use
+Regardless of the nature of shared responsibility, one thing is always constant when talking about the relationship between the cloud service provider and the cloud customer: the cloud customer is always accountable for their data and other assets existing in a cloud environment.
+
+Cloud Deployment Models - Several cloud deployment models exist
+
+The first model is public cloud, and the name implies who can
+access it—everybody, the public. A public cloud is in the cloud
+service provider’s data center and consumers are simply accessing
+it as a service (e.g., Gmail). It’s accessible by anyone.
+
+A private cloud is only accessible by a single customer, so it’s
+private to that customer. If it’s an on-premises private cloud, this
+means it’s in the customer’s own data center;
+
+A community cloud is a cloud that is used by a group of users that
+share common needs or interests, like a group of hospitals, for
+example. One of the largest community clouds is GovCloud.
+
+The last cloud deployment model is a hybrid cloud. A hybrid cloud
+is any combination of the three previously mentioned, and it is
+usually a combination of a public and private cloud.
+
+Protection and Privacy of Data in the Cloud - What should be a primary concern of an organization considering a move to the cloud?
+In addition to implementing strong access controls, strong encryption practices should be used when and where necessary to properly secure this data. This is especially true when an organization makes the initial decision to move from legacy, on-premises infrastructure to that of a cloud provider. In cases like this, best practices indicate that data should be encrypted and secured locally and then migrated to the cloud.
+
+Cloud computing roles
+Multiple computing roles relate to cloud computing: cloud consumer, cloud provider, cloud partner, and cloud broker.
+	-	Cloud Service - Customer/Consumer	-	Individual or organization who is accessing cloud services
+	-	Cloud Service Provider	-	The organization that is providing cloud services/resources to consumers
+	-	Cloud Service Partner	-	The organization which supports either the cloud provider or customer (e.g., cloud auditor or cloud service broker)
+	-	Broker	-	Carrier, Architect, Administrator, Developer, Operator, Services Manager, Reseller, Data Subject, Owner, Controller, Processor, Steward
+
+Accountability versus responsibility
+Accountability can never be delegated or outsourced. It can't be outsourced or passed down, and it always remains with the owner.
+
+Responsibility, 
+on the other hand, can be outsourced, and this often happens to a great extent when working with a cloud service provider.
+
+Compute in the cloud Hypervisors, virtual machines (VM), containers, serverless
+A hypervisor, also known as a virtual machine manager/monitor (VMM), is software that allows multiple operating systems to share the resources of a single physical machine. On the other hand, a virtual machine (VM) resembles a computer, but everything is emulated using software.
+
+One of the characteristics of cloud computing is resource pooling, which describes the relationship between the fundamental hardware that makes up the compute, storage, and network resources and the multiple customers that utilize those resources. Cloud customers can access compute resources through:
+
+Monolithic vs. Microservices vs Serverless Computing
+Monolithic
+**All functionality of a monolithic application is wrapped together as a single unit, whereas with microservices and serverless, functionality is more defined and self-contained in smaller or individual units.
+** typically comprise of a back-end database, an application and a user interface. Correspondingly, this implies a single large code base, and changes to an application may require updates to all three areas. 
+Microservices (Container)
+**a function that exists and operates as one unit, microservices exist and function as separate units that are loosely coupled via API calls.
+**The fact that an application is composed of multiple, loosely coupled components allows for better overall understanding of the application, and functional components can be reused across multiple applications.
+Serverless(FaaS)
+**The term serverless takes the basic premise of microservices—hyper focused, independent pieces of functionality coupledtogether through APIs—and extends it to the cloud
+
+3.5.11 Cloud Forensics
+**Focus is on the forensic process in cloud computing environments
+**Typically, more complex than on-premises forensic investigations
+**Virtual disks and VM images are often analyzed as part of cloud forensics
+
+The following table shows the type of forensic evidence that can be acquired based on the cloud model being used:
+
+SaaS
+Consumers must rely entirely on CSP
+PaaS
+For underlying infrastructure, consumers must rely entirely on CSP
+Consumer is responsible for any application layer code they deployed and application logging
+IaaS
+Consumers can perform forensic investigations on their VMs
+Investigation of network traffic, access to snapshots of memory, or the creation of hard disk images may require investigative support by the CSP
+
+NIST published a document in August 2020 entitled “NIST Cloud Computing Forensic Science Challenges” that summarized research in this area by members of the NIST Cloud Computing Forensic Science Working Group identified 9 main areas of challenge categories related to cloud forensics as outlined below:
+1.   Architecture
+2.   Data collection
+3.   Analysis
+4.   Anti-forensics
+5.   Incident first responders
+6.   Role management
+7.   Legal
+8.   Standards
+9.   Training
+
+3.5.12 Cloud Computing Roles
+**Multiple computing roles relate to cloud computing: cloud consumer, cloud provider, cloud partner, cloud broker
+**The cloud consumer is always accountable for their data stored in the cloud .. Responsibility can be delegated to other cloud computing roles.
+**Data controller = owner of data = cloud customer = accountable -  regardless of the terms of the SLA, accountability always remains with the asset owner.
+**Cloud Service Provider - Organization that is providing cloud services/resources to consumers
+**Data processor = processor of data = cloud provider or other agent of the customer = responsible
+Cloud Service Partner - Organization which supports either the cloud provider or customer (e.g., cloud auditor or cloud servicebroker)
+**Cloud service broker representatives provide service aggregation services to customers. Carrier, Architect, Administrator, Developer, Operator, Services Manager, Reseller, Data Subject, Owner, Controller, Processor, Steward
+
+3.5.13 Cloud Identities (pg383)
+**Third-party identity provider is a trusted organization that manages user identities and related attributes for purposes of authentication and authorization.
+**Identity federation involves protocols, standards, practices, and policies that support identity portability and trust relationships among unaffiliated resources and organizations.
+**SPML enables the automation of adding users to multiple cloud services.
+**On-premise IAM solutions include Microsoft Active Directory and LDAP based.
+**Cloud-based IAM solutions include those offered by Amazon, Google, and many other cloud vendors.
+**Identify as a Service (IDaaS) refers to cloud-based IAM services.
+**Identity moves to the cloud; access control follows federated trust, not local accounts.
+
+**Identity and Access Management (IAM) in any context can be challenging, and especially so in the cloud, with one of the most significant challenges being that of provisioning users to multiple disparate resources spread across multiple cloud services.
+
+**Identity as a Service (IDaaS) - One of their primary advantages is supports scalability, availability, and centralized control, but introduces third-party and trust risks.
+IDaaS is a cloud-based IAM model where identity lifecycle, authentication, authorization, and federation are handled by a third-party provider (e.g., Azure AD, Okta, Ping).
+Centralized identity management
+Supports SSO, MFA, and federation
+Integrates on-prem and cloud apps
+Reduces password sprawl and admin overhead
+
+**Federated identity (FIM) -  operates in a similar context to IDaaS.Purpose: Automates identity provisioning and deprovisioning
+Create, modify, delete user accounts
+**FIM extends the functionality of IDaaS to include multiple resources and organizations. Standards, protocols, and technologies that support FIM include Services Provisioning Markup Language (SPML), Security Assertion Markup Language (SAML), OAuth and OpenID
+
+
+SPML (Service Provisioning Markup Language)
+Purpose: Automates identity provisioning and deprovisioning
+Create, modify, delete user accounts
+Synchronizes identities across systems
+XML-based (older, but exam-relevant)
+📌 Exam clue: “Automated user account provisioning across cloud services”
+SPML = account lifecycle management
+
+
+**Security Assertion Markup Language (SAML)  is an XML-based, OASIS standard that utilizes security tokens that contain assertions about a user. SAML facilitates service requests made by users to service providers in the form of requests to identity providers, which—if the user is authenticated/authorized—result in SAML assertions allowing the user access to the service.
+Purpose: Authentication & SSO across trust boundaries
+Uses XML assertions
+Common in enterprise SSO
+Identity Provider (IdP) ↔ Service Provider (SP)
+📌 Exam clue to be SAML:“User authenticates once and accesses multiple SaaS apps”
+📌SAML handles authentication, not authorization logic
+SAML - Authentication
+
+**OAuth (Authorization) - OAuth (authorization) is a Federated Identity Management (FIM) open-standard protocol that typically works in conjunction with OpenID (authentication). OAuth provides users and applications with “secure delegated access” via access tokens versus credentials
+Authorization for APIs — OAuth (and OpenID Connect) OAuth 2.0
+Purpose: Authorization delegation
+Grants access tokens
+Used by APIs and microservices
+No password sharing
+📌 Exam clue: “Allow a mobile app to access cloud resources on behalf of a user”
+📌OAuth = what you can access, not who you are  ...  
+
+Protocol	Primary Function	Used For	CISSP Keyword
+SPML	Provisioning	Account lifecycle	User management
+SAML	Authentication	SSO, federation	Trust assertions
+OAuth	Authorization	API access	Token delegation
+OIDC	Authentication	Cloud/mobile login	Identity claims
+
+A company wants automatic account creation and removal when employees join or leave. - SPML
+Users authenticate once and access multiple SaaS apps without re-entering credentials. ✅ SAML
+
+A mobile app accesses a cloud API without storing user passwords.
+✅ OAuth
+
+OAuth is used to authenticate users.
+❌ Wrong
+✔ OAuth authorizes access; OIDC authenticates users
+
+🧠 Memory Trick (CISSP-Friendly)
+SPML → Staff Provisioning
+SAML → Single Sign-On
+OAuth → API Access
+OIDC → OAuth + Identity
+🏁 CISSP Bottom Line
+Cloud IAM = federation + tokens + lifecycle automation
+Identity is centralized, not local
+Protocols solve different IAM problems
+Always map the protocol to what the question is really asking
+
+
+3.5.14 Cloud Migration (pg 386)
+**Cloud migration involves benefits and risks that should be carefully considered 
+**One significant risk of cloud migration is vendor lock-in
+**Security in the cloud should be understood thoroughly, and organizations should work closely with the cloud service provider to implement security that follows best practices.
+
+Cost shifting ...
+Benefits of such a move include shifting costs from a capitalization expense (CapEx) model, where networking and computer equipment is owned by the organization, to an operations expense (OpEx) model where
+compute, storage, and networking costs are borne by the cloud service provider and paid for by the organization on an “as needed” basis.
+
+Focus shifting ...
+This shift, though not necessarily a huge cost-saver, can result
+in considerable efficiencies gained. Additionally, it’s in a cloud
+service provider’s best short- and long-term interest to provide
+reliable technology and support to its customers. This further shifts
+the load away from the organization so it can focus on core
+business activities.
+
+efficiencies and scalability ...
+Moving to the cloud makes applications, services, and
+data accessible from anywhere, using virtually any type of device,
+as long as an internet connection is available
+
+security 
+igration to the cloud also facilitates the centralization of data,
+which can further facilitate safe storage and backup of data.
+
+Among Cloud migration risk, what is one of the most important things to consider? ..................
+
+most important considerations of cloud migration
+relates to vendor lock-in—the notion that once migrated, an
+organization is “stuck” with the cloud service provider and will be
+unable to move elsewhere
+
+Security related to cloud migration must be carefully
+considered and addressed. 
+
+3.5.15 Edge Computing
+Edge computing is a distributed computing approach that can
+reduce latency, speed up response times, and increase bandwidth
+availability. Instead of processing all of the data in a central data
+center, much of the processing is done closer to the source of the
+data, often on the devices themselves, or on a local server
+
+ some important concepts related to edge computing.
+Ingress
+Ingress traffic is traffic entering a network. In edge computing,
+ingress traffic is often generated by users who are accessing
+services that are hosted at the edge
+
+Egress
+Egress traffic is traffic exiting a network. In the context of edge
+computing, this is generally data sent from services at the
+edge, either back to users, or to another network.
+
+Peering
+Peering is the interconnection between separate networks for
+exchanging traffic, This approach allows them to exchange
+traffic without going through the Internet. ISPs often have
+agreements between themselves to make it easier to send
+data to one another.
+
+Secure Access Service Edge
+Secure access service edge (SASE), pronounced sassy, is a suite of
+technologies that is often looked upon as the future of wide area
+networks (WANs).
+
+It combines network security and wide area
+networking into a cloud-based service. It aims to get data and
+services as close to the end users as possible
+
+3.5.16 XSS and CSRF
+**The topic of assessing and mitigating vulnerabilities in web-based systems is important, because the prevalence of web-based
+applications only continues to grow.
+**Cross-site scripting (XSS) attacks
+**An XSS attack involves a malicious script that is injected into a trusted website that a visitor’s browser then downloads and executes
+	-	Two primary forms of cross-site scripting (XSS): stored/persistent XSS and reflected XSS
+
+**A cross-site request forgery (CSRF) relies on persistence facilitated by cookies in browsers
+**With XSS, the target of attack is the user’s browser; with CSRF, the target of attack is the web server
+
+One-line memory anchor
+XSS = attacker injects script that runs in the user’s browser
+CSRF = attacker tricks a user’s browser into sending a valid request
+
+Cross-Site Scripting (XSS)
+What it is (CISSP definition): Injection attack where malicious script executes in the victim’s browser under a trusted site’s context.
+Key CISSP focus
+Client-side attack
+Steals cookies, tokens, sessions
+Exploits trust in the website, not the user
+
+Two Testable Types of XSS
+🎯A. Stored (Persistent) XSS
+Malicious script is stored on the web server (DB, forum post, comment)
+Executes every time a user loads the page
+Example: User posts <script>stealCookies()</script> in a comment field.
+ Exam memory trick:  Stored = Saved = Server-side persistence
+
+🎯B. Reflected (Non-Persistent) XSS
+Script is reflected immediately in the response
+Delivered via URL, form input, search field
+Requires user interaction (click link)
+Example: https://site.com/search?q=<script>attack()</script>
+Exam memory trick:
+Reflected = Returned immediately
+
+🛡 XSS Mitigations (CISSP-favorite answers)
+Input validation
+Output encoding
+Content Security Policy (CSP)
+HTTPOnly cookies
+
+Cross-Site Request Forgery (CSRF / XSRF)
+What it is: Attack where a logged-in user is tricked into executing an unwanted action without knowing it.
+🎯 Key CISSP focus
+Uses valid session/cookies
+No script injection required
+Exploits trust in the user
+Example: User clicks hidden link that submits a fund transfer form.
+🧠 Memory trick: CSRF = “You click it, browser sends it”
+
+🛡CSRF Mitigations
+Anti-CSRF tokens
+SameSite cookies
+Re-authentication for sensitive actions
+CAPTCHAs (secondary control)
+
+XSS vs CSRF — Exam Comparison Table
+Feature				XSS				CSRF
+Attack target		User’s browser	User’s session
+Script injection	✅ Yes			❌ No
+Uses victim’s auth	Sometimes		✅ Always
+Steals data			✅ Yes			❌ Usually performs actions
+Primary threat on	Website			User
+
+🚨 CISSP Exam Traps
+“The attacker injects JavaScript that runs in the user’s browser.” ... ✅ XSS
+“The user unknowingly performs an action while logged in.” ... ✅ CSRF
+“Anti-CSRF tokens protect against XSS.” .... ❌ Wrong — they protect against CSRF, not XSS.
+“HTTPOnly cookies prevent CSRF.” ....❌ Wrong — they mitigate XSS session theft, not CSRF.
+
+3.5.17 SQL Injection (pg 400)
+**Structured Query Language (SQL) is the language used for communicating with databases.
+**SQL Injection is a method of attack that utilizes SQL code and commands. can be used for modification, corruption, insertion, or deletion of data in a database.
+
+**dynamic website**, meaning that web pages can be created dynamically using data from the database, based upon user requests and interaction with the website.  a persistent
+connection to the database is required, but a web user should never be able to directly interact with the back-end database. However, SQL Injection makes that possible.
+**web server passed unvalidated information directly to the database server.
+**Using SQL Injection, instead of normal username .. a bit of malform SQL code is entered to trick SQL server to act abmornally 
+
+**Input validation is the best method to prevent SQL Injection attacks from being successful.
+Unvalidated data should never be passed directly from a web server to a database server.
+**input sanitized, or otherwise made to conform to expected formatting standards
+**Additionally, the use of things like prepared statement/parameterized queries and stored procedures can also help protect against SQL Injection attacks.
+	-	Prepared statement or parameterized query (PS/PQ) is to think of a template of SQL code, where variables are used and passed to the query later. The separation helps prevent the intent of a query from being changed
+	-	Stored procedures are like the PS/PQ but they are statements stored inside the database already compiled then ready to be invoked by the application
+
+common SQL commands
+CREATE ..SELECT FROM ..GRANT COMMIT
+ALTER INSERT INTO... REVOKE ROLLBACK
+DROP UPDATE SAVEPOINT TRUNCATE DELETE RENAME MERGE LOCK TABLE
+
+3.5.18 Input Validation
+**No input validation can lead to numerous web application vulnerabilities being exploited.
+**Server-side input validation reduces web-based vulnerabilities and the risk of XSS and SQL Injection attacks from succeeding.
+**Whitelist input validation only allows acceptable input.
+
+What is the best way to mitigate web-based vulnerabilities and what types of attacks can be mitigated or prevented
+**Server-side input validation—checking the contents of input fields —is one of the best ways to prevent XSS and SQL Injection attacks from succeeding.
+**Allow list (Whitelist)** input validation only allows acceptable input that consists of very well-defined characteristics, e.g., numbers, character, or both, size, or length, to name a few formats and standards.
+**Deny list (blacklist)** input validation where malicious characters can be discarded as they are considered signs of an attack, i.e., if the = or - characters are met in a “First Name” field, they can be safely discarded as a person’s first name wouldn’t need to include = or -.
+
+3.6 Select and determine cryptographic solutions (pg 409)
+3.6.1 Introduction to Cryptography
+
+**The most critical aspect of cryptography is key management 
+**Cryptographic systems can provide up to five services: confidentiality, integrity, authenticity, nonrepudiation, and access control 
+**Cryptography is used extensively and is often all around us in many different contexts
+**Cryptography is derived from two Greek words— crypto and graphia; crypto means “secret” or “covert” and graphia means “writing.” So, the foundation and meaning of cryptography is “secret writing”—creating a cipher.
+
+With any cryptographic system, one (or a combination of services) denoted in the following table can be achieved:
+-	Confidentiality:	Confidentiality helps prevent unauthorized disclosure of information and to make data available to only those authorized to view it.
+-	Integrity:	Integrity ensures that information has not been manipulated or changed by unauthorized individuals without our knowledge; it helps identify unauthorized or unexpected changes to data.
+-	Authenticity:	Authenticity allows verification that a message came from a particular sender.
+-	Nonrepudiation:	Nonrepudiation prevents someone from denying prior actions. There are two flavors of nonrepudiation:
+		Nonrepudiation of origin: the sender cannot deny that they sent a specific message.
+		Nonrepudiation of delivery: the receiver cannot deny that they received a specific message
+-	Access control:	Cryptography enables a form of access control; by controlling the distribution of ciphertext and the corresponding decryption key to only certain people, control over the decryption and, therefore, access to data can also be controlled
+
+high-level overview of the evolution of cryptography
+Manual	-	Caesar Cipher
+Mechanical	-	The Spartan Scytale,
+Electro-mechanical	-	Enigma machine, Japanese Red and Purple cipher
+Electronic	-	Most current way... software-based like PGP, and common algorithms include DES, AES, and RSA.
+Quantum	-	future/exprimental 
+
+3.6.2 Cryptographic Terminology
+**Cryptography involves its own nomenclature. practice of securing communications to prevent attackers from reading or manipulating information.
+**Important terms to be familiar with include: initialization vector (IV)/nonce, confusion, diffusion, avalanche, key space
+	
+	-	initialization vector (IV)/nonce 
+	-	Plaintext -	Plaintext, also known as cleartext, is simply data that is readable by anyone.
+		Plaintext (in this case, "CISSP is awesome") is provided as input into a cryptosystem, and a cryptographic algorithm transforms it into ciphertext. 
+	-	Encrypt/ Encryption -	Encryption is the process of converting plaintext into ciphertext using a cryptographic algorithm and a key/crypto variable.
+	-	Key/Crypto Variable -	A crypto variable is also referred to as a key. When a given piece of plaintext is encrypted with a key, the key determines how the algorithm processes the plaintext to produce ciphertext. Once plaintext has been encrypted with a key, the only way to decrypt the ciphertext is with the appropriate key.
+					-	The only way this ciphertext can be transformed back into plaintext by a recipient is through the use of a compatible cryptosystem and the same cryptographic algorithm.
+	-	Key space -	The term key space refers to the unique number of keys that is available based on the length of the key. For example, a 2-bit key has a total of four possible or unique keys: 00/01/10/11
+	-	Work factor -	an estimated amount of time or effort required by an attacker to break a cryptosystem. The higher the work factor, the more secure the cryptosystem.
+	-	Key Clustering -	describes what happens when two different keys generate the same ciphertext from the same plaintext. This is something that should be avoided in good  cryptographic algorithms design
+	-	Confusion -	focuses on hiding the relationship between the key and the resulting ciphertext.
+	-	Diffusion -	focuses on hiding the relationship between the plaintext and the resulting ciphertext.
+	-	Initialization Vector (IV)/ Nonce -	is a random number that is used in conjunction with the key and fed into a cryptographic algorithm when encrypting plaintext, need to prevent patterns in the resulting ciphertext.
+	-	Avalanche -	looks at the degree of confusion and diffusion that an algorithm provides. resulting small changes from key or plantext should result in BIG/Avalanche changes of ciphertext
+
+3.6.3 Substitution and Transposition (pg 419)
+
+**Encryption involves methods known as substitution and transposition.
+**Encryption is accomplished through the manipulation of bits —1s and 0s—via synchronous or asynchronous means.
+**Patterns must be avoided. 
+**When implemented and used correctly, one-time pads are the only unbreakable cipher systems. 
+**Bits are encrypted/decrypted as stream ciphers or block ciphers.
+	
+Substitution Transposition	-Characters are replaced with a different character
+GUBBINS > JXEELQV
+-	is a method of encryption where every plaintext character is replaced/substituted with a different character to create ciphertext.
+
+
+
+Transposition	-The order of characters is
+rearranged
+GUBBINS > BINBUGS
+-	is a method of encryption where every plaintext character is shifted around/rearranged based on a given key.
+-	Rail Fence (Zigzag)-	the text is transposed by writing it in a table where each row represents a rail, following a zigzag pattern.
+
+Cryptography --> Art of converting plain text to cipher text 
+Cryptanalysis --> Art of breaking the cipher
+Cryptology --> Science of Cryptography and Cryptanalysis
+Cryptosystem --> Implementation of code/cipher in Hardware or Software
+
+Synchronous versus Asynchronous
+**The bits of 0s and 1s are manipulated via synchronous or asynchronous methods.
+**Synchronous involves working with bits synchronized through some type of timing mechanism, for example, a clock, while encryption/decryption takes place immediately.
+	 - 	A timing element is involved
+	 -	Encryption/decryption requests are performed immediately
+
+**Asynchronous involves working with collections of bits, and the input is typically dictated by the user or some other element that requires input.
+	-	Dictated by some other element or entity that requires input
+	-	Encryption/decryptionrequests are processed in batches (queued)
+
+**Frequency analysis	-	The activity of trying to determine keys based upon letter usage patterns is known 
+simple substitution and transposition do not hide patterns in monoalphabetic ciphers. Frequency analysis can easily detect patterns in them, which can then lead to the determination of the key.
+
+Substitution—polyalphabetic ciphers
+By using polyalphabetic ciphers, frequency analysis becomes much more difficult because patterns are reduced significantly.
+The prefix poly means many, so with polyalphabetic ciphers, multiple alphabets are created and used.
+
+Substitution—running key ciphers
+Running key ciphers has been used since World War II. To utilize the running key cipher, the same "book" must exist at both ends of the communication channel.
+
+Substitution—one-time pads
+With a one-time pad, after every message is encrypted, the key is changed and never reused. One-time pads are the only unbreakable cipher systems.
+
+Stream versus block ciphers
+All symmetric and asymmetric algorithms in cryptography
+work with bits, not letters. Once a message has been turned
+into bits, two options exist with regards to how those bits
+are encrypted and decrypted.
+
+The two types of ciphers that exist are known as stream ciphers and block ciphers. Variables like speed and where it makes sense to use the block as opposed to stream help determine which cipher algorithm to use.
+	-	Stream	-	Encrypt/decrypt data one bit at a time ... faster suitable for networking and hardware level
+		-	Plaintext bits that need to be encrypted are combined with bits generated by a keystream generator.
+		-	The bits are combined using a logical operation called "exclusive or," or XOR. The result from each XOR operation becomes the ciphertext.
+		-	The most commonly used stream cipher is Rivest Cipher 4 (RC4).
+	-	Block	-	Encrypt/decrypt blocks of bits at a time (typically 64-bit blocks) .... slower but have a high diffusion rate and are very resistant to tampering.
+			These are five block cipher modes you need to know for the exam:  (pg 438 / 439)
+				Electronic Codebook (ECB)
+				Cipher Block Chaining (CBC)
+				Cipher Feedback (CFB)
+				Output Feedback (OFB)
+				Counter (CTR)
+
+3.6.4 Steganography and Null Ciphers
+Steganography is hiding information of a particular type
+within something else (like a sound file hidden in a picture).
+A null cipher involves hiding a plaintext message within
+other plaintext.
+
+Steganography Null Cipher
+Plaintext is hidden within
+something else (e.g., a picture)
+
+Null Cipher	-	Plaintext is mixed with a large amount of nonciphertext
+
+3.6.5 Symmetric Cryptography (pg 442)
+Symmetric key cryptography is fast.
+Key distribution and scalability are major disadvantages.
+Out-of-band communication can facilitate key distribution.
+Know symmetric algorithms from weakest (DES) to strongest
+(AES).
+
+Understand advantages and disadvantages of symmetric cryptography
+key distribution is a glaring and inherent
+weakness, especially if the parties involved in
+communication are separated by any amount of distance.
+Out-of-band communication can be used to overcome
+this weakness,
+
+A simple formula can be used to determine
+the number of keys required for a given number of people
+to securely communicate with each other:
+
+n * (n–1) / 2 = number of keys
+n = number of people
+
+Advantages :Fast/efficient / Strong
+Disadvantages : 
+Key distribution
+Scalability
+No authenticity, integrity, or nonrepudiation
+
+3.6.6 Asymmetric Cryptography (pg 452)
+Asymmetric cryptography 
+**Asymmetric cryptography solves the key exchange problem associated with symmetric cryptography. It enables digital signatures, digital certificates, authenticity, and nonrepudiation (of origin and delivery) and utilizes key pairs consisting of a public key and a private key.
+**Enables digital signatures, digital certificates, authenticity, and nonrepudiation (of origin and delivery)
+**Utilizes key pairs consisting of a public key and a private key
+**Two primary types of hard math problems: factoring and discrete logarithms
+**Popular asymmetric algorithms include RSA (uses factoring) and Elliptic Curve (ECC, uses discrete logarithms)
+Advantages 
+	-	Solves key exchange problem
+	-	Enables digital signatures and other services, like authenticity (proof of origin), confidentiality, and access control
+	-	Solves scalability
+Disadvantages
+	-	Significantly slower
+	-	Requires large key sizes
+**To obtain authenticity or proof of origin—identify with certainty who a message came from
+	—	A sender should encrypt the message using the sender's private key.
+	-	Anybody with the sender's public key can decrypt the message and therefore know without a doubt who sent the message
+	-	As the sender is the only person having access to their private key.
+
+Hard math problems
+Factoring and discrete log asymmetric algorithms depend on using very large prime numbers. When using such large numbers, it is very difficult to work backward to determine the original integers.
+ -	Factoring and discrete log asymmetric algorithms depend on using very large prime numbers. When using such large numbers, it is very difficult to work backward to determine the original integers.
+
+Asymmetric algorithms
+The following table summarizes asymmetric algorithms:
+	-	Rivest, Shamir, and Adleman (RSA)	-	Uses factoring mathematics for key genertion.
+	-	Elliptic Curve(ECC)					-	Uses discrete algorithms mathematics for key generation. ECC uses shorter keys than RSA to achieve the same level of security, which means ECC is faster and more efficient.
+	-	Diffie–Hellman Key Exchange			-	Uses discrete algorithms mathematics for key generation is primarily used for the exchange of symmetric keys between parties
+
+3.6.7 Hybrid Key Exchange (pg464)
+**Diffie–Hellman (DFH) Key Exchange (uses discrete logarithms) is an asymmetric algorithm used primarily for symmetric key exchange.
+**Hybrid cryptography blends the advantage of symmetric cryptography—extremely fast—with the advantage of asymmetric cryptography—solves the key distribution problem.
+
+**symmetric key cryptography is the best, when **speed and bulk processing are required**. 
+It is the only type of cryptography that can host the speeds required for being able to encrypt and decrypt fast enough, such as VPN traversing data over the network via session keys, one per session
+DFH process
+1. user a and b each picked a prime number
+2. each user multiply their prime number by 2 and send then exchange that with the other user
+3. each user multiply that given number by their own originial prime and that product would be equal for both user
+
+Hybrid cryptography
+Hybrid cryptography solutions employ the advantages of symmetric and asymmetric cryptography.
+**Symmetric algorithms are used for bulk processing and speed—for anything that requires frequent encryption and decryption and where both need to be done very quickly, 
+**while asymmetric algorithms are used to exchange symmetric keys.
+example of Hybrid cryptography:
+	1.	Alice wants to send Bob a very large message and she can only use symmetric cryptography
+	2.	Alice knows that for Bob to be able to decrypt using the exact same symmetric key
+	3.	To share the symmetric key securely with Bob, Alice knows that she can encrypt it with Bob’s public key send this to Bob.
+	4.	Bob can then use his private key to decrypt that message with the symmetric key sent by Alice
+	5.	Once decrypted, Bob will then have the same session key, which will allow him to quickly decrypt and read Alice’s very large message
+ 
+3.6.8 Message Integrity Controls (pg 470)
+**Message integrity checks (MIC) help to ensure the integrity of a message between the time it is created and the time it is read.
+**A MIC works by creating a representation of the message, which is sent with the message.
+**Message integrity checks are based upon math, some more complex—and therefore more effective—than others.
+**The use of simple math can result in a collision, meaning two different messages can result in the same representation.
+**Hashing is very effective as a MIC and works the same way, regardless of the length of input; the result is always a fixed length digest, based on the hashing algorithm used.
+**The birthday paradox best illustrates how collisions should be avoided to maintain integrity. ...more people entered the room, more with same birthdate . end hashed values are the same with two different input 
+**Cryptographic Hash Functions
+Purpose: Detect any change to data
+Examples: D5: 128-bit digest,SHA-1 (always 128): 160-bit digest (always 160), SHA-2: 224/256/384/512-bit digests, SHA-3: 224/256/384/512-bit digests
+		-	Fixed-length output	-	Any length input always equals the same length output.
+		-	One-way	-	it is not possible to determine the input of a hashing algorithm by inspecting theoutput.
+		-	Sensitive to bit changes (avalanche effect)	-	It should be very hard to find two inputs that hash to the same output.
+Exam hook:	Hash = integrity ONLY (no identity, no secrecy)
+✔ Correct answer: Cryptographic hash or HMAC
+“Verify software download integrity from a public website.”
+✅ Best answer: Cryptographic hash (SHA-256)
+
+**Message Authentication Code (MAC)
+Purpose: Integrity + authentication (shared secret)
+Examples: HMAC-SHA256
+	-	Sender and receiver share a secret key
+	-	Protects against tampering AND spoofing
+📌 Exam hook:	MAC requires shared secret → symmetric
+MAC uses shared keys → no non-repudiation
+
+**Digital Signatures
+Purpose: Integrity + authentication + non-repudiation
+Examples: RSA, ECDSA signatures
+	-	Signed with sender’s private key
+	-	Verified with public key
+📌 Exam hook: Integrity + non-repudiation → digital signature
+A digital signature uses include having the same legal significance as a written signature, code signing to verify the integrity and authenticity of software, and nonrepudiation (of origin and delivery).
+The process of creating a digital signature is quite easy and fundamentally involves two steps:
+	1.	The sender hashes the message, which produces a fixed-length message digest.
+	2.	The sender encrypts the hash value with the sender's private key.
+✔ Correct answer: Digital signature
+
+**Checksums / CRC
+Purpose: Error detection (not security)
+Examples: CRC32
+	-	Detects accidental corruption
+	-	Easily forged
+📌 Exam hook:	Checksums ≠ cryptographic integrity
+CRC detects errors, not attacks.
+“Detect accidental corruption in a low-risk internal system.”
+✅ Best answer: CRC
+
+**TLS / IPsec Integrity Protection
+Purpose: Transport-level message integrity
+Examples: TLS MAC, IPsec AH/ESP
+	-	Protects data in transit
+	-	Often combined with encryption
+📌 Exam hook:	TLS/IPsec protect integrity during transmission
+
+👉 Integrity answers “Was the message changed?”
+**What is the primary goal underlying the use of message integrity controls (MICs)?
+	-	Integrity-	✅ Yes	-Detects modification
+	-	Authenticity-	⚠️ Partial	-Only with HMAC
+Is the message altered?
+→ Integrity needed
+
+Need identity or non-repudiation? → Digital Signature
+Shared secret environment? → HMAC
+Public verification? → Hash
+Data in transit? → TLS / IPsec
+Accidental errors only? → CRC
+
+CIA Triad Mapping
+Integrity: Hash, MAC, Signature
+Authentication: MAC, Signature
+Non-repudiation: Signature only
+
+3.6.10 Digital Certificates (pg 484)
+**Digital certificates bind an individual to their public key.
+**All certificate authorities conform to the X.509 certificate standard.
+**The “root of trust” or “trust anchor” is the foundation of all digital certificates and is represented by a root certificate authority.
+**Digital certificate best practices suggest that public/private key pairs be periodically replaced, which means the associated digital certificate is also replaced.
+**When a private key has been compromised, a digital certificate should be revoked by the issuing certificate authority.
+**With certificate pinning, when a certificate from a web server is trusted, each subsequent visit to the site does not include a request for a new copy of the certificate.
+
+Digital certificate replacement and revocation are summarized here:
+	-	Replacement	-	Regular replacement of expired certificates	
+	-	Revocation	-	Replacement of certificate when associated private key has been compromised
+		Revocation confirmation methods, on the other hand, are: 
+			-	Certificate Revocation List (CRL)	-	Client downloads and searches the list of serial numbers of all revoked certificates from the CA
+			-	Online Certificate Status Protocol (OCSP)	-	Client queries CA for revocation status of specific certificate serial number
+
+With certificate pinning, when a certificate from a web server is trusted, each subsequent visit to the site does not include a request for a new copy of the certificate.
+Finally, a certificate's life cycle includes a number of distinct phases:
+Enrollment
+Issuance
+Validation
+Revocation
+Renewal
+
+A digital certificate is an electronic credential that binds an identity to a public key, issued and digitally signed by a trusted Certificate Authority (CA).
+
+👉 Certificates do NOT encrypt data themselves
+👉 They enable trust, authentication, and secure key exchang
+
+What Digital Certificates Provide (and Do NOT)
+✅ They PROVIDE
+Authentication (proof of identity)
+Integrity (certificate hasn’t been altered)
+Nonrepudiation (when used with digital signatures)
+Trust (via CA chain)
+
+❌ They DO NOT PROVIDE
+❌ Confidentiality (encryption happens later using keys)
+❌ Access control
+❌ Authorization
+
+Certificate Chain of Trust (VERY CISSP-Important)
+Root CA (self-signed, trusted)
+   ↓
+Intermediate CA
+   ↓
+End-entity certificate (server/user)
+
+Trust flows top → down
+Browsers trust Root CAs
+Intermediates reduce risk to Root
+📌 Exam trap: Trusting an intermediate without trusting the root = ❌
+
+🔄 Certificate Lifecycle (Know This Order)
+Key generation
+CSR (Certificate Signing Request) / Enrollment 
+CA validation
+Certificate issuance
+Deployment
+Renewal / Revocation
+
+📌 Exam trick: Revocation ≠ expiration
+
+🛑 Revocation Methods (Highly Testable)
+	-	***1️⃣ CRL (Certificate Revocation List) - Client downloads and searches list of serial numbers of all revoked certificates from the CA
+			Periodic list download
+			Can be stale
+			Offline capable
+	-	***2️⃣ OCSP (Online Certificate Status Protocol)	-	Client queries CA for revocation status of specific certificate serial number
+			Real-time status
+			Faster, more current
+			Availability dependent
+
+📌 Exam question clue:
+“Real-time status” → OCSP
+“Offline or cached” → CRL
+
+🧪 Common CISSP Exam Traps
+❌ Trap 1: Certificate = Encryption
+Wrong. Certificates only bind identity to public key.
+✔ Correct answer: Certificates support authentication, not encryption.
+
+
+Root of Trust
+Root of trust, or the trust anchor, is the foundation of digital certificates’ integrity. In the case of every digital certificate, ultimately a root CA’s key is used to sign the certificate, but oftentimes intermediary CAs (Subordinate CAs) act as proxies and sign and issue digital certificates on behalf of the root CA 
+
+From a security perspective, the reliability of the entire system is dependent on the security of the root CA’s private key. If this key were ever compromised, significant and farreaching global damage could take place, and the entire system could fall apart
+
+3.6.11 Public Key Infrastructure (PKI) (pg 497)
+**Public key infrastructure (PKI) is the basis for keys to be distributed and owners of public keys to be verified.
+**The standard used to create all digital certificates is X.509.
+**PKI consists of several components: certificate authority (CA), registration authority (RA), intermediate/issuing CA, certificate DB, certificate store.
+**The root of trust in any PKI is the CA, which ultimately issues certificates.
+
+Major components
+Certificate Authority (CA)	-	Root of trust
+Registration Authority (RA)	-	Identity proofs on behalf of CA
+Intermediate/ Issuing CA	-	Issues certificates on behalf of CA
+Validation Authority (VA)	-	Responds to revocation queries on behalf of CA - either use protocols, Revocation Methods (Highly Testable) or OCSP (Online Certificate Status Protocol)
+Certificate DB				-	List of certificates issued by CA and revocation list
+
+**Even without a PKI it is still possible to encrypt and send data, but you cannot verify the identities of the other participating parties, it’s impossible to entirely trust the digital identity of another entity or person.
+
+3.6.12 Key Management 
+**Proper key management is paramount to the security of any cryptographic system.
+**Kerckhoffs’ principle
+**Key management activities: generation/creation, distribution, storage, change/rotation, disposition/destruction, recovery
+**Kerckhoffs’ principle - If a key is secure, the underlying cryptographic system is secure. In other words, an attacker can know the ciphertext, the algorithm, the IV (initialization vector), and everything else about the system, and if the key remains secure, the system is secure.
+
+Proper key management is paramount to the security of any cryptographic system and contains numerous key management activities, which are summarized in the following table:
+	-	Key Creation/Generation	-	The key generation/creation process must have  attributes: fully automated process, keys are randomly chosen from all key space, asymmetric keys are much longer than symmetric keys	
+	-	Key Distribution	-	practice of securely distributing keys. Methods used could include: out-of-band distribution , key wrapping using key encrypting keys (KEK)
+	-	Key Storage	-	most critical , two types of systems for storage: Trusted Platform Module (TPM) / Hardware Security Module (HSM)
+	-	Key Change /Rotation	-	 refers to how often encryption keys should be replaced.
+	-	Key Destruction / Disposition	-	Key disposition refers to how keys are handled, especially data in cloud, 2 method : crypto shredding, key destruction
+	-	Key Recovery	-	Key recovery refers to techniques used to recover a key. Three primary techniques exist: split knowledge, dual control, and key escrow.
+
+S/MIME
+S/MIME is a standard for public key encryption and provides security services for digital messaging applications. It requires the establishment or utilization of public key infrastructure (PKI) in order to work properly.
+
+The basic security services offered by S/MIME are:
+
+Authentication
+Nonrepudiation of origin
+Message integrity
+Confidentiality
+MIME does not address security issues, but security features were developed and added to MIME to create S/MIME.
+
+S/MIME adds features to email messaging, including:
+Digital signatures for authentication of the sender
+Encryption for message privacy
+Hashing for message integrity and nonrepudiation of origin
+
+
+
+----------------------------------------------------------------------------------
+ https://blog.balancedsec.com/archive?sort=new
+https://andreakaiserclouds.com/my-cissp-journey-how-i-prepared-and-passed-the-exam/
+https://www.linkedin.com/pulse/how-i-passed-cissp-my-experience-using-lean-study-strategy-saifee-uzaue/
+https://www.youtube.com/watch?v=_nyZhYnCNLA
+
+
+ 
+ list of domains: 
+
+1. Security and Risk Management
+2. Asset Security
+3. Security Architecture and Engineering
+4. Communication and Network Security
+5. Identity and Access Management (IAM)
+6. Security Assessment and Testing
+7. Security Operations
+8. Software Development Security
+
+*************************************************************************************
+Clark–Wilson Model
+Goal: ✅ Integrity (Commercial Focus)
+Used in: Banking, accounting, business applications
+Key Ideas
+
+No direct user access to data
+Uses:
+
+Constrained Data Items (CDI)
+Transformation Procedures (TP)
+
+
+Focus on:
+
+Separation of duties
+Well‑formed transactions
+Auditing
+
+
+
+✅ Strong real‑world integrity
+✅ Practical and process‑driven
+🚫 Less about labels and classifications
+📌 Mnemonic:
+
+Clark‑Wilson = Clerks & Workflows
+----------------------------------------------------------------------------------
+Brewer–Nash (Chinese Wall)
+Goal: ✅ Prevent Conflict of Interest
+Used in: Legal firms, consulting, finance
+Rule
+
+Access depends on prior access history
+Once you access Company A’s data, you’re blocked from Company B’s competing data
+
+✅ Dynamic access control
+✅ Prevents insider conflict
+🚫 Not about CIA triad directly
+📌 Mnemonic:
+
+Chinese Wall = Conflict Wall
+----------------------------------------------------------------------------------
+attice-Based Access Control
+Goal: ✅ Formal information flow control
+Used in: MLS (Multi‑Level Security) systems
+Concept
+
+Every subject and object has a label
+Lattice defines allowed dominance relationships
+
+✅ Formal basis for Bell‑LaPadula
+✅ Highly structured
+📌 Mnemonic:
+
+Lattice = Levels + Labels
+----------------------------------------------------------------------------------
+Graham–Denning Model
+Goal: ✅ Secure creation & deletion of subjects/objects
+Focus
+
+Access rights management
+Who can:
+
+Grant access
+Delete users
+Transfer rights
+
+
+
+✅ Administrative control model
+🚫 Not about data flow directly
+📌 Mnemonic:
+
+Graham‑Denning = Admin actions
+----------------------------------------------------------------------------------
+Harrison–Ruzzo–Ullman (HRU)
+Goal: ✅ Access rights safety
+Key Question
+
+Can a system ever reach an unsafe state where rights leak?
+
+✅ Theoretical model
+✅ Proves access control problems can be undecidable
+📌 Mnemonic:
+
+HRU = “Are Rights Unsafe?”
+----------------------------------------------------------------------------------
+ Ultra‑Fast Memory Tricks (Exam Gold)
+🔔 Bell‑LaPadula
+✅ Bell rings when secrets leak
+👉 Protects Confidentiality
+🔧 Biba
+✅ Biba breaks bad data
+👉 Protects Integrity
+🏦 Clark‑Wilson
+✅ Accountants love workflows
+👉 Integrity + Separation of Duties
+🧱 Brewer‑Nash
+✅ Walls stop conflicts
+👉 Conflict of Interest
+🪜 Lattice
+✅ Security ladder
+👉 Levels & dominance
+
+🎯 CISSP Exam Strategy
+When you see a question:
+1️⃣ Ask: Confidentiality or Integrity?
+2️⃣ If confidentiality → Bell‑LaPadula
+3️⃣ If integrity (especially business) → Biba or Clark‑Wilson
+4️⃣ If conflict of interest → Brewer‑Nash
+
+HARD CISSP practice questions #1: All CISSP domains - 125Q   ... notes
+
+
+***************************************
+
+The Graham-Denning model is a framework for identifying and selecting appropriate security controls for an organization. It takes into account the organization's goals, threats, and vulnerabilities to determine the most effective controls. 
+
+**links or attachments to targets.
+
+ A unique key pair is generated for every user and the private key must remain secret correctly describes how asymmetric encryption is practically applied. In asymmetric encryption, each user has a pair of keys - a private key that must be kept secret and a public key that is made public. This key pair is unique for every user. The public key is used to encrypt the data, and only the corresponding private key can decrypt it. It's essential to understand that the private key should never be shared as it could lead to the decryption of the information by unauthorized individuals, compromising the confidentiality of the data. 
+ 
+ The incorrect answers: In an asymmetric encryption setup, each participant has a key pair, not just one user. The private key is kept private, while the public key is distributed to anyone who needs to send an encrypted message to the key owner. 
+ 
+ The fundamental idea behind asymmetric encryption is that the public key is shared openly, allowing anyone to encrypt messages with it. 
+ 
+ The corresponding private key, which is required to decrypt these messages, is kept secret by its owner. Everyone in the organization uses the same key pair for communication is a misrepresentation of asymmetric encryption. In reality, every participant in the communication has their unique key pair. If the entire organization used the same key pair, it would be similar to using symmetric encryption, which increases the risk of compromise and makes secure individual communication impossible.
+
+
+AES (Advanced Encryption Standard): This is an example of symmetric cryptography where the same key is used for both encryption and decryption of data.  
+RSA: This is an asymmetric cryptographic algorithm used for encryption and digital signatures. It uses a pair of keys: a public key and a private key. 
+SHA (Secure Hash Algorithm): It's a cryptographic hash function, not an encryption method. It produces a fixed-size output (hash) from a given input. 
+PGP: (Pretty Good Privacy): While PGP is known for encrypting emails, it uses a combination of both symmetric and asymmetric cryptographic techniques. However, by itself, PGP isn't a type of cryptography but a protocol that employs various cryptographic methods.
+
+ Spectre is a hardware vulnerability that affects microprocessors that perform branch prediction. On most personal computers, the operating system is responsible for managing hardware and software resources, including the processor. In response to the discovery of the Spectre vulnerability, operating system developers have released updates that contain mitigation techniques to prevent potential attacks. These techniques primarily involve changing the way the processor handles speculative execution, a feature that is exploited by Spectre attacks. By regularly updating your operating system, you ensure that you have the most recent protection mechanisms against known vulnerabilities, including Spectre.
+
+concerned about potential data leakage through covert channels.
+Standardizing system response times regardless of the input is the most effective method to mitigate the risks associated with covert timing channels. These channels rely on variations in response times to transfer information illicitly. By ensuring that the system response time remains constant, regardless of whether a username or password is correct or incorrect, you effectively shut down this covert channel. The incorrect answers: Implementing stringent access controls and authentication measures is an important security practice and can help to reduce the risk of unauthorized access, but this measure does not directly address the issue of covert timing channels, which can be exploited even when strong access controls are in place. Regularly monitoring and analyzing network traffic for anomalies is another crucial aspect of network security. This can help detect abnormal activities that might indicate a covert channel, but it may not necessarily prevent the use of timing channels, especially when the time differences exploited are subtle. Encrypting all data in transit within the network is a valuable security measure to protect the confidentiality of data, but this does not prevent the exploitation of timing channels, which are based on variations in system response times rather than the content of the data being transmitted.
+
+
+Physical security measures and access controls: While these are important to ensure the security of a processing site, they are the most basic level of security measures. They primarily focus on the physical environment, such as securing entry points and monitoring access to the site. They do not address digital threats or vulnerabilities that can arise within the IT infrastructure. The incorrect answers: Network security measures and firewalls: This level of security is more advanced than just physical security measures. Network security measures include firewalls, intrusion detection systems, and other tools to protect the organization's network from unauthorized access and potential cyber threats. Data encryption and backup procedures are essential for protecting sensitive information and ensuring business continuity in case of data loss or system failure. These measures add a layer of security that goes beyond physical and network security. Regular security assessments and audits are critical for identifying vulnerabilities and ensuring that security measures are effective in safeguarding an organization's assets. This level of security is more comprehensive than the other options, as it involves ongoing evaluation and improvement of security measures.
+
+ CPU utilization and network utilization: The most likely pair of metrics that will indicate a distributed denial-of-service (DDoS) attack is in progress is CPU utilization and network utilization. DDoS attacks typically involve overwhelming a target's network with a flood of internet traffic, which can lead to high network utilization. This in turn can cause increased CPU utilization as the system tries to process the incoming requests. The incorrect answers: Memory utilization and network utilization: While high network utilization is a strong indicator of a DDoS attack, memory utilization may not necessarily be affected in the same way as CPU or disk resources, as DDoS attacks primarily overwhelm network capacity and processing power rather than memory. CPU utilization and disk activity: DDoS attacks are focused on saturating network resources and causing service disruption, rather than causing high disk activity. Therefore, monitoring disk activity is less likely to indicate a DDoS attack compared to network utilization. Disk activity and network utilization: Disk activity is not typically the primary indicator of a DDoS attack, as these attacks target network resources. While high network utilization is relevant, disk activity does not correlate as directly with DDoS attacks as CPU utilization does.
+
+Periodically, Mark sends a random number he has chosen encrypted using the work server's public key and waits for the server to reply with the same number encrypted with his public key: This method is a good way to prevent a Man-In-The-Middle (MitM) attack because it utilizes asymmetric encryption to ensure that the communications are secure between Mark and the work server. By using the server's public key to encrypt the number, only the server, with its private key, can decrypt it. When the server replies using Mark's public key, only Mark can decrypt the message with his private key. This process helps to confirm that the parties in the transaction are legitimate and that there has not been interference by a third party. The incorrect answers: Mark and the work server should create and send a digital signature of every packet: While using digital signatures for every packet can provide strong security by ensuring the integrity and authenticity of the communications, this method may not be the most efficient, as it can produce significant overhead and delay due to the computational cost of signing every packet. Mark and the work server should create and send a digital signature of every nth packet: This approach can leave packets without digital signatures vulnerable to interception and manipulation, as every packet is not verified. It creates a gap in the security model, which could be exploited by an attacker. Mark sends the current time (including milliseconds) to the work server and waits for the work server to reply with the time it received Mark's message, together with the server's own time when it sent the reply: Sending timestamps can help detect replay attacks or delays in the network that might indicate tampering, but it does not encrypt or secure the data, so it would not be effective as a standalone measure against a MitM attack.
+
+PKI (Public Key Infrastructure). PKI uses a combination of public and private cryptographic keys to ensure message integrity, sender authentication, and non-repudiation. Message integrity ensures the message hasn't been altered, sender authentication verifies the sender's identity, and non-repudiation ensures the sender cannot deny having sent the message. The incorrect answers: Symmetric cryptography: While it provides message encryption, it doesn't inherently provide sender authentication or non-repudiation. Hashing: Hashing can ensure message integrity by detecting changes in the content of the message, but it does not provide sender authentication or non-repudiation. Linear cryptanalysis: This is a method used to break cryptographic algorithms and doesn't provide the benefits mentioned in the question.
+
+Second line of defense: Dee, in her role as a compliance manager, forms the second line of defense in her organization's risk management and control framework. The second line of defense typically includes functions that oversee risk management and compliance with external regulations and internal policies. As a compliance manager, Dee helps to ensure that controls are in place to meet compliance standards and works to identify and mitigate risks related to non-compliance. The incorrect answers: First line of defense: The first line of defense is typically composed of operational managers and staff who are directly responsible for maintaining control over the day-to-day business activities and processes. They are the ones who implement risk controls and procedures as a part of their regular job functions. Third line of defense: The third line of defense usually consists of internal audit functions. Their role is to provide independent assurance to the organization's board and senior management regarding the effectiveness of the company's governance, risk management, and internal control processes. Fourth line of defense: The concept of a fourth line of defense is not commonly recognized in standard risk management frameworks. Some organizations may informally refer to external auditors, regulators, or other external parties that provide another layer of oversight as a "fourth line of defense," but this is not a standard classification within the three lines of defense model.
+
+Water: Removes the “heat” leg of the fire triangle by lowering the temperature. IFire Triage = Heat, Fuel, Oxygen
+s the safest suppression agent, but for Data Centers: Water + hardware = dead hardware. Should always be a last resort and electricity could always be cut before water is used.
+
+
+
+**********
+Biba; Tim can read and Harvey cannot; but Harvey can write comments and Tim cannot: The Biba model focuses on ensuring the integrity of the information, which is achieved through two main principles: the "no read down" rule and the "no write up" rule. Given that the documents are at a mid-level clearance (Confidential), under the Biba model, Tim, who has a low-level clearance (Enhanced Reliability), would be able to read the documents (no read down) but not write to them (no write up) to prevent contamination of the higher integrity data. Harvey, with a high-level clearance (Secret), would not be able to read the documents (to maintain his higher integrity level and prevent potential downgrading of information), but he would be allowed to write comments (no write down), as his higher integrity level ensures that he would not compromise the data's integrity. The incorrect answers: Biba; both Tim and Harvey can read; but only Harvey can write comments: This choice is incorrect because, according to the Biba model's "no read down" rule, Harvey should not be able to read data at lower integrity levels than his own to prevent him from accessing potentially less reliable data. Bell-LaPadula; Harvey can read, and Tim cannot; but Tim can write comments and Harvey cannot: The Bell-LaPadula model is primarily focused on maintaining confidentiality, not integrity. Its "no read up" and "no write down" rules serve to prevent unauthorized access to information based on clearance levels and would not allow a lower clearance individual to write to a higher clearance document. Brewer-Nash; both Harvey and Tim can read Jada's papers and write their comments; but neither can read or write to their marketing documents at the same time: The Brewer-Nash model, or Chinese Wall model, is designed to prevent conflicts of interest by separating access to data based on conflict classes. It does not handle data integrity in the same way as the Biba model and does not apply clearance levels to read and write operations as described in the scenario.
+
+The correct answer: "It is a set of rules and guidelines used to ensure the security and integrity of data.": This is the correct answer. The Clark-Wilson model is indeed a set of rules and guidelines used to maintain the integrity of data in a system. It introduces the concepts of well-formed transaction and separation of duties to prevent unauthorized or malicious actions. This model focuses on certifying that applications and processes are in place to change and manage access to data, making it particularly useful for business environments where data integrity is crucial. The incorrect answers: "It is a mathematical model used to describe the behavior of physical systems.": This statement is not correct with respect to the Clark-Wilson model. While mathematical models are used in various fields to describe the behavior of systems, the Clark-Wilson model is a security model aimed at data integrity, not a mathematical model used to describe physical systems. "It is a database management system designed to store and organize large amounts of data.": This statement is also not correct. The Clark-Wilson model is not a database management system. While it can be applied to systems that involve databases to ensure data integrity, it is not a tool or system for managing databases. "It is a security model that focuses on the separation of duties and the use of well-defined interfaces.": While the concept of separation of duties is a part of the Clark-Wilson model, this statement is not entirely accurate. The Clark-Wilson model is more comprehensive, providing a framework for implementing a wide range of integrity controls in addition to separation of duties. It also includes the concept of well-formed transactions, which involves checking data integrity before and after a transaction, rather than focusing on well-defined interfaces.
+
+Provide a constrained interface, so that commands are shown but dimmed if the user does not have sufficient privileges: Implementing the Clark-Wilson security model involves using the principle of well-formed transactions and separation of duties. A constrained interface is a way to enforce these principles. It allows the application to show users all the commands they may potentially execute while making it clear which commands they are not authorized to perform (dimmed options). This helps prevent unauthorized access to functions and ensures data integrity by restricting users to only the transactions they are permitted to execute. The incorrect answers: Provide a drop-down menu showing all possible subcommands: Simply providing a drop-down menu with all possible subcommands does not enforce any of the Clark-Wilson integrity constraints. It does not differentiate between transactions that a user can and cannot perform based on their privileges. Ensure users cannot read down to a classification below their security clearance level: This principle is related to the Bell-LaPadula model, which is focused on maintaining confidentiality in a system with different levels of classification. It primarily deals with preventing "read down" operations, where a higher-classified user might read information at a lower classification. The Clark-Wilson model is focused on data integrity, not confidentiality. Ensure users cannot write down to a classification below their clearance level: This is also a principle from the Bell-LaPadula model, known as the "no write down" or "ss-property" rule. It prevents users from writing information to a lower classification level, potentially causing a data spill. The Clark-Wilson model is concerned with integrity and does not deal with classification levels.
+
+
+***********
+Phishing attack: Ken has most likely been the victim of a phishing attack. Phishing attacks typically involve the attacker sending emails that appear to be from a legitimate source with the intent to deceive the recipient into providing sensitive information. In this case, Ken believed the email was from Dee and clicked on a fraudulent link that led to a fake website designed to capture his username and password. The incorrect answers: Pharming attack: Pharming redirects a website's traffic to a fraudulent website without the user's knowledge, which can occur through malware on the user's system or by exploiting vulnerabilities in DNS servers. Since Ken was actively directed to the fake site by clicking on a link in an email, this is more indicative of phishing rather than pharming. Poisoning attack: Poisoning attacks often refer to techniques that corrupt or falsify data, such as cache poisoning in DNS or ARP (Address Resolution Protocol) poisoning on networks. Ken's situation does not involve data corruption but rather deception through a fake website. DNS Pharming attack: DNS pharming is a type of attack that involves compromising DNS servers to redirect users to malicious sites even when they type in the correct website address. Ken’s case involves an email link, which suggests a direct phishing attempt rather than DNS pharming, where the attack occurs at the DNS level.
+
+Digital signatures: Digital signatures are the best method for ensuring non-repudiation because they provide proof of the origin and integrity of the data. A digital signature confirms that a document or message was signed by the purported sender, making it difficult for that sender to deny having sent the message. This is achieved by using a combination of a private key to sign the message and the corresponding public key which can be used by others to verify the signature. The incorrect answers: Strong complex passwords: While strong complex passwords are important for securing access to systems and data, they do not provide non-repudiation. Passwords authenticate a user's identity but do not log the actions that the user takes in a way that cannot be repudiated later. Collision resistant hashes: Collision-resistant hashes ensure that a given input will always result in the same unique hash output, making it difficult to find two different inputs that produce the same hash value. However, hashes alone do not provide non-repudiation because they do not inherently tie the hash to a specific user's identity. Symmetric encryption: Symmetric encryption uses the same key for both encryption and decryption. While it secures the data during transmission, it does not prove who sent the message since anyone with access to the key could have encrypted it. Therefore, it cannot be used to ensure non-repudiation.
+
+Spamming. Spamming is typically not part of a reconnaissance attack. Reconnaissance, in the context of cybersecurity, refers to the preparatory phase where an attacker seeks to gather information about a target prior to launching an attack.Spamming would increase awareness of an attack either through logs, reduced performance, or other factors. This would lead to detection. The incorrect answers: Service detection: This can be part of a reconnaissance attack as knowing what services are running on a server can give attackers valuable information about potential vulnerabilities. Scanning: This is a common part of reconnaissance attacks. Scanning can involve checking for open ports, running services, and other elements that might expose a system to attack. Sniffing: Network sniffing can also be part of a reconnaissance attack to monitor and capture data packets in order to gain information about the system that could be useful in an attack.
+
+: Provide non-repudiation, protect confidentiality, and protect integrity. Cryptography provides multiple benefits, including: Non-repudiation: Ensures that a party cannot deny the authenticity of their signature on a document or the sending of a message. Confidentiality: Ensures that only authorized parties can access the data. Integrity: Ensures that data has not been altered in transit. The incorrect answers: Provide non-repudiation and protect confidentiality: This misses the benefit of ensuring data integrity. Protect both confidentiality and integrity: This misses the benefit of non-repudiation. Protect confidentiality, integrity, and availability: While cryptography can help protect confidentiality and integrity, it doesn't directly ensure availability, which usually depends on system resilience and redundancy.
+
+
+MITRE ATT&CK framework. The MITRE ATT&CK framework is a comprehensive knowledge base of adversary tactics and techniques based on real-world observations.
+in watering hole attacks, such as "Drive-by Compromise" (T1189) and "Exploit Public-Facing Application" (T1190), are covered in the framework.
+ The MITRE ATT&CK framework includes multiple techniques related to malware, such as "Command and Scripting Interpreter" (T1059),
+ Social Engineering (T1586): Social engineering is a technique listed under the "Initial Access" tactic in the MITRE ATT&CK framework. 
+ "Obfuscated Files or Information" (T1027), and "Software Deployment Tools" (T1072). Attackers employ malware to achieve different objectives, such as gaining unauthorized access, stealing data, or disrupting operations.
+
+FIRST principle that should be considered when assessing and implementing secure design principles in network architectures?
+: Least privilege: This principle dictates that every user or process should have the minimum privileges necessary to perform its task and nothing more. Applying the principle of least privilege is the first and foundational step in designing secure network architectures. It helps to reduce the potential damage from accidents or malicious actions, as users or processes can't affect systems or data beyond their scope of necessity. The incorrect answers: Confidentiality: While it is crucial to ensure that unauthorized individuals cannot access sensitive data, confidentiality is not the first principle that should be considered when designing secure network architectures. Only after setting up access controls based on the least privilege principle, can you effectively implement measures to maintain confidentiality. Integrity: Integrity, ensuring the accuracy and consistency of data, is a key principle in secure network design. However, before ensuring integrity, it is more important to establish who should have access to the data (based on least privilege), which directly impacts both integrity and confidentiality. Availability: While maintaining system and data availability is important, it is not the first principle to consider. Similar to confidentiality and integrity, effective availability controls can only be established after implementing the least privilege principle, as understanding who has access to systems and data under what conditions is fundamental to maintaining their availability.
+
+
+ Message Authentication Code (MAC): In the context of hashing and cybersecurity, a Message Authentication Code (MAC) refers to a short piece of information used to authenticate a message and to ensure the integrity and authenticity of the message. A MAC is computed from a message and a secret key, and any change to the message will result in a different MAC. It provides assurance that the message is from the claimed sender (authentication) and that it hasn't been tampered with during transmission (integrity). The incorrect answers: Media Access Control: While MAC can also stand for Media Access Control, this refers to a unique identifier assigned to a network interface controller (NIC) for use as a network address in communications within a network segment. This context is related to networking and not directly to hashing or cryptography. Most Accessible Control and Multi-Application Control: These options are not standard terms in the context of hashing, cryptography, or networking.
+
+: A root certificate is used to sign other certificates, while a self-signed certificate is used to secure a single website: Root Certificate: A root certificate is at the top of the trust chain in the public key infrastructure (PKI) hierarchy. It belongs to a certificate authority (CA) and is used to sign the intermediary certificates. These intermediary certificates can then sign end-entity or leaf certificates, which are used for various purposes, such as securing websites. Because the root certificate is crucial to the trust model, it's typically stored offline and in highly secure environments to prevent any potential compromise. Self-Signed Certificate: A self-signed certificate is a certificate that is not signed by a trusted CA. Instead, it's signed by its own private key, essentially vouching for its own authenticity. This type of certificate is typically used for testing purposes or within environments where the entities communicating already trust each other. For publicly accessible websites, self-signed certificates are not recommended because browsers and systems will not trust them by default, leading to security warnings. 
+
+
+
+
+
+
+
+Security models provide the rules for how we secure our data, while focusing on different goals and what they provide.
+▪ DAC - (Discretionary Access Control) gives subjects full control of objects they have created or been given access to.
+▪ MAC - (Mandatory Access Control) is system-enforced access control based on a subject’s clearance and an object’s labels.
+▪ RBAC - (Role Based Access Control) is where access to objects is granted based on the role of the subject.
+▪ ABAC - (Attribute Based Access Control) is where access to objects is granted based on subjects, objects, and environmental conditions.
+⬥ Attributes could be:
+	🢭Subject (user) – Name, role, ID, clearance, etc.
+	🢭Object (resource) – Name, owner, and date of creation.
+	🢭Environment – Location, and/or time of access, and threat levels.
+▪ RUBAC - (Rule Based Access Control) is access that’s granted based on IF/THEN statements.
+
+
+
+
+

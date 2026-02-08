@@ -1,0 +1,374 @@
+
+
+• Domain 1: Security and Risk Management
+• Domain 2: Asset Security
+• Domain 3: Security Architecture and Engineering
+• Domain 4: Communication and Network Security
+• Domain 5: Identity and Access Management (IAM)
+• Domain 6: Security Assessment and Testing
+• Domain 7: Security Operations
+• Domain 8: Software Development Security
+https://drive.google.com/file/d/1y8LiZUfuVykYvsjY3GqNESLdyCEK4icf/view?usp=sharing
+https://drive.google.com/file/d/1y8LiZUfuVykYvsjY3GqNESLdyCEK4icf/view?usp=drive_link
+
+CISSP EASY/MID questions #3 - ALL CISSP domains 250 Q - 2025
+CISSP EASY/MID questions #4 - ALL CISSP domains 250 Q - 2025 ******
+CISSP EASY/MID questions #5 - ALL CISSP domains 250 Q - 2025
+
+CISSP Easy/Mid practice questions: Domain 3 & 4 - 2025 Exam
+CISSP Easy/Mid practice questions: Domain 1 & 2 - 2025 Exam
+CISSP Easy/Mid practice questions: Domain 5 & 6 - 2025 Exam
+CISSP Easy/Mid practice questions: Domain 7 & 8 - 2025 Exam
+
+HARD CISSP practice questions #1: All CISSP domains - 125Q
+HARD CISSP practice questions #5: All CISSP domains - 125Q
+
+COMPLEX CISSP practice questions #4: All CISSP domains 125Q
+COMPLEX CISSP practice questions #3: All CISSP domains 125Q
+
+CISSP: How to study (plans, tips, materials, approach) 2025
+
+Latest CISSP Practice Tests 700 In-Depth Q/As & Explanations
+
+
+
+
+
+
+
+=================================================================================================================================================
+Framework and Compliance lists:
+
+ COBIT 2019: 
+ COBIT, which stands for Control Objectives for Information and Related Technologies, is primarily a framework focused on governance and management of enterprise IT. Although COBIT can help organizations align IT with business strategies and manage IT-related risks, 
+ COBIT (Control Objectives for Information and Related Technologies)
+ 
+Business-focused IT governance framework.
+Aligns IT goals with business objectives and risk management.
+  Electronic Communications Privacy Act (ECPA)
+ SOX
+
+HIPAA
+**HIPAA = Health Insurance Portability and Accountability Act (1996)**
+**HIPAA establishes a framework for protecting health information, and its enforcement is carried out by the Office for Civil Rights (OCR) and the Health and Human Services (HHS). OCR is responsible for enforcing the HIPAA Privacy and Security Rules, conducting compliance reviews, and investigating complaints. HHS, on the other hand, is involved in developing and updating HIPAA regulations and ensuring equal access to health and human services. 
+
+**From a CISSP perspective, HIPAA is: ✔ A U.S. federal law protect­ing PHI, Protected Health Information (PHI) includes:
+	-Medical records
+	-Billing data
+	-Diagnoses
+	-Lab results
+	-Any data that can identify a patient
+**HIPAA aligns to the “C” in GRC — Compliance.
+
+A law with three major rules the exam focuses on:
+**Privacy Rule** – defines when PHI can/cannot be used or disclosed
+**Security Rule** – protects electronic PHI (ePHI) via administrative, physical, and technical controls
+**Breach Notification Rule** – requires timely disclosure to affected individuals + HHS (US Department of Health and Human Services)
+**Covered entities:** (hospitals, insurers, clinics, providers, plans, clearinghouses, doctors, pharmacies)
+**Business associates:** (cloud vendors, billing companies, MSPs, labs) - any person/org/services that works with entities that handles PII/PHI
+
+✔Privacy Rule...
+		- Governs: Use & disclosure of PHI, Minimum necessary requirement, Patient rights (access, correction, restrictions)
+		**CISSP mindset: Privacy Rule = policy & governance.
+
+✔ Security Rule 
+		**Requires administrative, physical, and technical safeguards for ePHI:
+		**Administrative Safeguards
+		-	Risk assessments
+		-	Workforce training
+		-	Policies/program oversight
+		**Physical Safeguards
+			Facility access
+			Device/media controls
+		**Technical Safeguards
+		-	Access control
+		-	Audit logs
+		-	Encryption (addressable, not mandatory)
+		-	Integrity controls
+		**CISSP mindset: Security Rule = technical + operational security controls.**	
+✔ Breach Notification Rule ...If PHI is breached:
+		-	Notify affected individuals without unreasonable delay
+		-	Notify HHS
+		-	Notify media if > 500 individuals affected
+		**	CISSP mindset: Breach = immediate reporting + incident response. CISSP will NEVER choose “wait for investigation to complete before notifying.”
+How CISSP Wants You to Think About HIPAA
+Use these principles:
+✔ Compliance requirements override convenience
+✔ Patient rights and privacy always come first
+✔ Administrative controls are equally important
+✔ Risk assessment is the foundation of HIPAA Security Rule
+✔ Breach notification must be prompt
+✔ PHI = highly regulated, no exceptions
+ 
+ PCI DSS
+ COBIT -	 COBIT (Control Objectives for Information and Related Technology) is a framework developed by ISACA for IT management and governance. It's a toolset that allows managers to bridge the gap between control requirements, technical issues, and business risks. It's the correct answer in this case because one of the objectives of COBIT is to help businesses create optimal value from IT by maintaining a balance between realizing benefits and optimizing risk levels. Therefore, it can be used for self-directed risk management. 
+
+ CSA START
+ FedRAMP (Federal Risk and Authorization Management Program)  .. 3PAO
+ FISMA
+ GDRP
+ address other aspects of data privacy, such as the need for user consent for data collection, limits on data retention, and the right to erasure. Creating a public-facing privacy policy that is easy to understand and accessible is a good practice for transparency and can help customers understand how their PII is used, but this does not necessarily ensure the company is adhering to the strict privacy standards required by law, particularly in regions like the EU
+ 
+ ITIL
+ 
+COSO Internal Control Framework
+Focuses on enterprise internal controls and risk management.
+Often referenced for financial systems and compliance.
+
+
+SOC 1 / SOC 2 (AICPA)/SOC3 / each with type 1/2
+**SOC = System and Organization Controls.. They are audits performed under AICPA SSAE 18 standards.
+** AICPA = American Institute of Certified Public Accountants (AICPA) Auditing Standards Board.
+**SOC reports are third‑party independent audits
+**They support **vendor due diligence, supplier risk, and compliance assurance**
+**SOC is NOT security certification (they are attestation, not certification)
+**SOC reports are a GRC artifact, not a technical control
+**Type 1 - A point in time report ... completedthe first time to get SOC certification ... “Are the controls designed properly now?”
+**Type 2 - conducted annually , show how controls operated over a period of time typically 6-12 months ... “Do the controls actually work during this period?” ... **CISSP perferred type 2 for RMF** 
+
+➡	SOC 1 = FINANCIAL
+	Sections: 1. Auditor’s Report / 2. Management Assertion / 3. System Description/ 4. Control Objectives (financial oriented)/ 5. Controls and Tests / 6. Results / Exceptions
+	CISSP GRC Tie‑Ins:  Vendor financial risk, Third‑party assurance, Governance requirements for financial systems, SOX compliance evidence
+
+➡➡SOC 2 = SECURITY .............**MOST important for CISSP**
+Purpose
+Evaluate controls relevant to the Trust Services Criteria (TSC):
+Regular testing and monitoring of controls are the most important elements of a successful SOC 2 audit. The SOC 2 (Service Organization Controls 2) report focuses on an organization's non-financial reporting controls related to security, availability, processing integrity, confidentiality, and privacy of a system. To satisfy the requirements of SOC 2, an organization must demonstrate that it has suitable controls in place and that they are operating effectively over time.
+
+Security (mandatory)
+Availability
+Processing Integrity
+Confidentiality
+Privacy
+
+SOC 2 Sections
+Auditor’s Opinion
+Management Assertion
+System Description
+Trust Services Criteria
+Controls & Test Procedures
+Results / Exceptions
+
+CISSP GRC Tie‑Ins
+Cloud vendor risk assessments
+Privacy compliance audits
+Security governance assurance
+Contractual due diligence
+Supply chain risk management
+
+
+➡ SOC 3 = PUBLIC‑FACING SECURITY SUMMARY
+Purpose
+A public, high-level version of SOC 2 with no confidential details.
+Used For
+Marketing
+Publishing on website
+Easy proof of security posture
+CISSP GRC Tie‑In:  Used for governance transparency and stakeholder assurance, but not acceptable for vendor risk assessments.
+
+SOC 1 is Financial reporting controls (ICFR) for Auditors, CFO, regulators
+SOC 2 focuses on security, availability, confidentiality, integrity, privacy. need registered CPA firms/CPAs to conduct audits and issue reports for **security and customer teams** ....
+SOC 3 for Public summary of SOC 2 for giving to Public, marketing, customers
+
+ SOC 1 vs SOC 2
+Your organization is evaluating a payroll vendor that processes financial transactions. Which report provides the MOST relevant assurance?
+✔ Correct Answer: SOC 1 Type II
+➡ CISSP Logic:
+Financial reporting = SOC 1.
+Assurance = Type II.
+ 
+ CISSP Exam Traps to Avoid
+❌ Trap 1: “SOC 1 is about security”
+No — SOC 1 = financial.
+❌ Trap 2: “SOC 3 is enough for due diligence”
+Never. It is not acceptable for risk assessments.
+❌ Trap 3: “Type I is as strong as Type II”
+Type II is always stronger.
+❌ Trap 4: “SOC reports certify security”
+They do not certify. They attest.
+❌ Trap 5: “SOC 2 always includes all TSC”
+Only Security is mandatory.
+
+The SOC 2 (System and Organization Controls) audit is a type of audit designed to assess a service organization's systems in terms of their security, availability, processing integrity, confidentiality, and privacy. 
+The primary focus of a SOC 2 audit is on the **organization's non-financial reporting controls** as they relate to the **security and availability** of a system. 
+These controls must be designed effectively and operating as intended to pass the audit.
+
+System Organization Controls (SOC) reports
+Over the years, audit standards have evolved and matured over the years from SAS70 → SSAE 16 → SSAE 18.
+
+The SSAE 18 standard defines three types of Service Organization Controls (SOC) reports:
+
+SOC 1 reports are quite basic and focus on financial reporting risks.
+SOC 2 reports are much more involved and focus on the controls related to the five trust principles: security, availability, confidentiality, processing integrity, and privacy.
+SOC 3 reports are stripped-down versions of SOC 2 reports—typically used for marketing purposes.
+There are also two types of SOC 1 and SOC 2 reports:
+
+A Type 1 report focuses on the design of controls at a point in time.
+A Type 2 report examines not only the design of a control but, more importantly, the operating effectiveness over a period of time, typically a year.
+From the types of reports defined, it should be clear that SOC 2, Type 2 are the most desirable reports for security professionals, as they report on the operating effectiveness of the security controls at a service provider over a period of time.
+ 
+ 
+ The Common Criteria for Information Technology Security Evaluation (Common Criteria or CC) is an international standard (ISO/IEC 15408) for computer security certification
+ ISO / IEC (International Standards)
+ SO/IEC 27001 is an information security standard that is part of the ISO/IEC 27000 family of standards. It's used for the establishment, implementation, maintenance, and continual improvement of an information security management system (ISMS). This framework is focused more on managing information security
+ ISO 27001
+ ISO 27002: 
+ ISO 27002 is a well-established international standard that provides best practice recommendations on information security controls, making it a suitable reference for listing security controls in application development.
+ISO/IEC 27001 - Specifies requirements for an Information Security Management System (ISMS). Focuses on governance, policy, risk management, and continual improvement.
+ is an internationally recognized standard for information security management. It provides a framework for establishing, implementing, maintaining, and continuously improving an information security management system (ISMS). It is designed to help organizations protect their information assets by adopting a risk management process and giving assurance to stakeholders that risks are adequately managed. It is widely used by organizations globally for auditing and assessing the effectiveness of their information security programs. 
+ 
+ISO/IEC 27002 
+Provides best-practice security controls to support ISO 27001.
+Answers “How do we implement security controls?”
+ISO/IEC 27005
+Risk management framework aligned with ISO 27001.
+Focuses on identifying, analyzing, and treating information security risks.
+ Federal Information Processing Standards (FIPS) are publicly announced standards developed by the United States Federal government for use in computer systems by all non-military government agencies and by government contractors. FIPS standards specify certain requirements for IT products in terms of their security functionalities and capabilities. FIPS 140-2, for instance, is a widely recognized standard for cryptographic modules
+
+ when evaluating a security product according to ISO/IEC 15408-1
+primary evaluation criterion, as it assesses the security features provided by the product. Functionality refers to the specific set of security functions that the product is designed to perform. These functions are evaluated against a set of specified security objectives to ensure that the product adequately addresses the identified threats and risks. 
+ ISO 15489-1 emphasizes the importance of ensuring the confidentiality of records by implementing appropriate access controls.
+
+SABSA is more geared towards designing and implementing security architecture based on business requirements, and while risk management is a part of this
+
+: The US-EU Privacy Shield framework is designed to protect personal data transferred from the European Union to the United States. A key aspect of this protection is ensuring that individuals are aware of how their personal data is being used and processed.
+
+ 
+****NISTs*****
+NIST CFS 
+NIST CSF = Identify → Protect → Detect → Respond → Recover
+It is NOT a technical standard, a certification nor mandatory (unless referenced by law or contract).
+It IS:
+	-	A risk-based, voluntary framework
+	-	Designed for critical infrastructure, but usable by any org
+	-	Mapped to other frameworks (ISO 27001, COBIT, etc.)
+	-	High-level, management-friendly
+	-	outcome driven
+Use the acronym: I P D R R
+👉 “I Prepare DRR (Disaster Ready Response)”
+or
+👉 “I Protect Data, Respond & Recover.”
+You will see this flow repeatedly in questions.
+ 
+  The NIST (National Institute of Standards and Technology) Cybersecurity Framework is a policy framework of computer security guidance for how private sector organizations in the United States can assess and improve their ability to prevent, detect, and respond to cyber attacks. Although it includes risk management elements
+	
+NIST SP 800-39	- framework any companies can use to assess risks ... "a holistic view rather than a checklist view ", 3 tiers, organization/mission-business/info-system, risks must be addresses in each tiers
+NIST 800-37
+NIST SP 800-53 is a comprehensive catalog of security and privacy controls for all U.S. federal information systems (except those related to national security) and is directly focused on listing such controls, making it highly relevant for application development.
+
+**NIST Special Publication 800-53A, security labeling and marking of asset**
+The term security labeling refers to the association of security attributes with subjects and objects represented by internal data structures within organizational information systems, to enable information system-based
+enforcement of information security policies. 
+The term security marking refers to the association of security attributes with objects in a human-readable form, to enable organizational process-based enforcement of information security policies
+
+
+NIST SP 800-53A: 
+NIST SP 800-53A provides guidelines for assessing the effectiveness of security controls, and while it is not the primary resource for listing controls, it is related to the implementation of the controls listed in NIST SP 800-53, which itself is applicable for the development process.
+
+🇺🇸 NIST (U.S. Government / Industry)
+NIST Cybersecurity Framework (CSF)
+Risk-based framework organized into Identify, Protect, Detect, Respond, Recover.
+Used to assess, improve, and communicate cybersecurity posture.
+NIST SP 800-53
+Comprehensive catalog of security and privacy controls for federal and enterprise systems.
+Answers “What controls should we implement?”
+NIST SP 800-37 (RMF)
+Defines the Risk Management Framework lifecycle (categorize → authorize → monitor).
+Used heavily in government system authorization (ATO).
+NIST SP 800-61
+Computer Security Incident Handling Guide.
+Defines incident response phases: Preparation, Detection, Containment, Eradication, Recovery.
+NIST SP 800-30
+Risk assessment methodology focusing on threats, vulnerabilities, likelihood, and impact.
+Supports both qualitative and quantitative risk analysis.
+
+NIST SP 800-88 revision 1 provides guidelines for media sanitization 
+
+
+ISO 31000 - ISO 31000 is a family of standards relating to risk
+management. The scope of ISO 31000 is to provide best
+practice structure and guidance to all organizations
+concerned with risk management.
+ISMS
+COSO - COSO provides a definition to essential enterprise risk
+management components, reviews ERM principles and
+concepts, and provides direction and guidance for
+enterprise risk management.
+
+**NIST RMF 800-37 Rev2** - This guide describes the risk management framework (RMF) and provides guidelines for applying the RMF to information systems and organizations.
+Prepare to execute the RMF - In this step, information systems are identified and categorized. 
+Select Security Controls
+Implement Security Controls
+Assess Security Controls
+Authorize Information System
+Monitor Security Controls
+
+ISO/IEC 27001
+Enterprise security governance
+ISACA Risk IT Framework - ISACA’s Risk IT Framework contains guidelines and
+practices for risk optimization, security, and business
+value. The latest version places greater emphasis on
+cybersecurity and aligns with the latest version of COBIT.
+
+
+Three of the most popular enterprise security architectures are 
+Zachman, Sherwood Applied Business Security Architecture (SABSA), and The Open Group Architecture Framework (TOGAF).
+
+ The Graham-Denning model is a framework for identifying and selecting appropriate security controls for an organization. It takes into account the organization's goals, threats, and vulnerabilities to determine the most effective controls. 
+
+ GLBA (Gramm-Leach-Bliley Act)-  Establishing safeguards for financial institutions -  requires financial institutions to develop, implement, and maintain a comprehensive information security program to protect the privacy and security of customers' nonpublic personal information. 
+ This includes ensuring customer privacy, implementing cybersecurity measures, and adopting other administrative, technical, and physical safeguards.
+
+
+ Security Models (Very Exam-Heavy)
+Bell-LaPadula
+
+Confidentiality model enforcing No Read Up, No Write Down.
+
+Used in military and classified environments.
+
+Biba Model
+
+Integrity model enforcing No Read Down, No Write Up.
+
+Protects data accuracy and trustworthiness.
+
+Clark-Wilson ... Integrity model using well-formed transactions and separation of duties. Common in commercial and financial systems.
+
+Brewer-Nash (Chinese Wall) .. Prevents conflicts of interest dynamically. ...Access depends on prior access history.
+Graham-Denning ....Formal model defining secure creation and deletion of subjects/objects. ...Focuses on access rights management.
+
+🔐 Cryptographic & Trust Models ...Public Key Infrastructure (PKI)
+Framework for managing digital certificates and trust.
+Enables authentication, encryption, and non-repudiation.
+
+Web of Trust
+Decentralized trust model used by PGP.
+Trust is established through peer endorsements.
+
+🧩 Software & Development Models
+SDLC (Systems Development Life Cycle)
+
+Structured approach to system development from requirements to disposal.
+
+Security must be integrated in every phase.
+
+DevSecOps
+
+Integrates security into DevOps pipelines.
+
+Emphasizes shift-left security and automation.
+
+🏛️ Privacy & Data Protection Frameworks
+GDPR
+
+EU data protection regulation governing personal data processing.
+
+Emphasizes consent, data subject rights, and breach notification.
+
+HIPAA Security Rule
+
+Protects electronic protected health information (ePHI).
+
+Focuses on administrative, technical, and physical safeguards.
+ 
