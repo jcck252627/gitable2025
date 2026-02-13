@@ -11,8 +11,8 @@ https://drive.google.com/file/d/1y8LiZUfuVykYvsjY3GqNESLdyCEK4icf/view?usp=shari
 https://drive.google.com/file/d/1y8LiZUfuVykYvsjY3GqNESLdyCEK4icf/view?usp=drive_link
 
 CISSP EASY/MID questions #3 - ALL CISSP domains 250 Q - 2025
-CISSP EASY/MID questions #4 - ALL CISSP domains 250 Q - 2025 ******
-CISSP EASY/MID questions #5 - ALL CISSP domains 250 Q - 2025
+CISSP EASY/MID questions #4 - ALL CISSP domains 250 Q - 2025 
+CISSP EASY/MID questions #5 - ALL CISSP domains 250 Q - 2025 ****
 
 CISSP Easy/Mid practice questions: Domain 3 & 4 - 2025 Exam
 CISSP Easy/Mid practice questions: Domain 1 & 2 - 2025 Exam
@@ -202,6 +202,8 @@ Focuses on identifying, analyzing, and treating information security risks.
  when evaluating a security product according to ISO/IEC 15408-1
 primary evaluation criterion, as it assesses the security features provided by the product. Functionality refers to the specific set of security functions that the product is designed to perform. These functions are evaluated against a set of specified security objectives to ensure that the product adequately addresses the identified threats and risks. 
  ISO 15489-1 emphasizes the importance of ensuring the confidentiality of records by implementing appropriate access controls.
+  ISO/IEC/IEEE 15288 - To establish a common framework for the life cycle of systems engineering and software engineering
+ It is a standard that applies to the system and software life cycles, including processes and process descriptions. It provides a common framework that enables understanding and communication among all stakeholders involved in a project. It does this by detailing the stages of the lifecycle from concept and initial requirements, through design, build, test, operation, and maintenance, to final decommissioning.
 
 SABSA is more geared towards designing and implementing security architecture based on business requirements, and while risk management is a part of this
 
