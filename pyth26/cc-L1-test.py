@@ -1,84 +1,31 @@
-myList = [123, 123, 1.23]
-print(len(myList)) # prints 3
-myList.append("555")
-print(len(myList)) 
+
+name=input("Enter you name:  ")
+print("Welcome " +name +"!!")
+
+age = input("Enter your age:  ")
+if int(age) == 50:
+ print("You exactly half a century or older!")
+elif int(age) > 50:
+ print("You are half a century or older!")
+elif 20 <= int(age) <= 29:
+ print("You are in your twenties")
+else:
+ print("your age is ", age)
 
 
-name = 'Jonathan'
-print(name[0:])
-print(name[:2])
+num1=input("Enter your 1st number :  ")
+if num1.isdigit():
+    print("First Number entered is: ", num1)
+else:
+    print("Please input a valid interger !!")    
+num2=input("Enter your 2nd number :  ")
+if num2.isdigit():
+    print("First Number entered is: ", num2)
+else:
+    print("Please input a valid interger !!")  
 
-print(name[2:3])
-print(name[3:6])
-
-string1 = "Cypress "
-string2 = "College"
-tt=string1 + string2
-print(tt)
-
-
-name = "Jonathan"
-name2 = name
-name = "Bob"
-print(name2)
-print(name)
+print ("The addition of the two numbers : ", num1+num2)
+print ("The multiple of the two numbers: ", num1*num2)
 
 
 
-state = "California"
-kkkk=state.find("for")
-print(kkkk)
-state.find("for") # Returns 4
-state.find("a") # Returns 1
-state.find("xyz") # Returns -1
-
-
-state = "California"
-ttttt= state.replace("al", "b")
-print(ttttt)
-
-str = "HelloHelloHello"
-newStr = str.replace("Hello", "Hi") # newStr references a string with 'HiHiHi'
-print(newStr)
-
-str = "1234"
-print(str.isdigit()) # prints True
-str = "123b4"
-print(str.isdigit()) # prints 
-
-str = "Hello"
-print(str.upper()) # prints HELLO
-
-str = "Hello"
-print(str.lower()) # prints hello
-
-myList = [123, 'a string', 1.23]
-myList[1] = "Hello"
-print(myList)
-
-myList.append('GoodBye')
-print(myList)
-
-myList.append('HowRU')
-print(myList)
-
-myList.pop()
-print(myList)
-
-myList.pop(0)
-print(myList)
-
-myList2 = [123, 495, -11.23,34556]
-myList2.sort()
-print(myList2)
-
-num_sales = 50
-print("You have made num_sales sales today")
-
-myList = [123, 4444, 1.23]
-print(myList)
-myList.append("Hello")
-print(myList)
-
-name = "Jonathan"
-print(f'Hello {name}!')
