@@ -24,8 +24,8 @@ if num2.isdigit():
 else:
     print("Please input a valid interger !!")  
 
-print ("The addition of the two numbers : ", num1+num2)
-print ("The multiple of the two numbers: ", num1*num2)
+print ("The addition of the two numbers : ", int(num1)+int(num2))
+print ("The multiple of the two numbers: ", int(num1)*int(num2))
 
 
 
