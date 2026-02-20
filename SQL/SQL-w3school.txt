@@ -853,3 +853,29 @@ Return all customers that have NOT placed any orders in the Orders table:
 
 SELECT * FROM Customers
 WHERE CustomerID NOT IN (SELECT CustomerID FROM Orders);
+
+
+USE [AdventureWorksDW2022]
+GO
+/****** Object:  StoredProcedure [dbo].[CustomerByFirstNameNAddress]    Script Date: 2/14/2026 2:55:45 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROC [dbo].[CustomerByFirstNameNAddress] 
+    @Firstname NVARCHAR(30),
+    @Addr1 NVARCHAR(80)
+AS
+BEGIN
+    SELECT 
+        CustomerKey,
+        FirstName,
+        LastName,
+        EmailAddress,
+        AddressLine1
+    FROM dbo.DimCustomer
+    WHERE 
+        (@Firstname IS NULL OR FirstName = @Firstname)
+        AND (@Addr1 IS NULL OR AddressLine1 = @Addr1);
+END

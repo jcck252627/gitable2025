@@ -1,3 +1,16 @@
+i=0
+while (i <= 10):
+   print("Hello ", i)
+   i += 1
+
+s = ''
+while s.lower() != "start":
+ s = input("Please enter the word 'start': ")
+
+
+print(5*"\nHello")
+
+
 
 name=input("Enter you name:  ")
 print("Welcome " +name +"!!")

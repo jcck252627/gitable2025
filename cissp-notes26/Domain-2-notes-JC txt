@@ -141,6 +141,18 @@ PLD (Programmable Logic Device) - Devices (PLDs) are not a type of memory but ar
 
 EEPROM, or Electrically Erasable Programmable Read-Only Memory, is the type of memory used in flash drives. This is a type of non-volatile memory used in computers and other electronic devices to store relatively small amounts of data. It can be electrically erased and reprogrammed, which is why it's used in flash drives. These can be repeatedly written to and erased without wear and can retain data without power. The incorrect answers: SDRAM (Synchronous Dynamic Random-Access Memory) is a type of DRAM that is synchronized with the clock speed that the microprocessor is optimized for. This maximizes the number of memory accesses the microprocessor can make. While used in computing systems, it isn't the memory type used in flash drives. Programmable Read-Only Memory (PROM) is a type of ROM that can be programmed using a special device. This programming is a one-time operation and once done the data stored in PROM cannot be changed. It's not used in flash drives because flash drives require memory that can be rewritten and erased. Dynamic Random-Access Memory (DRAM) is a type of RAM that stores each bit of data in a separate capacitor within an integrated circuit. The capacitors leak charges, hence they must be refreshed constantly. Because of this volatility and the required constant power supply, DRAM is not used in flash drives, which need to retain information even without power.
 
+We are using read-only memory for our low-level operating systems. Which of these is NOT a type of Read-Only memory (ROM)?
+EPROM
+Your answer is incorrect
+EEPROM
+Correct answer
+DRAM
+PROM
+Overall explanation
+The correct answer: Dynamic Random Access Memory (DRAM) is not a type of Read-Only Memory (ROM). DRAM is a type of Random Access Memory (RAM), a volatile memory used for temporary storage of data that is being actively used or processed by a computer. The data stored in DRAM can be read from and written to, and it is lost when the computer is powered off or restarted. This is in stark contrast to ROM, which is non-volatile and retains its data even when the power is turned off. The incorrect answers: EEPROM (Electrically Erasable Programmable Read-Only Memory): This is indeed a type of ROM. EEPROM is unique because its contents can be electrically changed, or rewritten, while it's still in the computer or electronic device. Unlike other types of ROM, EEPROM can be erased and programmed in small sections without affecting the rest of the memory chip, which makes it a highly flexible and frequently used type of ROM. EPROM (Erasable Programmable Read-Only Memory): EPROM is also a type of ROM. Once programmed, the data on an EPROM chip remains intact, even without power. However, unlike other types of ROM, EPROM can be erased and reprogrammed, but this requires exposure to ultraviolet light and is not something that typically happens during normal computer operation. PROM (Programmable Read-Only Memory): This is another type of ROM. PROM comes blank from the factory and can be programmed once by the user with a special device called a PROM programmer. Once the PROM has been programmed, the data is permanent and cannot be changed or erased. This makes PROM an ideal choice for devices that need to store firmware or other data that will not change during the device's life.
+
+
+
  tangible or intangible assets
 
 Statistical techniques are considered to be the most effective methods for de-identifying personal data. 
