@@ -11,7 +11,36 @@
 • Domain 7: Security Operations
 • Domain 8: Software Development Security
 
+file:///C:/Users/HJCWKZ23/Downloads/CISSP%20Cornell%20Notes-D4.pdf
+file:///C:/Users/HJCWKZ23/Downloads/CISSP-LastMinuteGuideD4.pdf
 
+https://blog.balancedsec.com/p/understanding-cissp-domain-4-communication?utm_source=publication-search
+
+https://destcert.com/resources/cissp-domain-4-communication-and-network-security/
+
+
+
+***OSI Model (7 Layers)
+From top to bottom:
+Application
+Presentation
+Session
+Transport
+Network
+Data Link
+Physical
+
+Mnemonic:
+All People Seem To Need Data Processing
+OSI is a theoretical model used to understand networking behavior.
+
+***TCP/IP Model (4 Layers)
+Application (Application /Presentation /Session)
+Transport (Transport)
+Internet (Network) 
+Network Access  (Data Link / Physical
+
+This is the model actually used on the Internet.
 
 
 
@@ -85,8 +114,32 @@ Transmission media—wired, wireless, and so on
 Network topologies: Bus, Tree, Star, Mesh, Ring
 Collisions and collision avoidance; CSMA
 Transmission methods: unicast, multicast, broadcast
-Layer 1 devices: hubs, repeaters, concentrators, network interface cards
-(NICs)
+Layer 1 devices: hubs, repeaters, concentrators, network interface cards (NICs)
+
+Unicast
+Anycasts
+Mulitcasts
+Broadcasts
+
+
+North-South Traffic = Traiff flow in/out of the data center ... user/services and including external traffic
+East-West Traffic = Traffic flow in/out between systems within the data center .... servers/VM/storages
+
+FTP   ... 21
+SSH   ... 22
+SMTP  ... 25
+DNS ... 53
+HTTP .... 80
+HTTPS ... 443
+RDP .... 3389
+POP   ... 110
+NetBIOS ... 137,138,139
+IMAP  .... 143
+
+private ip address ranges
+10.0.0.0 – 10.255.255.255 (Class A: )
+172.16.0.0 – 172.31.255.255 (Class B: )
+192.168.0.0 – 192.168.255.255 (Class C: ) 
 
 
 
@@ -122,6 +175,10 @@ Threats: SSL stripping, weak encryption, downgrade attacks
 Application Layer — “Where users and software interact with the network.”
 Example: HTTPS, DNS, SMTP, FTP, SNMP
 Threats: Phishing, DNS poisoning, email malware, API abuse
+
+
+
+
 
 
 The main objective of the Kerberos protocol is to securely authenticate users to network resources without transmitting passwords over the network in plaintext. Kerberos uses secret-key cryptography to provide strong authentication so that communicating parties can verify each other's identity. It's designed to authenticate clients to services and vice versa, and not necessarily to encrypt all data transmissions. The incorrect answers: While Kerberos does use encryption as part of its authentication process to protect the confidentiality and integrity of authentication tokens, its main purpose is not to encrypt all data transmission between network devices. Protocols such as SSL/TLS or IPsec are more commonly used for this purpose. Kerberos does help prevent unauthorized access by providing secure authentication but this is a function of access control, not authentication. Access control mechanisms come into play after authentication and determine whether an authenticated user has permissions to access a certain resource. Kerberos' main function is to authenticate users, not to grant access to resources. The process of granting access to resources based on user credentials is typically managed by an access control system, which often uses the authentication provided by Kerberos as a first step.

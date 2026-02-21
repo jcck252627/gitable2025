@@ -24,15 +24,31 @@ def get_validated_calculator_option():
             import sys
             sys.exit(0)
         else:
-            print("Invalid input. Please enter '0', '1' or 'stop' only ......")        
+            print("Invalid input. Please enter '0', '1' or 'stop' only ......") 
+
+def which_operation(choice, n1, n2): 
+    if choice == 0:
+        a= n1+n2 
+        print(f"The sum of the two numbers added ({n1:,} + {n2:,}) is: {a:,}") 
+    elif choice == 1:
+        m = n1*n2 
+        print(f"The product of the two numbers mulitplied ({n1:,} x {n2:,}) is: {m:,}")
 
 
-user_choice = 100
-n1 = 100
-n2 = 100
-n1 = get_validated_num1()
-n2 = get_validated_num2()
-print(n1)
-print(n2)
-user_choice = get_validated_calculator_option()
-print(user_choice)
+
+repeat = "yes"
+
+while (repeat == "yes"):
+    n1 = get_validated_num1()
+    n2 = get_validated_num2()
+    user_choice = get_validated_calculator_option()
+    print("The first number you have entered is: ",n1)
+    print("The first number you have entered is: ",n2)
+    which_operation(user_choice, n1, n2)
+    while True: 
+        repeat = input("Do you want to calculate another pair of numbers? (yes or no): ").strip().lower() 
+        if repeat in ("yes", "no"):
+            break 
+        print("Invalid response, please type exactly 'yes' or 'no'.")
+print ("You have entered 'no' to not continue ... this program will now exit, goodbye") 
+
