@@ -1,6 +1,9 @@
 
 
 
+file:///C:/Users/HJCWKZ23/Downloads/Destination%20CISSP%20A%20Concise%20Guide%20(Rob%20Witcher,%20John%20Berti,%20Lou%20Hablas%20etc.)%20(Z-Library).pdf
+2021(Isc)2 Cissp Certified Information Systems Security Professional Official Practice Tests (Mike Chapple David Seidl) (Z-Library).epub
+chrome-extension://gbohfhccchgngoapncnfnpldhlkojifo/home/index.html?filekey=2021(Isc)2%20Cissp%20Certified%20Information%20Systems%20Security%20Professional%20Official%20Practice%20Tests%20(Mike%20Chapple%20David%20Seidl)%20(Z-Library).epub
 
 • Domain 1: Security and Risk Management	
 • Domain 2: Asset Security
@@ -43,7 +46,21 @@ Network Access  (Data Link / Physical
 This is the model actually used on the Internet.
 
 
+level of switches .............
+core switches
+aggregation / distribution switches
+edge switches
+access switches
 
+
+SDN (software defined networking)
+control plane - routing decision layer
+data plane - data carrying layer
+making network programmable instead of manual configurations and scaling 
+
+VXLAN uses encapsulation (one proctol embeded into another one) builds overlay networks that operate at layer 2 using layer 3 equipment ... extend the vlan to larger areas
+SDN ... allow granular network configuration and faster security incident response
+SDN ... more complex ... need stronger access control
 
 
 

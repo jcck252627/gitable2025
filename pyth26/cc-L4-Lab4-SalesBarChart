@@ -1,37 +1,46 @@
 
-# Validate input is whole/ positive number for number of stores
+# Validate if input is whole/ positive number for number of stores
 def get_validated_num():
     while True:
         num = input("Please enter NUMBER OF STORES (whole number only):   ")
         if num.isdigit() and int(num) > 0:
             return int(num)
-        print("Invalid input. Please enter a positive, whole for NUMBER OF STORES !! Please Try Again ......")
+        print("Invalid input, You must enter a positive, whole for this input !! Please Try Again ......")
 
-# Validate input is whole/ positive number and in multiple of 100 for sales number 
-def get_validated_100():
+# Validate if input is whole/ positive number and in a multiple of 100 for sales number 
+def get_validated_sale100(this_store):
     while True:
-        num100 = input("Please enter today's sales (whole number and in multiple of $100):   ")
+        num100 = input(f"\nPlease enter today's sales number for store #{this_store} (whole number and in multiple of $100):   ")
         if num100.isdigit() and int(num100) % 100 == 0 and int(num100) > 100:
             return int(num100)
         
         print("Invalid input. Please enter a positive, whole sales number that is in the MULTIPLE OF $100, Please Try again......")
 
+#def add_stars():
+#def append_sales():
 
+stores = []
+sales = []
 
+n = get_validated_num()
 
-stores =[]
-number_of_stores = get_validated_num ()
+# collecting and validating input
+for i in range(1, n + 1):
+    store_name = f"Store #{i}"
+    stores.append(store_name)
+    
+    sale_amount = get_validated_sale100(i)
+    sales.append(sale_amount)
+    # print(f"{store_name} has sales of ${sale_amount:,} today")
 
-for n in range (1, number_of_stores)
-    stores.append(f"store {n}")
+# print store names and their individual bar chart
+print("\nSALES BAR CHART (Each * = $100)\n")
 
-
-store.append("store1")
-store.append("store2")
-store.append("store3")
-
-
-
-print(store[0])
-print(store[1])
-print(store[2])
+for i in range(n):              # Outer loop print each indivual store name
+    print(f"{stores[i]}: ", end="")
+    
+    # inner loop appending and printing sales bar chart stars for each individual store
+    for s in range(0, sales[i], 100):
+        print("*", end="")
+    
+    print()  # move to next line
