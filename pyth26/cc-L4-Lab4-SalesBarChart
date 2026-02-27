@@ -1,0 +1,37 @@
+
+# Validate input is whole/ positive number for number of stores
+def get_validated_num():
+    while True:
+        num = input("Please enter NUMBER OF STORES (whole number only):   ")
+        if num.isdigit() and int(num) > 0:
+            return int(num)
+        print("Invalid input. Please enter a positive, whole for NUMBER OF STORES !! Please Try Again ......")
+
+# Validate input is whole/ positive number and in multiple of 100 for sales number 
+def get_validated_100():
+    while True:
+        num100 = input("Please enter today's sales (whole number and in multiple of $100):   ")
+        if num100.isdigit() and int(num100) % 100 == 0 and int(num100) > 100:
+            return int(num100)
+        
+        print("Invalid input. Please enter a positive, whole sales number that is in the MULTIPLE OF $100, Please Try again......")
+
+
+
+
+stores =[]
+number_of_stores = get_validated_num ()
+
+for n in range (1, number_of_stores)
+    stores.append(f"store {n}")
+
+
+store.append("store1")
+store.append("store2")
+store.append("store3")
+
+
+
+print(store[0])
+print(store[1])
+print(store[2])
