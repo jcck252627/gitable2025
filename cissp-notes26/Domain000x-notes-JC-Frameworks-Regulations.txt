@@ -221,6 +221,8 @@ primary evaluation criterion, as it assesses the security features provided by t
   
   ISO/IEC 27005-  To provide a framework for information security risk management
  
+ ISO/IEC 19249 - To provide guidelines for the development of secure software applications ..  This standard is used to ensure that software applications are developed in a way that takes into account security considerations, such as the protection of personal information and the implementation of secure communication protocols.
+ 
  
   ISO/IEC/IEEE 15288 - To establish a common framework for the life cycle of systems engineering and software engineering
  It is a standard that applies to the system and software life cycles, including processes and process descriptions. It provides a common framework that enables understanding and communication among all stakeholders involved in a project. It does this by detailing the stages of the lifecycle from concept and initial requirements, through design, build, test, operation, and maintenance, to final decommissioning.

@@ -116,6 +116,12 @@
 - **Acceptance**: formal, structured hand-off of the completed software system to the customer org; usually involves test, analysis and assessment activities
 - **Accreditation**: AKA Security Accreditation a formal declaration by a designated accrediting authority (DAA) that an information system is approved to operate at an acceptable level of risk, based on the implementation an approved set of technical, managerial, and procedural safeguards
 - **ACID Test**: data integrity provided by means of enforcing atomicity, consistency, isolation, and durability policies
+		**Atomicity - a transaction is treated as a single, indivisible unit of work, where all of its changes are performed or none of them are. If a single part of the transaction fails, the entire transaction fails, and the database state is left unchanged.
+		** Consistency - ensures that a transaction brings the database from one valid state to another, maintaining data integrity. 
+		**Isolation - It ensures that concurrent execution of transactions results in a system state that would be obtained if transactions were executed sequentially, meaning that each transaction is executed without other transactions accessing the data that it is manipulating
+		** Durability - Once a transaction has been committed, it remains so, even in the event of power loss, crashes, or errors
+
+
 - **Aggregation**: ability to combine non-sensitive data from separate sources to create sensitive info; note that aggregation is a "security issue", where as inference is an attack (where an attacker can pull together pieces of less sensitive info to derive info of greater sensitivity)
 - **Arbitrary code**: alternate set of instructions and data that an attacker attempts to trick a processor into executing
 - **Buffer overflow**: source code vulnerability allowing access to data locations outside of the storage space allocated to the buffer; can be triggered by attempting to input data larger than the size of the buffer

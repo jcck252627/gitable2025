@@ -41,7 +41,15 @@ OSI is a theoretical model used to understand networking behavior.
 Application (Application /Presentation /Session)
 Transport (Transport)
 Internet (Network) 
-Network Access  (Data Link / Physical
+Network Access  (Data Link / Physical)
+
+
+1.Application layer --> 2.Transport layer ---> 3.Internet layer ----> 4.Network Access layer
+
+----------
+Application layer  -- Network Access layer -- Internet layer -- Transport layer
+1,4,3,2
+
 
 This is the model actually used on the Internet.
 
@@ -185,12 +193,12 @@ Session Layer — “Manages sessions, connections, and dialogs.”
 Example:  Session tokens, NetBIOS, RPC, SQL session management. Anything involving session IDs, authentication tokens, or dialog control is Session layer.
 Threats: Session hijacking, replay attacks, fixation attacks
 
-Presentation Layer — “Formats, encrypts, and translates data.”
-Example: SSL/TLS encryption, data compression, character encoding
+Presentation Layer — “Formats, encrypts, and translates data.” Compression/Data encoding/decoding
+Example: SSL/TLS encryption, data compression, character encoding, JPEG, ASCII, and MIDI
 Threats: SSL stripping, weak encryption, downgrade attacks
 
 Application Layer — “Where users and software interact with the network.”
-Example: HTTPS, DNS, SMTP, FTP, SNMP
+Example: HTTPS, DNS, SMTP, FTP, SNMP, TLS
 Threats: Phishing, DNS poisoning, email malware, API abuse
 
 
@@ -203,7 +211,9 @@ The main objective of the Kerberos protocol is to securely authenticate users to
 
 Packet switching - Cheap, but no capacity guarantee, very widely used today. Data is sent in packets, but take multiple different paths to the destination. The packets are reassembled at the destination.
 
-staeful vs stateless firewall ...
+staeful vs stateless firewall ... stateful firewall modern
+implict deny rule .... deny anything by default unless is explicitly allowed 
+NGFW (Next Generation FireWalls)
 
 Kerberos process !!
 Which is the FIRST step in the Kerberos authentication process?
