@@ -28,9 +28,104 @@ COMPLEX CISSP practice questions #4: All CISSP domains 125Q
 COMPLEX CISSP practice questions #3: All CISSP domains 125Q
 
 CISSP: How to study (plans, tips, materials, approach) 2025
-
 Latest CISSP Practice Tests 700 In-Depth Q/As & Explanations
 
+=========================================================================
+prompts
+=========================================================================
+Provide comprehensive and clear study material to help prepare for the CISSP (Certified Information Systems Security Professional) examination. Focus on the eight domains of the (ISC)² CISSP Common Body of Knowledge (CBK), covering concepts, best practices, and key topics within each domain.
+
+Ensure explanations are accurate, concise, and structured to facilitate effective learning and retention. Include summaries, examples, and where applicable, practice questions to test understanding.
+
+# Steps
+
+1. Present an overview of the CISSP certification and its importance.
+2. Break down the eight CISSP domains:
+   - Security and Risk Management
+   - Asset Security
+   - Security Architecture and Engineering
+   - Communication and Network Security
+   - Identity and Access Management (IAM)
+   - Security Assessment and Testing
+   - Security Operations
+   - Software Development Security
+3. For each domain, explain key concepts, principles, frameworks, and best practices.
+4. Include example scenarios or practice questions to reinforce learning.
+5. Provide summaries or mnemonics where helpful to assist memorization.
+
+# Output Format
+
+- Organized and clearly titled sections for each domain.
+- Bullet points, numbered lists, or tables for clarity.
+- Practice questions with answers following each domain.
+- Concise summaries at the end of each domain section.
+
+# Notes
+
+Focus on relevance to the CISSP exam objectives. Avoid overly technical jargon unless necessary and provide definitions for complex terms. Ensure information is up to date with the latest CISSP exam outline.
+
+
+-----------------------------------------
+
+Generate high-quality, practice questions tailored for CISSP (Certified Information Systems Security Professional) exam preparation. Ensure questions cover a broad range of CISSP domains, including but not limited to Security and Risk Management, Asset Security, Security Architecture and Engineering, Communication and Network Security, Identity and Access Management, Security Assessment and Testing, Security Operations, and Software Development Security.
+
+Questions should be clear, concise, and of varying difficulty levels (easy, medium, hard). Each question should include multiple-choice options with one correct answer. Additionally, provide a brief explanation for the correct answer to reinforce learning and understanding.
+
+# Steps
+
+1. Identify key topics across all eight CISSP domains.
+2. Generate thought-provoking multiple-choice questions related to these topics.
+3. Ensure diversity in question format and difficulty to accurately reflect the exam style.
+4. Provide one correct answer per question with plausible distractors.
+5. Add a concise explanation to justify the correct answer.
+
+# Output Format
+
+Provide the questions in the following JSON array format:
+
+[
+  {
+    "question": "[Question text]",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "correct_answer": "[Correct option text]",
+    "explanation": "[Brief explanation of why this answer is correct]"
+  },
+  ...
+]
+
+# Notes
+
+- Avoid overly technical jargon; questions should test both theoretical and practical knowledge.
+- Ensure no ambiguity in questions or options.
+- Focus on aligning with the latest CISSP exam domains and objectives.
+
+# Examples
+
+{
+  "question": "Which security model is primarily concerned with data confidentiality and uses classification levels?",
+  "options": ["Bell-LaPadula Model", "Biba Model", "Clark-Wilson Model", "Brewer and Nash Model"],
+  "correct_answer": "Bell-LaPadula Model",
+  "explanation": "The Bell-LaPadula Model focuses on maintaining the confidentiality of data by using security levels to restrict access."
+}
+
+
+----------------------------------------------------
+
+https://github.com/blazinbhayor/AI-CISSP-Study-Assistant
+
+https://aipromptsx.com/blog/best-gemini-prompts
+
+https://www.retext.io/templates/student-study-guide-prompts
+
+https://www.skool.com/cybersecurity-study-group/study-with-ai
+
+https://prodseclabs.com/cissp-study-plan/
+
+
+
+
+
+==================================================================================================================================================================
 Framework and Compliance lists:
 
  COBIT 2019: 
