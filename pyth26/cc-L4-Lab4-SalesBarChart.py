@@ -24,7 +24,7 @@ sales = []
 
 n = get_validated_num()
 
-# collecting and validating input
+# collecting and validating input for number of stores then populate into store and sales lists
 for i in range(1, n + 1):
     store_name = f"Store #{i}"
     stores.append(store_name)

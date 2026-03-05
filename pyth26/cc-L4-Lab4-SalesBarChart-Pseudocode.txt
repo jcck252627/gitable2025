@@ -1,0 +1,44 @@
+### PseudoCode 
+
+
+function1_valdate_store:
+func1 BEGIN
+	Repeat
+	Prompt for user input 
+	IF number is an integer and positive-integer ... return that number or input
+	ELSE ....print error and go back to Repeat
+func1 END
+
+function2_valdate_sales_by100:
+func2 BEGIN
+	Repeat
+	Prompt for user input 
+	IF number is an integer and positive-integer ... return that number or input
+	ELSE ....print error and go back to Repeat
+func1 END
+
+
+MAIN 
+MAIN BEGIN
+Create and Initalize two lists : store [] and sales [] 
+Get number of store by running a function1 that prompt user to input a validated positive-integer 
+
+Loop1 where iterate through that number returned from function 1
+Loop1 Begin
+Populate the list in store [] with store1, store2, store3 .... and so on depending on the user input number
+Get number of sales in each store by running a function2 that prompt user to input a validated positive-integer in the multiple of 100 
+populate the list in sales [] with validated input sales numbers .... 
+Loop1 END
+
+
+Loop3 iterate the total number of stores and print the heading for store name ... store1, store2 ... and so on
+Loop3 Begin
+    Loop4 iterate inside of loop3
+    Loop4 Begin 
+    iterate the sales number entered per each store and print out a star appending to the end per unit of 100 in sales 
+    Loop4 END
+Loop3 END
+
+MAIN END
+
+
