@@ -25,6 +25,28 @@ def get_valid_bookqty():
         if price.isdigit() and int(price) > 0:
             return int(price)
         print("Invalid input, You must enter a valid number for the book price !! Please Try Again ......")
+
+# calcuate sub total by multiplying unit price with quantity 
+def calculate_subtotal(price, qty):
+    subtotal = price * qty
+    return int(subtotal)
+
+# add subtotal with 9.25% tax
+def calculate_tax(subtotal):
+    total_w_tax = subtotal * 1.0925
+    return float(total_w_tax)
+
+# get membership status 
+def get_membership_status():
+    while True:
+        print("Please enter customer's membership status ... enter one of the option")
+        print("1. Paid Membership")
+        print("2. Free Membership")
+        print("3. Non Member")
+        member = input("Please enter member option:   ")
+        if member.isdigit() and int(member) > 0 and int(member) < 4:
+            return int(member)
+        print("***Invalid operation choice.....You must enter option 1, 2 or 3....Please Try Again ......")
         
 
 grand_total = 0
@@ -35,16 +57,33 @@ while op != 3:
     if op == 1:
         p = get_valid_price()
         q = get_valid_bookqty()
-        print(f"Customer wants to buy {q} books each at ${p} ")
-        break
-    elif op ==2:
-        print(f"Grand Total is: ${grand_total}")
+        subtotal = calculate_subtotal(p,q)
+        salestotal = calculate_tax(subtotal)
+        m = get_membership_status()
 
-print(f"Qutting This Program.....Grand Total is: ${grand_total}")
+        if m == 1:
+            print("Membership Status is : PAID MEMBER")
+        elif m ==2:
+            print("Membership Status is : FREE MEMBER")
+        else:
+            print("Membership Status is : NON MEMBER")
+
+        print(f"Customer wants to buy {q:,} books each at ${p:,} ")
+        print(f"The Subtotal for this purchase is: ${subtotal:,}")
+        print(f"The Grand Total with added 9.25% tax for this purchase is: ${salestotal:,.2f}")
+        
+        grand_total = grand_total + salestotal
+        
+    elif op ==2:
+        print(f"Grand Total is: ${grand_total:,.2f}")
+    op = get_validated_option()
+
+print(f"Qutting This Program.....Grand Total is: ${grand_total:,.2f}")
 
 
 
 """
+print(f'Gross Profit:       ${gross_profit:,.2f}')
 Pseudo Code
 
 grand_total = 0
