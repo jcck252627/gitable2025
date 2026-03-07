@@ -15,6 +15,40 @@
 
 D5
 **********************************************************
+
+RuBAC stands for Rule-Based Access Control. The primary characteristic of this access control paradigm is the use of rules to make access control decisions. These rules can be based on various factors such as the role of a user, time of access, etc. The rules are pre-defined and when a user tries to access a resource, the system checks whether the request matches any of the rules. If it matches, access is granted; otherwise, it is denied. The central concept here is the usage of rules, hence the name Rule-Based Access Control (RuBAC). 
+
+Dynamic evaluation of access requests: This answer is incorrect because dynamic evaluation of access requests is not the primary characteristic of RuBAC. While it's true that the evaluation of access requests in a RuBAC system happens at the time a user tries to access a resource, which could be seen as "dynamic", this isn't unique to RuBAC. 
+
+Many other access control models like Attribute-Based Access Control (ABAC) or Mandatory Access Control (MAC) also evaluate access requests dynamically. 
+
+Use of complex algorithms to determine access: While algorithms are used in many access control systems to make decisions, this is not the primary characteristic of RuBAC. 
+
+RuBAC primarily relies on rules to determine access. These rules can be simple or complex
+
+User characteristics can be a part of the rules, but they aren't the fundamental basis of RuBAC ... user characteristics to determine access is more closely associated with Attribute-Based Access Control (ABAC), 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Capability Table: If Thor is assigning read access to a group of files and can organize the users into five departments, using a capability table would be the most likely mechanism. A capability table is a system used to define access rights based on capabilities, which are tokens or keys that grant permissions to users or groups to access specific system objects such as files. Since Thor is dealing with several hundred employees, it would be more efficient to manage access by assigning capabilities to departments, rather than managing individual file permissions for each user. The incorrect answers: Access Control List: While ACLs are a common method for controlling access to files based on user identities and group memberships, they are not as suited to scenarios with a large number of users where permissions are uniform across common objects. ACLs could become complex and cumbersome to manage with several hundred individual entries. Content-dependent access controls: This form of access control relies on the content within the objects to determine access, rather than predefined capabilities or groups. This would not be the most efficient method for Thor, as he is looking to assign access based on departmental grouping, not content evaluation. Application access control: Although application access control could theoretically be used to govern access to certain files within an application, it is not the most likely choice for managing file access at an organizational or departmental level across multiple applications or systems. Application access controls are more specific to the functions within the application itself.
 
 Authorization comes after authentication. Authentication is the process of verifying the identity of a user, system, or device. It often involves checking a username and password, or some other form of credentials. Authorization comes after a user or system is authenticated. It involves granting permissions to the authenticated user or system, determining what they can access and what actions they can perform. The incorrect answers: Authentication is granting permissions: This is incorrect. Authentication is about verifying identity, not granting permissions. Authorization is verifying the identity of a user: This is incorrect. Authorization is about granting access and permissions, not verifying identity. Authorization comes before authentication: This is incorrect. Authentication usually comes before authorization. You need to know who someone is (authentication) before you can decide what they can do (authorization).

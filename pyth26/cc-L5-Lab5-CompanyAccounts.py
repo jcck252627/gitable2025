@@ -27,7 +27,7 @@ def get_account ():
 account = get_account()
 print("\n")
 
-# save each value from the list .... as 3 indivual variables and output 
+# save each value from the list .... as 3 indivual variables and output them
 name = account[0]
 email   = account[1]
 id = account[2]

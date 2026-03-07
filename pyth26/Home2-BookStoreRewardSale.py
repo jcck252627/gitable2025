@@ -2,10 +2,12 @@
 # Validate if input 1,2 or 3 for the main menu
 def get_validated_option():
     while True:
+        print("********************************************************")
         print("1. Customer Information")
         print("2. See Today's Sales Total")
         print("3. Quit")
         option = input("Please enter an operation to be performed:   ")
+      
         if option.isdigit() and int(option) > 0 and int(option) < 4:
             return int(option)
         print("***Invalid operation choice.....You must enter option 1, 2 or 3....Please Try Again ......")
@@ -16,7 +18,7 @@ def get_valid_price():
         price = input("Please enter a price for the book we are selling:   ")
         if price.isdigit() and int(price) > 0:
             return int(price)
-        print("Invalid input, You must enter a valid number for the book price !! Please Try Again ......")
+        print("**Invalid input, You must enter a valid number for the book price !! Please Try Again ......")
 
 # Validate number of books as a whole number .... reusing the same code as get_valid_price
 def get_valid_bookqty():
@@ -24,7 +26,7 @@ def get_valid_bookqty():
         price = input("Please enter a number of book customer is buying:   ")
         if price.isdigit() and int(price) > 0:
             return int(price)
-        print("Invalid input, You must enter a valid number for the book price !! Please Try Again ......")
+        print("**Invalid input, You must enter a valid number for the book price !! Please Try Again ......")
 
 # calcuate sub total by multiplying unit price with quantity 
 def calculate_subtotal(price, qty):
@@ -46,8 +48,34 @@ def get_membership_status():
         member = input("Please enter member option:   ")
         if member.isdigit() and int(member) > 0 and int(member) < 4:
             return int(member)
-        print("***Invalid operation choice.....You must enter option 1, 2 or 3....Please Try Again ......")
-        
+        print("**Invalid operation choice.....You must enter option 1, 2 or 3....Please Try Again ......")
+
+def member_discount (sub):
+    d = sub * 0.9
+    print(f"***PAID member received an extra 10% discount on the book price, Saving of ${sub - d} !! ")
+    return d
+
+def calulate_member_rewards_pts (member_type, book_qty):
+    p = 5
+    if member_type == 1:
+        if book_qty == 1:
+            print(f"***This book purchase earned you {p} points")
+        elif book_qty == 2:
+            print(f"***This book purchase earned you {p * 3} points")
+        elif book_qty == 3:
+            print(f"***This book purchase earned you {p * 10} points")
+        elif book_qty >= 4:
+            print(f"***This book purchase earned you {p * 20} points")  
+    elif member_type == 2:    
+         if book_qty == 1:
+            print(f"***This book purchase earned you {p} points")
+         elif book_qty ==2:
+            print(f"***This book purchase earned you {p * 3} points")  
+         elif book_qty == 3:
+            print(f"***This book purchase earned you {p * 6} points")
+         elif book_qty >= 4:
+            print(f"***This book purchase earned you {p * 12} points")  
+
 
 grand_total = 0
 op = get_validated_option()
@@ -63,22 +91,26 @@ while op != 3:
 
         if m == 1:
             print("Membership Status is : PAID MEMBER")
+            subtotal = member_discount(subtotal)  # if a paid member, runs function for a 10% discount
+            salestotal = calculate_tax(subtotal)
+            reward_pt = calulate_member_rewards_pts (m, q)
         elif m ==2:
             print("Membership Status is : FREE MEMBER")
+            reward_pt = calulate_member_rewards_pts (m, q)
         else:
-            print("Membership Status is : NON MEMBER")
+            print("Membership Status is : NON MEMBER  ... NO reward points earned")
 
         print(f"Customer wants to buy {q:,} books each at ${p:,} ")
         print(f"The Subtotal for this purchase is: ${subtotal:,}")
-        print(f"The Grand Total with added 9.25% tax for this purchase is: ${salestotal:,.2f}")
+        print(f"** The Grand Total with added 9.25% tax for this purchase is: ${salestotal:,.2f} **")
         
         grand_total = grand_total + salestotal
         
     elif op ==2:
-        print(f"Grand Total is: ${grand_total:,.2f}")
+        print(f"** Today's Grand Total is: ${grand_total:,.2f} so far .... **")
     op = get_validated_option()
 
-print(f"Qutting This Program.....Grand Total is: ${grand_total:,.2f}")
+print(f"*** Qutting This Program.....Grand Total for today is: ${grand_total:,.2f} ***")
 
 
 
