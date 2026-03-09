@@ -110,6 +110,18 @@ Provide the questions in the following JSON array format:
   "explanation": "The Bell-LaPadula Model focuses on maintaining the confidentiality of data by using security levels to restrict access."
 }
 
+----------------------------------------------------
+
+Search and find detailed cissp domain ### mind map from internet and map out main concepts and tricks and exam scenarios and 20 sample questions and answers and create them in clear table format
+
+
+
+A full “CISSP Domain 6 attack scenario cheat sheet” (50 real exam-style traps) 2️
+A visual Domain ### super-mindmap (one-page exam cram sheet) 3️⃣
+50 extremely tricky CISSP Domain 6 questions similar to the real exam
+
+https://sajinshivdas.com/cybersecurity/page/2/?s=cissp
+
 
 ----------------------------------------------------
 
@@ -309,6 +321,9 @@ primary evaluation criterion, as it assesses the security features provided by t
  
    specific standards for business continuity are the ISO 22301 series.
   
+  ISO 31000 provides a set of principles for risk management, including continuous improvement, not accepting unacceptable risks, and maximizing opportunities and minimizing threats. However, it does not advocate for tolerating all risks. The incorrect answers: Continuous improvement is a principle of ISO 31000. The standard emphasizes that the risk management framework and process should be continually improved through learning and experience. Not accepting unacceptable risks is inherent in the risk management process. Risks that are deemed unacceptable should be addressed appropriately to bring them within acceptable levels. Maximizing opportunities and minimizing threats aligns with the core principles of risk management. ISO 31000 acknowledges that the risk management process should create and protect value. This involves seizing opportunities while also addressing threats.
+ 
+ 
  
   The ISO 31004 standard provides guidelines on implementing risk management processes and protocols. This is the most important principle of this standard, as it is designed specifically to assist organizations in managing risk effectively. It details how to integrate risk management into a company's decision-making process, the elements of a risk management framework, how to evaluate the effectiveness of risk management, and how to continually improve risk management
   
