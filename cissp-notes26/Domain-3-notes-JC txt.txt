@@ -1573,6 +1573,8 @@ Overall explanation
 The correct answer: Cipher Block Chaining (CBC) is a mode of operation in DES that is vulnerable to error propagation. In CBC, each block of plaintext is XORed with the previous ciphertext block before being encrypted. This means that if an error occurs during the encryption of one block, that error will propagate through all subsequent blocks. This compromises the integrity of the entire encrypted message, as a single error affects the rest of the blocks. In scenarios where data integrity is of utmost importance, the CBC mode might not be the most suitable choice. The incorrect answers: Electronic Codebook (EBC) is a mode of DES that is indeed considered weak because it doesn't use an initialization vector or chaining, but it doesn't pose a risk of error propagation. If an error occurs in one block during encryption or decryption, it doesn't affect the other blocks. Cipher Feedback (CFB) mode is similar to CBC, but it is a stream cipher and not a block cipher. In CFB, an error in one block can indeed affect the decryption of the following block, but unlike CBC, the error does not propagate beyond that. Output Feedback (OFB) is a mode of DES that operates as a stream cipher. This mode eliminates the issue of error propagation found in CBC and CFB, since each block is encrypted independently. An error in one block doesn't affect the others
 
 
+Mark as downloadedDownloaded
+換個方式說
 Which of the following is the MOST secure type of cryptoprocessor?
 Your answer is correct
 Hardware-based
