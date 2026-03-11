@@ -1,5 +1,5 @@
 
-# Validate if input 1,2 or 3 for the main menu
+# Validate if input 1,2 or 3 for the main menu and loops all other input
 def get_validated_option():
     while True:
         print("********************************************************")
@@ -50,11 +50,13 @@ def get_membership_status():
             return int(member)
         print("**Invalid operation choice.....You must enter option 1, 2 or 3....Please Try Again ......")
 
+# calculate discount for PAID membership of 10% discount
 def member_discount (sub):
     d = sub * 0.9
     print(f"***PAID member received an extra 10% discount on the book price, Saving of ${sub - d} !! ")
     return d
 
+# calculate points reward for FREE/PAID memberships
 def calulate_member_rewards_pts (member_type, book_qty):
     p = 5
     if member_type == 1:
@@ -77,7 +79,9 @@ def calulate_member_rewards_pts (member_type, book_qty):
             print(f"***This book purchase earned you {p * 12} points")  
 
 
-grand_total = 0
+grand_total = 0  #required variable
+
+# validate basic option selected
 op = get_validated_option()
 print("The option you picked was: ", op)
 
@@ -87,16 +91,16 @@ while op != 3:
         q = get_valid_bookqty()
         subtotal = calculate_subtotal(p,q)
         salestotal = calculate_tax(subtotal)
-        m = get_membership_status()
+        m = get_membership_status()  # 
 
         if m == 1:
             print("Membership Status is : PAID MEMBER")
             subtotal = member_discount(subtotal)  # if a paid member, runs function for a 10% discount
             salestotal = calculate_tax(subtotal)
-            reward_pt = calulate_member_rewards_pts (m, q)
+            reward_pt = calulate_member_rewards_pts (m, q) # calls function to calculate reward points here for PAID member
         elif m ==2:
             print("Membership Status is : FREE MEMBER")
-            reward_pt = calulate_member_rewards_pts (m, q)
+            reward_pt = calulate_member_rewards_pts (m, q) # calls function to calculate reward points here for FREE member
         else:
             print("Membership Status is : NON MEMBER  ... NO reward points earned")
 
@@ -106,17 +110,18 @@ while op != 3:
         
         grand_total = grand_total + salestotal
         
-    elif op ==2:
+    elif op ==2:   #Display Today's grand total 
         print(f"** Today's Grand Total is: ${grand_total:,.2f} so far .... **")
     op = get_validated_option()
 
+# exit the program/loop and display the grand total one more time
 print(f"*** Qutting This Program.....Grand Total for today is: ${grand_total:,.2f} ***")
 
 
 
 """
-print(f'Gross Profit:       ${gross_profit:,.2f}')
 Pseudo Code
+print(f'Gross Profit:       ${gross_profit:,.2f}')
 
 grand_total = 0
 loop until user quits
