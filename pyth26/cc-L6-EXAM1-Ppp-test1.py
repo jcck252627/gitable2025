@@ -1,3 +1,12 @@
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+res = [num for num in a if num % 2 == 0]
+print(res)
+
+
+
+
+
+
 """
 can you give examples in python for each
 Lists/Dictionaries     Also know Comprehension
@@ -389,7 +398,14 @@ Readability first: If a comprehension becomes long or complex, a plain loop with
 
 
 
+Want to practice?
+Try writing comprehensions for these:
 
+Build a list of lengths for each string in names = ["Alex", "Kim", "Jordan"].
+Get lowercase versions of strings only if they start with "C" from courses = ["CIS 247", "Math 120", "CS 101", "Chem"].
+From nums, produce "even:10" / "odd:99" labels.
+
+If you want, share your answers and I’ll review them—and we can tailor examples to your CIS 247 module topics (I see you’ve got “Files and Directories” open, so we can also show a comprehension that reads lines from a file and filters them).
 
 
 
