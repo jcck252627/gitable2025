@@ -69,7 +69,7 @@ Focus on relevance to the CISSP exam objectives. Avoid overly technical jargon u
 
 -----------------------------------------
 
-Generate high-quality, practice questions tailored for CISSP (Certified Information Systems Security Professional) exam preparation. Ensure questions cover a broad range of CISSP domains, including but not limited to Security and Risk Management, Asset Security, Security Architecture and Engineering, Communication and Network Security, Identity and Access Management, Security Assessment and Testing, Security Operations, and Software Development Security.
+Generate 125 high-quality, average and some longer case study style practice questions tailored for CISSP (Certified Information Systems Security Professional) exam preparation. Ensure questions cover a broad range of CISSP domains, including but not limited to Security and Risk Management, Asset Security, Security Architecture and Engineering, Communication and Network Security, Identity and Access Management, Security Assessment and Testing, Security Operations, and Software Development Security.
 
 Questions should be clear, concise, and of varying difficulty levels (easy, medium, hard). Each question should include multiple-choice options with one correct answer. Additionally, provide a brief explanation for the correct answer to reinforce learning and understanding.
 
@@ -78,6 +78,8 @@ Questions should be clear, concise, and of varying difficulty levels (easy, medi
 1. Identify key topics across all eight CISSP domains.
 2. Generate thought-provoking multiple-choice questions related to these topics.
 3. Ensure diversity in question format and difficulty to accurately reflect the exam style.
+4. waiting for my input
+5. once input explain why the answer is right or wrong and explain the wrong answers
 4. Provide one correct answer per question with plausible distractors.
 5. Add a concise explanation to justify the correct answer.
 
@@ -295,6 +297,12 @@ Type II is always stronger.
 They do not certify. They attest.
 ❌ Trap 5: “SOC 2 always includes all TSC”
 Only Security is mandatory.
+ 
+ NIST Cybersecurity Framework (CSF)
+    The "Tier" represents the organization's cybersecurity maturity and its ability to manage cybersecurity risk in line of cybersecurity activities and processes support desired outcomes, such as risk reduction. 
+  The "Core" component organizes activities into functions, 
+  The "Profile" adapts the framework to the business,  
+  The "Identify" function helps assess critical assets and risks. 
  
  
  The Common Criteria for Information Technology Security Evaluation (Common Criteria or CC) is an international standard (ISO/IEC 15408) for computer security certification

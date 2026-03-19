@@ -107,6 +107,8 @@ Domain 3 Security Architecture and Engineering
 **Secure access service edge - We discuss secure access service edge when we talk about edge computing in section 3.5.15.
 
 3.2 Understand the fundamental concepts of security models (e.g., Biba, Star Model, Bell–LaPadula)
+
+
 3.2.1 Security Models
 **A model is a representation of something real.
 **A security model is a representation of what security should look like in an architecture.
@@ -1434,6 +1436,18 @@ When you see a question:
 2️⃣ If confidentiality → Bell‑LaPadula
 3️⃣ If integrity (especially business) → Biba or Clark‑Wilson
 4️⃣ If conflict of interest → Brewer‑Nash
+
+-The Clark-Wilson model emphasizes the importance of well-formed transactions and ensures data integrity by enforcing strict controls, especially in ensuring only authorized users can alter sensitive information. This aligns with the engineer’s requirement to limit changes without strict verification. 
+The Brewer-Nash and Bell-LaPadula models focus on different types of security (conflict of interest and confidentiality, respectively) 
+Take-Grant deals with permission propagation
+
+ Aggregation occurs when data from multiple sources is combined, potentially revealing sensitive information that was not apparent from individual datasets. Sawan’s ability to compile unprotected information fits the description of aggregation, which may compromise privacy. Inference involves deducing sensitive information from less sensitive data, and polyinstantiation deals with creating multiple instances to avoid inference issues
+
+Rivest–Shamir–Adleman. (RSA) -  used for public key encryption,
+International Data Encryption Algorithm. (IDEA) - are symmetric key algorithms
+Diffie-Hellman (DFH) -  a method of securely exchanging cryptographic keys over an untrusted channel,  where symmetric key cryptography is used and the parties cannot meet to exchange the key in person
+Advanced Encryption Standard. (AES) - are symmetric key algorithms
+
 
 HARD CISSP practice questions #1: All CISSP domains - 125Q   ... notes
 
