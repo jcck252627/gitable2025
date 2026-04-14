@@ -3,6 +3,11 @@ import sys
 import datetime
 import random
 
+
+
+
+
+
 def get_current_date():
  cur_date = datetime.datetime.now()
  print(f"Today's date is {cur_date.month}/{cur_date.day}/{cur_date.year}")
